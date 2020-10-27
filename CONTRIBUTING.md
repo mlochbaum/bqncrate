@@ -1,6 +1,6 @@
 # Contributing
 
-If something is missing or not right, please [submit an issue](https://github.com/abrudz/aplcart/issues/new/choose).
+If something is missing or not right, please submit an issue.
 
 You can also submit a pull request, especially against [table.tsv](table.tsv) — the really simple TSV file database: 
 
