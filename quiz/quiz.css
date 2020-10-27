@@ -1,10 +1,10 @@
 @font-face{font-family:P;src:local('APL333'),url(/apl333.ttf)}
-@font-face{font-family:M;src:local('APL385 Unicode'),url(/apl385.ttf)}
+@font-face{font-family:M;src:local('BQN386'),url(/bqn386.ttf)}
 i{display:none}
 *{font-family:P}
 body{filter:invert(.85);background:#444;color:#222;overflow:hidden;position:relative;font-size:16px}
 .b{filter:invert(1);background:#222}  .w{filter:invert(0);background:#ddd}
-pre,code{font-family:M}
+pre,code,#m{font-family:M}
 img{margin-bottom:4px;opacity:90%;}
 #a{position:relative;top:6.5px;height:16px;margin-right:.6ex;border-radius:1em;border:.25ex solid currentcolor;width:16px}
 a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;color:unset;
