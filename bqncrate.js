@@ -8,11 +8,9 @@ I=_=>{
     ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
     c=ps.map(r=>r[0])
     e=ps.map(r=>r[1])
-    u=ps.map(r=>r[7])
-    h=ps.map(r=>r[8])
     p=d.split(/\r?\n/g).splice(1).map(x=>x.toLowerCase().replace(/http\S+\t/,"(>)").replace(/http\S+$/,"(?)"))
     r=""
-    for(var i=0;i<c.length;i++){r+='<tr><td>'+(u[i]?'<a href="'+u[i]+'" target="_blank" title="Try it online!"></a>':'')+c[i]+'</td><td>'+(h[i]?'<a href="'+h[i]+'" target="_blank" title="Documentation">?</a>':'')+e[i]+'</td></tr>'}
+    for(var i=0;i<c.length;i++){r+='<tr><td>'+c[i]+'</td><td>'+e[i]+'</td></tr>'}
     t.innerHTML=r
     F(Q(q.value=s.get("q")))})}
 Q=_=>{
