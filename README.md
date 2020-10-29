@@ -14,7 +14,7 @@ BQNcrate can also be used for [exercising your BQN skills](https://mlochbaum.git
 
 ### Notes
 
-- BQNcrate is for finding out *how to do* things, not for finding out, for example, what a symbol means or what a system function does. Please use the [https://mlochbaum.github.io/BQN/doc/index.html](language documentation) for such purposes.
+- BQNcrate is for finding out *how to do* things, not for finding out, for example, what a symbol means or what a system function does. Please use the [language documentation](https://mlochbaum.github.io/BQN/doc/) for such purposes.
 
 - The site may take some seconds to load due to the information being processed by the browser. Once ready, it does not require internet access any more.
 
@@ -25,8 +25,6 @@ BQNcrate can also be used for [exercising your BQN skills](https://mlochbaum.git
 See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how to use access-keys on your system.
 
 - Hit [here](https://mlochbaum.github.io/bqncrate) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
-- [Some entries](https://mlochbaum.github.io/bqncrate?q=(>)) have a <kbd>▸</kbd> which can be clicked to open example code in a sandbox
-- [Some entries](https://mlochbaum.github.io/bqncrate?q=(?)) have a <kbd>?</kbd> which can be clicked to open online documentation
 - Hit the logo [⊔˜](mlochbaum/bqncrate) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
 - Hit [<kbd>×</kbd>](https://mlochbaum.github.io/bqncrate?q=) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
