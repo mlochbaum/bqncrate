@@ -2,7 +2,7 @@ var ps
 I=_=>{
   var s=new URLSearchParams(location.search)
   b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
-  um.href="/?"+b.className
+  um.href="../?"+b.className
   fetch("../table.tsv").then(d=>d.text()).then(d=>{
     ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
     .filter(x=>-1===x[0].indexOf("dfns.") && ["Tacit", "Dfn"].includes(x[2]) && ["Monadic Function", "Dyadic Function"].includes(x[3]) && x[4]==="")
@@ -27,4 +27,4 @@ Q3=_=>{
   i=0;c3i=c3[0].replace(/&lt;|&gt;/g,x=>({'&lt;':'<','&gt;':'>'}[x])).replace(r,x=>i++==n?"@←@"+x+"@→@":x).replace(/<|>/g,x=>({'<':'&lt;','>':'&gt;'}[x])).replace('@←@','<ins>').replace('@→@','</ins>')
   q3.innerHTML=`What is the obscured symbol in the following ${c3[3].match(/\w+/)[0].toLowerCase()} ${c3[5].toLowerCase()} function:<p><code id='p3'>${c3d}</code></p>which when given ${a?E(a)+" and ":""}${E(w)}, solves the task: <p>${c3[1]}</p>`
 }
-W=x=>{b.className=x?x:"wbg"[1+"wb".indexOf(b.className[0])];um.href="/?"+b.className}
+W=x=>{b.className=x?x:"wbg"[1+"wb".indexOf(b.className[0])];um.href="../?"+b.className}
