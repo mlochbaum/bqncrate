@@ -2,6 +2,8 @@
 
 **BQNcrate is a search tool that seeks to answer *How do I…* questions in BQN.**
 
+It's based on Adám Brudzewsky's [APLcart](https://github.com/abrudz/aplcart).
+
 BQNcrate is a searchable collection of some short BQN phrases intended for both beginners and professionals, with content provided by the community. Knowledge of basic BQN syntax is a prerequisite. 
 
 Note that Internet Explorer is not supported.
