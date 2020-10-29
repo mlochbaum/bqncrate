@@ -24,14 +24,14 @@ BQNcrate can also be used for [exercising your BQN skills](https://mlochbaum.git
 
 See [here](https://www.w3schools.com/tags/att_global_accesskey.asp#table2) how to use access-keys on your system.
 
-- Hit [here](https://mlochbaum.github.io/bqncrate) and start typing (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
-- Hit the logo [⊔˜](mlochbaum/bqncrate) in the top left corner to go to the source code (access-key <kbd>A</kbd> — for _**A**PLcart_)
+- Hit [the input field](https://mlochbaum.github.io/bqncrate) at the top to type your query (access-key <kbd>Q</kbd> — for _**Q**uery_ — to re-focus)
+- Hit the logo [⊔˜](https://mlochbaum.github.io/bqncrate) in the top left corner to go to the main page (access-key <kbd>M</kbd> — for _**M**ain_)
 - Hit [<kbd>?</kbd>](#usage) in the top left corner to start a new query (access-key <kbd>E</kbd> — for _**E**xplain_)
 - Hit [<kbd>×</kbd>](https://mlochbaum.github.io/bqncrate?q=) at the end of the input field to clear it (access-key <kbd>X</kbd> — for _e**x**punge_)
 - Hit [<kbd>#</kbd>](https://mlochbaum.github.io/bqncrate?q=42) in the top right corner copy to the current search to the address bar (access-key <kbd>C</kbd> — for _**C**opy_)
 - Hit [<kbd>◐</kbd>](https://mlochbaum.github.io/bqncrate?w) in the bottom right corner to cycle theme (access-keys <kbd>B</kbd> for **B**lack, <kbd>G</kbd> for **G**rey, <kbd>W</kbd> for **W**hite)
+- Hit the Github icon at the lower right to come to the source code here (access-key <kbd>R</kbd> — for _**R**epository_)
 - Hit the result list to enable movement keys for scrolling (access-key <kbd>Z</kbd>)
-- Hit [the input field](https://mlochbaum.github.io/bqncrate) at the top to start a new query (access-key <kbd>E</kbd> — for _**Q**uery_)
 
 ## URL API ("permalinks")
 
