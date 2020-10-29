@@ -4,7 +4,7 @@ I=_=>{
   b.className=0==s.get("w")?"w":0==s.get("b")?"b":""
   um.href="../?"+b.className
   fetch("../table.tsv").then(d=>d.text()).then(d=>{
-    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).splice(1).map(r=>r.split("\t"))
+    ps=d.replace(/[<>&'"]/g,x=>({'<':'&lt;','>':'&gt;','&':'&amp;',"'":'&apos;','"':'&quot;'}[x])).split(/\r?\n/g).slice(1,-1).map(r=>r.split("\t"))
     .filter(x=>["Tacit", "Dfn"].includes(x[2]) && ["Monadic Function", "Dyadic Function"].includes(x[3]) && x[4]==="")
     Q1();Q2();Q3()})}
 E=x=>(["any","a numeric","an integer","a Boolean","a character"]["xmiacynjbd".indexOf(x[0])%5]+(x[1]?[" unit"," list"," table"]["012".indexOf(x[1])]:" array")+(x?" <code>"+x+"</code>":""))
