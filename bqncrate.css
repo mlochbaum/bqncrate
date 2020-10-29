@@ -15,9 +15,9 @@ a{display:inline-block;text-align:center;z-index:1;width:1em;line-height:1em;col
   -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 a:hover,a:focus{color:#000}
 #m{letter-spacing:-.25ex;font-size:133%}
-#e,#x,#c,#w,#a,td a{border-radius:1em;border:.25ex solid currentcolor}
+#e,#x,#c,#w,#r,td a{border-radius:1em;border:.25ex solid currentcolor}
 td a{margin-right:0.75em;color:#bbb}
-#a{position:absolute;right:2.4em;bottom:0em;height:1em}
+#r{position:absolute;right:2.4em;bottom:0em;height:1em}
 #w{right:0;background:linear-gradient(to right,currentcolor 50%,transparent 50%);position:relative}
 #e{margin:0 .5em}
 #x{margin:0 0.75em 0 -1.5em}
