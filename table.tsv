@@ -21,7 +21,7 @@ m∧n	Probabilistic AND	Primitive	Dyadic Function		Mathematical	caret wedge hat 
 m⌈n	Maximum of m and n	Primitive	Dyadic Function		Mathematical	upstile greater larger max() bigger
 ⌊n	Round down to integer	Primitive	Monadic Function		Mathematical	downstile rounddown down() floor()
 m⌊n	Minimum of m and n	Primitive	Dyadic Function		Mathematical	downstile lesser smaller min()
-⌽y	Reverse leading axis of y	Primitive	Monadic Function		Structural	circlebar rowel upsetting flipping upending upsidedown reversing ⌽[1] dimension start beginning
+⌽y	Reverse leading axis of y	Primitive	Monadic Function		Structural	circlebar rowel upsetting flipping upending upsidedown reversing dimension start beginning
 ⌽y2	Reflect horizontally	Primitive	Monadic Function		Structural	mirroring reflecting reflection up-down updown down-up downup
 i⌽y	Rotate rows along leading axis of y	Primitive	Dyadic Function		Structural	circlebar rotating cyclically dimension lists start beginning
 ÷n	Reciprocal: 1÷n	Primitive	Monadic Function		Mathematical	multiplicativeinverse opposite obelus inverting reciprocating per
@@ -95,8 +95,8 @@ F○G y	Over: F on the result of G on y, that is, F G y	Primitive	Monadic Functi
 x F○G y	Over: apply G to each argument and F to the results	Primitive	Ambivalent Monadic Function, Dyadic Function	2-modifier	Function Application	circle ontop composewith functioncomposition (gX)F(gY) (gX)fgY (fX)G(fY) (fX)gfY comparing
 /b1	Indices of all 1s in b	Primitive	Monadic Function		Index Generation	wheretrues slash solidus locationsoftrues positions ones trues truths
 /j1	Indices: j/↕≠j	Primitive	Monadic Function		Index Generation	slash solidus locationsoftrues positions ones trues truths
-a1/y	Filter major cells of y according to mask a1	Primitive	Dyadic Function		Selection	compressing selecting items vertically rowsofmatrix columnwise column-wise a1/[1] dimension 1st start beginning down bitmask bit-mask
-i1/y	Copy major cells of y i1 times	Primitive	Dyadic Function		Selection	compressing slash solidus first copying repeatingeachrows i1/[1] dimension 1st start beginning vertically columnwise column-wise down
+a1/y	Filter major cells of y according to mask a1	Primitive	Dyadic Function		Selection	compressing selecting items vertically rowsofmatrix columnwise column-wise dimension 1st start beginning down bitmask bit-mask
+i1/y	Copy major cells of y i1 times	Primitive	Dyadic Function		Selection	compressing slash solidus first copying repeatingeachrows dimension 1st start beginning vertically columnwise column-wise down
 F´y1	Fold: F between all elements of y1	Primitive	Monadic Function	1-modifier	Function Application	accute accent slash inserting over reducing folding cells elements
 x F´ y1	Fold: F between all elements of y1 and initial value x	Primitive	Monadic Function	1-modifier	Function Application	accute accent slash inserting over reducing folding cells elements
 F⎉j0 y	Rank: apply F to j0-cells to form cells of the result	Primitive	Monadic Function	2-modifier	Function Application	sub-array dimensions axes ending
@@ -105,11 +105,11 @@ F⌾G y	Under: apply G, then F, then undo G	Primitive	Monadic Function	2-modifie
 x F⌾G y	Under: apply F○G, then undo G	Primitive	Dyadic Function	2-modifier	Function Application	double circle dual commutator
 F⊘G y	Valences: F y since F is used for one argument	Primitive	Monadic Function	2-modifier	Function Application	circle slash number adicity ambivalent
 x F⊘G y	Valences: x G y since F is used for two arguments	Primitive	Dyadic Function	2-modifier	Function Application	circle slash number adicity ambivalent
-F˝y	Insert: F between all major cells of y	Primitive	Monadic Function	1-modifier	Function Application	slash reducefirst foldfirst insertfirst inserting folding solidusbar columnwise F/[1] reducing major cells elements dimension 1st column-wise vertically down
-x F˝ y	Insert: F between all major cells of y and initial value x	Primitive	Monadic Function	1-modifier	Function Application	slash reducefirst foldfirst insertfirst inserting folding solidusbar columnwise F/[1] reducing major cells elements dimension 1st column-wise vertically down
+F˝y	Insert: F between all major cells of y	Primitive	Monadic Function	1-modifier	Function Application	slash reducefirst foldfirst insertfirst inserting folding solidusbar columnwise reducing major cells elements dimension 1st column-wise vertically down
+x F˝ y	Insert: F between all major cells of y and initial value x	Primitive	Monadic Function	1-modifier	Function Application	slash reducefirst foldfirst insertfirst inserting folding solidusbar columnwise reducing major cells elements dimension 1st column-wise vertically down
 ∾y	Join elements of y along axes corresponding to y's axes	Primitive	Monadic Function		Structural	combine merge joinvertically cells elements dimensions
 ∾y1	Join list of lists into one list	Primitive	Dyadic Function		Structural	nextto juxtapose merge flatten row-wise rowwise
-x∾y	Join two arrays along a leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically stack x,[1]y dimension column-wise columnwise start beginning connect join
+x∾y	Join two arrays along a leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically stack dimension column-wise columnwise start beginning connect join
 x2∾y1	Append elements of list to respective columns of table	Primitive	Dyadic Function		Structural	vertically ontop atop extend with over merge join concatenate table list
 ≍y	Solo: add a length-1 axis to the beginning of y	Primitive	Monadic Function		Structural	itemize additional dimensions axes axis items elements cells extend shape add beginning first 1st rowmatrixfromvector
 ≍y1	Reshape list y1 into a one-row table	Primitive	Monadic Function		Structural	1-row table list
@@ -139,12 +139,12 @@ x F⍟j0 y	Repeat: apply x⊸F on y j0 times	Primitive	Dyadic Function	2-modifie
 x⍋y	Bins up: indices of cells of y in intervals with ascending cut-offs x	Primitive	Dyadic Function		Index Generation	deltastile intervalindex iotaunderbar bins groups ranges buckets classes classifying classification major cells elements
 ⍒y	Grade down: indices to reorder y into descending order	Primitive	Monadic Function		Index Generation	downgrade gradedown delstile spine concordelanding decreasing
 x⍒y	Bins down: indices of cells of y in intervals with descending cut-offs x	Primitive	Dyadic Function		Index Generation	delstile intervalindex iotaunderbar bins groups ranges buckets classes classifying classification major cells elements
-F`y	Scan: F between elements of y progressing along the first axis	Primitive	Monadic Function	1-modifier	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst columnwise F\[1] scanning major cells elements dimension 1st column-wise vertically lists
+F`y	Scan: F between elements of y progressing along the first axis	Primitive	Monadic Function	1-modifier	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst columnwise scanning major cells elements dimension 1st column-wise vertically lists
 ⍉y	Transpose: move first axis of y to end	Primitive	Monadic Function		Structural	circlebackslash cant rotateaxes ^T ⸆ ᵀ reordering ordering rotating dimensions
 ⍉y2	Reflect diagonally	Primitive	Monadic Function		Structural	mirroring reflecting reflection mirror across tip
 i0⍉y	Rotate only the first i0+1 axes of y as if transposing	Primitive	Dyadic Function		Structural	diagonal reorderaxes reordering dimensions
 i1⍉y	Reorder the axes of y to send axes to positions i1	Primitive	Dyadic Function		Structural	circlebackslash diagonal reorderaxes reordering dimensions shuffle slice shuffling slicing
-⊑y	First element of y	Primitive	Monadic Function		Selection	disclose rightshoe unbox open contentof y[1] x[1] element cell 1st
+⊑y	First element of y	Primitive	Monadic Function		Selection	disclose rightshoe unbox open contentof y[0] x[0] element cell 1st
 i1⊑y	Select element at index i1 from y	Primitive	Dyadic Function		Selection	rightshoe pickfrom selectfrom getting picking indexing selecting major minor cells
 ⊒y	Occurrence count: number of times each major cell's value has appeared previously	Primitive	Monadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI remove
 x⊒y	Progressive Index of: ⊐ that can't use the same index twice	Primitive	Dyadic Function		Index Generation	indexin indexof matchingpositionof find locatecorresponding PDI remove
@@ -220,7 +220,7 @@ i1 /⎉1 y	Replicate along last axis of y	Tacit	Dyadic Function		Selection	compr
 F⌾⥊y	Handle array y temporarily as a list	Tacit	Monadic Function	1-modifier	Function Application	columnheadings columnnumbers ⍢, flattened ravelled raveled list
 ⊢˝y	Last cell of y	Tacit	Monadic Function		Selection	topmostrow subarray dimension 1st
 +˝n	Sum of n (column-wise)	Tacit	Monadic Function		Mathematical	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise
--˝n	Column-wise alternating sum: ((n[1]-n[2])+n[3])-n[4]+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise
+-˝n	Column-wise alternating sum: ((n_0-n_1)+n_2)-n_3+…	Tacit	Monadic Function		Mathematical	alternatingsum series vertically columnwise
 ×˝n	Product of n (column-wise)	Tacit	Monadic Function		Mathematical	enlargedpi bigpi capitalpi ∏ Π vertically columnwise
 x2∾˘y0	Append unit to each row of table	Tacit	Dyadic Function		Structural	extend with next merge join concatenate rows table connect
 x2∾˘y1	Append elements of list to respective rows of table	Tacit	Dyadic Function		Structural	extend with next merge join concatenate table list connect
@@ -234,7 +234,7 @@ x≍⌜y	Cartesian product: all pairs of x and y	Tacit	Monadic Function		Sets
 ≍⎉0 y	Increment rank by inserting a new dimension after the trailing one	Tacit	Monadic Function		Structural	additional dimensions axes axis items elements cells extend shape add ending last columnmatrixfromvector
 m1 F⎉0‿1 n2	Apply F between list m1 and each column of n2	Tacit	Dyadic Function		Function Application	rank suffixagreement columns distribute columwise column-wise list dimensions axes vertically columnwise
 i1⊏˜j1	Generate consolidated left argument for successive transposes i1⍉j1⍉y	Tacit	Dyadic Function		Structural	
-¯1⊸⊏y	Tail: Last major cell	Tacit	Monadic Function		Selection	y[-1;] x[-1;] y[-1] x[-1] y[¯1;] x[¯1;] y[¯1] x[¯1] trailing element item ending
+¯1⊸⊏y	Tail: Last major cell	Tacit	Monadic Function		Selection	y[-1] x[-1] y[¯1] x[¯1] trailing element item ending
 x ∊⎉1 y	Which elements of x belong to corresponding row of y (≠x ↔ ≠y)	Tacit	Dyadic Function		Sets	testif memberof isin membership containedin has cells items
 ⊐⟜1 n	Index of first 1 in n	Tacit	Monadic Function		Index Generation	indexof one locate find positionof location 1st
 x ⊐⎉1 y	Indices of elements of x in corresponding rows of x	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof rowwise row-wise locating cells items location horizontally
@@ -373,8 +373,8 @@ i(0≠|)j	Does i not divide j?	Tacit	Dyadic Function		Mathematical	testif divisi
 (1↓≢)y	Dimensions of major cells	Tacit	Monadic Function		Array Properties	shape items elements axes
 (¯1↓≢)y	Lengths of leading axes	Tacit	Monadic Function		Array Properties	shape dimensions start beginning
 (1+↕)j0	Integers from 1 to j0	Tacit	Monadic Function		Mathematical	whole numbers naturals 1st
-x(1=⍋)y	Is y within the range [ 1⌷x , 2⌷x )	Tacit	Dyadic Function		Comparison	testif ≤y< ≤x< tao totalarrayordering interval inrange?
-x(1≠⍋)y	Is y outside the range [ 1⌷x , 2⌷x )	Tacit	Dyadic Function		Comparison	testif >y≥ >x≥ tao totalarrayordering interval outsiderange?
+x(1=⍋)y	Is y within the range [ x_0 , x_1 )	Tacit	Dyadic Function		Comparison	testif ≤y< ≤x< tao totalarrayordering interval inrange?
+x(1≠⍋)y	Is y outside the range [ x_0 , x_1 )	Tacit	Dyadic Function		Comparison	testif >y≥ >x≥ tao totalarrayordering interval outsiderange?
 (¯1⊑≢)y	Length of last axis	Tacit	Monadic Function		Array Properties	count length() cells len() cells elements dimension ending
 ⟨⟩⊸⥊y	First element of y as a unit	Tacit	Monadic Function		Selection	1st cell item
 ⟨⟩⊸⥊y	Enclosed top corner (or first element) of y; fill if y is empty	Tacit	Monadic Function		Selection	first top-left topleft northwest north-west NW cell item 1st
