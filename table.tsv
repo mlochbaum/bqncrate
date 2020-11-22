@@ -893,8 +893,8 @@ name↩y	Change definition	Syntax			Expression	inplace replace value reassignmen
 int.frac	Decimal Point	Syntax	Array		Expression	period rational
 '	Character delimiter	Syntax	Array		Expression	quote apostrophe string text
 "	String delimiter	Syntax	Array		Expression	quote apostrophe string text "
-∞	Negative infinity	Constant			Expression	lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞
-¯∞	Positive infinity	Constant			Expression	upper limit ∞ ∞ ¯ negativeinfinity ∞
+∞	Positive infinity	Constant			Expression	upper limit ∞ ∞ ¯ positiveinfinity ∞
+¯∞	Negative infinity	Constant			Expression	lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞
 x0⌈y0⌊z	Force z to range x0≤z≤y0	Expression			Mathematical	clamp limitrange between –
 a0⊑x‿y	Pick y if a0 is true or x if a0 is false	Expression			Selection	conditional selector pick choose
 @+0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 ≢00
