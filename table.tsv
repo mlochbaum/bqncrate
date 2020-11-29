@@ -743,6 +743,8 @@ m((π÷3)××˜⊸×)n	Volume of cone with height m and radius n	Tacit	Dyadic Fu
 (»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
 (∨⟜«' '⊸≠)⊸/d1	Remove trailing and multiple blanks	Tacit	Monadic Function		Text	trim spaces left consecutive start beginning
 (∨˝˘' '⊸≠)⊸/d2	Remove blank rows	Tacit	Monadic Function		Text	all-space allspace empty remove delete drop space without
+-⟜(32×1="a{"⊸⍋)d	Uppercase ASCII text	Tacit	Monadic Function		Text	casemap lettercase toupper upper-case conversion converting change changing
++⟜(32×1="A["⊸⍋)d	Lowercase ASCII text	Tacit	Monadic Function		Text	casemap lettercase tolower lower-case conversion converting change changing
 (≠`⊸∨'''⊸=)d1	Locations of texts between and including quotes	Tacit	Monadic Function		Text	strings
 (≠`⊸>'''⊸=)d1	Locations of texts between and excluding quotes	Tacit	Monadic Function		Text	strings
 (∧`·∧˝' '⊸=)d2	Locate leading blank columns	Tacit	Monadic Function		Boolean/Logical	spaces beginning masking indicate indications allspace all-space start blanks
