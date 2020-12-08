@@ -906,6 +906,7 @@ a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin onl
 {∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨∾⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Monadic Function		Mathematical	gol conways cellularautomaton sub-array
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	sub-vectors +\
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Dyadic Function		Boolean/Logical	sub-vectors sublists sub-lists ≠\
+{{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Monadic Function		Index Generation	dependency resolution ordering dag scheduling kahn's algorithm
 x{𝔽𝔾⊢}y	Church Boolean AND	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	∧ conjunction caret wedge hat circumflex Kpq
 x{⊣𝔽𝔾}y	Church Boolean OR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	∨ disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
 x{𝔽𝔾⊣}y	Church Boolean Converse Implication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	≥ because ∵ ⇐ if converseconditional Bpq reverseimplying
