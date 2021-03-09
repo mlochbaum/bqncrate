@@ -999,4 +999,5 @@ x{𝕨⌾⊏𝕩}y	Replace first major cell of y with x	Block function	Monadic F
 {𝕩𝕊⍟≠1+÷𝕩}1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
 1⌽∾˜9⥊"""1⌽∾˜9⥊"""	An expression giving itself	Constant			Text	quine
 (2×a)÷˜b-⊸(+≍-)√(×˜b)-(4×a×c)	Solutions of quadratic equation ax²+bx+c=0	Expression			Mathematical	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
+(0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression				fizz buzz interview counting
 1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression				Knuth ALGOL
