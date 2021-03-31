@@ -317,7 +317,6 @@ F´∘⥊y	Fold F over all elements without respect to shape	Tacit	Monadic Funct
 1⊸∾˘y2	Preface a column of 1s	Tacit	Monadic Function		Structural	ones trues truths
 ∾⟜1˘y2	Append a column of 1s	Tacit	Monadic Function		Structural	ones trues truths
 i0/⟜≍y1	Table with i0 rows, each consisting of y1	Tacit	Dyadic Function		Structural	fill table
-i0/⟜≍y1	Form an i0-row table with all rows being y1	Tacit	Dyadic Function		Structural	table
 ∾∘≍y	Join array of arrays vertically	Tacit	Dyadic Function		Structural	aboveandbelow stack merge flatten column-wise columnwise
 ∾∘≍y1	Join elements of y1 along the second axis	Tacit	Primitive		Structural	combine merge joinhorizontally cells elements dimensions
 ⌽‿i0⥊y1	Reshape y1 to i0-column table (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise columns
@@ -524,6 +523,7 @@ i0↑⟜(⥊⟜1)j0	Prefix List: length i0 with j0 ones on the left, the rest ze
 (⊢=⌈˝)n1	Mask of positions where the global maximum occurs in n1	Tacit	Monadic Function		Boolean/Logical	indicate where equal to maxima maximums location masking indicating
 (+˝÷≠)n	Column-wise arithmetic mean of n	Tacit	Monadic Function		Mathematical	average arithmeticmean() AM() avg() mean()
 (≠√×˝)n	Geometric mean	Tacit	Monadic Function		Mathematical	average GM() G() geometricmean
+a(∾∧⟜<)b	Expand a by replacing 1s with same-rank array b, and 0s with 0×b	Tacit	Dyadic Function			nest fractal replace copies
 (⌊≍1⊸|)n0	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals
 (⥊˜0⊸≍)j0	Initialise a table with j0 columns and no rows	Tacit	Monadic Function		Structural	table
 (1‿¯1×⌜⊢)n	±n as two major cells of the result	Tacit	Monadic Function		Mathematical	plusminus dimensions axes
@@ -579,6 +579,7 @@ x⊣⌾(b1⊸/)˜y	Mask Operator: Merge x and y using b1 (1 for x's element, 0 f
 (100×⊢÷+˝)n	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	≢ vertically columnwise
 (∾↑¨∘↓)y1	All possible slices ordered by starting index	Tacit	Monadic Function		Selection	sub-strings substrings sub-vectors sub-sequences subsequences segmented sub-lists partitioned sublists
 i0(↑≍○<↓)y	First and last i0 major cells of y	Tacit	Dyadic Function		Structural	headtail split divide separate dividing first leading remaining
+i0(∾˝/⟜≍)y	Repeat y as a whole i0 times along the first axis	Tacit	Dyadic Function		Structural	duplicate copy
 x1(⥊∾⎉0‿1˜)y1	Insert x1 after every element of y1	Tacit	Dyadic Function		Structural	merge cell item
 ∾⟜(1¨∘⊏)y	Append a row of 1s	Tacit	Monadic Function		Structural	ones trues truths
 ⌽⌾(0‿¯1⊸⊏)y	Swap first and last major cells	Tacit	Monadic Function		Structural	exchange swap head tail leading trailing elements items 1st start beginning ending
