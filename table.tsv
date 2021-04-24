@@ -393,7 +393,7 @@ x1+´∘≠y1	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
 ∧´∘⥊b	Are all true?	Tacit	Monadic Function		Boolean/Logical	testif forall ∀ ⋀
 ∧´∘⥊b	All	Tacit	Monadic Function		Boolean/Logical	forall true givenany tautology universalquantification ∀
 n1×´∘⋆b1	Products over subsets of n1 specified by b1	Tacit	Dyadic Function		Mathematical	sub-sets
-+⟜÷´n	Continued fraction with terms n	Tacit	Monadic Function		Mathematical	series sequence
++⟜÷´n	Evaluate continued fraction with terms n	Tacit	Monadic Function		Mathematical	series sequence
 +´⌾÷n1	Ohm's Law: resistance of parallel resistors/capacitance of serial capacitors	Tacit	Monadic Function		Mathematical	electronics electrics circuits Ω series inparallel
 x1≍○<⌜y1	Catalogue of all pairs from x1 and y1	Tacit	Dyadic Function		Structural	pairings tuples table matrix
 ∘‿2⊸⥊y1	Reshape list y1 into a two-column table	Tacit	Monadic Function		Structural	2-column table list
@@ -407,7 +407,6 @@ i∊˜⟜↕j0	Boolean list of length j0 with ones in locations i (inverse of �
 x∧`∘=y	Indicate leading elements that are equal	Tacit	Dyadic Function		Comparison	show matching onleft cells items masking indicating start beginning
 x∧`∘≠y	Indicate leading elements that are unequal	Tacit	Dyadic Function		Comparison	show different onleft cells items masking indicating start beginning
 ≠`⊸∨b	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Monadic Function		Boolean/Logical	1s pad trues truths
-+⟜÷`n1	Continued fraction convergents with terms n1	Tacit	Monadic Function		Mathematical	series sequence
 +`∘↕j0	First j0 triangular numbers	Tacit	Monadic Function		Mathematical	oeisA000217 oeisA217 1st
 <˘∘⍉y2	Table to list of column lists	Tacit	Monadic Function		Structural	split table lists into columns
 <˘∘⍉y2	Enclose columns of a table	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed table
@@ -630,7 +629,6 @@ x0(⊣+↕∘¬˜)y0	Consecutive values from x0 to y0 (both numbers, or both cha
 ×⌜˜∘(1+↕)j0	Multiplication table for numbers up to j0	Tacit	Monadic Function		Mathematical	multiplicationtable cartesianproduct timestable matrix integers
 /○⥊⟜(↕≢)b2	List of arcs from adjacency matrix b2	Tacit	Monadic Function		Mathematical	connections table directed graph vector
 (1+´0=↕⊸|)j0	Number of positive divisors of j0	Tacit	Monadic Function		Mathematical	sigma_0(n) tau(n) sigma0 σ₀(n) d(n) ν(n) τ(n) oeisA000005 oeisA5
-(+⟜÷´1+↕)j0	Continued fraction: 1+÷2+÷3+÷4+÷5+÷6+÷…j0	Tacit	Monadic Function		Mathematical	series sequence
 (1=-⌜○↕´)j1	Subdiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	sub-diagonal
 (¯1=-⌜○↕´)j1	Superdiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	super-diagonal
 (↕∘≠∾˘⊢)y2	Attach row numbers to a table	Tacit	Monadic Function		Index Generation	labels table
@@ -734,6 +732,7 @@ x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Taci
 (+´÷≠)⌾(√⟜m0)n	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Dyadic Function		Sets	⊖
 (+˝÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Monadic Function		Mathematical	average GM() G() geometricmean
+{+⟜÷´¨1↓↑𝕩}n1	Continued fraction convergents with terms n1	Tacit	Monadic Function		Mathematical	series sequence
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
 (××·⌊|+1>2||)n	Round to nearest odd number, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring
 (××·⌊|+1≤2||)n	Round to nearest even number, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring
@@ -872,6 +871,7 @@ c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest comm
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Monadic Function		Structural	list cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	1s trues truths start beginning
+{÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨𝕩}n1	Continued fraction convergents with terms n1, in linear time	Tacit	Monadic Function		Mathematical	series sequence
 ((↕-⌈∘÷⟜2)(⊣⌽˘⌾⍉⌽˘)≍˜⥊⟜↕×˜)j0	a magic square, odd side j0	Tacit	Monadic Function		Mathematical	
 (√((≠×+´∘×˜)-·×˜+´)÷·-⟜1⊸×≠)n1	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷≍+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AHM() HAM() AH() HA() harmonic-arithmetic
