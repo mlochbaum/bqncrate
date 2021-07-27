@@ -163,8 +163,6 @@ i1⊔y	Group major cells of y into the positions i1	Primitive	Dyadic Function		S
 x1⊔y	Group array y based on x1	Primitive	Dyadic Function		Selection	square cup bucket sort
 F⚇j0 y	Depth: apply F to depth-j0 nested elements of y	Primitive	Monadic Function	2-modifier	Function Application	circledots recursion repeated each
 x F⚇j1 y	Depth: F on corresponding elements of x and y at the given depths	Primitive	Dyadic Function	2-modifier	Function Application	circledots recursion repeated each
-m{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n	Greatest Common Divisor of natural numbers m and n	Primitive	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
-m(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n	Lowest Common Multiple of natural numbers m and n	Primitive	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
 1˘y2	List having as many ones as y2 has rows	Tacit	Monadic Function		Boolean/Logical	1s trues truths list
 0¨y	0 corresponding to each element of y	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s zeros cell element falses falsehoods
 0¨y	Zeros, simple with same shape	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
@@ -897,12 +895,15 @@ a1(-⟜»1⊸⌽⊸/⟜(+`))n	Sums over (+/) sublists of n indicated by a1	Block
 i0(1↓=⟜(+`⊑⊸=)/⊢)y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Block Function	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st
 {𝕩⌾(0‿0⊸⍉)0⌜˜𝕩}y1	Diagonal matrix with elements of y1 (filled appropriately)	Block Function	Monadic Function		Structural	cells items table
 m0{(𝕨⊣0)∾𝕩÷↕≠𝕩}n1	Integral of polynomial n1 with ascending coefficients and optional constant m0	Block Function	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate
+{(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Monadic Function		Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
 {x0¨⌾((y0=𝕩)/○⥊⊢)𝕩}y	Replace all values y0 in y with x0	Block Function	Monadic Function	2-modifier	Structural	substitute merge amend replace update
+m{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n	Greatest Common Divisor of natural numbers m and n	Block Function	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
 n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Dyadic Function		Mathematical	
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Monadic Function	1-modifier	Structural	substitute merge amend update cells items
 {𝕩𝕊⍟≢∨˝∘∧⎉1‿∞˜⊸∨𝕩}b2	Transitive closure	Block Function	Monadic Function		Boolean/Logical	adjacency list matrix contingency table
 (-2⌊∘÷˜·+´·∧`' '=⌽)⊸⌽˘d2	Center flush left character array	Block Function	Monadic Function		Text	centre align
 {'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all blanks with dashes	Block Function	Monadic Function		Text	spaces substitute format
+m(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n	Lowest Common Multiple of natural numbers m and n	Block Function	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
 a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st
 {∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨∾⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Monadic Function		Mathematical	gol conways cellularautomaton sub-array
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	sub-vectors +\
