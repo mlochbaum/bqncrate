@@ -712,6 +712,7 @@ x(+´∧`∘⌽∘≠)y	Count number of trailing elements that are unequal	Tacit
 (∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column) only	Tacit	Monadic Function		Boolean/Logical	sequence run trues truths 1st
 (∧⊑˜2⌊∘÷˜≠)n1	Median of non-empty n1, taking larger value for even lengths	Tacit	Monadic Function		Mathematical	average
 (100×÷⟜(+˝)˘)n	Row-wise percentage per row	Tacit	Monadic Function		Mathematical	≢ horizontally rowwise
+(⌈´(⊢⌈+)`)n1	Largest sum of any contiguous non-empty sublist	Tacit	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
 i0((+˝÷≠)⍉⁼)n	Average (mean value) of elements of n along axis i0	Tacit	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
 (1≥·|-⌜○↕´)j1	Tridiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	tri-diagonal banded
