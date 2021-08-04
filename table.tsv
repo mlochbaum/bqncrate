@@ -680,7 +680,7 @@ i0(|⟜↕⟜≠⊔⊢)y	Distribute major cells of y into i0 groups round-robin	
 i0/⟜(≍⎉(-m0))y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Dyadic Function		Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension
 (⍋(≠≍<)¨)y1	Ascending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical
 (⍒(≠≍<)¨)y1	Descending shortlex grade	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical ordering sorting
-(⌈´(0⌈+)`)n1	Largest sum of any contiguous sublist	Tacit	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
+(0⌈´(0⌈+)`)n1	Largest sum of any contiguous sublist	Tacit	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
 x2(¯1⊑≠)⊸(↑˘)y2	Widen table y2 to be compatible with x2	Tacit	Dyadic Function		Structural	adjust width table
 (××¯0.5⌈∘+|)n	Round to nearest integer, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring integer round()
 (××0.5⌊∘+|)n	Round to nearest integer, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring integer round()
