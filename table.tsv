@@ -928,6 +928,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j	Binary representation of natural number j	Block Modifier	Monadic Function		Mathematical	digits base2 base-2 Boolean
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
+c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Dyadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa
 realIimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
 ¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating
