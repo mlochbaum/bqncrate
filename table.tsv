@@ -607,6 +607,8 @@ x0(1↓·⥊≍˘)y1	Insert x0 in between each pair of elements of list y1	Tacit
 (2×·↕1⊸+)j0	Even integers from 0 to 2×j0	Tacit	Monadic Function		Mathematical	numbers 1st
 ' '⊸≠⊸/¨d	Remove blanks in each string	Tacit	Monadic Function		Text	deletespaces spaces drop without
 ≍⟜('¯'¨)d1	Underline a string	Tacit	Monadic Function		Text	underscore
+10⊸×⊸+˜´∘⌽d1	Natural number from base-10 digits	Tacit	Monadic Function		Mathematical	frombase10 base-10 dec() decimal Conversion converting change changing
+2⊸×⊸+˜´∘⌽d1	Natural number from binary representation	Tacit	Monadic Function		Mathematical	frombase2 base-2 binary Conversion converting change changing
 ⌈´⊸=∘⊒⊸/y	Modes: Most frequent major cells of data	Tacit	Monadic Function		Set	average items elements
 (⌊⊢+1≤2|⊢)n	Round to nearest even number, ties towards ∞	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring
 i(⊣⋆˜1+÷˜)n	Effective rate of interest with nominal rate n for i periods	Tacit	Dyadic Function		Mathematical	
@@ -863,7 +865,7 @@ a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of elements of s
 m(+´⋆⌜˜)⟜((1+↕)⊸(⊣/˜0=|))j0	Sum of m'th powers of positive divisors of j0	Tacit	Dyadic Function		Mathematical	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
 a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero in each sublist of b indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned 1st
 (≍÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
-(16⊸×⊸+˜´∘⌽(∾"0A"+⟜↕¨10‿6)⊸⊐)d1	Convert from hexadecimal	Tacit	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
+(16⊸×⊸+˜´∘⌽(∾"0A"+⟜↕¨10‿6)⊸⊐)d1	Convert from hexadecimal string to number	Tacit	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
 (=⌜˜∘(↕≠)≡+˝∘×⎉1‿∞⟜(⍉+))n2	Is square matrix n2 unitary?	Tacit	Monadic Function		Mathematical	testif Unitary?
 (+´¨(+⌜´(↕2)¨)⊔·×⌜´1≍¨˜-)n1	Coefficients in ascending order of polynomial with roots n1	Tacit	Monadic Function		Mathematical	solve
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Dyadic Function		Text	match lcs
