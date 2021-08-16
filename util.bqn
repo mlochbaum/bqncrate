@@ -1,4 +1,4 @@
-#! /usr/bin/env dbqn
+#! /usr/bin/env bqn
 
 SplitTSV ← >(@+9)⊸=⊸(×∘↕∘≠⊸(↓¨)+`⊸⊔)¨
 JoinTSV ← (<1↓∾)˘ (@+9)⊸∾¨
@@ -28,7 +28,7 @@ Reorder←{𝕊t:
   t⊏˜0∾1+⍋⍉>⟨classdata,complexity,syntaxdata,typedata⟩
 }
 ReorderFile←{
-  𝕩 •LNS⟜(∾∾⟜(@+10)¨) JoinTSV Reorder SplitTSV •LNS 𝕩
+  𝕩 •FChars⟜(∾∾⟜(@+10)¨) JoinTSV Reorder SplitTSV •FLines 𝕩
 }
 
 opts‿acts ← <˘⍉∘‿2⥊ ⟨
