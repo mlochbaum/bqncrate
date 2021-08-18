@@ -740,6 +740,7 @@ x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly o
 (××¯1+2×·⌈2÷˜|)n	Round to nearest odd number, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring
 (⌊⊢+2÷˜0.5≠2|⊢)n	Round to nearest integer, ties to even	Tacit	Monadic Function		Mathematical	precision whole number favoring
 i0(⊣√·+´⋆˜⟜|)n	i0-norm	Tacit	Dyadic Function		Mathematical	Lp-normal L-p ℓp ℓ-p
+(⊢↑˝·≍⟜¬2+≢)y	Pad y with a layer of fill elements on all sides	Tacit	Monadic Function		Structural	expand enlarge outer outside boundary
 m((π÷3)××˜⊸×)n	Volume of cone with height m and radius n	Tacit	Dyadic Function		Circular/Trigonometric	lengths
 (»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
 (∨⟜«' '⊸≠)⊸/d1	Remove trailing and multiple blanks	Tacit	Monadic Function		Text	trim spaces left consecutive start beginning
