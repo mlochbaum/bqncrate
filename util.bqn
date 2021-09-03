@@ -2,6 +2,7 @@
 
 SplitTSV ← >(@+9)⊸=⊸(×∘↕∘≠⊸(↓¨)+`⊸⊔)¨
 JoinTSV ← (<1↓∾)˘ (@+9)⊸∾¨
+_onTSV ← {JoinTSV∘𝔽∘SplitTSV}
 
 Reorder←{𝕊t:
   letters←"¯_"∾∾"0aA"+⟜↕¨10‿26‿26
@@ -28,11 +29,12 @@ Reorder←{𝕊t:
   t⊏˜0∾1+⍋⍉>⟨classdata,complexity,syntaxdata,typedata⟩
 }
 ReorderFile←{
-  𝕩 •FLines JoinTSV Reorder SplitTSV •FLines 𝕩
+  𝕩 •FLines Reorder _onTSV •FLines 𝕩
 }
 
 opts‿acts ← <˘⍉∘‿2⥊ ⟨
   "reorder", {𝕤⋄ReorderFile "table.tsv"}
+  "showdup", {𝕤⋄•Out ¯1↓(∾∾⟜(@+10)¨) (¬∘(∊∧∊⌾⌽)⊏˘)⊸/ _onTSV •FLines "table.tsv"}
 ⟩
 
 {𝕏@} (acts∾⟨{𝕤⋄0!˜"Option not found!"}⟩)⊑∘⊏˜opts⊐⊏•args

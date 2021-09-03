@@ -116,8 +116,7 @@ x F˝ y	Insert: F between all major cells of y and initial value x	Primitive	Mon
 x∾y	Join two arrays along a leading axis	Primitive	Dyadic Function		Structural	commabar concatenate over ontop atop vertically stack dimension column-wise columnwise start beginning connect join
 x2∾y1	Append elements of list to respective columns of table	Primitive	Dyadic Function		Structural	vertically ontop atop extend with over merge join concatenate table list
 ≍y	Solo: add a length-1 axis to the beginning of y	Primitive	Monadic Function		Structural	itemize additional dimensions axes axis items elements cells extend shape add beginning first 1st rowmatrixfromvector
-≍y1	Reshape list y1 into a one-row table	Primitive	Monadic Function		Structural	1-row table list
-≍y1	Turn y1 into the first row of a 1-row table	Primitive	Monadic Function		Structural	default initialise initialize 1st table
+≍y1	Turn y1 into a one-row table	Primitive	Monadic Function		Structural	1-row table list 1st initialise initialize
 x≍y	Couple: join arrays of identical shape along new length-2 axis	Primitive	Dyadic Function		Structural	laminate comma combine juxtapose dimension
 x1≍y1	Two-row table from two lists	Primitive	Monadic Function		Structural	table lists rows
 ⊏y	First cell of y	Primitive	Monadic Function		Selection	topmostrow subarray dimension leading cell item 1st start beginning
@@ -129,8 +128,7 @@ i↕y	Windows: slices of y with shape i, arranged in a flat array	Primitive	Dyad
 i0↕y1	All slices of y1 of length i0	Primitive	Dyadic Function		Selection	sub-string substring sub-sequence subsequence sub-vectors segmented sub-lists partitioned sublists
 ∊y	Unique mask: boolean list indicating major cells to be kept if y was deduplicated (⍷y)	Primitive	Monadic Function		Sets	unique Boolean indication indicate ⍧ items elements masking indicating Nub-sieve
 x∊y	Member of: 1 for cells of x matching major cells of y and 0 elsewhere	Primitive	Dyadic Function		Sets	testif epsilon isin membership containedin has ϵ ε ∈ memberof elementof cell searching
-⊐y	Classify: translate major cells to natural number keys ((⍷y)⊐y)	Primitive	Monadic Function		Index Generation	self unique index
-⊐y	Consecutive ids (indices with equal major cells mapping to same index)	Primitive	Monadic Function		Index Generation	integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels
+⊐y	Classify: translate major cells to natural number keys ((⍷y)⊐y)	Primitive	Monadic Function		Index Generation	self unique index integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels
 x⊐y	Index of: index of the first major cell of x matching each cell of y	Primitive	Dyadic Function		Index Generation	iota indexin indexof ɩ ι finding locating locate positionof 1st items elements location searching
 x1⊐y	Indices of keys y in key list x1	Primitive	Dyadic Function		Index Generation	find locate positionof locating location list
 F⁼y	Inverse: find z such that y ≡ F z	Primitive	Monadic Function	1-modifier	Function Application	F⁻¹(x) F′(x) fʹ(x) opposite revert
@@ -164,8 +162,7 @@ x1⊔y	Group array y based on x1	Primitive	Dyadic Function		Selection	square cup
 F⚇j0 y	Depth: apply F to depth-j0 nested elements of y	Primitive	Monadic Function	2-modifier	Function Application	circledots recursion repeated each
 x F⚇j1 y	Depth: F on corresponding elements of x and y at the given depths	Primitive	Dyadic Function	2-modifier	Function Application	circledots recursion repeated each
 1˘y2	List having as many ones as y2 has rows	Tacit	Monadic Function		Boolean/Logical	1s trues truths list
-0¨y	0 corresponding to each element of y	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s zeros cell element falses falsehoods
-0¨y	Zeros, simple with same shape	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
+0¨y	Zeros with same shape as y	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
 x0¨y	Fill array y with data value x0	Tacit	Monadic Function	1-modifier	Structural	
 +˜n	Double: 2×n	Tacit	Monadic Function		Mathematical	twice
 ×˜n	Square: n⋆2	Tacit	Monadic Function		Mathematical	² ^2
@@ -213,8 +210,7 @@ x F⊸G⟜H y	Split-Compose: apply G between (F x) and (H y), that is (F x) G (H
 <˘y2	Table to list of rows	Tacit	Monadic Function		Structural	spike downarrow split lists from table into
 i0↓˘y2	Drop i0 columns from y2	Tacit	Dyadic Function		Structural	table delete remove without
 i0↑˘y2	Adjust y2 to width i0 (positive i0 to pad/chop on right, negative i0 to pad/chop on left)	Tacit	Dyadic Function		Structural	fill limit
-⥊˘y	Reshape into 2-dimensional array	Tacit	Monadic Function		Structural	commabar ravelcells flattencells razecells
-⥊˘y	Ravel planes of rank 3 array y to form rows of a table	Tacit	Monadic Function		Structural	Merge demoterank lessenrank reduce flatten reducing table
+⥊˘y	Convert to rank 2 array by flattening each cell to a row	Tacit	Monadic Function		Structural	commabar ravelcells flattencells razecells Merge demoterank lessenrank reduce reducing
 i0⥊˘y1	Table with i0 columns, each consisting of y1	Tacit	Dyadic Function		Structural	fill table
 ⥊¨y	Ensure that all elements are lists	Tacit	Monadic Function		Structural	items elements cells lists uniformity make force to be
 i1+⌜j1	Addition table for i1 down and j1 across	Tacit	Monadic Function		Mathematical	additiontable cartesianaddition plustable matrix
@@ -337,7 +333,6 @@ m0∊⟜↕n0	Is m0 in range 0…n0-1?	Tacit	Dyadic Function		Comparison	inrange
 ∨⊸⊐y	Descending cardinals numbers (ranking, ties equal)	Tacit	Monadic Function		Index Generation	falling do
 ∧⊸⊐y	Ascending cardinals numbers (ranking, ties equal)	Tacit	Monadic Function		Index Generation	rising up
 x⌽⊸⊐y	Last indices in x of major cells y, counted from the rear	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
-x⌽⊸⊐y	Index of last occurrence of y in x, counting from the rear	Tacit	Dyadic Function		Index Generation	indexof locate find positionof location reverse back trailing ending
 x⍋⊸⊏y	Sorting y according to x	Tacit	Dyadic Function		Mathematical	ordering
 x⍋∘⊐y	Grade up of y according to key x	Tacit	Dyadic Function		Index Generation	custom sort order ascending
 ⍋∘⍋y	Permutation that sorts like y	Tacit	Monadic Function		Index Generation	ranking list
@@ -388,8 +383,7 @@ x1+´∘≠y1	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
 ×´∘≢y	Count the number of elements (bound) of an array	Tacit	Monadic Function		Array Properties	tallyall ≢, numberofelements numberofitems howmanyelements howmanyitems whole scalars countall ×⌿≢ ≠, ≢, cells items
 =´∘≢y2	Is y2 a square matrix?	Tacit	Monadic Function		Array Properties	square? table
 ∨´∘⥊b	Are any true?	Tacit	Monadic Function		Boolean/Logical	testif forany thereexists forsome existentialquantification ∃ ⋁ any?
-∧´∘⥊b	Are all true?	Tacit	Monadic Function		Boolean/Logical	testif forall ∀ ⋀
-∧´∘⥊b	All	Tacit	Monadic Function		Boolean/Logical	forall true givenany tautology universalquantification ∀
+∧´∘⥊b	Are all true?	Tacit	Monadic Function		Boolean/Logical	testif forall ∀ ⋀ givenany tautology universalquantification
 n1×´∘⋆b1	Products over subsets of n1 specified by b1	Tacit	Dyadic Function		Mathematical	sub-sets
 +⟜÷´n	Evaluate continued fraction with terms n	Tacit	Monadic Function		Mathematical	series sequence
 +´⌾÷n1	Ohm's Law: resistance of parallel resistors/capacitance of serial capacitors	Tacit	Monadic Function		Mathematical	electronics electrics circuits Ω series inparallel
@@ -406,9 +400,7 @@ x∧`∘=y	Indicate leading elements that are equal	Tacit	Dyadic Function		Compa
 x∧`∘≠y	Indicate leading elements that are unequal	Tacit	Dyadic Function		Comparison	show different onleft cells items masking indicating start beginning
 ≠`⊸∨b	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Monadic Function		Boolean/Logical	1s pad trues truths
 +`∘↕j0	First j0 triangular numbers	Tacit	Monadic Function		Mathematical	oeisA000217 oeisA217 1st
-<˘∘⍉y2	Table to list of column lists	Tacit	Monadic Function		Structural	split table lists into columns
-<˘∘⍉y2	Enclose columns of a table	Tacit	Monadic Function		Structural	vertically column-wise columnwise boxed enclosed table
-<˘∘⍉y2	Convert table to inverted table (character data as lists of lists)	Tacit	Monadic Function		Structural	matrix tables transforming transformation change changing into inverting inversion
+<˘∘⍉y2	Table to list of column lists (inverted table)	Tacit	Monadic Function		Structural	split table lists into columns vertically column-wise columnwise boxed enclosed table matrix transforming transformation change changing into inverting inversion
 ≠¨∘⊔j1	Convert set of indices j1 to a mask	Tacit	Monadic Function		Boolean/Logical	indicate masking indicating bitmask bit-mask converting change changing
 a1/¨⊸⊔y	Partition y along each axis by list of partition length lists a1	Tacit	Dyadic Function		Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions blockmatrix
 a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Dyadic Function		Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension
@@ -461,8 +453,7 @@ i1+`⊸∊˜b1	Mask to get sublists with indices i1 as indicated by b1	Tacit	Dya
 i0‿⌽⍉∘⥊y1	Reshape y1 to i0-column table (filled column-wise)	Tacit	Monadic Function		Structural	table vertically columnwise columns
 ⊑∘⌽∘⥊y	The last element of y	Tacit	Monadic Function		Selection	cell element
 x⊑∘/∘≠y	Index of first differing element in x and y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof unequal different 1st locating cell item difference location
-x⊑∘/∘∊y	Index in x of the first element which is a member of y	Tacit	Dyadic Function		Index Generation	find locate positionof locating memberof occurrence location 1st
-x⊑∘/∘∊y	Index of first occurrence in x of any element of y	Tacit	Dyadic Function		Index Generation	cell element find locate 1st position find location
+x⊑∘/∘∊y	Index of first occurrence in x of any cell of y	Tacit	Dyadic Function		Index Generation	cell element find locate 1st position find location
 a1+`¨⊸⊔y	Partition y along each axis by list of partition indicators a1	Tacit	Dyadic Function		Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions blockmatrix
 m(⊢-|)n	Largest whole multiple of m less than or equal to n (n rounded down to closest smaller multiple of m)	Tacit	Dyadic Function		Mathematical	without less nodivisionremainder bar() noresidual intmultiples smaller ≤ integer unit floor
 (×|⊢)n	Fractional part with sign	Tacit	Monadic Function		Mathematical	decimals
@@ -498,8 +489,7 @@ m(π××)n	Area of cone with height m and radius n (excluding base)	Tacit	Dyadic
 ⊐⟜' '⎉1 d	Indices of first blanks in rows of array d	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text horizontally
 x0+´∘⥊∘=y	Number of occurrences of atom x0 in array y	Tacit	Dyadic Function		Comparison	count tally
 c⊑∘∊˜⟜<d1	Is string d1 a member of list of strings c	Tacit	Dyadic Function		Index Generation	isin membership containedin has vtv vector
-≠¨∘⊔∘⊐y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated
-≠¨∘⊔∘⊐y	Frequencies of major cells	Tacit	Monadic Function		Mathematical	occurrences statistics items elements
+≠¨∘⊔∘⊐y	Count of occurrences of each unique major cell	Tacit	Monadic Function		Mathematical	elements items how many repetitions times repeated occurrences statistics items elements
 (0=≠∘⥊)y	Is y an Empty Array?	Tacit	Monadic Function		Structural	testif isempty? isvoid? isnull?
 (1=≠∘⥊)y	Is y a singleton (array with only one element)?	Tacit	Monadic Function		Array Properties	testif unit? sole? one?
 (¯128+256|128⊸+)j	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation converting change changing
@@ -561,14 +551,13 @@ m(⊣+a×-˜)n	Select each element from m where a is 0 and from n where it's 1	T
 (××⌊∘|)n	Round towards zero	Tacit	Monadic Function		Mathematical	0 truncate whole number integer int() trunc() chop clamp
 m(⊣+-⊸|)n	Residue after dividing n by m but replacing 0 with m	Tacit	Dyadic Function		Mathematical	modulo modulus divisionremainder 12hourclock divide
 (1⊸↓-¯1⊸↓)n	Deltas: (n_1-n_0)(n_2-n_1)(n_3-n_2)…	Tacit	Monadic Function		Mathematical	pairwisedifferences changes steps
-(1⊸↓-¯1⊸↓)n	Ratio of each number in a list to its predecessor: (n_1÷n_0)(n_2÷n_1)(n_3÷n_2)…	Tacit	Monadic Function		Mathematical	pairwiseratios vector
+(1⊸↓÷¯1⊸↓)n	Ratio of each number in a list to its predecessor: (n_1÷n_0)(n_2÷n_1)(n_3÷n_2)…	Tacit	Monadic Function		Mathematical	pairwiseratios vector
 (2⊸⋆+¯1⊸⋆)j0	Jacobsthal-Lucas number	Tacit	Monadic Function		Mathematical	sequence Édouard Edouard Ernst j(n) A014551() A14551()
 m(≤⟜|×⊢)n	Round to zero values of n within m of zero	Tacit	Dyadic Function		Mathematical	precision fuzz 0
 i0(×⟜≠⥊⊢)y1	Duplicate list y1 i0 times	Tacit	Dyadic Function		Structural	copying extending recycling recycle list
 i0(⊢/˜0=|)j1	Elements of j1 divisible by i0	Tacit	Dyadic Function		Mathematical	filter divisors cells items
 (+´÷1⌈≢)n1	Average, returning 0 if empty	Tacit	Monadic Function		Mathematical	arithmeticmean
 m1(+´|∘-)n1	Manhattan distance between two points in n-space	Tacit	Dyadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()
-(¬∨´∘⥊)b	Not Any	Tacit	Monadic Function		Boolean/Logical	none notany
 (¬∨´∘⥊)b	Are none true?	Tacit	Monadic Function		Boolean/Logical	testif theredoesnotexist ∄
 (¬∧´∘⥊)b	Not all true?	Tacit	Monadic Function		Boolean/Logical	notall somenot all?
 x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Dyadic Function		Function Application	conformity conforming axes frames major minor cells
@@ -700,9 +689,9 @@ i0(⊢∾-⟜≠/¯1⊸↑)y	Extend y with last cell of y to length i0	Tacit	Dya
 (≠˝0=400‿100‿4|⌜⊢)j	Is year j a leap year?	Tacit	Monadic Function		Mathematical	testif gregoriancalendar 29thfeb29 29february29th
 x(⌊⟜≠⊏∾⟜i∘⊢)y	Select major cells at indices x from y, using cell i for indices beyond the end	Tacit	Dyadic Function		Selection	fallback indexing trailing ending
 (<⌜˜↕∘≠)⊸×m2	Extract the upper triangular part of the matrix m2 without main diagonal	Tacit	Monadic Function		Mathematical	make strict triangle northeast north east north-east
-(>⌜˜↕∘≠)⊸×m2	Extract the lower triangular part of the matrix m2 with main diagonal	Tacit	Monadic Function		Mathematical	make triangle southwest south west south-west
 (>⌜˜↕∘≠)⊸×m2	Extract the lower triangular part of the matrix m2 without main diagonal	Tacit	Monadic Function		Mathematical	make strict triangle southwest south west south-west
 (≤⌜˜↕∘≠)⊸×m2	Extract the upper triangular part of the matrix m2 with main diagonal	Tacit	Monadic Function		Mathematical	make triangle northeast north east north-east
+(≥⌜˜↕∘≠)⊸×m2	Extract the lower triangular part of the matrix m2 with main diagonal	Tacit	Monadic Function		Mathematical	make triangle southwest south west south-west
 (<⌜˜↕∘≠)⊸≡b2	Is b2 a full upper triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular? remove strict
 (>⌜˜↕∘≠)⊸≡b2	Is b2 a full lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove strict
 (≤⌜˜↕∘≠)⊸≡b2	Is b2 a full upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?
@@ -750,7 +739,6 @@ m((π÷3)××˜⊸×)n	Volume of cone with height m and radius n	Tacit	Dyadic Fu
 (≠`⊸∨'''⊸=)d1	Locations of texts between and including quotes	Tacit	Monadic Function		Text	strings
 (≠`⊸>'''⊸=)d1	Locations of texts between and excluding quotes	Tacit	Monadic Function		Text	strings
 (∧`·∧˝' '⊸=)d2	Locate leading blank columns	Tacit	Monadic Function		Boolean/Logical	spaces beginning masking indicate indications allspace all-space start blanks
-(∧`·∧˝' '⊸=)d2	Locate leading blank rows	Tacit	Monadic Function		Boolean/Logical	spaces beginning masking indicate indications allspace all-space lines start blanks
 i1(⊢↑˜⊣⌊≠⊸↑⟜≢)y	Take up to i1 positions from axes of y	Tacit	Dyadic Function		Selection	limit major cells items
 m1(+˝∘×⎉1÷+´∘⊣)n2	Weighted average of rows of n2 with column weights m1	Tacit	Dyadic Function		Mathematical	
 m1(+´⌈○≠↑¨≍○<)n1	Sum of polynomials with ascending coefficients	Tacit	Dyadic Function		Mathematical	additionof plus
@@ -782,6 +770,7 @@ i0(⊢/˜(⍋⍒)⊸∊˜)y	The i0 largest cells of y in order of occurrence	Tac
 (÷⟜⊑·⌽·+`0∾↕)j0	Outstanding balances on rule of 78s	Tacit	Monadic Function		Mathematical	sum-of-the-digits method
 0.01⊸(⊣×·⌊0.5+÷˜)n	Round to nearest hundredth, ties towards ∞	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring
 0.05⊸(⊣×·⌊0.5+÷˜)n	Round currency to nearest five hundredths	Tacit	Monadic Function		Mathematical	cents nickels ¢5¢
+(∧`·∧˝˘' '⊸=)d2	Locate leading blank rows	Tacit	Monadic Function		Boolean/Logical	spaces beginning masking indicate indications allspace all-space lines start blanks
 (∧´∘∊≠|↕∘≠⊸+)j1	Valid siteswap pattern for juggling?	Tacit	Monadic Function		Mathematical	testif beat
 x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Tacit	Dyadic Function		Selection	trim trailing right cells items list ending
 a1+`⊸(⊏˜⍋⊸⊏⊢)⟜⍋y	Grade up (⍋) for sorting subarrays of y indicated by a1	Tacit	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
