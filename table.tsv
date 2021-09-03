@@ -916,6 +916,7 @@ F{𝔽𝕩⋄𝕩}y	Apply function F but discard result and return the original 
 F{⊐⊏𝔽∘⍷}y	Apply deterministic cell-wise F to cells of y, avoiding extra calls for duplicate cells	Block Modifier	Monadic Function	1-modifier	Function Application	performance memoisation memoization quick speed
 F{𝕨𝔽˜´⌽𝕩}y	Fold from the left	Block Modifier	Monadic Function	1-modifier	Function Application	reduction typenotation reducing folding
 x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block Modifier	Dyadic Function	1-modifier	Structural	items elements
+f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Ambivalent Function	1-modifier	Function Application	each every list gerund
 F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Monadic Function	2-modifier	Iteration	application poweroperator circlestar starcircle inverse repeated repeating inversion inverting iterating looping while powerlimit fixedpoint
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j	Base-10 digits of natural number j	Block Modifier	Monadic Function		Mathematical	base10 decimal base-10
