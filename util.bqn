@@ -28,7 +28,7 @@ Reorder←{𝕊t:
   t⊏˜0∾1+⍋⍉>⟨classdata,complexity,syntaxdata,typedata⟩
 }
 ReorderFile←{
-  𝕩 •FChars⟜(∾∾⟜(@+10)¨) JoinTSV Reorder SplitTSV •FLines 𝕩
+  𝕩 •FLines JoinTSV Reorder SplitTSV •FLines 𝕩
 }
 
 opts‿acts ← <˘⍉∘‿2⥊ ⟨
