@@ -760,6 +760,7 @@ i0(⊢/˜(⍋⍋)⊸∊˜)y	The i0 smallest cells of y in order of occurrence	Ta
 ((≠≍<)¨⊸⍒⊸⊏)y1	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
 i0(⊢/˜(⍋⍒)⊸∊˜)y	The i0 largest cells of y in order of occurrence	Tacit	Dyadic Function		Selection	biggest greatestif items elements
 (∨≠¨⊸(≍˘)∘⊔)y	Sorted frequency table	Tacit	Monadic Function		Mathematical	matrix
+=⊸{<⎉𝕨⍉⍟𝕨>𝕩}y	Invert array of same-rank arrays, exchanging inner with outer axes	Tacit	Monadic Function		Structural	transpose transposing cell element zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing flip
 (××2×·⌈2÷˜1-˜|)n	Round to nearest even number, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring
 (+˝|∘-)⎉1⎉1‿∞˜n2	Manhattan distance table for points in n-space (one point per row)	Tacit	Monadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d() matrix
 (28+·≠´0=400‿100‿4|⌜⊢)j	Number of days in February of year j (YYYY)	Tacit	Monadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
