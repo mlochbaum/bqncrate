@@ -223,8 +223,8 @@ F⊸/y	Filter to only those elements of y that satisfy cell-wise criterion F	Tac
 ×´n1	Volume of box with sides n1	Tacit	Monadic Function		Mathematical	block edge lengths
 ∨´b1	Are any true?	Tacit	Monadic Function		Boolean/Logical	anyone? forany thereexists ∃ horizontally rowwise testif forany?
 ∧´b1	Are all true?	Tacit	Monadic Function		Boolean/Logical	forall? ∀ binary base-2 base2 testif
-⌈´n1	Maximum of n1	Tacit	Monadic Function		Mathematical	supremum biggest largest highest
-⌊´n1	Minimum of n1	Tacit	Monadic Function		Mathematical	infirmum smallest lowest
+⌈´n1	Maximum of n1	Tacit	Monadic Function		Mathematical	supremum biggest largest highest greatest
+⌊´n1	Minimum of n1	Tacit	Monadic Function		Mathematical	infirmum smallest lowest least
 ÷´n1	Alternating product of n1	Tacit	Monadic Function		Mathematical	
 ≠´b1	Boolean Parity (Even)	Tacit	Monadic Function		Boolean/Logical	
 ∧⎉1 y	Sort each row in ascending order	Tacit	Monadic Function		Mathematical	up increasing sorting reordering ordering
@@ -355,6 +355,8 @@ i0⊑∘⌽y1	Pick element of list y1 at cyclic offset i0 (default ¯1)	Tacit	Dy
 ⊑∘/b	Index of first satisfied condition in b	Tacit	Monadic Function		Index Generation	1st
 ⊑∘⍋y	Index of smallest cell in y (earliest index for ties)	Tacit	Monadic Function		Comparison	find locate positionof least minimum lexicographically lexically locating location
 ⊑∘⍒y	Index of largest cell in y (earliest index for ties)	Tacit	Monadic Function		Comparison	find locate positionof biggest greatestif maximum lexicographically lexically locating location
+⊒∘⍋y	Index of minimum cell of y	Tacit	Monadic Function		Index Generation	lesser smaller smallest lowest least
+⊒∘⍒y	Index of maximum cell of y	Tacit	Monadic Function		Index Generation	greater larger bigger greatest biggest largest highest
 ⍷⊸≡y	Are all major cells distinct?	Tacit	Monadic Function		Sets	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?
 i1/⊸⊔y	Cut y into partitions of length i1 (+´i1 ↔ ≠y)	Tacit	Dyadic Function		Structural	chop split separate chunks segments
 @⊸+i	Characters to Unicode code point numbers	Tacit	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping UniversalCodedCharacterSet UniversalCharacterSet codepoints code-points converting change changing
@@ -582,6 +584,8 @@ x(∊⍒⊸⊏⊣)y	Move major cells of x that appear in y to the front	Tacit	Dy
 b1(i0=+`)⊸/y1	The i0'th sublist of y1 (sublists indicated by b1)	Tacit	Dyadic Function		Selection	
 (+˝∧`)⎉1 b	Number of leading ones in each row of b	Tacit			Boolean/Logical	ones trues truths start beginning
 (↕¯1⊑≢)⊸∾y2	Attach column numbers to a table	Tacit	Monadic Function		Index Generation	headings table
+(⊑⊢⊐⌈´)n1	Index of minimum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	lesser smaller smallest lowest least
+(⊑⊢⊐⌊´)n1	Index of maximum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	greater larger bigger greatest biggest largest highest
 x(≠∘⊣>⊒)y	Progressive member of (∊) without replacement	Tacit	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE remove
 x(≠¨⍋⊔⊢)y	Distribution of y into intervals with cut-offs x	Tacit	Dyadic Function		Mathematical	bins groups ranges buckets
 m +˝∘×⎉1‿∞ n	Dot/Vector/Cross/Matrix Product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication multiply
