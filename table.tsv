@@ -575,6 +575,7 @@ x1(⥊∾⎉0‿1˜)y1	Insert x1 after every element of y1	Tacit	Dyadic Function
 x(¬∘∊/⊢)y	x without major cells that appear in y	Tacit	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
 (∊∘/1⊸+)n1	Boolean gaps of lengths n1 after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2
 (¬∧´∘∊)y	Are any two major cells of y identical to each other?	Tacit	Monadic Function		Sets	testif anysame? anyequal? anyduplicates? anyidentical? anydups? items elements
+(∊∧∊⌾⌽)y	Indicate which cells of y appear exactly once	Tacit	Monadic Function		Comparison	unique indication indicate items masking indicating
 (↕∘≠≡⍋)n	Is n non-decreasing?	Tacit	Monadic Function		Array Properties	testif ascending? increasing? rising? up ordered? sorted?
 x⊏˜⟜(⍋⍋)y	Reorder x to match the ordering of y	Tacit	Dyadic Function		Mathematical	meshing sorting reordering ordering
 (↕∘≠≡⍒)n	Is n non-increasing?	Tacit	Monadic Function		Mathematical	testif descending? falling? down ordered? decreasing? sorted?
@@ -643,6 +644,7 @@ x(+´∧`∘≠)y	Count number of leading elements that are unequal	Tacit	Dyadic
 m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (matrix sum)	Tacit	Dyadic Function		Mathematical	tables
 x F⌾(<˘ax⍉⁼⊢) y	Run F on each list along axis ax of y	Tacit	Dyadic Function		Function Application	onaxis apply dimensions
 i(⊑⊣+1⊐˜↓)b	Index of first one after index i0 in b1	Tacit	Dyadic Function		Index Generation	1st
+(1+⊒+⊒⌾⌽)y	Indicate number of cells matching each cell of y	Tacit	Monadic Function		Comparison	count duplicate repetitions appearances
 x1(+´¨⊐⊸⊔)n1	Sum n1 by buckets x1 (≢n1 ↔ ≢x1)	Tacit	Dyadic Function		Mathematical	groups classify bins
 (π×4÷3÷⋆⟜3)n	Volume of sphere with radius n	Tacit	Monadic Function		Circular/Trigonometric	length ball
 (∧˝' '⊸=)d	Mask for blank columns	Tacit	Monadic Function		Boolean/Logical	spaces empty filter indicate masking indicating blanks bitmask bit-mask
@@ -669,6 +671,7 @@ a1(⍋+`⊸+)⊸⊏y	Rotate first major cells (1⌽) of sublists of y indicated 
 a1(⌽∘⍒+`)⊸⊏y	Reverse (⌽) sublists of y indicated by starting mask a1	Tacit	Dyadic Function		Structural	
 (∨`∧∨`⌾⌽)b1	Mask that selects values between first and last 1	Tacit	Monadic Function		Boolean/Logical	masking trim ones 1st bitmask bit-mask
 i0(|⟜↕⟜≠⊔⊢)y	Distribute major cells of y into i0 groups round-robin	Tacit	Dyadic Function		Structural	unzip elements items deal
+⊏⟜(≠¨⊔)∘⊐y	Indicate number of cells matching each cell of y	Tacit	Monadic Function		Comparison	count duplicate repetitions appearances
 ∧´∘≤⟜(@+127)d	Is string d ASCII-only?	Tacit	Monadic Function		Text	plain exclusively
 (≠(«-⊢)/)b1	Changing starting indicators b1 of sublists to lengths	Tacit	Monadic Function		Boolean/Logical	partitions change converting conversion segments
 (≠(«-⊢)/)i1	Segment lengths given the number of segments that start at each position	Tacit	Monadic Function		Data Conversion	chunk start leading converting change changing segments partitions
