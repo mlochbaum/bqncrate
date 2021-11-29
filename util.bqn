@@ -6,7 +6,7 @@ _onTSV ← {JoinTSV∘𝔽∘SplitTSV}
 
 Reorder←{𝕊t:
   letters←"¯_"∾∾"0aA"+⟜↕¨10‿26‿26
-  chars←" ⊢⊣+-×∨∧⌈⌊⌽÷|»«=≠<>≤≥≡≢↓↑⥊⋆√¬˙˜∘⊸⟜˘¨⌜○/´⎉⌾⊘◶˝∾≍‿⊏↕∊⊐⁼⍟⍋⍒`⍉⊑⊒⍷⊔⚇@←⇐→↩:;𝕨𝕩𝔽𝔾𝕗𝕘𝕎𝕏𝕤𝕊𝕣(){}⟨⟩⋄,#0123456789_XYZMNIJABCDEFGHIJKLMNOPQRSTUVWXYZfghasvmabcdefghijklmnopqrstuvwxyzÀ"
+  chars←" ⊢⊣+-×∨∧⌈⌊⌽÷|»«=≠<>≤≥≡≢↓↑⥊⋆√¬˙˜∘⊸⟜˘¨⌜○/´⎉⌾⊘◶˝∾⋈≍‿⊏↕∊⊐⁼⍟⍋⍒`⍉⊑⊒⍷⊔⚇@←⇐→↩:;𝕨𝕩𝔽𝔾𝕗𝕘𝕎𝕏𝕤𝕊𝕣(){}⟨⟩⋄,#0123456789_XYZMNIJABCDEFGHIJKLMNOPQRSTUVWXYZfghasvmabcdefghijklmnopqrstuvwxyzÀ"
 
   class←⟨
     "Primitive"
