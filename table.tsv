@@ -744,8 +744,8 @@ x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly o
 i0(⊣√·+´⋆˜⟜|)n	i0-norm	Tacit	Dyadic Function		Mathematical	Lp-normal L-p ℓp ℓ-p
 (⊢↑˝·≍⟜¬2+≢)y	Pad y with a layer of fill elements on all sides	Tacit	Monadic Function		Structural	expand enlarge outer outside boundary
 m((π÷3)××˜⊸×)n	Volume of cone with height m and radius n	Tacit	Dyadic Function		Circular/Trigonometric	lengths
-(»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
-(∨⟜«' '⊸≠)⊸/d1	Remove trailing and multiple blanks	Tacit	Monadic Function		Text	trim spaces left consecutive start beginning
+(»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate blanks	Tacit	Monadic Function		Text	delete trim without consecutive extraneous normalise normalize spaces multiple drop start beginning
+(∨⟜«' '⊸≠)⊸/d1	Remove trailing and duplicate blanks	Tacit	Monadic Function		Text	delete trim without consecutive extraneous normalise normalize spaces multiple drop start ending
 (∨˝˘' '⊸≠)⊸/d2	Remove blank rows	Tacit	Monadic Function		Text	all-space allspace empty remove delete drop space without
 -⟜(32×1="a{"⊸⍋)d	Uppercase ASCII text	Tacit	Monadic Function		Text	casemap lettercase toupper upper-case conversion converting change changing
 +⟜(32×1="A["⊸⍋)d	Lowercase ASCII text	Tacit	Monadic Function		Text	casemap lettercase tolower lower-case conversion converting change changing
@@ -806,7 +806,7 @@ i1(⊢↑˜≢∘⊢+|⟜-⟜≢)y	Increase the dimensions of y to multiples of 
 m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descending order)	Tacit	Dyadic Function		Mathematical	multiplicationof multiply times coefficients
 m1((√+´∘×˜)÷⟜2⊸∾)n0	Length of edges of rectangular pyramid with base dimensions m1 and height n0	Tacit	Dyadic Function		Mathematical	lengths sides
 i(⊢/˜¬∘∊˜⟜(↕≠))y	Remove major cells with indices i from y	Tacit	Dyadic Function		Selection	without remove indices delete drop
-x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, multiple and trailing x0's	Tacit	Dyadic Function		Selection	trim left right spaces consecutive blanks start beginning ending
+x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Dyadic Function		Selection	trim left right spaces multiple consecutive blanks start beginning ending
 i0(⌊∘×⟜(↕⊸÷≠)⊔⊢)y	Distribute major cells of y into i0 slices as evenly as possible	Tacit	Dyadic Function		Structural	unzip elements items deal
 a1(¬1(∾/∾˜)(∨/⊣))b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	sub-vector cell item ∨/¨a1⊂[1]b1
 (≠(«-⊢)·/1»≠⟜«)y1	Lengths of sublists of y1 having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items
