@@ -932,6 +932,7 @@ x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z t
 10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j	Base-10 digits of natural number j	Block Modifier	Monadic Function		Mathematical	base10 decimal base-10
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j	Binary representation of natural number j	Block Modifier	Monadic Function		Mathematical	digits base2 base-2 Boolean
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
+{(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Block Modifier	Monadic Function	2-modifier	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Dyadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa
 realIimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
