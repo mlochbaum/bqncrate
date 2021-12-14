@@ -732,6 +732,7 @@ a1(∾·F`¨+`⊸⊔)y	Segmented scan: like F` but starting over whenever indica
 m1(+˝∘×÷+´∘⊣)n2	Weighted average of each column of n2 with row weights m1	Tacit	Dyadic Function		Mathematical	
 ↕⊸(+´⊣/˜0=|)j0	Aliquot sum (sum of proper divisors)	Tacit	Monadic Function		Mathematical	s(n) divisorsum
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Dyadic Function		Selection	trim leading left cells items list start
+a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those locations	Tacit	Dyadic Function		Structural	cut separate chop divide chunk dividing strings lists segments partitions
 (+´⌾(×˜)÷≠)n1	Quadratic mean	Tacit	Monadic Function		Mathematical	Root square rms()
 (+´÷≠)⌾(√⟜m0)n	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Dyadic Function		Sets	⊖
@@ -821,6 +822,7 @@ m1(-⟜»≠⟜«⊸/⟜(+`))n1	Sum elements of n1 marked by successive identica
 x0((⊢-˜+`×¬)∘=⊔⊢)y1	Split y1 at occurrences of separators x0, removing the separators	Tacit	Dyadic Function		Structural	cut separate chop divide chunk dividing strings lists segments partitions
 i0(+´÷≠){𝔽-⟜𝔽⊸⋆˜}n1	i0'th moment of n1	Tacit	Dyadic Function		Mathematical	
 (√+´∘×˜∘-)⎉1⎉1‿∞˜n2	Euclidean distance table for points in n-space (one point per row)	Tacit	Monadic Function		Mathematical	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Cartesian metric Pythagorean d() matrix
+a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group of 1s	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions
 (>·»⊸+⍟(↕≠)1∾⥊⟜0)j0	Binomial coefficients until j0	Tacit	Monadic Function		Mathematical	pascal'striangle numberofcombinations pascalstriangle
 (1∾·÷˜○(×`)⟜⌽1+↕)j0	Coefficients of the binomial	Tacit	Monadic Function		Mathematical	
 (¯1⋆·+´·∨´¨⊢<≠↑↑)j1	Sign of permutation	Tacit	Monadic Function		Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita symbol LC
