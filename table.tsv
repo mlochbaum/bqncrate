@@ -375,6 +375,7 @@ i0⥊⟜0⊸↓y	Increase rank of y to i0	Tacit	Dyadic Function		Structural	numb
 +/∘⥊n	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems cells items
 a1+⟜1⊸/y	Duplicate y cells where indicated by a1	Tacit	Dyadic Function		Structural	replicate double items elements
 a1+´∘×n1	Summation over subsets of n1 specified by a1	Tacit	Dyadic Function		Mathematical	
+m1+´∘×n1	Dot product of vectors m1 and n1	Tacit	Dyadic Function		Mathematical	 dotproduct vectorproduct ∙ ⋅ · multiplication multiply
 m1⌈´∘×n1	Maximum of n1 with weights m1	Tacit	Dyadic Function		Mathematical	greatestif largest biggest
 m1⌊´∘×n1	Minimum of n1 with weights m1	Tacit	Dyadic Function		Mathematical	smallest least
 m1+´∘÷n1	Sum of reciprocal series m1÷n1	Tacit	Dyadic Function		Mathematical	sequence
@@ -493,6 +494,7 @@ x F⍟(↕1+y0) z	Apply F y0 times to z, returning initial value z and all inter
 m(π××)n	Area of cone with height m and radius n (excluding base)	Tacit	Dyadic Function		Circular/Trigonometric	lengths bottom
 ⊐⟜' '⎉1 d	Indices of first blanks in rows of array d	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text horizontally
 x0+´∘⥊∘=y	Number of occurrences of atom x0 in array y	Tacit	Dyadic Function		Comparison	count tally
+m1-´∘×⟜⌽n1	Scalar cross product of 2-dimensional vectors m1 and n1	Tacit	Dyadic Function		Mathematical	 vectorproduct signed area parallelogram
 c⊑∘∊˜⟜<d1	Is string d1 a member of list of strings c	Tacit	Dyadic Function		Index Generation	isin membership containedin has vtv vector
 (0=≠∘⥊)y	Is y an Empty Array?	Tacit	Monadic Function		Structural	testif isempty? isvoid? isnull?
 (1=≠∘⥊)y	Is y a singleton (array with only one element)?	Tacit	Monadic Function		Array Properties	testif unit? sole? one?
@@ -592,8 +594,8 @@ b1(i0=+`)⊸/y1	The i0'th sublist of y1 (sublists indicated by b1)	Tacit	Dyadic 
 (⊑⊢⊐⌈´)n1	Index of minimum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	lesser smaller smallest lowest least
 (⊑⊢⊐⌊´)n1	Index of maximum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	greater larger bigger greatest biggest largest highest
 x(≠∘⊣>⊒)y	Progressive member of (∊) without replacement	Tacit	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE remove
-m +˝∘×⎉1‿∞ n	Dot/Vector/Cross/Matrix Product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Dyadic Function		Mathematical	dotproduct vectorproduct crossproduct ∙ ⋅ · multiplication multiply
-m -˝∘×⎉1‿∞ n	Alternating Matrix Product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Dyadic Function		Mathematical	
+m +˝∘×⎉1‿∞ n	Matrix product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Dyadic Function		Mathematical	dotproduct multiplication multiply
+m -˝∘×⎉1‿∞ n	Alternating matrix product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Dyadic Function		Mathematical	
 a2 ∨˝∘∧⎉1‿∞ b2	Extend a transitive binary relation	Tacit	Dyadic Function		Boolean/Logical	extension base-2 base2
 m2 ⌊˝∘+⎉1‿∞ n2	Extend a distance table to next leg	Tacit	Dyadic Function		Mathematical	extension matrix
 i2 <¨⊸⊏⎉¯1‿∞ y	Select: each row of i2 selects a cell from y	Tacit	Dyadic Function		Selection	rightshoeunderbar saneindexing ⊇ items elements index
@@ -737,6 +739,7 @@ a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those l
 (+´÷≠)⌾(√⟜m0)n	Generalised mean	Tacit	Dyadic Function		Mathematical	x-mean xmean generalized power Hölder holder cubic
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Dyadic Function		Sets	⊖
 (+˝÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Monadic Function		Mathematical	average GM() G() geometricmean
+m1 1⊸⌽⊸×{1⌽𝔽˜-𝔽} n1	Cross product of 3-dimensional vectors m1 and n1	Tacit	Dyadic Function		Mathematical	crossproduct exterior product multiplication multiply
 (××·⌊|+1>2||)n	Round to nearest odd number, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring
 (××·⌊|+1≤2||)n	Round to nearest even number, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring
 (××¯1+2×·⌈2÷˜|)n	Round to nearest odd number, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring
@@ -864,6 +867,7 @@ c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of char
 (⊏∘⊑˘·(⌈´⊸=≠¨)⊸/⊐⊸⊔)y	Modes: Most frequent major cells of data	Tacit	Monadic Function		Set	average items elements
 -⟜(64×'^'⊸=»⊸∧1="@`"⊸⍋)d1	Evaluate control character sequences (like ^J)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed lf verticaltab vt formfeed ff carriagereturn cr crlf cr+lf ^M^J control-z sub eof endoffile end-of-file escape ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^J ^K ^L ^M ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Dyadic Function		Text	match lcs
+(+´(↕3)(×˝⌽˘){𝔽--⊸𝔽}⊢) n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Tacit	Monadic Function		Mathematical	scalar box signed volume parallelepiped
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of elements of sublists of y indicated by a1	Tacit	Dyadic Function		Mathematical	segmented partitioned array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of elements of sublists of y indicated by a1	Tacit	Dyadic Function		Mathematical	segmented partitioned array maximums greatestif largest biggest major cells items
 m(+´⋆⌜˜)⟜((1+↕)⊸(⊣/˜0=|))j0	Sum of m'th powers of positive divisors of j0	Tacit	Dyadic Function		Mathematical	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
