@@ -812,6 +812,7 @@ i(⊢/˜¬∘∊˜⟜(↕≠))y	Remove major cells with indices i from y	Tacit	D
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Dyadic Function		Selection	trim left right spaces multiple consecutive blanks start beginning ending
 i0(⌊∘×⟜(↕⊸÷≠)⊔⊢)y	Distribute major cells of y into i0 slices as evenly as possible	Tacit	Dyadic Function		Structural	unzip elements items deal
 a1(¬1(∾/∾˜)(∨/⊣))b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	sub-vector cell item ∨/¨a1⊂[1]b1
+(<⥊¨·⊣⌜˜`⌾⌽↕¨)j1	Index arrays along each dimension for shape j1	Tacit	Monadic Function		Index Generation	separated indices positions locations elements odometer meshgrid ndgrid
 (≠(«-⊢)·/1»≠⟜«)y1	Lengths of sublists of y1 having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items
 (-˜˝·(⍋⍋)⌾⥊≍˜)y1	Count of total (not previous) occurrences of each element of y1	Tacit	Monadic Function		Sets	tally selfcount items elements
 ('F'-·×⊸+60‿70‿80‿90⊸⍋)j	Students grades given score	Tacit	Monadic Function		Mathematical	
