@@ -576,7 +576,7 @@ x1(⥊∾⎉0‿1˜)y1	Insert x1 after every element of y1	Tacit	Dyadic Function
 ∾⟜(1¨∘⊏)y	Append a row of 1s	Tacit	Monadic Function		Structural	ones trues truths
 ⌽⌾(0‿¯1⊸⊏)y	Swap first and last major cells	Tacit	Monadic Function		Structural	exchange swap head tail leading trailing elements items 1st start beginning ending
 (↕∘≠≡∧)y1	Is y1 permutation?	Tacit	Monadic Function		Array Properties	testif
-x(¬∘∊/⊢)y	x without major cells that appear in y	Tacit	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
+x(¬∘∊/⊣)y	x without major cells that appear in y	Tacit	Dyadic Function		Sets	butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
 (∊∘/1⊸+)n1	Boolean gaps of lengths n1 after each one	Tacit	Monadic Function		Boolean/Logical	runs binary base-2 base2
 (¬∧´∘∊)y	Are any two major cells of y identical to each other?	Tacit	Monadic Function		Sets	testif anysame? anyequal? anyduplicates? anyidentical? anydups? items elements
 (∊∧∊⌾⌽)y	Indicate which cells of y appear exactly once	Tacit	Monadic Function		Comparison	unique indication indicate items masking indicating
