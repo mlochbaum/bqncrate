@@ -318,7 +318,7 @@ i0/⟜≍y1	Table with i0 rows, each consisting of y1	Tacit	Dyadic Function		Str
 ∾∘≍y1	Join elements of y1 along the second axis	Tacit	Primitive		Structural	combine merge joinhorizontally cells elements dimensions
 ⌽‿i0⥊y1	Reshape y1 to i0-column table (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise columns
 i0‿⌽⥊y1	Reshape y1 to i0-row table (filled row-wise)	Tacit	Monadic Function		Structural	table horizontally rowwise rows
-0‿0⊸↓y	Increase rank of y to at least 2 by adding length-1 leading axes	Tacit	Monadic Function		Structural	number of dimensions pad 2D axes matrify matricise matricize make
+0‿0⊸↓y	Increase rank of y to at least 2 by adding length-1 leading axes	Tacit	Monadic Function		Structural	number of dimensions 2D axes matrify matricise matricize make
 i0⊏∘⌽y	Select major cell of y at cyclic offset i0 (default i0:¯1)	Tacit	Dyadic Function		Selection	element item
 i0⊏⟜∨y	i0'th-largest major cell of y	Tacit	Monadic Function		Selection	greatestof maximum biggest lexicographically item element
 i0⊏⟜∧y	i0'th-smallest major cell of y	Tacit	Monadic Function		Selection	leastof minimum lexicographically item element
@@ -370,7 +370,7 @@ a ¯1⊸⋆⊸× n	Conditional elementwise change of sign	Tacit	Dyadic Function	
 x2↑˜⟜≠y2	Vertically lengthening table x2 to be compatible (for ∾˘) with y2	Tacit	Monadic Function		Structural	compatibility sameheight adjust column-wise columnwise table
 i0⥊⟜0⊸»y1	Shift y1 right by i0, padding on left	Tacit	Dyadic Function		Selection	rightshift list
 i0⥊⟜0⊸«y1	Shift y1 left by i0, padding on right	Tacit	Dyadic Function		Selection	leftshift list
-i0⥊⟜0⊸↓y	Increase rank of y to i0	Tacit	Dyadic Function		Structural	number dimensions pad axes
+i0⥊⟜0⊸↓y	Increase rank of y to i0	Tacit	Dyadic Function		Structural	number dimensions axes
 +/∘⥊b	Number of trues	Tacit	Monadic Function		Boolean/Logical	sumall howmanytrue count tally 1s ones truths
 +/∘⥊n	Sum all elements in an array	Tacit	Monadic Function		Arithmetic	sumall +⌿, grandtotal sumitems cells items
 a1+⟜1⊸/y	Duplicate y cells where indicated by a1	Tacit	Dyadic Function		Structural	replicate double items elements
@@ -404,7 +404,7 @@ x/⁼∘⍋y	Distribution of y into intervals with cut-offs x	Tacit	Dyadic Funct
 +`∘»j1	Starting positions of sublists having lengths j1	Tacit	Monadic Function		Index Generation	sub-vectors sub-lists sublists
 x∧`∘=y	Indicate leading elements that are equal	Tacit	Dyadic Function		Comparison	show matching onleft cells items masking indicating start beginning
 x∧`∘≠y	Indicate leading elements that are unequal	Tacit	Dyadic Function		Comparison	show different onleft cells items masking indicating start beginning
-≠`⊸∨b	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Monadic Function		Boolean/Logical	1s pad trues truths
+≠`⊸∨b	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Monadic Function		Boolean/Logical	1s trues truths
 +`∘↕j0	First j0 triangular numbers	Tacit	Monadic Function		Mathematical	oeisA000217 oeisA217 1st
 <˘∘⍉y2	Table to list of column lists (inverted table)	Tacit	Monadic Function		Structural	split table lists into columns vertically column-wise columnwise boxed enclosed table matrix transforming transformation change changing into inverting inversion
 a1/¨⊸⊔y	Partition y along each axis by list of partition length lists a1	Tacit	Dyadic Function		Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions blockmatrix
@@ -433,7 +433,7 @@ m ×⎉1‿∞ n	Mid product of m and n	Tacit	Dyadic Function		Mathematical	midp
 -⟜'0'd	Translate character digits to numbers	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean decimal converting change changing
 -⟜'a'd	Convert lowercase letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals Conversion converting change changing
 m×⊸×⟜|n	Transfer sign from m to n	Tacit	Dyadic Function		Mathematical	signum resign
-x 0¨∘≢⊸↓ y	Increase rank of y to rank of x	Tacit	Dyadic Function		Structural	conform align number dimensions pad axes
+x 0¨∘≢⊸↓ y	Increase rank of y to rank of x	Tacit	Dyadic Function		Structural	conform align number dimensions axes
 -⟜»∘/i1	Segment lengths given the number of segments that end at each position	Tacit	Monadic Function		Data Conversion	chunk trailing converting change changing segments partitions
 +´∘×˜n1	Sum of squares of n1	Tacit	Dyadic Function		Mathematical	∑x² Σx² sum(x^2) Pythagorean trigonometry
 x2∧˝˘∘=y0	Boolean rows of x2 all equal to unit y0	Tacit	Dyadic Function		Sets	findall lookup binary base-2 base2 compare equality match
@@ -745,7 +745,7 @@ m1 1⊸⌽⊸×{1⌽𝔽˜-𝔽} n1	Cross product of 3-dimensional vectors m1 an
 (××¯1+2×·⌈2÷˜|)n	Round to nearest odd number, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring
 (⌊⊢+2÷˜0.5≠2|⊢)n	Round to nearest integer, ties to even	Tacit	Monadic Function		Mathematical	precision whole number favoring
 i0(⊣√·+´⋆˜⟜|)n	i0-norm	Tacit	Dyadic Function		Mathematical	Lp-normal L-p ℓp ℓ-p
-(⊢↑˝·≍⟜¬2+≢)y	Pad y with a layer of fill elements on all sides	Tacit	Monadic Function		Structural	expand enlarge outer outside boundary
+(⊢↑˝·≍⟜¬2+≢)y	Pad y with a layer of fill elements on all sides	Tacit	Monadic Function		Structural	expand enlarge outer outside around edges boundary border surround frame
 m((π÷3)××˜⊸×)n	Volume of cone with height m and radius n	Tacit	Dyadic Function		Circular/Trigonometric	lengths
 (»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate blanks	Tacit	Monadic Function		Text	delete trim without consecutive extraneous normalise normalize spaces multiple drop start beginning
 (∨⟜«' '⊸≠)⊸/d1	Remove trailing and duplicate blanks	Tacit	Monadic Function		Text	delete trim without consecutive extraneous normalise normalize spaces multiple drop start ending
@@ -788,6 +788,8 @@ i0(⊢/˜(⍋⍒)⊸∊˜)y	The i0 largest cells of y in order of occurrence	Tac
 x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Tacit	Dyadic Function		Selection	trim trailing right cells items list ending
 a1+`⊸(⊏˜⍋⊸⊏⊢)⟜⍋y	Grade up (⍋) for sorting subarrays of y indicated by a1	Tacit	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
 a1+`⊸(⊏˜⍋⊸⊏⊢)⟜⍒y	Grade down (⍒) for sorting subarrays of y indicated by a1	Tacit	Dyadic Function		Index Generation	sub-arrays sub-vectors subvectors substrings sub-strings
+i0((⊢+|⟜-)⟜≠↑⊢)y	Increase the leading dimension of y to multiple of i0	Tacit	Dyadic Function		Structural	1st axis divisibleby pad extend first start beginning
+i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tacit	Dyadic Function		Structural	allaxes divisibleby pad extend axes
 (∨⌜´(⌽⊸∨↑⟜1)¨)j1	Array of shape j1 with ones along faces and zeros inside	Tacit	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle
 (+´(⌈´≠¨)↑¨⊢)y1	Sum of list of polynomials with ascending coefficient order	Tacit	Dyadic Function		Mathematical	sumof
 m0(⋆⟜(↕≠)+´∘×⊢)n1	Value of polynomial with ascending coefficients n1 at point m0	Tacit	Dyadic Function		Mathematical	
@@ -803,8 +805,6 @@ a1(1⌈·⌈`↕∘≠⊸×)⊸⊏y	Copy each cell of y until before next 1 in a
 (>⌈´↑¨⥊¨⟜'⎕')j	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting
 (⍋·+˝˘' '⊸≠)⊸⊏d2	Sort words in list d2 according to word length	Tacit	Monadic Function		Text	vector
 ((¬/"in"˙)∾"correct"˙)b0	Conditional in text	Tacit	Monadic Function		Data Conversion	message true false Boolean binary base-2 base2 converting change changing
-i0(⊢↑˜≠∘⊢+|⟜-⟜≠)y	Increase the leading dimension of y to multiple of i0	Tacit	Dyadic Function		Structural	1st axis divisibleby pad extend first start beginning
-i1(⊢↑˜≢∘⊢+|⟜-⟜≢)y	Increase the dimensions of y to multiples of i1	Tacit	Dyadic Function		Structural	allaxes divisibleby pad extend axes
 (⍉↕∘≠+˝∘×=⌜⟜1‿¯1)j2	Change connection matrix j2 (¯1 to 1) to a node matrix	Tacit	Monadic Function		Mathematical	graph connectivity table change converting conversion
 m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descending order)	Tacit	Dyadic Function		Mathematical	multiplicationof multiply times coefficients
 m1((√+´∘×˜)÷⟜2⊸∾)n0	Length of edges of rectangular pyramid with base dimensions m1 and height n0	Tacit	Dyadic Function		Mathematical	lengths sides
