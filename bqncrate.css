@@ -11,7 +11,7 @@ label{justify-self:right}
 #q{grid-column:4/5;place-self:center stretch;border:none;font-size:medium}
 #q{margin-right:-1.2em} #x{margin:0 0.2em 0 -0.4em}
 p{grid-column:1/-1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:1ex 0 0 0}
-#z{grid-column:1/4} #um{margin-left:-7.1em} #r{grid-column:5}
+#z{grid-column:1/4} #r{grid-column:5}
 a:hover,a:focus,tr:hover td{color:#000}
 .o,td a{height:1em;border-radius:1em;border:.25ex solid currentcolor;width:1em;line-height:1em}
 a{place-self:center;display:inline-block;text-align:center;color:unset;
@@ -24,7 +24,12 @@ td{padding:.5em}
 td a{margin-right:0.75em;color:#bbb}
 td:first-child a:before{display:inline-block;position:relative;margin-left:0.33ex;line-height:0;content:'';
   border:0.6ex solid transparent;border-left:1ex solid currentcolor;border-right:none}
-#u{text-align:center}
+#u{text-align:center;margin-left:-7.1em}
 #w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 @media(max-width:1320px){s{display:none}}
-@media(max-width:420px){.o{display:none} .h{grid-template-columns:7em auto} #u{text-align:right}}
+@media(max-width:420px){
+  .o,#m{display:none}
+  .h{grid-template-columns:7em auto}
+  #z{grid-column:1} #u{text-align:right}
+  #q{grid-column:2;margin-right:0}
+}
