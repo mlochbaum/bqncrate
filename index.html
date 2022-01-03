@@ -5,20 +5,26 @@
     <link rel="shortcut icon" href="favicon.ico"/><title>BQNcrate - Find your way in BQN</title>
     <link rel="stylesheet" href="bqncrate.css"/><script src="bqncrate.js"></script>
   </head>
-  <body onload="I()" id="b">
-    <a     title="m̲ain page" id="m" accesskey="m" href=".">⊔˜</a>
-    <a     title="e̲xplanation" target="_blank" id="e" accesskey="e" href="https://github.com/mlochbaum/bqncrate#usage">?</a>
-    <label title="what to q̲uery for">Tell me about: <input id="q" accesskey="q" oninput="Q()" autocomplete="off"/></label>
-    <a     title="ex̲punge query"        href="#" id="x" accesskey="x" onclick="X()">×</a>
-    <a     title="c̲opy to address bar" href="#" id="c" accesskey="c" onclick="C()">#</a>
-    <p>x,<s> </s>y,<s> </s>z:<s> </s>any<s> type </s> m,<s> </s>n:<s> </s>num<s>eric </s> i,<s> </s>j:<s> </s>int<s>eger </s> a,<s> </s>b:<s> </s>bool<s>ean </s> c,<s> </s>d:<s> </s>char<s>acter </s> f,<s> </s>g,<s> </s>h:<s> </s>f<s>unctio</s>n<s> </s> 0:<s> </s>unit<s> </s> 1:<s> </s>list<s> </s> 2:<s> </s>tab<s>le</s></p>
-    <div   title="(access-key z)" id="d" accesskey="z"><table id="t"></table></div>
-    <footer id="z"></footer>
-    <span id="u">
-      <a id="um" href="quiz" title="challenge your BQN skills with the BQNcrate quiz">Quiz</a></span>
-    <a title="bqncrate r̲epository" target="_blank" id="r" accesskey="r" href="https://github.com/mlochbaum/bqncrate">
-      <img src="github.svg"></a>
-    <a title="cycle b̲lack/g̲rey/w̲hite theme"  id="w" href="#" onclick="W()"> </a>
-    <i accesskey="w" onclick="W('w')"></i><i accesskey="g" onclick="W('g')"></i><i accesskey="b" onclick="W('b')"></i>
+  <body onload="I()" id="b" class="">
+    <div class="h">
+      <a     title="m̲ain page" id="m" accesskey="m" href=".">⊔˜</a>
+      <a class="o" title="e̲xplanation" target="_blank" id="e" accesskey="e" href="https://github.com/mlochbaum/bqncrate#usage">?</a>
+      <label title="what to q̲uery for" for="q">Tell me about:&nbsp;</label><input id="q" title="what to q̲uery for" accesskey="q" oninput="Q()" autocomplete="off"/>
+      <a class="o" title="ex̲punge query"        href="#" id="x" accesskey="x" onclick="X()">×</a>
+      <a class="o" title="c̲opy query URL" href="#" id="c" accesskey="c" onclick="C()">#</a>
+      <p>x,<s> </s>y,<s> </s>z:<s> </s>any<s> type </s> m,<s> </s>n:<s> </s>num<s>eric </s> i,<s> </s>j:<s> </s>int<s>eger </s> a,<s> </s>b:<s> </s>bool<s>ean </s> c,<s> </s>d:<s> </s>char<s>acter </s> f,<s> </s>g,<s> </s>h:<s> </s>f<s>unctio</s>n<s> </s> 0:<s> </s>unit<s> </s> 1:<s> </s>list<s> </s> 2:<s> </s>tab<s>le</s></p>
+    </div>
+    
+    <div id="y" title="(access-key z)"><div id="k" accesskey="z"><table id="t"></table></div></div>
+    
+    <div class="h">
+      <footer id="z"></footer>
+      <span id="u">
+        <a id="um" href="quiz" title="challenge your BQN skills with the BQNcrate quiz">Quiz</a></span>
+      <a class="o" title="bqncrate r̲epository" target="_blank" id="r" accesskey="r" href="https://github.com/mlochbaum/bqncrate">
+        <img src="/github.svg"></a>
+      <a class="o" title="cycle b̲lack/g̲rey/w̲hite theme"  id="w" href="#" onclick="W()"> </a>
+      <i accesskey="w" onclick="W('w')"></i><i accesskey="g" onclick="W('g')"></i><i accesskey="b" onclick="W('b')"></i><i accesskey="r" onclick="R()"></i>
+    </div>
   </body>
 </html>
