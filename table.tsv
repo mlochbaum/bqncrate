@@ -163,6 +163,68 @@ i1⊔y	Group major cells of y into the positions i1	Primitive	Dyadic Function		S
 x1⊔y	Group array y based on x1	Primitive	Dyadic Function		Selection	square cup bucket sort
 F⚇j0 y	Depth: apply F to depth-j0 nested elements of y	Primitive	Monadic Function	2-modifier	Function Application	circledots recursion repeated each
 x F⚇j1 y	Depth: F on corresponding elements of x and y at the given depths	Primitive	Dyadic Function	2-modifier	Function Application	circledots recursion repeated each
+F•_timed y	Time taken to evaluate F y	System	Monadic Function	1-modifier	Time	timings performance speed measure elapsed tuning tune
+m0 F•_timed y	Average time per call to evaluate F y, m0 times in succession	System	Dyadic Function	1-modifier	Time	timings performance speed measure elapsed tuning tune mean
+x •Import d1	Load BQN script from path d1, with •args x	System	Dyadic Function		Execution	include library run execute
+x1 •BQN d1	Evaluate string d1 as BQN code, with •state x1	System	Dyadic Function		Execution	eval() run call
+•MakeRand m0	Random number generator (behaves like •rand) initialized with seed m0	System	Monadic Function		Random	RNG rnd pseudorandominteger pseudo-randomfloat srandomness source randomlink deterministic reproducible reproduce seeded predictable
+•MonoTime y	Monotonically-increasing time counter in seconds, for relative measurement	System	Monadic Function		Time	
+•Import d1	Load BQN script from path d1, recalling saved result if already loaded	System	Monadic Function		Execution	include library run execute
+•BQN d1	Evaluate source string d1 as BQN code	System	Monadic Function		Execution	eval() run call
+•Decompose g	Split compound function g into parts	System	Monadic Function		Properties	
+•Delay n0	Wait n0 seconds	System	Monadic Function		Time	await sleep pause idle
+•Exit y	Exit the running BQN process, with return code y	System	Monadic Function		Execution	quit terminate level stop close
+•Fmt y	Format value y for printing	System	Monadic Function		I/O	itoa tostringify() totext() tostring()
+•Glyph g	Glyph character of primitive g	System	Monadic Function		Properties	squiggle builtin
+•Out d1	Print string d1, and trailing newline, to stdout	System	Monadic Function		I/O	echo puts
+•ReBQN y	Create BQN-like evaluation function using options namespace y	System	Monadic Function		Execution	repl extend extension replace new
+•Repr y	Source code representation of BQN value y, if possible	System	Monadic Function		I/O	uneval itoa totext() numbers numerics converting into marshal serialize pickle
+•Show y	Format and print BQN value y	System	Monadic Function		I/O	echo log debug display
+•Type y	Type of y: 0 array, 1 number, 2 character, 3 function, 4 1-modifier, 5 2-modifier, 6 namespace	System	Monadic Function		Properties	kind
+•UnixTime y	Current Unix time in seconds	System	Monadic Function		Time	now timestamp datetime
+•args	Arguments passed to the current script by command line or BQN caller	System	Constant		Execution	startup shell args argv cmdline cli
+•state	The list ⟨•path, •name, •args⟩ of execution state	System	Constant		Execution	bqn
+•name	Name of the file where this system value appears	System	Constant		Execution	this here script location
+•path	Path of the file where this system value appears	System	Constant		Execution	this here script location
+•primitives	List of primitives as glyph‿value pairs	System	Constant		Execution	builtins
+•wdpath	The shell's current working directory path	System	Constant		Execution	pwd folder location where
+m0 •rand.Deal n0	A simple random sample of m0 elements of ↕n0	System	Dyadic Function		Random	srs draw without replacement removing
+m0 •rand.Subset n0	A sorted random sample of m0 elements from ↕n0	System	Dyadic Function		Random	srs simple draw without replacement removing reservoir
+m1 •file.Owner d1	Set owner user ID and group ID number of file d1	System	Dyadic Function		Files	dir directory directories folders ls list information vector chown
+m1 •file.Permissions d1	Set permissions of file d1	System	Dyadic Function		Files	dir directory directories folders ls list information vector chmod
+m1 •rand.Range n0	Shape m1 array of elements selected uniformly at random from ↕n0	System	Dyadic Function		Random	randominteger roll draw with replacement
+c1 •file.At d1	Absolute path of file with path d1 relative to c1	System	Dyadic Function		Files	resolve canonicalize reduce extend
+c1 •file.Bytes d1	Write raw bytes to file d1 (overwrites existing contents)	System	Dyadic Function		Files	store put dump cat save to overwrite UTF-8
+c1 •file.Chars d1	Write string c1 to file d1 (overwrites existing contents)	System	Dyadic Function		Files	store put dump cat save to overwrite
+c1 •file.Copy d1	Copy file d1 to c1	System	Dyadic Function		Files	copying
+c1 •file.Rename d1	Rename file d1 to c1	System	Dyadic Function		Files	moving renaming
+x1 •file.Lines d1	Write lines x1 to file d1 (overwrites existing contents)	System	Dyadic Function		Files	store put dump cat save to overwrite vtv charvec charactervector textvector string
+•file.Modified d1	Time of last modification to file d1	System	Monadic Function		Files	filepath dir directory directories folders ls list information vector when modified
+•file.Name d1	File name from path d1	System	Monadic Function		Files	parts
+•file.Accessed d1	Time of last access to file d1	System	Monadic Function		Files	filepath dir directory directories folders ls list information vector when previously accessed
+•file.At d1	Absolute path of file d1	System	Monadic Function		Files	resolve canonicalize reduce relative
+•file.Basename d1	File name from path d1, with dot and extension removed	System	Monadic Function		Files	parts
+•file.Bytes d1	Return contents of file d1 as raw bytes	System	Monadic Function		Files	get read fetch load UTF-8
+•file.Chars d1	Return contents of file d1 as a string	System	Monadic Function		Files	get read fetch load
+•file.CreateDir d1	Create a directory with path d1	System	Monadic Function		Files	mkdir md newfolder make
+•file.Created d1	Time file d1 was created	System	Monadic Function		Files	filepath dir directory directories folders ls list information vector when created
+•file.Exists d1	1 if file d1 exists and 0 otherwise	System	Monadic Function		Files	check is there dir directory directories folders ls list information vector
+•file.Extension d1	File extension, including leading dot, from path d1	System	Monadic Function		Files	parts
+•file.List d1	Return the list of filenames contained in directory d1	System	Monadic Function		Files	dir directory directories folders ls list information vector
+•file.Lines d1	Return lines of file d1 as a list of strings	System	Monadic Function		Files	get read fetch load vtv charvec charactervector textvector string
+•file.Owner d1	Owner user ID and group ID number of file d1	System	Monadic Function		Files	dir directory directories folders ls list information vector userid user-id windows sid
+•file.Parent d1	Path of containing directory of path d1	System	Monadic Function		Files	parts
+•file.Parts d1	List of parent, base name, and extension given path d1	System	Monadic Function		Files	split divide
+•file.Permissions d1	Permissions of file d1, as a 3-element list	System	Monadic Function		Files	dir directory directories folders ls list information vector
+•file.Remove d1	Delete file d1	System	Monadic Function		Files	dcf delete expunge remove drop without removing erasing eliminate eliminating deleting
+•file.RemoveDir d1	Recursively delete directory d1 and all contents	System	Monadic Function		Files	dir directory directories folders dcf delete expunge remove drop without removing erasing eliminate eliminating deleting
+•file.Size d1	Total size in bytes of file d1	System	Monadic Function		Files	dir directory directories folders ls list information vector
+•file.Type d1	A character from "fdlpsbc" indicating POSIX type of file d1	System	Monadic Function		Files	filepath dir directory directories folders ls list information vector symbolic first-in-first-out character
+•file.path	Equivalent to •path	System	Constant		Files	this here script location
+•rand.Deal n0	A random shuffle of ↕n0	System	Monadic Function		Random	shuffling reorder
+•rand.Range 0	A random real number in the interval from 0 to 1	System	Monadic Function		Random	roll
+•rand.Range n0	A number selected uniformly at random from ↕n0	System	Monadic Function		Random	randominteger roll
+•rand.Subset n0	A random sorted subset of ↕n0	System	Monadic Function		Random	simple random sample srs length
 1˘y2	List having as many ones as y2 has rows	Tacit	Monadic Function		Boolean/Logical	1s trues truths list
 0¨y	Zeros with same shape as y	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
 x0¨y	Fill array y with data value x0	Tacit	Monadic Function	1-modifier	Structural	
