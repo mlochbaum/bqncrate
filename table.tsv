@@ -951,14 +951,14 @@ m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation c
 c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Dyadic Function		Text	fuzzy match
 m0(∾·(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽↕⟜↕)n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Tacit	Dyadic Function		Mathematical	combinatorics selections list sublists subsequences choices choose
 i0(⊣|·⊑{𝕨(0⊸<)◶⟨1‿0,(⊢𝕊|˜)(⌽∘⊣-×)0⋈⌊∘÷⟩𝕩}˜)j0	Multiplicative inverse of j0 modulo i0	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
+x⍋⌾⋈y	Is x lexically less than or equal to y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
+x⍒⌾⋈y	Is x lexically greater than or equal to y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
+x(¬⍋⌾⋈)y	Is x lexically greater than y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds
+x(¬⍒⌾⋈)y	Is x lexically less than y?	Block Function	Dyadic Function		Comparison	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 {<˘⍉>𝕩}y1	Invert list of lists, so that element i of j of the result is j of i of the argument	Block Function	Monadic Function		Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
 i1(⌽∘⍒/)⊸⊏y	Reverse (⌽) sublists of y having lengths i1	Block Function	Dyadic Function		Structural	
 x1{∾𝕨⊸∾¨𝕩}y1	Join list of lists y1 using separator x1, including leading separator	Block Function	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging
 c{𝕨⊸⊐⌾<𝕩}d1	Position of first occurrence of string d1 in list of strings c	Block Function	Dyadic Function		Index Generation	indexin indexof vtv vector 1st
-x{<´⍋𝕨‿𝕩}y	Is x lexically less than or equal to y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
-x{>´⍋𝕨‿𝕩}y	Is x lexically greater than y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds
-x{<´⍒𝕨‿𝕩}y	Is x lexically greater than or equal to y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
-x{>´⍒𝕨‿𝕩}y	Is x lexically less than y?	Block Function	Dyadic Function		Comparison	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 {⥊1‿0‿1∧⌜⍟𝕩1}j0	Cantor set iteration j0	Block Function	Monadic Function		Mathematical	fractal ternary middle third
 i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	Dyadic Function		Index Generation	repeated
 x{𝕨⌾(¯1⊸⊏)𝕩}y	Replace last major cell of y with x0	Block Function	Dyadic Function		Structural	substitute merge amend replace update item element
