@@ -770,7 +770,7 @@ x(⌊⟜≠⊏∾⟜i∘⊢)y	Select major cells at indices x from y, using cell
 (>⌜˜↕∘≠)⊸≡b2	Is b2 a full lower triangular matrix without diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular? remove strict
 (≤⌜˜↕∘≠)⊸≡b2	Is b2 a full upper triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle NE northeast north-east table triangular?
 (≥⌜˜↕∘≠)⊸≡b2	Is b2 a full lower triangular matrix with diagonal?	Tacit	Monadic Function		Boolean/Logical	testif triangle SW southwest south-west table triangular?
-i(×´1+-⊸↑⟜↕)j	Number of ordered of combinations of i out of j, assuming i≤j	Tacit	Dyadic Function		Mathematical	combinatorics permutations
+i0(×´1+-⊸↑⟜↕)j0	Number of ordered selections (permutations) of i0 items from j0 choices	Tacit	Dyadic Function		Mathematical	combinatorics permutations
 x(≠∘⊣-1+⌽⊸⊐)y	Last indices in x of major cells y (¯1 if not found)	Tacit	Dyadic Function		Index Generation	indexin indexof finding locating locate positionof items elements location
 (≠⊸⋈¨⊸⍋⊸⊏)y1	Ascending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
 (≠⊸⋈¨⊸⍒⊸⊏)y1	Descending shortlex sort	Tacit	Monadic Function		Mathematical	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
@@ -921,6 +921,7 @@ a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch given b1 on and a1 o
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	zeros 0s falses falsehoods start beginning
 (-·+´2(⋆⁼×⊢)/⁼∘⊐÷≠)y	Shannon entropy of array 𝕩	Tacit	Monadic Function		Mathematical	informationtheory text message string
 (" ⎕"⊏˜·>⌜⟜(↕⌈´)/⁼)j1	Histogram (distribution barchart, down the page)	Tacit	Monadic Function		Mathematical	
+i0(-(+÷○(×´+)⊢)1+↕∘⊢)˜j0	Number of unordered selections (combinations) of i0 items from j0 choices	Tacit	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered selecting picking outof nCk C(n,k)
 a1(⊢∧∧(⊢∊/)(+`»⊸<)∘⊢)b1	Groups of ones in b1 pointed to by at least one 1 in a1	Tacit	Dyadic Function		Boolean/Logical	runs sequences 1s indicated trues truths
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
