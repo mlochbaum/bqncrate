@@ -856,6 +856,7 @@ i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tac
 (∨⌜´(⌽⊸∨↑⟜1)¨)j1	Array of shape j1 with ones along faces and zeros inside	Tacit	Monadic Function		Structural	all-around along outline frame table 1s zeroes 0s zeros in middle
 (+´(⌈´≠¨)↑¨⊢)y1	Sum of list of polynomials with ascending coefficient order	Tacit	Dyadic Function		Mathematical	sumof
 m0(⋆⟜(↕≠)+´∘×⊢)n1	Value of polynomial with ascending coefficients n1 at point m0	Tacit	Dyadic Function		Mathematical	
+i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorter one at the end if needed	Tacit	Dyadic Function		Structural	chunk divide dividing cut partition distribute greedy
 a1(1(∾/∾˜)(≥/⊣))b1	All elements true (∧´) for each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	sub-vector major cells items ∧/¨a1⊂[1]b1
 i0 10⊸⋆⊸(⊣÷˜0.5⌊∘+×) n	Round n to i0 decimal places	Tacit	Dyadic Function		Mathematical	precision banking banker's bank's (⍎⍕)
 i0(⊢÷⊣√·+´⋆˜⟜|)n	Normalisation by i0-norm	Tacit	Dyadic Function		Mathematical	Lp-normalise Lp-normalize Lp-normalization L-p ℓp ℓ-p
