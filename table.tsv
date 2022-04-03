@@ -347,11 +347,11 @@ m|∘-n	Absolute distance between x and y	Tacit	Dyadic Function		Mathematical	ma
 a¬∘∨b	Logical NOR	Tacit	Dyadic Function		Boolean/Logical	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽ neither-nor gate †
 a¬∘∧b	Logical NAND	Tacit	Dyadic Function		Boolean/Logical	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼ gate
 m¬∘∧n	Probabilistic NAND	Tacit	Dyadic Function		Mathematical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼
-»⊸<b	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns trues truths 1st binary base-2 base2
-»⊸<b1	First ones in groups of ones	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st
+»⊸<b	Boolean first ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	beginningsofruns trues truths 1st binary base-2 base2 runs sequences blocks
 a0-⊸↓y	Conditional drop of last element of y	Tacit	Dyadic Function		Structural	trailing cell item delete remove ending without
 i0-⊸↑y1	Pad y1 on the left to width i0	Tacit	Dyadic Function		Structural	extend left-align leftalign text
 x≠⊸⥊y	Array with shape of x and content of y	Tacit	Dyadic Function		Structural	reshape mould mold form fill
+¬⊸-n	Convert 0 to 1 and 1 to -1 with a linear transformation	Tacit	Monadic Function		Mathematical	affine unit interval boolean sign reverse negative
 a¬⊸∨b	Probabilistic implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
 m¬⊸∧n	Probabilistic converse nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance ⇍ Mpq
 a¬⊸⋆n	Conditional change of elements of n to one according to a	Tacit	Dyadic Function		Mathematical	1 cells items changing converting conversion
@@ -360,6 +360,7 @@ m×⟜÷n	Division, forcing error for division by 0	Tacit	Dyadic Function		Mathe
 x«⟜»y	Replace last major cell of y with x0 (slow)	Tacit	Dyadic Function		Structural	substitute merge amend replace update item element
 >⟜«b	Boolean last ones in each group of ones	Tacit	Monadic Function		Boolean/Logical	endsofruns 1s trues truths binary base-2 base2
 i1⥊⟜<y	Array of shape i1 filled with copies of y	Tacit	Dyadic Function		Structural	copy repeat repetitions duplicate reshape
+-⟜¬n	Convert range [0,1] to [-1,1] with a linear transformation	Tacit	Monadic Function		Mathematical	affine unit interval boolean sign
 a∨⟜¬b	Probabilistic converse implication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance because ∵ ⇐ if converseconditional Bpq reverseimplying
 m∧⟜¬n	Probabilistic nonimplication	Tacit	Dyadic Function		Mathematical	fuzzy probability chance abjunction ⇏ not butnot Lpq
 1⊸↑˘ y2	First column as a column matrix (column list)	Tacit	Monadic Function		Selection	leftmostcolumn leading 1st table list start beginning
@@ -389,7 +390,9 @@ i0⊏⟜∧y	i0'th-smallest major cell of y	Tacit	Monadic Function		Selection	le
 ↕∘≠y2	All row indices of table y2	Tacit	Monadic Function		Index Generation	enumerate rows table
 ↕∘≢y	All indices of y, as a matching-shape array	Tacit	Monadic Function		Index Generation	indicesof
 ⥊∘↕y1	All tuples of corresponding elements of ↕¨y1 (for small y1)	Tacit	Monadic Function		Index Generation	indices major cells items
+↕⊸÷j0	Start points when [0,1) is split into j0 intervals	Tacit	Monadic Function		Index Generation	unit normalized steps linear divide
 m0×⟜↕j0	Arithmetic progression vector: j0 steps of m0	Tacit	Dyadic Function		Mathematical	sequence
+↕⊸∾j0	Integers from 0 to j0 inclusive	Tacit	Monadic Function		Index Generation	unsigned natural whole numbers additional extra
 m0↕∘⋈n0	Catalogue of all pairs from ↕m0 and ↕n0	Tacit	Dyadic Function		Index Generation	pairings tuples table matrix
 x¬∘∊y	Boolean elements in x that are not in y	Tacit	Dyadic Function		Sets	isnotin membership notcontainedin hasn't doesnothave elementof ∉ cells elements binary base-2 base2
 ∊∘/j1	Change lengths j1 of sublists to starting indicators	Tacit	Monadic Function		Boolean/Logical	partitions change converting conversion segments
@@ -509,6 +512,7 @@ x ∧˝∘=⎉1 y1	Compare list y1 with rows of array x	Tacit	Dyadic Function		C
 >⌜˜∘↕j0	Lower triangular matrix without diagonal: j0 by j0	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table remove strict
 ≤⌜˜∘↕j0	Upper triangular matrix with diagonal: j0 by j0	Tacit	Monadic Function		Boolean/Logical	triangle NE northeast north-east table
 ≥⌜˜∘↕j0	Lower triangular matrix with diagonal: j0 by j0	Tacit	Monadic Function		Boolean/Logical	triangle SW southwest south-west table
+↕⊸∾⊸÷j0	Endpoints when [0,1] is split into j0 intervals (including 0 and 1: j0+1 total)	Tacit	Monadic Function		Index Generation	unit normalized steps linear divide
 x1∧´∘∊˜y1	Is x1 a superset of y1?	Tacit	Dyadic Function		Sets	testif superset? contains ⊇
 i¬∘∊⟜↕j0	Boolean list of length j0 with zeros in locations i	Tacit	Dyadic Function		Boolean/Logical	zeroes 0s falses falsehoods list binary base-2 base2
 i1∊⟜↕⟜≠y	Starting points for y in indices pointed by i1	Tacit	Dyadic Function		Structural	segmented partitioned starts beginnings
@@ -585,7 +589,9 @@ a(∾∧⟜<)b	Expand a by replacing 1s with same-rank array b, and 0s with 0×b
 (1‿¯1×⌜⊢)n	±n as two major cells of the result	Tacit	Monadic Function		Mathematical	plusminus dimensions axes
 (¯1‿1×⌜⊢)n	∓n as two major cells of the result	Tacit	Monadic Function		Mathematical	minusplus dimensions axes
 x1(⥊∾⎉1‿0)y1	Insert x1 before every element of y1	Tacit	Dyadic Function		Structural	merge cell item
+(↕÷-⟜1)j0	j0 evenly spaced numbers starting at 0 and ending at 1	Tacit	Monadic Function		Index Generation	unit normalized steps linear divide inclusive
 (×´1+↕)i0	Factorial	Tacit	Monadic Function		Mathematical	countpermutations exclamation bang shriek combinatorics fact() gamma() Γ
+(2×↕⊸∾)j0	Even integers from 0 to 2×j0	Tacit	Monadic Function		Mathematical	numbers 1st
 i0↕⟜(↕≠)y	Moving width-i0 window of indices for array y	Tacit	Dyadic Function		Index Generation	
 (1«∊∘/)j1	Change lengths j1 of sublists to ending indicators	Tacit	Monadic Function		Boolean/Logical	partitions trailing change converting conversion segments
 i(⌊1+⋆⁼)j	Length to represent j in base i	Tacit	Dyadic Function		Mathematical	width representation required digits positions
@@ -618,6 +624,7 @@ m(¯1+⊣√1+⊢)n	Annual rate to modal rate	Tacit	Dyadic Function		Mathematica
 i0(×⥊⊢↑1˙)j0	Starting points for i0 fields of width j0	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned vector starts beginnings list
 m(⊣+a×-˜)n	Select each element from m where a is 0 and from n where it's 1	Tacit	Dyadic Function		Selection	conditional selector meshing merge cells items indicate masking indicating
 (××⌊∘|)n	Round towards zero	Tacit	Monadic Function		Mathematical	0 truncate whole number integer int() trunc() chop clamp
+(1÷1+⋆∘-)n	Logistic function, approaching 0 for small n and 1 for large n	Tacit	Monadic Function		Mathematical	standard sigmoid curve limited exponential population growth
 m(⊣+-⊸|)n	Residue after dividing n by m but replacing 0 with m	Tacit	Dyadic Function		Mathematical	modulo modulus divisionremainder 12hourclock divide
 (1⊸↓-¯1⊸↓)n	Deltas: (n_1-n_0)(n_2-n_1)(n_3-n_2)…	Tacit	Monadic Function		Mathematical	pairwisedifferences changes steps
 (1⊸↓÷¯1⊸↓)n	Ratio of each number in a list to its predecessor: (n_1÷n_0)(n_2÷n_1)(n_3÷n_2)…	Tacit	Monadic Function		Mathematical	pairwiseratios vector
@@ -665,7 +672,6 @@ i2 <¨⊸⊏⎉¯1‿∞ y	Select: each row of i2 selects a cell from y	Tacit	Dy
 (1.8÷˜¯32⊸+)n	Fahrenheit to Celsius	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celsius c2f() ctof() converting change changing
 x0(1↓·⥊∾˘)y2	Table to list using x0 as delimiter	Tacit	Dyadic Function		Structural	vectorise vectorize serialise serialize list table
 x0(1↓·⥊≍˘)y1	Insert x0 in between each pair of elements of list y1	Tacit	Dyadic Function		Structural	combine merge list string character joiner joining merging combining
-(2×·↕1⊸+)j0	Even integers from 0 to 2×j0	Tacit	Monadic Function		Mathematical	numbers 1st
 ' '⊸≠⊸/¨d	Remove blanks in each string	Tacit	Monadic Function		Text	deletespaces spaces drop without
 ≍⟜('¯'¨)d1	Underline a string	Tacit	Monadic Function		Text	underscore
 10⊸×⊸+˜´∘⌽d1	Natural number from base-10 digits	Tacit	Monadic Function		Mathematical	frombase10 base-10 dec() decimal Conversion converting change changing
