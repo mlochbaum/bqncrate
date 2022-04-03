@@ -865,6 +865,7 @@ a1(1⌈·⌈`↕∘≠⊸×)⊸⊏y	Copy each cell of y until before next 1 in a
 (<·⌈´≢¨)⊸(↑¨)y1	Pad elements of list of equal-rank arrays y1 to equal shape	Tacit	Monadic Function		Structural	list cells items
 (2=·+´0=(1+↕)⊸|)n0	Is n0 a prime?	Tacit	Monadic Function		Mathematical	testif isprime primality
 (0=(1+·↕⌈´)|⌜⊢)j1	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix
+{(√π)÷˜⋆-×˜𝕩}n	Gaussian or normal distribution with mean 0 and variance 1/2	Tacit	Monadic Function		Mathematical	statistics probability bell curve pdf probability density function
 (∨˝' '⊸≠)⊸(/⎉1)d2	Remove blank columns	Tacit	Monadic Function		Text	all-space allspace empty remove delete drop space without
 (>⌈´↑¨⥊¨⟜'⎕')j	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting
 (⍋·+˝˘' '⊸≠)⊸⊏d2	Sort words in list d2 according to word length	Tacit	Monadic Function		Text	vector
@@ -950,6 +951,7 @@ m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation c
 ⊑∘{𝕩𝕊⍟≢𝕩(×´⊸(√˜)⋈+´⌾÷⊸×)≠𝕩}n1	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM() HGM() GH() HG() harmonic-geometric
 (√((≠×+´∘×˜)-·×˜+´)÷·-⟜1⊸×≠)n1	Sample standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD empirical
 (((≠×+´∘×˜)-·×˜+´)÷·(1⌈-⟜1)⊸×≠)n1	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(x) dispersion
+×˜⊸((2÷√π)×⋆∘-⊸××1(1+×)´÷⟜(1.5+↕99))n0	Error function (normalized integral of Gaussian)	Tacit	Monadic Function		Mathematical	statistics erf() normal distribution sigmoid cdf cumulative
 ((≍↕0){∾˝(0∾˘1+𝕩)⊸⊏˘⍒˘=⌜˜↕𝕨}´-⟜↕)n0	All permutations of ↕n0, as table rows in lexicographical order	Tacit	Monadic Function		Mathematical	combinatorics ordered orderings anagrams without replacement list
 c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Dyadic Function		Text	fuzzy match
 m0(∾·(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽↕⟜↕)n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Tacit	Dyadic Function		Mathematical	combinatorics selections list sublists subsequences choices choose
