@@ -133,8 +133,8 @@ x∊y	Member of: 1 for cells of x matching major cells of y and 0 elsewhere	Prim
 ⊐y	Classify: translate major cells to natural number keys ((⍷y)⊐y)	Primitive	Monadic Function		Index Generation	self unique index integers replace with convertion to self-identifying generate ids identities serial-numbers enumeration labels
 x⊐y	Index of: index of the first major cell of x matching each cell of y	Primitive	Dyadic Function		Index Generation	iota indexin indexof ɩ ι finding locating locate positionof 1st items elements location searching
 x1⊐y	Indices of keys y in key list x1	Primitive	Dyadic Function		Index Generation	find locate positionof locating location list
-F⁼y	Inverse: find z such that y ≡ F z	Primitive	Monadic Function	1-modifier	Function Application	F⁻¹(x) F′(x) fʹ(x) opposite revert
-x F⁼ y	Inverse: find z such that y ≡ x F z	Primitive	Monadic Function	1-modifier	Function Application	F⁻¹(x,y) F′(x,y) fʹ(x,y) opposite revert
+F⁼y	Undo: find z such that y ≡ F z	Primitive	Monadic Function	1-modifier	Function Application	F⁻¹(x) F′(x) fʹ(x) inverse opposite revert
+x F⁼ y	Undo: find z such that y ≡ x F z	Primitive	Monadic Function	1-modifier	Function Application	F⁻¹(x,y) F′(x,y) fʹ(x,y) inverse opposite revert
 F⍟G y	Repeat: apply F G y times to y, in succession	Primitive	Monadic Function	2-modifier	Iteration	application poweroperator circlestar starcircle inverse repeated repeating inversion inverting iterating looping
 F⍟j0 y	Repeat: apply F j0 times to y	Primitive	Monadic Function	2-modifier	Iteration	application poweroperator circlestar starcircle inverse repeated repeating inversion inverting iterating looping
 x F⍟G y	Repeat: apply x∘F to y, G y times	Primitive	Dyadic Function	2-modifier	Iteration	application inverse repeated repeating inversion inverting iterating looping
@@ -1011,6 +1011,7 @@ F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Blo
 x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block Modifier	Dyadic Function	1-modifier	Structural	items elements
 f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Ambivalent Function	1-modifier	Function Application	each every list gerund
 F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Monadic Function	2-modifier	Iteration	application poweroperator circlestar starcircle repeated repeating iterating looping while
+F{F _𝕣_ G: {𝕊:F𝕩 ; 𝕊⁼:G𝕩}}G	Function that applies like F with inverse set to G	Block Modifier	Monadic Function	2-modifier	Function Application	obverse specify specified undo header opposite
 F{𝔽∘⊢⍟≢⟜𝔽_𝕣∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F starting at y (avoiding stack overflow)	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable low stack
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j	Base-10 digits of natural number j	Block Modifier	Monadic Function		Mathematical	base10 decimal base-10
