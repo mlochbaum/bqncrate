@@ -458,6 +458,7 @@ x1+´∘≠y1	Hamming distance	Tacit	Dyadic Function		Mathematical	edit
 n1×´∘⋆b1	Products over subsets of n1 specified by b1	Tacit	Dyadic Function		Mathematical	sub-sets
 +⟜÷´n	Evaluate continued fraction with terms n	Tacit	Monadic Function		Mathematical	series sequence
 +´⌾÷n1	Ohm's Law: resistance of parallel resistors/capacitance of serial capacitors	Tacit	Monadic Function		Mathematical	electronics electrics circuits Ω series inparallel
+<∘∾˘y2	Turn a table of lists into a list of lists by joining each row	Tacit	Monadic Function		Structural	format merge along rows concatenate lines each
 ∘‿2⊸⥊y1	Reshape list y1 into a two-column table	Tacit	Monadic Function		Structural	2-column table list
 ¬∘a0◶F‿G y	Ternary: if a0 then apply F to y else apply G to y	Tacit	Dyadic Function		Function Application	conditionaloperator inlineiff ternaryiff ?:
 x1∨´∘∊y1	Do x1 and y1 have any elements in common?	Tacit	Dyadic Function		Sets	testif anyshared? anycommon? cells items
