@@ -400,10 +400,12 @@ m0∊⟜↕n0	Is m0 in range 0…n0-1?	Tacit	Dyadic Function		Comparison	inrange
 ∨⊸⊐y	Descending cardinals numbers (ranking, ties equal)	Tacit	Monadic Function		Index Generation	falling do
 ∧⊸⊐y	Ascending cardinals numbers (ranking, ties equal)	Tacit	Monadic Function		Index Generation	rising up
 x⌽⊸⊐y	Last indices in x of major cells y, counted from the rear	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
+x⍋⌾⋈y	Is x lexically less than or equal to y?	Tacit	Dyadic Function		Comparison	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
 x⍋⊸⊏y	Sorting y according to x	Tacit	Dyadic Function		Mathematical	ordering
 x⍋∘⊐y	Grade up of y according to key x	Tacit	Dyadic Function		Index Generation	custom sort order ascending
 ⍋∘⍋y	Permutation that sorts like y	Tacit	Monadic Function		Index Generation	ranking list
 ⍋∘⍋y	Ascending cardinal numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	rising up
+x⍒⌾⋈y	Is x lexically greater than or equal to y?	Tacit	Dyadic Function		Comparison	testif tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
 a1⍒⊸⊏y	Moving cells of y indicated by a1 to the start of y	Tacit	Dyadic Function		Structural	conditional promote promotion items elements beginning leading
 x⍒∘⊐y	Grade down of y according to key x	Tacit	Dyadic Function		Index Generation	custom sort order descending
 ⍋∘⍒y	Descending cardinal numbers (ranking, all different)	Tacit	Monadic Function		Index Generation	falling down
@@ -596,8 +598,10 @@ i0↕⟜(↕≠)y	Moving width-i0 window of indices for array y	Tacit	Dyadic Fun
 (1«∊∘/)j1	Change lengths j1 of sublists to ending indicators	Tacit	Monadic Function		Boolean/Logical	partitions trailing change converting conversion segments
 i(⌊1+⋆⁼)j	Length to represent j in base i	Tacit	Dyadic Function		Mathematical	width representation required digits positions
 m(⌊⟜-⍟2)n	Force numbers n to range (-m)≤n≤m	Tacit	Dyadic Function		Mathematical	clamp restrictrange between ±m
+x(¬⍋⌾⋈)y	Is x lexically greater than y?	Tacit	Dyadic Function		Comparison	testif tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds
 x(1=⌽⊸⍒)y	Are cells of y within the range ( x_0 , x_1 ]?	Tacit	Dyadic Function		Comparison	testif <y≤ <x≤ tao totalarrayordering interval inrange?
 x(1≠⌽⊸⍒)y	Are cells of y outside the range ( x_0 , x_1 ]?	Tacit	Dyadic Function		Comparison	testif ≥y> ≥x> tao totalarrayordering interval outsiderange?
+x(¬⍒⌾⋈)y	Is x lexically less than y?	Tacit	Dyadic Function		Comparison	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 (¬∧≠`)b	Places between pairs of ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths
 (+´∧`)b1	Count of leading ones	Tacit	Monadic Function		Boolean/Logical	1s trues truths at start beginning
 m2(1⍉˘×⌜)n2	Direct matrix product	Tacit	Dyadic Function		Mathematical	table
@@ -707,6 +711,7 @@ x(⊏˜⍋⊸⊏⊢)j1	Sort indices j1 according to data x	Tacit	Dyadic Function
 i0(⊏⎉1⍋⊸⊏⊢)y	Sort y ascending according to column i0	Tacit	Dyadic Function		Mathematical	sort() major cells elements items of array up increasing sorting reordering ordering bycolumn specific
 x(⍋∘∊˜⊏⊢)y	Move cells x to end of y	Tacit	Dyadic Function		Sets	major cells elements trailing ending
 x1(∊˜⍋⊸⊏⊢)y1	Move elements x1 to end of y1	Tacit	Dyadic Function		Sets	major cells elements trailing ending
+i1(⌽∘⍒/)⊸⊏y	Reverse (⌽) sublists of y having lengths i1	Tacit	Dyadic Function		Structural	
 i0(⊏⎉1⍒⊸⊏⊢)y	Sort y descending according to column i0	Tacit	Dyadic Function		Mathematical	sort() major cells elements items of array down decreasing sorting reordering ordering bycolumn specific
 (+´∧`∘⌽)b1	Count of trailing ones	Tacit	Monadic Function		Boolean/Logical	0s zeroes falses at end
 x(+´∧`∘=)y	Count number of leading elements that are equal	Tacit	Dyadic Function		Comparison	matching onleft cells items start beginning
@@ -789,7 +794,6 @@ x(+´∧`∘⌽∘≠)y	Count number of trailing elements that are unequal	Tacit
 (⌈´(⊢⌈+)`)n1	Largest sum of any contiguous non-empty sublist	Tacit	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
 i0((+˝÷≠)⍉⁼)n	Average (mean value) of elements of n along axis i0	Tacit	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
-{+⟜÷´¨1↓↑𝕩}n1	Continued fraction convergents with terms n1	Tacit	Monadic Function		Mathematical	series sequence
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
 (1≥·|-⌜○↕´)j1	Tridiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	tri-diagonal banded
 (2≥·|-⌜○↕´)j1	Pentadiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	penta-diagonal banded
@@ -843,7 +847,6 @@ i0(⊢/˜(⍋⍋)⊸∊˜)y	The i0 smallest cells of y in order of occurrence	Ta
 i0(⊢/˜(⍋⍒)⊸∊˜)y	The i0 largest cells of y in order of occurrence	Tacit	Dyadic Function		Selection	biggest greatestif items elements
 (∨≠¨⊸(≍˘)∘⊔)y	Sorted frequency table	Tacit	Monadic Function		Mathematical	matrix
 =⊸{<⎉𝕨⍉⍟𝕨>𝕩}y	Invert array of same-rank arrays, exchanging inner with outer axes	Tacit	Monadic Function		Structural	transpose transposing cell element zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing flip
-{2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Tacit	Dyadic Function		Mathematical	 triangle shape region size points coordinates
 (××2×·⌈2÷˜1-˜|)n	Round to nearest even number, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring
 (+˝|∘-)⎉1⎉1‿∞˜n2	Manhattan distance table for points in n-space (one point per row)	Tacit	Monadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d() matrix
 (28+·≠´0=400‿100‿4|⌜⊢)j	Number of days in February of year j (YYYY)	Tacit	Monadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
@@ -873,7 +876,6 @@ a1(1⌈·⌈`↕∘≠⊸×)⊸⊏y	Copy each cell of y until before next 1 in a
 (<·⌈´≢¨)⊸(↑¨)y1	Pad elements of list of equal-rank arrays y1 to equal shape	Tacit	Monadic Function		Structural	list cells items
 (2=·+´0=(1+↕)⊸|)n0	Is n0 a prime?	Tacit	Monadic Function		Mathematical	testif isprime primality
 (0=(1+·↕⌈´)|⌜⊢)j1	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix
-{(√π)÷˜⋆-×˜𝕩}n	Gaussian or normal distribution with mean 0 and variance 1/2	Tacit	Monadic Function		Mathematical	statistics probability bell curve pdf probability density function
 (∨˝' '⊸≠)⊸(/⎉1)d2	Remove blank columns	Tacit	Monadic Function		Text	all-space allspace empty remove delete drop space without
 (>⌈´↑¨⥊¨⟜'⎕')j	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting
 (⍋·+˝˘' '⊸≠)⊸⊏d2	Sort words in list d2 according to word length	Tacit	Monadic Function		Text	vector
@@ -951,7 +953,6 @@ a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in 
 (16⊸×⊸+˜´∘⌽(∾"0A"+⟜↕¨10‿6)⊸⊐)d1	Convert from hexadecimal string to number	Tacit	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
 (=⌜˜∘(↕≠)≡+˝∘×⎉1‿∞⟜(⍉+))n2	Is square matrix n2 unitary?	Tacit	Monadic Function		Mathematical	testif Unitary?
 (+´¨(+⌜´(↕2)¨)⊔·×⌜´1⋈¨˜-)n1	Coefficients in ascending order of polynomial with roots n1	Tacit	Monadic Function		Mathematical	solve
-{÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨𝕩}n1	Continued fraction convergents with terms n1, in linear time	Tacit	Monadic Function		Mathematical	series sequence
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AHM() HAM() AH() HA() harmonic-arithmetic
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Monadic Function		Structural	list cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate
@@ -964,22 +965,20 @@ m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation c
 c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Dyadic Function		Text	fuzzy match
 m0(∾·(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽↕⟜↕)n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Tacit	Dyadic Function		Mathematical	combinatorics selections list sublists subsequences choices choose
 i0(⊣|·⊑{0=𝕨?1‿0;(⌽-(0⋈𝕩⌊∘÷𝕨)⊸×)𝕨𝕊˜𝕨|𝕩})j0	Multiplicative inverse of n0 modulo m0	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
-x⍋⌾⋈y	Is x lexically less than or equal to y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
-x⍒⌾⋈y	Is x lexically greater than or equal to y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
-x(¬⍋⌾⋈)y	Is x lexically greater than y?	Block Function	Dyadic Function		Comparison	testif tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds
-x(¬⍒⌾⋈)y	Is x lexically less than y?	Block Function	Dyadic Function		Comparison	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 {<˘⍉>𝕩}y1	Invert list of lists, so that element i of j of the result is j of i of the argument	Block Function	Monadic Function		Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
-i1(⌽∘⍒/)⊸⊏y	Reverse (⌽) sublists of y having lengths i1	Block Function	Dyadic Function		Structural	
 x1{∾𝕨⊸∾¨𝕩}y1	Join list of lists y1 using separator x1, including leading separator	Block Function	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging
 c{𝕨⊸⊐⌾<𝕩}d1	Position of first occurrence of string d1 in list of strings c	Block Function	Dyadic Function		Index Generation	indexin indexof vtv vector 1st
 {⥊1‿0‿1∧⌜⍟𝕩1}j0	Cantor set iteration j0	Block Function	Monadic Function		Mathematical	fractal ternary middle third
 i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	Dyadic Function		Index Generation	repeated
 x{𝕨⌾(¯1⊸⊏)𝕩}y	Replace last major cell of y with x0	Block Function	Dyadic Function		Structural	substitute merge amend replace update item element
+{+⟜÷´¨1↓↑𝕩}n1	Continued fraction convergents with terms n1	Block Function	Monadic Function		Mathematical	series sequence
 {⥊+⌜´𝕩⥊<↕10}i0	Sum of digits of the first 10⋆i0 numbers	Block Function	Monadic Function		Mathematical	sod()
 m{𝕨⊸×⊸+˜´𝕩}n1	Value of polynomial with ascending coefficients n1 at points m (Horner's method)	Block Function	Dyadic Function		Mathematical	
 x1{𝕨⌾(0‿0⊸⍉)𝕩}y2	Matrix y2 with main diagonal changed to x1	Block Function	Dyadic Function		Expression	inplace update table
+{2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Block Function	Dyadic Function		Mathematical	 triangle shape region size points coordinates
 {𝕩⌾(0‿0⊸⍉)0⌜˜𝕩}y1	Diagonal matrix with elements of y1 (filled appropriately)	Block Function	Monadic Function		Structural	cells items table
 m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending coefficients and optional constant m0	Block Function	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate
+{(√π)÷˜⋆-×˜𝕩}n	Gaussian or normal distribution with mean 0 and variance 1/2	Block Function	Monadic Function		Mathematical	statistics probability bell curve pdf probability density function
 a1(-⟜»1⊸⌽⊸/⟜(+`))n	Sums over (+/) sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	segmented partitioned sub-vectors
 i0(1↓=⟜(+`⊑⊸=)/⊢)y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Block Function	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st
 {(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Monadic Function		Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
@@ -995,6 +994,7 @@ a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin onl
 {∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨⋈⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Monadic Function		Mathematical	gol conways cellularautomaton sub-array
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	sub-vectors +\
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Dyadic Function		Boolean/Logical	sub-vectors sublists sub-lists ≠\
+{÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨𝕩}n1	Continued fraction convergents with terms n1, in linear time	Block Function	Monadic Function		Mathematical	series sequence
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Monadic Function		Index Generation	dependency resolution ordering dag scheduling kahn's algorithm
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Dyadic Function		Comparison	least minimum infirmum smallest lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Dyadic Function		Comparison	most maximum supremum biggest largest highest
