@@ -542,8 +542,8 @@ x0⌾(b1⊸/)y	Replace elements of y satisfying b1 with x0	Tacit	Monadic Functio
 i0(↑⋈↓)y	First and last i0 major cells of y	Tacit	Dyadic Function		Structural	headtail split divide separate dividing first leading remaining
 m0(+≍-)n0	m0±n0	Tacit	Dyadic Function		Mathematical	plusminus
 m0(-≍+)n0	m0∓n0	Tacit	Dyadic Function		Mathematical	minusplus
+x1(⥊≍˘)y1	Merge equal-length lists x1 and y1 alternately	Tacit	Dyadic Function		Structural	faro weave dovetail zipper zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
 x0(⥊≍⎉0)y1	Insert x0 after each element of y1	Tacit	Dyadic Function		Structural	cell item
-x1(⥊≍⎉0)y1	Merge equal-length lists x1 and y1 alternately	Tacit	Dyadic Function		Structural	zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
 (1‿¯1×<)n	±n by juxtaposition	Tacit	Monadic Function		Mathematical	plusminus
 (¯1‿1×<)n	∓n by juxtaposition	Tacit	Monadic Function		Mathematical	minusplus
 F⌾(¯1⊸⊏)y	Apply function F to last cell of y	Tacit	Ambivalent Monadic Function, Dyadic Function	1-modifier	Function Application	onlast item element
@@ -588,6 +588,7 @@ a(∾∧⟜<)b	Expand a by replacing 1s with same-rank array b, and 0s with 0×b
 (⌊⋈1⊸|)n0	Integral and fractional part of positive number	Tacit	Monadic Function		Mathematical	parts split whole decimals
 1⊸(↑⋈↓)y	First element (as list) and remaining elements	Tacit	Dyadic Function		Structural	headtail split divide separate dividing leading
 (⥊˜0⊸⋈)j0	Initialise a table with j0 columns and no rows	Tacit	Monadic Function		Structural	table
+x(∾˝≍˘)y	Merge cells of equal-length arrays x and y alternately	Tacit	Dyadic Function		Structural	faro weave dovetail zipper zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
 (1‿¯1×⌜⊢)n	±n as two major cells of the result	Tacit	Monadic Function		Mathematical	plusminus dimensions axes
 (¯1‿1×⌜⊢)n	∓n as two major cells of the result	Tacit	Monadic Function		Mathematical	minusplus dimensions axes
 x1(⥊∾⎉1‿0)y1	Insert x1 before every element of y1	Tacit	Dyadic Function		Structural	merge cell item
@@ -641,7 +642,7 @@ m1(+´|∘-)n1	Manhattan distance between two points in n-space	Tacit	Dyadic Fun
 (¬∨´∘⥊)b	Are none true?	Tacit	Monadic Function		Boolean/Logical	testif theredoesnotexist ∄
 (¬∧´∘⥊)b	Not all true?	Tacit	Monadic Function		Boolean/Logical	notall somenot all?
 x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Dyadic Function		Function Application	conformity conforming axes frames major minor cells
-x⊣⌾(b1⊸/)˜y	Mask Operator: Merge x and y using b1 (1 for x's element, 0 for y1's element)	Tacit	Dyadic Function	1-modifier	Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
+x⊣⌾(b1⊸/)˜y	Mask Operator: Merge x and y using b1 (1 for x's element, 0 for y1's element)	Tacit	Dyadic Function	1-modifier	Structural	faro weave dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
 (100×⊢÷+˝)n	Column-wise percentage per column	Tacit	Monadic Function		Mathematical	≢ vertically columnwise
 (∾↑¨∘↓)y1	All possible slices ordered by starting index	Tacit	Monadic Function		Selection	sub-strings substrings sub-vectors sub-sequences subsequences segmented sub-lists partitioned sublists
 i0(∾˝/⟜≍)y	Repeat y as a whole i0 times along the first axis	Tacit	Dyadic Function		Structural	duplicate copy
@@ -795,7 +796,7 @@ x(+´∧`∘⌽∘≠)y	Count number of trailing elements that are unequal	Tacit
 (⌈´(⊢⌈+)`)n1	Largest sum of any contiguous non-empty sublist	Tacit	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
 i0((+˝÷≠)⍉⁼)n	Average (mean value) of elements of n along axis i0	Tacit	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
-{⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Function		Structural	zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
+{⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Function		Structural	faro weave dovetail zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
 (1≥·|-⌜○↕´)j1	Tridiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	tri-diagonal banded
 (2≥·|-⌜○↕´)j1	Pentadiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	penta-diagonal banded
 i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Tacit	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering specific columns
@@ -843,7 +844,7 @@ i0(⊢/˜0=|⟜(↕≠))y	Keep every i0'th major cell of y	Tacit	Dyadic Function
 i0(⊢/˜0≠|⟜(↕≠))y	Remove every i0'th cell of y	Tacit	Dyadic Function		Selection	filter item element
 (⊢>⌜⟜(⌽↕)⌈´)i1	Matrix with i⊑i1 trailing ones on row i	Tacit	Monadic Function		Boolean/Logical	1st trues truths first table ending
 (⊢≤⌜⟜(⌽↕)⌈´)i1	Matrix with i⊑i1 trailing zeroes on row i	Tacit	Monadic Function		Boolean/Logical	1s 0s zeros ones falses falsehoods trues truths table ending
-x(∾○(↕≠)⍋⊸⊏∾)y	Merge x and y alternately	Tacit	Dyadic Function		Structural	zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
+x(∾○(↕≠)⍋⊸⊏∾)y	Merge x and y alternately	Tacit	Dyadic Function		Structural	faro weave dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
 i0(⊢/˜(⍋⍋)⊸∊˜)y	The i0 smallest cells of y in order of occurrence	Tacit	Dyadic Function		Selection	least items elements
 i0(⊢/˜(⍋⍒)⊸∊˜)y	The i0 largest cells of y in order of occurrence	Tacit	Dyadic Function		Selection	biggest greatestif items elements
 (∨≠¨⊸(≍˘)∘⊔)y	Sorted frequency table	Tacit	Monadic Function		Mathematical	matrix
