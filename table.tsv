@@ -885,6 +885,7 @@ a1(1⌈·⌈`↕∘≠⊸×)⊸⊏y	Copy each cell of y until before next 1 in a
 (⍉↕∘≠+˝∘×=⌜⟜1‿¯1)j2	Change connection matrix j2 (¯1 to 1) to a node matrix	Tacit	Monadic Function		Mathematical	graph connectivity table change converting conversion
 m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descending order)	Tacit	Dyadic Function		Mathematical	multiplicationof multiply times coefficients
 m1((√+´∘×˜)÷⟜2⊸∾)n0	Length of edges of rectangular pyramid with base dimensions m1 and height n0	Tacit	Dyadic Function		Mathematical	lengths sides
+i0(-÷○(×´)1⊸+)⟜↕˜j0	Number of unordered selections (combinations) of i0 items from j0 choices	Tacit	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered selecting picking outof nCk C(n,k)
 i(⊢/˜¬∘∊˜⟜(↕≠))y	Remove major cells with indices i from y	Tacit	Dyadic Function		Selection	without remove indices delete drop
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Dyadic Function		Selection	trim left right spaces multiple consecutive blanks start beginning ending
 i0(⌊∘×⟜(↕⊸÷≠)⊔⊢)y	Distribute major cells of y into i0 slices as evenly as possible	Tacit	Dyadic Function		Structural	unzip elements items deal
@@ -936,7 +937,6 @@ a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch given b1 on and a1 o
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	zeros 0s falses falsehoods start beginning
 (-·+´2(⋆⁼×⊢)/⁼∘⊐÷≠)y	Shannon entropy of array 𝕩	Tacit	Monadic Function		Mathematical	informationtheory text message string
 (" ⎕"⊏˜·>⌜⟜(↕⌈´)/⁼)j1	Histogram (distribution barchart, down the page)	Tacit	Monadic Function		Mathematical	
-i0(-(+÷○(×´+)⊢)1+↕∘⊢)˜j0	Number of unordered selections (combinations) of i0 items from j0 choices	Tacit	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered selecting picking outof nCk C(n,k)
 a1(⊢∧∧(⊢∊/)(+`»⊸<)∘⊢)b1	Groups of ones in b1 pointed to by at least one 1 in a1	Tacit	Dyadic Function		Boolean/Logical	runs sequences 1s indicated trues truths
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
