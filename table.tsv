@@ -669,6 +669,7 @@ x(∊⍒⊸⊏⊣)y	Move major cells of x that appear in y to the front	Tacit	Dy
 (»⊸≤∧`)b	Turn on all 0s after first 0 (indicate all elements except the first 0)	Tacit	Monadic Function		Boolean/Logical	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes falsehoods 1st mask not
 b1(i0=+`)⊸/y1	The i0'th sublist of y1 (sublists indicated by b1)	Tacit	Dyadic Function		Selection	
 (+˝∧`)⎉1 b	Number of leading ones in each row of b	Tacit			Boolean/Logical	ones trues truths start beginning
+k˙⌾(i‿j⊸⊑)y2	Replace element i,j of matrix y2 with k	Tacit	Monadic Function		Structural	modify change at index
 (↕¯1⊑≢)⊸∾y2	Attach column numbers to a table	Tacit	Monadic Function		Index Generation	headings table
 (⊑⊢⊐⌈´)n1	Index of minimum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	lesser smaller smallest lowest least
 (⊑⊢⊐⌊´)n1	Index of maximum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	greater larger bigger greatest biggest largest highest
@@ -898,6 +899,7 @@ a1(¬1(∾/∾˜)(∨/⊣))b1	Any element true (∨´) for each sublist of b1 in
 (<⥊¨·⊣⌜˜`⌾⌽↕¨)j1	Index arrays along each dimension for shape j1	Tacit	Monadic Function		Index Generation	separated indices positions locations elements odometer meshgrid ndgrid
 (≠(«-⊢)·/1»≠⟜«)y1	Lengths of sublists of y1 having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items
 (-˜˝·(⍋⍋)⌾⥊≍˜)y1	Count of total (not previous) occurrences of each element of y1	Tacit	Monadic Function		Sets	tally selfcount items elements
+(10⊸×⊸+˜´∘⌽-⟜'0')d1	Parse natural number from string	Tacit	Monadic Function		Mathematical	decimal Conversion converting cast integer parseint atoi
 ('F'-·×⊸+60‿70‿80‿90⊸⍋)j	Students grades given score	Tacit	Monadic Function		Mathematical	
 (⊣+=×'-'⊸-)⟜' 'y	Replace all blanks with dashes	Tacit	Monadic Function		Text	spaces substitute format
 ¬∘∊⟜".,:;?!"⊸/d1	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop without
