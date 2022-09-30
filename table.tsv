@@ -92,8 +92,8 @@ F⟜y z	Bind: F between z and y, that is, z F y	Primitive	Monadic Function	2-mod
 x F⟜G y	After: x⊸F on the result of G on y, that is, x F G y	Primitive	Monadic Function	2-modifier	Composition	small little tiny jot composewith bind ring functioncomposition hook against
 F¨y	Each: F on elements of y	Primitive	Monadic Function	1-modifier	Function Application	foreach diaeresis mapping cells elements
 x F¨y	Each: F between elements of x and y	Primitive	Dyadic Function	1-modifier	Function Application	foreach diaeresis mapping cells elements
-G⌜y	Table: G on each element of y; same as G¨y	Primitive	Monadic Function	2-modifier	Mathematical	corner jotdot outerproduct table cartesianproduct allcombinationsof matrix cell element pair up
-x G⌜ y	Table: G between each element of x and every element of y	Primitive	Monadic Function	2-modifier	Mathematical	corner jotdot outerproduct cartesianproduct allcombinationsof matrix cell element pair up
+G⌜y	Table: G on each element of y; same as G¨y	Primitive	Monadic Function	1-modifier	Mathematical	corner jotdot outerproduct table cartesianproduct allcombinationsof matrix cell element pair up
+x G⌜ y	Table: G between each element of x and every element of y	Primitive	Monadic Function	1-modifier	Mathematical	corner jotdot outerproduct cartesianproduct allcombinationsof matrix cell element pair up
 F○G y	Over: F on the result of G on y, that is, F G y	Primitive	Monadic Function	2-modifier	Composition	circle hoof composewith functioncomposition
 x F○G y	Over: apply G to each argument and F to the results	Primitive	Ambivalent Monadic Function, Dyadic Function	2-modifier	Function Application	circle ontop composewith functioncomposition (gX)F(gY) (gX)fgY (fX)G(fY) (fX)gfY comparing
 /b1	Indices of all 1s in b	Primitive	Monadic Function		Index Generation	wheretrues slash solidus locationsoftrues positions ones trues truths
@@ -145,6 +145,7 @@ x⍋y	Bins up: indices of cells of y in intervals with ascending cut-offs x	Prim
 ⍒y	Grade down: indices to reorder y into descending order	Primitive	Monadic Function		Index Generation	downgrade gradedown delstile spine concordelanding decreasing
 x⍒y	Bins down: indices of cells of y in intervals with descending cut-offs x	Primitive	Dyadic Function		Index Generation	delstile intervalindex iotaunderbar bins groups ranges buckets classes classifying classification major cells elements
 F`y	Scan: F between elements of y progressing along the first axis	Primitive	Monadic Function	1-modifier	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst columnwise scanning major cells elements dimension 1st column-wise vertically lists
+x F` y	Scan: F between elements of y with initial cell x	Primitive	Monadic Function	1-modifier	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst columnwise scanning major cells elements dimension 1st column-wise vertically lists
 ⍉y	Transpose: move first axis of y to end	Primitive	Monadic Function		Structural	circlebackslash cant rotateaxes ^T ⸆ ᵀ reordering ordering rotating dimensions
 ⍉y2	Reflect diagonally	Primitive	Monadic Function		Structural	mirroring reflecting reflection mirror across tip
 i0⍉y	Rotate only the first i0+1 axes of y as if transposing	Primitive	Dyadic Function		Structural	diagonal reorderaxes reordering dimensions
@@ -163,6 +164,10 @@ i1⊔y	Group major cells of y into the positions i1	Primitive	Dyadic Function		S
 x1⊔y	Group array y based on x1	Primitive	Dyadic Function		Selection	square cup bucket sort
 F⚇j0 y	Depth: apply F to depth-j0 nested elements of y	Primitive	Monadic Function	2-modifier	Function Application	circledots recursion repeated each
 x F⚇j1 y	Depth: F on corresponding elements of x and y at the given depths	Primitive	Dyadic Function	2-modifier	Function Application	circledots recursion repeated each
+!y	Assert: throw an error (with message y) unless y is 1	Primitive	Monadic Function		Errors	raise exception fail signal panic abort test require
+x!y	Assert with message: if y isn't 1, throw an error with message x	Primitive	Dyadic Function		Errors	raise exception fail signal panic abort test require
+F⎊G y	Catch: Run F, but run G on the same arguments instead if it fails	Primitive	Monadic Function	2-modifier	Errors	recover stop exception signalled
+x F⎊G y	Catch: Run F, but run G on the same arguments instead if it fails	Primitive	Monadic Function	2-modifier	Errors	recover stop exception signalled
 F•_timed y	Time taken to evaluate F y	System	Monadic Function	1-modifier	Time	timings performance speed measure elapsed tuning tune
 m0 F•_timed y	Average time per call to evaluate F y, m0 times in succession	System	Dyadic Function	1-modifier	Time	timings performance speed measure elapsed tuning tune mean
 x •Import d1	Load BQN script from path d1, with •args x	System	Dyadic Function		Execution	include library run execute
@@ -1061,7 +1066,6 @@ a0⊑x‿y	Pick y if a0 is true or x if a0 is false	Expression			Selection	condi
 @+9	Horizontal Tab character (HT)	Constant	Expression		Text	\t ^i U+00 0x00h \u00 ≢00 tabulation
 ⊢name←y	Define, and print if in the session	Syntax			Expression	passthroughvalue yieldassignment
 name∾↩y	Fast: 'name' redefined to be its value with y catenated along its first axis				Expression	amend append extend accumulate concatenate dimension 1st
-𝕊→	Return: Leave function and return to caller	Syntax	Monadic Function		Expression	rightarrow :Return
 (F G H)y	Fork: (F y)G(H y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train
 (F G)y	Atop: F G y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
 (x G H)y	Fork: x G H y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train
