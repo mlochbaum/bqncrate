@@ -1019,7 +1019,11 @@ x{𝔽˜𝔾⊣}y	Church Boolean NAND	Block Modifier	Dyadic Function	2-modifier	
 {𝔽𝔾𝔽˜}	Church Boolean XNOR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	= materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 F{𝔽𝕩⋄𝕩}y	Apply function F but discard result and return the original value	Block Modifier	Monadic Function	1-modifier	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 F{⊐⊏𝔽∘⍷}y	Apply deterministic cell-wise F to cells of y, avoiding extra calls for duplicate cells	Block Modifier	Monadic Function	1-modifier	Function Application	performance memoisation memoization quick speed
+F{⊢𝔽¨¨1↓↓}n1	Apply F to all pairs of distinct elements in n1, reverse order	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
+F{⊢𝔽¨¨1↓↑}n1	Apply F to all pairs of elements in n1 including self-pairs	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
 F{𝕨𝔽˜´⌽𝕩}y	Fold from the left	Block Modifier	Monadic Function	1-modifier	Function Application	reduction typenotation reducing folding
+F{⊢𝔽¨¨≠↑↓}n1	Apply F to all pairs of elements in n1 including self-pairs, reverse order	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
+F{⊢𝔽¨¨≠↑↑}n1	Apply F to all pairs of distinct elements in n1	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
 F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable
 x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block Modifier	Dyadic Function	1-modifier	Structural	items elements
 f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Ambivalent Function	1-modifier	Function Application	each every list gerund
