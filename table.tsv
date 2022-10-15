@@ -276,7 +276,7 @@ x F⊸G⟜H y	Split-Compose: apply G between (F x) and (H y), that is (F x) G (H
 ⌽˘y2	Reflect vertically	Tacit	Monadic Function		Structural	mirroring reflecting reflection right-left rightleft leftright left-right
 »˘y2	Leftmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighboring neighbours neighbors lefthand bitshift cells items
 «˘y2	Rightmost neighbouring elements (padding at edge)	Tacit	Monadic Function		Selection	neighbours neighbors neighboring lefthand bitshift cells items
-<˘y2	Table to list of rows	Tacit	Monadic Function		Structural	spike downarrow split lists from table into
+<˘y2	Table to list of rows	Tacit	Monadic Function		Structural	spike downarrow split lists from array into nested nesting rank depth unflatten
 i0↓˘y2	Drop i0 columns from y2	Tacit	Dyadic Function		Structural	table delete remove without
 i0↑˘y2	Adjust y2 to width i0 (positive i0 to pad/chop on right, negative i0 to pad/chop on left)	Tacit	Dyadic Function		Structural	fill limit
 ⥊˘y	Convert to rank 2 array by flattening each cell to a row	Tacit	Monadic Function		Structural	commabar ravelcells flattencells razecells Merge demoterank lessenrank reduce reducing
@@ -698,7 +698,7 @@ m1(×÷+´∘×)n1	Bayes' formula	Tacit	Dyadic Function		Mathematical	Bayesformu
 (⊢÷⌈˝∘|)n	Normalize by infinity-norm (maximum absolute value)	Tacit	Monadic Function		Mathematical	L∞-normalise L∞-normalize L∞-normalization L-∞
 (-´×⟜⌽˝)n2	Determinant of two-row matrix	Tacit	Monadic Function		Mathematical	det() 2-row 2row table
 x2⊣∾⊏⊸(⊢¨)y0	Append unit to each column of table	Tacit	Dyadic Function		Structural	vertically ontop atop extend with over merge join concatenate columns table
-x0(⊣+↕∘¬˜)y0	Consecutive values from x0 to y0 (both numbers, or both characters)	Tacit	Dyadic Function		Mathematical	range seq() sequence …
+x0(⊣+↕∘¬˜)y0	Consecutive values from x0 to y0 (both numbers, or both characters, with x0≤y0)	Tacit	Dyadic Function		Mathematical	inclusive range closed interval seq() sequence …
 (↕1++˜)⊸-j0	Integers from -j0 to j0	Tacit	Monadic Function		Mathematical	whole numbers natural symmetric negative positive
 (1↓↕∘≠⊸×)n1	Derivative of polynomial with coefficients n1 in ascending order	Tacit	Monadic Function		Mathematical	firstderivative derivate
 (↕∘≠⌽˘⊢)y2	Skew y2 to turn diagonals into columns (with wrap-around)	Tacit	Dyadic Function		Structural	table
@@ -898,6 +898,7 @@ i0(⌊∘×⟜(↕⊸÷≠)⊔⊢)y	Distribute major cells of y into i0 slices a
 a1(¬1(∾/∾˜)(∨/⊣))b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	sub-vector cell item ∨/¨a1⊂[1]b1
 (<⥊¨·⊣⌜˜`⌾⌽↕¨)j1	Index arrays along each dimension for shape j1	Tacit	Monadic Function		Index Generation	separated indices positions locations elements odometer meshgrid ndgrid
 (≠(«-⊢)·/1»≠⟜«)y1	Lengths of sublists of y1 having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items
+x0(⊣-(××·↕1+|)∘-)y0	Consecutive values from x0 to y0 (both numbers, or both characters)	Tacit	Dyadic Function		Mathematical	inclusive range closed interval seq() sequence … any either direction unordered
 (-˜˝·(⍋⍋)⌾⥊≍˜)y1	Count of total (not previous) occurrences of each element of y1	Tacit	Monadic Function		Sets	tally selfcount items elements
 (10⊸×⊸+˜´∘⌽-⟜'0')d1	Parse natural number from string	Tacit	Monadic Function		Mathematical	decimal Conversion converting cast integer parseint atoi
 ('F'-·×⊸+60‿70‿80‿90⊸⍋)j	Students grades given score	Tacit	Monadic Function		Mathematical	
