@@ -933,7 +933,7 @@ m(×⊸⊢×⊣×·⌊0.5+|∘÷˜)n	Round n to nearest multiple of m, ties away
 (-˜˝˘∘‿2⥊0⊸(/∾≠∾˜))b1	Lengths of groups of ones in b1	Tacit	Monadic Function		Boolean/Logical	runs 1s trues truths
 (-˜`˘∘‿2⥊0⊸(/∾≠∾˜))b1	Start and length of groups of 1s in b1	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st ones
 (+´÷≠){𝔽⌾(×˜)-⟜𝔽}n1	Theoretical standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD
-i(1={𝕨(|𝕊⍟(>⟜0)⊣)𝕩})j	Are i and j co-prime?	Tacit	Dyadic Function		Mathematical	coprime? relatively mutually testif
+i0(1={𝕨(|𝕊⍟(>⟜0)⊣)𝕩})j0	Are i0 and j0 co-prime?	Tacit	Dyadic Function		Mathematical	coprime? relatively mutually testif
 (1+·+´↕⊸(⊣/˜0=|))⊸=j0	Is j0 an almost perfect number?	Tacit	Monadic Function		Mathematical	testif almostperfect? almost-perfect?
 (¯1+·+´↕⊸(⊣/˜0=|))⊸=j0	Is j0 a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	testif quasiperfect? quasi-perfect?
 ((∨`∧∨`⌾⌽)' '⊸≠)⊸/d1	Removing leading and trailing blanks	Tacit	Monadic Function		Text	trim left right spaces start beginning ending
@@ -992,12 +992,12 @@ m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending c
 a1(-⟜»1⊸⌽⊸/⟜(+`))n	Sums over (+/) sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	segmented partitioned sub-vectors
 i0(1↓=⟜(+`⊑⊸=)/⊢)y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Block Function	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st
 {(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Monadic Function		Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
-m{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n	Greatest Common Divisor of natural numbers m and n	Block Function	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
+m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
 {x0¨⌾((y0=𝕩)/○⥊⊢)𝕩}y	Replace all values y0 in y with x0	Block Function	Monadic Function	2-modifier	Structural	substitute merge amend replace update
 n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Dyadic Function		Mathematical	
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Monadic Function	1-modifier	Structural	substitute merge amend update cells items
 {𝕩𝕊⍟≢∨˝∘∧⎉1‿∞˜⊸∨𝕩}b2	Transitive closure	Block Function	Monadic Function		Boolean/Logical	adjacency list matrix contingency table
-m(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n	Lowest Common Multiple of natural numbers m and n	Block Function	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
+m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
 {'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all blanks with dashes	Block Function	Monadic Function		Text	spaces substitute format
 a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st
 (-2⌊∘÷˜·+´·∧`' '=⌽)⊸⌽˘d2	Center flush left character array	Block Function	Monadic Function		Text	centre align
@@ -1032,8 +1032,8 @@ F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly unt
 F{F _𝕣_ G: {𝕊:F𝕩 ; 𝕊⁼:G𝕩}}G	Function that applies like F with inverse set to G	Block Modifier	Monadic Function	2-modifier	Function Application	obverse specify specified undo header opposite
 F{𝔽∘⊢⍟≢⟜𝔽_𝕣∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F starting at y (avoiding stack overflow)	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable low stack
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
-10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j	Base-10 digits of natural number j	Block Modifier	Monadic Function		Mathematical	base10 decimal base-10
-2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j	Binary representation of natural number j	Block Modifier	Monadic Function		Mathematical	digits base2 base-2 Boolean
+10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Base-10 digits of natural number j0	Block Modifier	Monadic Function		Mathematical	base10 decimal base-10
+2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0	Block Modifier	Monadic Function		Mathematical	digits base2 base-2 Boolean
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 {(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Block Modifier	Monadic Function	2-modifier	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Dyadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
