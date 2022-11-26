@@ -193,6 +193,11 @@ x1 •BQN d1	Evaluate string d1 as BQN code, with •state x1	System	Dyadic Func
 •path	Path of the file where this system value appears	System	Constant		Execution	this here script location
 •primitives	List of primitives as glyph‿value pairs	System	Constant		Execution	builtins
 •wdpath	The shell's current working directory path	System	Constant		Execution	pwd folder location where
+m •math.Atan2 n	2-argument arctangent, angle of vector m‿n relative to 1‿0	System	Dyadic Function		Mathematical	argument phase
+m •math.Comb n	Binomial function m choose n	System	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered selecting picking outof nCk C(n,k)
+m •math.GCD n	Greatest Common Divisor of m and n	System	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
+m •math.Hypot n	Highest-precision hypotenuse length m+⌾(×˜)n	System	Dyadic Function		Mathematical	correct accurate perfect rounding
+m •math.LCM n	Least Common Multiple of m and n	System	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
 m0 •rand.Deal n0	A simple random sample of m0 elements of ↕n0	System	Dyadic Function		Random	srs draw without replacement removing
 m0 •rand.Subset n0	A sorted random sample of m0 elements from ↕n0	System	Dyadic Function		Random	srs simple draw without replacement removing reservoir
 m1 •file.Owner d1	Set owner user ID and group ID number of file d1	System	Dyadic Function		Files	dir directory directories folders ls list information vector chown
@@ -226,6 +231,27 @@ x1 •file.Lines d1	Write lines x1 to file d1 (overwrites existing contents)	Sys
 •file.Size d1	Total size in bytes of file d1	System	Monadic Function		Files	dir directory directories folders ls list information vector
 •file.Type d1	A character from "fdlpsbc" indicating POSIX type of file d1	System	Monadic Function		Files	filepath dir directory directories folders ls list information vector symbolic first-in-first-out character
 •file.path	Equivalent to •path	System	Constant		Files	this here script location
+•math.Asin n	Arcsine of n	System	Monadic Function		Mathematical	inverse arsin() asin() arcussinus sin⁻¹() sin^-1()
+•math.Asinh n	Hyperbolic arcsine of n	System	Monadic Function		Mathematical	inverse arcsine asinh() arcsinh() arsinh() area sinh⁻¹() sinh^-1()
+•math.Acos n	Arccosine of n	System	Monadic Function		Mathematical	inverse arccos() acos() arcuscosinus cos⁻¹() cos^-1()
+•math.Acosh n	Hyperbolic arccosine of n	System	Monadic Function		Mathematical	inverse arccosine acosh() arccosh() arcosh() area cosh⁻¹() cosh^-1()
+•math.Atan n	Arctangent of n	System	Monadic Function		Mathematical	inverse arctan() atan() arcustangens tan⁻¹() tan^-1()
+•math.Atanh n	Hyperbolic arctangent of n	System	Monadic Function		Mathematical	inverse arctangent atanh() arctanh() artanh() area tanh⁻¹() tanh^-1()
+•math.Cbrt n	Highest-precision cube root 3√n	System	Monadic Function		Mathematical	correct accurate perfect rounding
+•math.Cos n	Cosine of angle n (radians)	System	Monadic Function		Mathematical	cos() cosinus
+•math.Cosh n	Hyperbolic cosine of n	System	Monadic Function		Mathematical	cosh()
+•math.Erf n	Error function of n (normalized integral of Gaussian)	System	Monadic Function		Mathematical	statistics erf() normal distribution sigmoid cdf cumulative
+•math.ErfC n	Highest-precision complementary error function 1-•math.Erf n	System	Monadic Function		Mathematical	statistics erf() normal distribution sigmoid cdf cumulative
+•math.Expm1 n	Highest-precision (⋆n)-1	System	Monadic Function		Mathematical	correct accurate perfect rounding
+•math.Fact n	n factorial, or Gamma function of n+1	System	Monadic Function		Mathematical	pling exclamation bang shriek countpermutations combinatorics fact() gamma() Γ
+•math.Log10 n	Highest-precision base-10 logarithm 10⋆⁼n	System	Monadic Function		Mathematical	correct accurate perfect rounding decimal
+•math.Log1p n	Highest-precision ⋆⁼1+n	System	Monadic Function		Mathematical	correct accurate perfect rounding
+•math.Log2 n	Highest-precision base-2 logarithm 2⋆⁼n	System	Monadic Function		Mathematical	correct accurate perfect rounding binary
+•math.LogFact n	Highest-precision logarthm of factorial ⋆⁼•math.Fact n	System	Monadic Function		Mathematical	correct accurate perfect rounding
+•math.Sin n	Sine of angle n (radians)	System	Monadic Function		Mathematical	sin() sinus
+•math.Sinh n	Hyperbolic sine of n	System	Monadic Function		Mathematical	sinh()
+•math.Tan n	Tangent of angle n (radians)	System	Monadic Function		Mathematical	tan() tangens
+•math.Tanh n	Hyperbolic tangent of n	System	Monadic Function		Mathematical	tanh()
 •rand.Deal n0	A random shuffle of ↕n0	System	Monadic Function		Random	shuffling reorder
 •rand.Range 0	A random real number in the interval from 0 to 1	System	Monadic Function		Random	roll
 •rand.Range n0	A number selected uniformly at random from ↕n0	System	Monadic Function		Random	randominteger roll
