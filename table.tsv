@@ -1134,6 +1134,9 @@ m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions 
 (↕2)∾⌜⍟2<⟨⟩	Unit square	Constant	Expression		Mathematical	
 (↕2)∾⌜⍟3<⟨⟩	Unit cube	Constant	Expression		Mathematical	
 (↕2)∾⌜⍟4<⟨⟩	Unit tesseract	Constant	Expression		Mathematical	
+↕∘⌈⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending before n0	Expression			Mathematical	sequence interval
+(↕1+⌈)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending after n0	Expression			Mathematical	sequence interval
+(↕1+⌊)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending at or before n0	Expression			Mathematical	sequence interval
 1⌽∾˜9⥊"""1⌽∾˜9⥊"""	An expression giving itself	Constant			Text	quine
 (2×a)÷˜b-⊸(+⋈-)√(×˜b)-(4×a×c)	Solutions of quadratic equation ax²+bx+c=0	Expression			Mathematical	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
 1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression				Knuth ALGOL
