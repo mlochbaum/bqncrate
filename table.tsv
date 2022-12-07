@@ -569,7 +569,6 @@ m(⊢-|)n	Largest whole multiple of m less than or equal to n (n rounded down to
 (¬2⊸|)j	j is Even	Tacit	Monadic Function		Mathematical	
 (¬2|/)j1	Alternating sequence of j1_0 ones, j1_1 zeros, j1_2 ones, …	Tacit	Monadic Function		Boolean/Logical	1s 0s zeroes naughts falses falsehoods trues truths
 (0⌈´⊢)n	Positive maximum, at least zero (even for empty n)	Tacit	Monadic Function		Mathematical	largest biggest
-x0⌾(b1⊸/)y	Replace elements of y satisfying b1 with x0	Tacit	Monadic Function		Structural	substitute merge amend replace update major cells items indicate masking indicating
 i0(↑⋈↓)y	First and last i0 major cells of y	Tacit	Dyadic Function		Structural	headtail split divide separate dividing first leading remaining
 m0(+≍-)n0	m0±n0	Tacit	Dyadic Function		Mathematical	plusminus
 m0(-≍+)n0	m0∓n0	Tacit	Dyadic Function		Mathematical	minusplus
@@ -610,6 +609,7 @@ i0↑⟜(⥊⟜1)j0	Prefix List: length i0 with j0 ones on the left, the rest ze
 (×´1↓≢)y	Number of elements in major cells	Tacit	Monadic Function		Array Properties	shape items
 (×´¯1↓≢)y	Number of rows (1-cells) in array y	Tacit	Monadic Function		Array Properties	list
 (3÷˜×´)n1	Volume of pyramid with height, width, length n1	Tacit	Monadic Function		Mathematical	lengths sides
+x0¨⌾(b1⊸/)y1	Replace elements of y1 with x0 where b1 is 1	Tacit	Monadic Function		Structural	substitute merge amend replace update major cells items indicate masking indicating
 (⊢-⌊˝)n	Normalise n so that minimum value is 0	Tacit	Monadic Function		Mathematical	normalize zero smallest least cell element
 (⊢÷+˝)n	Normalise n so that sum is 1	Tacit	Monadic Function		Mathematical	normalize one
 (⊢=⌈˝)n1	Mask of positions where the global maximum occurs in n1	Tacit	Monadic Function		Boolean/Logical	indicate where equal to maxima maximums location masking indicating
