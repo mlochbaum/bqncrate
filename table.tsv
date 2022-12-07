@@ -1001,6 +1001,7 @@ m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation c
 c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Dyadic Function		Text	fuzzy match
 m0(∾·(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽↕⟜↕)n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Tacit	Dyadic Function		Mathematical	combinatorics selections list sublists subsequences choices choose
 i0(⊣|·⊑{0=𝕨?1‿0;(⌽-(0⋈𝕩⌊∘÷𝕨)⊸×)𝕨𝕊˜𝕨|𝕩})j0	Multiplicative inverse of n0 modulo m0	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
+f{𝕎𝕩}y	Function to apply f to y as a function	Block Function	Dyadic Function		Function Application	call tacit dynamic value subject
 {<˘⍉>𝕩}y1	Invert list of lists, so that element i of j of the result is j of i of the argument	Block Function	Monadic Function		Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
 x1{∾𝕨⊸∾¨𝕩}y1	Join list of lists y1 using separator x1, including leading separator	Block Function	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging
 c{𝕨⊸⊐⌾<𝕩}d1	Position of first occurrence of string d1 in list of strings c	Block Function	Dyadic Function		Index Generation	indexin indexof vtv vector 1st
@@ -1053,7 +1054,7 @@ F{⊢𝔽¨¨≠↑↓}n1	Apply F to all pairs of elements in n1 including self-
 F{⊢𝔽¨¨≠↑↑}n1	Apply F to all pairs of distinct elements in n1	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
 F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable
 x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block Modifier	Dyadic Function	1-modifier	Structural	items elements
-f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Ambivalent Function	1-modifier	Function Application	each every list gerund
+f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Ambivalent Function	1-modifier	Function Application	each every list gerund elements to both arguments collect
 F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Monadic Function	2-modifier	Iteration	application poweroperator circlestar starcircle repeated repeating iterating looping while
 F{F _𝕣_ G: {𝕊:F𝕩 ; 𝕊⁼:G𝕩}}G	Function that applies like F with inverse set to G	Block Modifier	Monadic Function	2-modifier	Function Application	obverse specify specified undo header opposite
 F{𝔽∘⊢⍟≢⟜𝔽_𝕣∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F starting at y (avoiding stack overflow)	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable low stack
@@ -1129,6 +1130,7 @@ _op_←{𝔾𝕨}	Prototypical block 2-modifier deriving dyadic functions	Syntax
 _op_←{𝔾𝕩}	Prototypical block 2-modifier deriving monadic functions	Syntax	Monadic Function	2-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
 name1‿name2⌽∘⊣↩@	Swap variable values				Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables
 x{𝕨⌾⊏𝕩}y	Replace first major cell of y with x	Block function	Monadic Function	1-modifier	Structural	substitute merge amend replace update 1st item element
+f{𝕎𝕩}¨<y	Apply each function in f to the whole of y	Expression			Function Application	functions each every list gerund elements collect
 m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions j1 starting at m1 with steps n1	Expression			Mathematical	sequence seq() multidimensional axes
 {𝕩𝕊⍟≠1+÷𝕩}1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
 (↕2)∾⌜⍟2<⟨⟩	Unit square	Constant	Expression		Mathematical	
