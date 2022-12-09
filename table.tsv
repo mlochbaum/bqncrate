@@ -994,6 +994,7 @@ a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in 
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈×´⊸(√˜))≠𝕩}n1	Arithmetic-geometric mean	Tacit	Monadic Function		Mathematical	average AGM() GAM() AG() GA() geometric-arithmetic common
 ((↕-⌈∘÷⟜2)(⊣⌽˘⌾⍉⌽˘)≍˜⥊⟜↕×˜)j0	a magic square, odd side j0	Tacit	Monadic Function		Mathematical	
+x1(⊑{+´𝕨⋈⟜¬⊸×1‿¯1↓¨<𝕩}⍟(1-˜≠∘⊢)˜)m0	Bezier curve with control points x1 evaluated at m0, by De Casteljau's algorithm	Tacit	Dyadic Function		Mathematical	polynomial spline value of interpolate parameter linear quadratic cubic
 ⊑∘{𝕩𝕊⍟≢𝕩(×´⊸(√˜)⋈+´⌾÷⊸×)≠𝕩}n1	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM() HGM() GH() HG() harmonic-geometric
 (((≠×+´∘×˜)-·×˜+´)÷·(1⌈-⟜1)⊸×≠)n1	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(x) dispersion
 ×˜⊸((2÷√π)×⋆∘-⊸××1(1+×)´÷⟜(1.5+↕99))n0	Error function (normalized integral of Gaussian)	Tacit	Monadic Function		Mathematical	statistics erf() normal distribution sigmoid cdf cumulative
