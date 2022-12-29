@@ -256,9 +256,47 @@ x1 •file.Lines d1	Write lines x1 to file d1 (overwrites existing contents)	Sys
 •rand.Range 0	A random real number in the interval from 0 to 1	System	Monadic Function		Random	roll
 •rand.Range n0	A number selected uniformly at random from ↕n0	System	Monadic Function		Random	randominteger roll
 •rand.Subset n0	A random sorted subset of ↕n0	System	Monadic Function		Random	simple random sample srs length
+mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa
+realIimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
+¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating
+name←y	Define	Syntax	Dyadic Function		Expression	leftarrow gets is copula let define naming denotes means
+name F↩y	Modify: change name to name F y	Syntax	Dyadic Function	1-modifier	Expression	leftarrow gets is copula let redefine naming denotes means inplace update
+name↩y	Change definition	Syntax			Expression	inplace replace value reassignment re-assignment reassigning re-assigning
+𝕨	Block left argument	Syntax	Array		Expression	alpha leftarg α ɑ alfa larg
+𝕨	Optional left argument in header	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header
+𝕩	Block right argument	Syntax	Array		Expression	omega rightarg ω ꞷ rarg
+𝔽	Block modifier left operand	Syntax	Array, Monadic Function, Dyadic Function		Expression	alpha leftop
+𝔾	Block modifier right operand	Syntax	Array, Monadic Function, Dyadic Function		Expression	omega rightop
+𝕊	Function self-reference	Syntax	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot
+𝕣	Modifier self-reference	Syntax	Ambivalent Monadic Function, Dyadic Function	1-modifier;2-modifier	Expression	deldel recurse triangledown downtriangle carrot
+⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
+,	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
+#	Comment symbol (disables rest of line)	Syntax			Expression	commentout lamp ignore skip note nb
+int.frac	Decimal Point	Syntax	Array		Expression	period rational
+'	Character delimiter	Syntax	Array		Expression	quote apostrophe string text
+"	String delimiter	Syntax	Array		Expression	quote apostrophe string text "
+⊢name←y	Define, and print if in the session	Syntax			Expression	passthroughvalue yieldassignment
+(F G H)y	Fork: (F y)G(H y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train
+(F G)y	Atop: F G y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
+(x G H)y	Fork: x G H y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train
+x(F G H)y	Fork: (x F y)G(x H y)	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train
+x(F G)y	Atop: F x G y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
+x(z G H)y	Fork: z G x H y	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train
+(x+y)×z	Precedence: z×x+y	Syntax			Expression	roundparentheses grouping roundparens
+x‿(y‿z)	Stranding: ⟨x,⟨y,z⟩⟩	Syntax			Expression	roundparentheses roundparens grouping nestedarraynotation nestedvectornotation
+F←{𝕨}	Prototypical dyadic block function	Syntax	Dyadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining
+F←{𝕩}	Prototypical monadic block function	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining
+>x1‿y1‿…	n-row table from n vectors	Syntax	Monadic Function		Structural	rows table lists
+_op←{𝔽𝕨}	Prototypical block 1-modifier deriving dyadic functions	Syntax	Dyadic Function	1-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
+_op←{𝔽𝕩}	Prototypical block 1-modifier deriving monadic functions	Syntax	Monadic Function	1-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
+_op_←{𝔾𝕨}	Prototypical block 2-modifier deriving dyadic functions	Syntax	Dyadic Function	2-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
+_op_←{𝔾𝕩}	Prototypical block 2-modifier deriving monadic functions	Syntax	Monadic Function	2-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
 1˘y2	List having as many ones as y2 has rows	Tacit	Monadic Function		Boolean/Logical	1s trues truths list
 0¨y	Zeros with same shape as y	Tacit	Monadic Function		Boolean/Logical	zeroes naughts 0s falses falsehoods
 x0¨y	Fill array y with data value x0	Tacit	Monadic Function	1-modifier	Structural	
+∞	Positive infinity	Constant			Expression	upper limit ∞ ∞ ¯ positiveinfinity ∞
+¯∞	Negative infinity	Constant			Expression	lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞
+x0⌈y0⌊z	Force z to range x0≤z≤y0	Expression			Mathematical	clamp limitrange between –
 +˜n	Double: 2×n	Tacit	Monadic Function		Mathematical	twice
 ×˜n	Square: n⋆2	Tacit	Monadic Function		Mathematical	² ^2
 =˜y	Ones, same shape and structure	Tacit	Monadic Function		Boolean/Logical	1s trues truths
@@ -369,7 +407,22 @@ m⋆⁼n	Base-m logarithm of n	Tacit	Dyadic Function		Mathematical	logarithms lo
 ⍉⎉2 y	Transpose every submatrix of y	Tacit	Monadic Function		Structural	cant ^T ⸆ ᵀ sub-matrix sub-table subtable planes
 F⌾⍉y	Apply action F defined on rows to columns instead	Tacit	Monadic Function		Function Application	
 ¯1⊸⊑y1	Pick last element of list y1	Tacit	Monadic Function		Selection	element cell list
+a0⊑x‿y	Pick y if a0 is true or x if a0 is false	Expression			Selection	conditional selector pick choose
+@+0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 ≢00
+@+10	Line Feed (LF)	Constant	Expression		Text	\n ^j U+0D 0x0Ah \u0A ≢0A newline linefeed
+@+11	Vertical Tab character (VT)	Constant	Expression		Text	\v ^K U+00 0x00h \u00 ≢00 tabulation
+@+12	Form Feed character (FF)	Constant	Expression		Text	\F ^L U+00 0x00h \u00 ≢00
+@+127	Delete character (DEL)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D ≢0D carriagereturn
+@+13	Carriage Return character (CR)	Constant	Expression		Text	\r ^m U+0D 0x0Dh \u0D ≢0D carriagereturn
+@+26	End-Of-File character (EOF)	Constant	Expression		Text	SUB ^z U+0A 0x0Dh \u0D ≢0D carriagereturn
+@+27	Escape character (ESC)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D ≢0D carriagereturn
+@+7	Bell character (BEL)	Constant	Expression		Text	\a ^G U+07 0x07h \u07 ≢07 beep
+@+8	Backspace character (BS)	Constant	Expression		Text	\b ^H U+08 0x08h \u08 ≢08
+@+9	Horizontal Tab character (HT)	Constant	Expression		Text	\t ^i U+00 0x00h \u00 ≢00 tabulation
 expr⊣name←y	Combining two lines into one	Tacit			Identity	lev lefttack where
+name∾↩y	Fast: 'name' redefined to be its value with y catenated along its first axis				Expression	amend append extend accumulate concatenate dimension 1st
+2×π	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏
+m×n⋆¯1⋆a	Conditionally multiply (where a=0) or divide (where a=1) m by n	Expression			Mathematical	per-element item cell
 +∘-n	Negate real part (“real conjugate”)	Tacit	Monadic Function		Mathematical	
 -∘+n	Mirror complex n across y-axis	Tacit	Monadic Function		Circular/Trigonometric	negatereal mirroring reflecting reflection
 m×∘-n	Sign of difference (¯1:m is smaller, 0:m=n, 1:m is bigger)	Tacit	Dyadic Function		Comparison	signum cmp() <=> >-< spaceship space-ship three-way compare comparing comparison
@@ -415,6 +468,7 @@ i0‿⌽⥊y1	Reshape y1 to i0-row table (filled row-wise)	Tacit	Monadic Functio
 i0⊏∘⌽y	Select major cell of y at cyclic offset i0 (default i0:¯1)	Tacit	Dyadic Function		Selection	element item
 i0⊏⟜∨y	i0'th-largest major cell of y	Tacit	Monadic Function		Selection	greatestof maximum biggest lexicographically item element
 i0⊏⟜∧y	i0'th-smallest major cell of y	Tacit	Monadic Function		Selection	leastof minimum lexicographically item element
+m0+n0×↕j0	Arithmetic progression list: j0 elements starting at m0 with step n0	Expression		2-modifier	Mathematical	list sequence seq() cells items
 ↕∘=y	All axes of array y	Tacit	Monadic Function		Index Generation	dimensions
 ↕∘≠y	Indices of Major Cells of y	Tacit	Monadic Function		Index Generation	enumerate number count items elements
 ↕∘≠y2	All row indices of table y2	Tacit	Monadic Function		Index Generation	enumerate rows table
@@ -461,8 +515,12 @@ i0⊑∘⌽y1	Pick element of list y1 at cyclic offset i0 (default ¯1)	Tacit	Dy
 i1/⊸⊔y	Cut y into partitions of length i1 (+´i1 ↔ ≠y)	Tacit	Dyadic Function		Structural	chop split separate chunks segments
 @⊸+i	Characters to Unicode code point numbers	Tacit	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping UniversalCodedCharacterSet UniversalCharacterSet codepoints code-points converting change changing
 -⟜@c	Characters from Unicode code point numbers	Tacit	Function	Data Conversion	System Function	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping UniversalCodedCharacterSet UniversalCharacterSet codepoints code-points converting change changing
+@+13‿10	Carriage Return-Line Feed pair (CRLF)	Constant	Expression		Text	\r\n U+0DU+0A 0x0D0x0A \u0D\u0A ≢0D≢0A enter linebreak windows
 m1(F⎉1)n2	Apply F between list m1 and each row of n2	Tacit	Dyadic Function		Function Application	rank prefixargeement rows distribute rowwise row-wise list dimensions axes horizontally
 x(F⎉0)y	Run F on units	Tacit	Dyadic Function	1-modifier	Function Application	apply
+⌊0.5+n	Round to nearest integer	Expression			Mathematical	int()
+'''	Quote character	Constant	Expression		Text	apostrophe ’ U+27 0x27 ≢27 quotationmark prime singlequoted in string symbol escape literal
+2÷˜1+√5	Golden ratio (direct formula)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
 a ¯1⊸⋆⊸× n	Conditional elementwise change of sign	Tacit	Dyadic Function		Mathematical	signum conditionalnegation changing converting conversion
 x2↑˜⟜≠y2	Vertically lengthening table x2 to be compatible (for ∾˘) with y2	Tacit	Monadic Function		Structural	compatibility sameheight adjust column-wise columnwise table
 i0⥊⟜0⊸»y1	Shift y1 right by i0, padding on left	Tacit	Dyadic Function		Selection	rightshift list
@@ -507,6 +565,7 @@ x∧`∘≠y	Indicate leading elements that are unequal	Tacit	Dyadic Function		C
 <˘∘⍉y2	Table to list of column lists (inverted table)	Tacit	Monadic Function		Structural	split table lists into columns vertically column-wise columnwise boxed enclosed table matrix transforming transformation change changing into inverting inversion
 a1/¨⊸⊔y	Partition y along each axis by list of partition length lists a1	Tacit	Dyadic Function		Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions blockmatrix
 a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Dyadic Function		Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension
+@+31↓↕126	Printable ASCII	characters	Expression		Text	characters
 m(0⌈⌊)n	Force numbers n to range 0≤n≤m	Tacit	Dyadic Function		Mathematical	clamp restrictrange between 0–
 i(1+|)j	Increment cyclic counter j with upper limit i	Tacit	Dyadic Function		Mathematical	
 (1||)n	Magnitude of fractional part of n	Tacit	Monadic Function		Mathematical	absolutedecimals
@@ -516,6 +575,7 @@ i(0=|)j	Does i divide j?	Tacit	Dyadic Function		Mathematical	testif divides divi
 i(0≠|)j	Does i not divide j?	Tacit	Dyadic Function		Mathematical	testif divisibility divisor ∤ dividing
 (0=≡)y	Is y an atom?	Tacit	Monadic Function		Array Properties	testif simple?
 (1=≡)y	Is y an array of atoms?	Tacit			Array Properties	testif simple?
+(a×i1)↓y	Conditional drop of i1 elements from array y only if a is true	Expression			Structural	major cells items delete remove without
 (1↓≢)y	Dimensions of major cells	Tacit	Monadic Function		Array Properties	shape items elements axes
 (¯1↓≢)y	Lengths of leading axes	Tacit	Monadic Function		Array Properties	shape dimensions start beginning
 (1+↕)j0	Integers from 1 to j0	Tacit	Monadic Function		Mathematical	whole numbers naturals 1st
@@ -523,13 +583,17 @@ x(1=⍋)y	Is y within the range [ x_0 , x_1 )	Tacit	Dyadic Function		Comparison	
 x(1≠⍋)y	Is y outside the range [ x_0 , x_1 )	Tacit	Dyadic Function		Comparison	testif >y≥ >x≥ tao totalarrayordering interval outsiderange?
 (¯1⊑≢)y	Length of last axis	Tacit	Monadic Function		Array Properties	count length() cells len() cells elements dimension ending
 (¯1⊑≢)y2	Number of columns in y2	Tacit	Monadic Function		Array Properties	trailingshape
+f{𝕎𝕩}y	Function to apply f to y as a function	Block Function	Dyadic Function		Function Application	call tacit dynamic value subject
 ⟨⟩⊸⥊y	First element of y as a unit	Tacit	Monadic Function		Selection	1st cell item
 ⟨⟩⊸⥊y	Enclosed top corner (or first element) of y; fill if y is empty	Tacit	Monadic Function		Selection	first top-left topleft northwest north-west NW cell item 1st
 ⟨⟩⊸⍉y	Convert y to array (enclose if atom)	Tacit	Monadic Function		Structural	leftshoeunderbar encloseifsimple conditionalenclose boxsimple eis condenclose
+⟨name1,name2⟩←y	Multiple assignment				Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector distributed pervasive pervading pervade unpacking unpacked
 m ×⎉1‿∞ n	Mid product of m and n	Tacit	Dyadic Function		Mathematical	midproduct
 '0'⊸+d	Translate digit numbers to characters	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean decimal converting change changing
 -⟜'0'd	Translate character digits to numbers	Tacit	Monadic Function		Data Conversion	base-2 base2 binary Boolean decimal converting change changing
 -⟜'a'd	Convert lowercase letters to their positions in the alphabet	Tacit	Monadic Function		Index Generation	nth ordinals Conversion converting change changing
+'0'+↕10	The digits from 0 to 9	Constant	Expression		System Function	123456789 numbers arabicnumerals 0-9 0123456789
+'a'+↕26	The letters from a to z	Constant	Expression		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
 m×⊸×⟜|n	Transfer sign from m to n	Tacit	Dyadic Function		Mathematical	signum resign
 x 0¨∘≢⊸↓ y	Increase rank of y to rank of x	Tacit	Dyadic Function		Structural	conform align number dimensions axes
 -⟜»∘/i1	Segment lengths given the number of segments that end at each position	Tacit	Monadic Function		Data Conversion	chunk trailing converting change changing segments partitions
@@ -589,11 +653,17 @@ x F⍟(↕1+y0) z	Apply F y0 times to z, returning initial value z and all inter
 (⊑0⥊<)y	Type (convert to fill element)	Tacit	Monadic Function		Array Properties	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods
 (⊑0⊸⥊)y	Fill element (converts characters to spaces, numbers to zeros)	Tacit	Monadic Function		Array Properties	fillelement padding 0s zeroes type cell item blanks falses falsehoods
 (↕¯1⊑≢)y2	All column indices of y2	Tacit	Monadic Function		Index Generation	enumerate columns
+(1˙𝕨)⊣0	Was this block function called monadically?			Function Application	Expression	arity ambivalent ambivalence variadic leftargument 900⌶ monadic?
+x{𝔽𝔾⊢}y	Church Boolean AND	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	∧ conjunction caret wedge hat circumflex Kpq
+x{⊣𝔽𝔾}y	Church Boolean OR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	∨ disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
+x{𝔽𝔾⊣}y	Church Boolean Converse Implication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	≥ because ∵ ⇐ if converseconditional Bpq reverseimplying
+x{𝔾𝔽⊣}y	Church Boolean Implication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	≤ materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
 m(π××)n	Area of cone with height m and radius n (excluding base)	Tacit	Dyadic Function		Circular/Trigonometric	lengths bottom
 ⊐⟜' '⎉1 d	Indices of first blanks in rows of array d	Tacit	Monadic Function		Index Generation	1st spaces row-wise rowwise text horizontally
 x0+´∘⥊∘=y	Number of occurrences of atom x0 in array y	Tacit	Dyadic Function		Comparison	count tally
 m1-´∘×⟜⌽n1	Scalar cross product of 2-dimensional vectors m1 and n1	Tacit	Dyadic Function		Mathematical	 vectorproduct signed area parallelogram
 c⊑∘∊˜⟜<d1	Is string d1 a member of list of strings c	Tacit	Dyadic Function		Index Generation	isin membership containedin has vtv vector
+name1‿name2⌽∘⊣↩@	Swap variable values				Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables
 (0=≠∘⥊)y	Is y an Empty Array?	Tacit	Monadic Function		Structural	testif isempty? isvoid? isnull?
 (1=≠∘⥊)y	Is y a singleton (array with only one element)?	Tacit	Monadic Function		Array Properties	testif unit? sole? one?
 (¯128+256|128⊸+)j	Convert from unsigned short integers to signed short integers	Tacit	Monadic Function		Data Conversion	datarepresentation converting change changing
@@ -641,6 +711,15 @@ m2(1⍉˘×⌜)n2	Direct matrix product	Tacit	Dyadic Function		Mathematical	tabl
 (1=≠∘⍷)y	Are all major cells of y identical?	Tacit	Monadic Function		Comparison	testif allsame allmatch? elements items allidentical allequal
 (1<≠∘⍷)y	Are any major cells distinct?	Tacit	Monadic Function		Sets	testif anydifferent? anyunequal? anyunique? items elements
 (1≥≠∘⍷)y	Are all major cells identical?	Tacit	Monadic Function		Sets	testif allsame? allequal? nounique? items elements
+x{𝕨⌾⊏𝕩}y	Replace first major cell of y with x	Block function	Monadic Function	1-modifier	Structural	substitute merge amend replace update 1st item element
+x{⊢𝔽𝔾˜}y	Church Boolean NOR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	⍱ peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
+x{𝔽˜𝔾⊢}y	Church Boolean Converse Nonimplication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	< ⇍ Mpq
+x{𝔾˜𝔽⊢}y	Church Boolean Nonimplication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	> abjunction ⇏ not butnot Lpq
+x{𝔽˜𝔾⊣}y	Church Boolean NAND	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	⍲ shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
+{𝔽˜𝔾𝔽}	Church Boolean XOR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	≠ exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
+{𝔽𝔾𝔽˜}	Church Boolean XNOR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	= materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
+f{𝕎𝕩}¨<y	Apply each function in f to the whole of y	Expression			Function Application	functions each every list gerund elements collect
+F{𝔽𝕩⋄𝕩}y	Apply function F but discard result and return the original value	Block Modifier	Monadic Function	1-modifier	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 ⍉∘>x1‿y1‿…	n-column table from n lists	Tacit	Monadic Function		Structural	transpose columns table lists
 (⌊0.5+⊢)n	Round to nearest integer, ties towards ∞	Tacit	Monadic Function		Mathematical	precision favoring whole number favoring closestinteger nearestinteger nint()
 (32+1.8⊸×)n	Celsius to Fahrenheit	Tacit	Monadic Function		Data Conversion	°Fahrenheit °Celsius f2c() ftoc() converting change changing
@@ -650,6 +729,7 @@ m2(1⍉˘×⌜)n2	Direct matrix product	Tacit	Dyadic Function		Mathematical	tabl
 (π×⋆⟜2)n	Area of circle with radius n	Tacit	Monadic Function		Circular/Trigonometric	length
 ' '⊸≠⊸/d1	Remove blanks in string	Tacit	Monadic Function		Text	deletespaces spaces drop without
 ⊐⟜' '⊸↑d1	First word in d1	Tacit	Monadic Function		Text	initial leading leftmost nonspace non-space 1st start beginning
+m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions j1 starting at m1 with steps n1	Expression			Mathematical	sequence seq() multidimensional axes
 =⌜○↕´∘≢n2	Identity matrix with shape of table n2	Tacit	Monadic Function		Mathematical	diagonal table
 ≠⌜○↕´∘≢n2	Anti-diagonal matrix with shape of table n2	Tacit	Monadic Function		Mathematical	nondiagonal table
 x⊑∘/∘¬∘∊y	Position of first element in x not in y	Tacit	Dyadic Function		Index Generation	cell element 1st
@@ -700,6 +780,8 @@ k˙⌾(i‿j⊸⊑)y2	Replace element i,j of matrix y2 with k	Tacit	Monadic Func
 (⊑⊢⊐⌈´)n1	Index of minimum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	lesser smaller smallest lowest least
 (⊑⊢⊐⌊´)n1	Index of maximum value in n1 (linear time)	Tacit	Monadic Function		Index Generation	greater larger bigger greatest biggest largest highest
 x(≠∘⊣>⊒)y	Progressive member of (∊) without replacement	Tacit	Dyadic Function		Sets	isin membership containedin hascorresponding mathcingmemberof PDE remove
+{<˘⍉>𝕩}y1	Invert list of lists, so that element i of j of the result is j of i of the argument	Block Function	Monadic Function		Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
+F{⊐⊏𝔽∘⍷}y	Apply deterministic cell-wise F to cells of y, avoiding extra calls for duplicate cells	Block Modifier	Monadic Function	1-modifier	Function Application	performance memoisation memoization quick speed
 m +˝∘×⎉1‿∞ n	Matrix product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Dyadic Function		Mathematical	dotproduct multiplication multiply
 m -˝∘×⎉1‿∞ n	Alternating matrix product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Dyadic Function		Mathematical	
 a2 ∨˝∘∧⎉1‿∞ b2	Extend a transitive binary relation	Tacit	Dyadic Function		Boolean/Logical	extension base-2 base2
@@ -758,6 +840,11 @@ i(⊑⊣+1⊐˜↓)b	Index of first one after index i0 in b1	Tacit	Dyadic Functi
 (1+⊒+⊒⌾⌽)y	Indicate number of cells matching each cell of y	Tacit	Monadic Function		Comparison	count duplicate repetitions appearances
 (1+⊒+⊒⌾⌽)y	Count of total (not previous) occurrences of each cell of y	Tacit	Monadic Function		Sets	tally selfcount items elements
 x1(+´¨⊐⊸⊔)n1	Sum n1 by buckets x1 (≢n1 ↔ ≢x1)	Tacit	Dyadic Function		Mathematical	groups classify bins
+x1{∾𝕨⊸∾¨𝕩}y1	Join list of lists y1 using separator x1, including leading separator	Block Function	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging
+c{𝕨⊸⊐⌾<𝕩}d1	Position of first occurrence of string d1 in list of strings c	Block Function	Dyadic Function		Index Generation	indexin indexof vtv vector 1st
+F{⊢𝔽¨¨1↓↓}n1	Apply F to all pairs of distinct elements in n1, reverse order	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
+F{⊢𝔽¨¨1↓↑}n1	Apply F to all pairs of elements in n1 including self-pairs	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
+F{𝕨𝔽˜´⌽𝕩}y	Fold from the left	Block Modifier	Monadic Function	1-modifier	Function Application	reduction typenotation reducing folding
 (π×4÷3÷⋆⟜3)n	Volume of sphere with radius n	Tacit	Monadic Function		Circular/Trigonometric	length ball
 (∧˝' '⊸=)d	Mask for blank columns	Tacit	Monadic Function		Boolean/Logical	spaces empty filter indicate masking indicating blanks bitmask bit-mask
 i0(×⥊1↑˜-∘⊢)j0	Ending points for i0 fields of width j0	Tacit	Dyadic Function		Boolean/Logical	vector list trailing segments partitions
@@ -789,6 +876,15 @@ i0(|⟜↕⟜≠⊔⊢)y	Distribute major cells of y into i0 groups round-robin	
 (≠(«-⊢)/)i1	Segment lengths given the number of segments that start at each position	Tacit	Monadic Function		Data Conversion	chunk start leading converting change changing segments partitions
 i0/⟜(≍⎉(-m0))y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Dyadic Function		Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension
 x2(¯1⊑≠)⊸(↑˘)y2	Widen table y2 to be compatible with x2	Tacit	Dyadic Function		Structural	adjust width table
+{⥊1‿0‿1∧⌜⍟𝕩1}j0	Cantor set iteration j0	Block Function	Monadic Function		Mathematical	fractal ternary middle third
+i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	Dyadic Function		Index Generation	repeated
+F{⊢𝔽¨¨≠↑↓}n1	Apply F to all pairs of elements in n1 including self-pairs, reverse order	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
+F{⊢𝔽¨¨≠↑↑}n1	Apply F to all pairs of distinct elements in n1	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
+{𝕩𝕊⍟≠1+÷𝕩}1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
+x{𝕨⌾(¯1⊸⊏)𝕩}y	Replace last major cell of y with x0	Block Function	Dyadic Function		Structural	substitute merge amend replace update item element
+(↕2)∾⌜⍟2<⟨⟩	Unit square	Constant	Expression		Mathematical	
+(↕2)∾⌜⍟3<⟨⟩	Unit cube	Constant	Expression		Mathematical	
+(↕2)∾⌜⍟4<⟨⟩	Unit tesseract	Constant	Expression		Mathematical	
 (××¯0.5⌈∘+|)n	Round to nearest integer, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring integer round()
 (××0.5⌊∘+|)n	Round to nearest integer, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring integer round()
 (|¯11|·+´+`)j1	ISBN check digit generator from ten first digits j1	Tacit	Monadic Function		Mathematical	InternationalStandardBookNumber correct validate 1st
@@ -828,7 +924,12 @@ x(+´∧`∘⌽∘≠)y	Count number of trailing elements that are unequal	Tacit
 (0⌈´0(0⌈+)`⊢)n1	Largest sum of any contiguous sublist	Tacit	Monadic Function		Mathematical	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
 i0((+˝÷≠)⍉⁼)n	Average (mean value) of elements of n along axis i0	Tacit	Monadic Function		Mathematical	arithmeticmean() AM() avg() axis dimension cells items
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Dyadic Function		Text	combine glue 0x0A U+0A U+000A
+{+⟜÷´¨1↓↑𝕩}n1	Continued fraction convergents with terms n1	Block Function	Monadic Function		Mathematical	series sequence
+{⥊+⌜´𝕩⥊<↕10}i0	Sum of digits of the first 10⋆i0 numbers	Block Function	Monadic Function		Mathematical	sod()
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Function		Structural	faro weave dovetail zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
+m{𝕨⊸×⊸+˜´𝕩}n1	Value of polynomial with ascending coefficients n1 at points m (Horner's method)	Block Function	Dyadic Function		Mathematical	
+F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable
+x1{𝕨⌾(0‿0⊸⍉)𝕩}y2	Matrix y2 with main diagonal changed to x1	Block Function	Dyadic Function		Expression	inplace update table
 (1≥·|-⌜○↕´)j1	Tridiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	tri-diagonal banded
 (2≥·|-⌜○↕´)j1	Pentadiagonal matrix of size j1	Tacit	Monadic Function		Mathematical	penta-diagonal banded
 i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Tacit	Dyadic Function		Mathematical	sort() sortby() table sorting reordering ordering specific columns
@@ -848,6 +949,7 @@ a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those l
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Dyadic Function		Sets	⊖
 (+˝÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Monadic Function		Mathematical	average GM() G() geometricmean
 m1 1⊸⌽⊸×{1⌽𝔽˜-𝔽} n1	Cross product of 3-dimensional vectors m1 and n1	Tacit	Dyadic Function		Mathematical	crossproduct exterior product multiplication multiply
+x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block Modifier	Dyadic Function	1-modifier	Structural	items elements
 (××·⌊|+1>2||)n	Round to nearest odd number, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring
 (××·⌊|+1≤2||)n	Round to nearest even number, ties away from 0	Tacit	Monadic Function		Mathematical	precision favoring
 (××¯1+2×·⌈2÷˜|)n	Round to nearest odd number, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring
@@ -876,11 +978,14 @@ i0(⊢/˜0=|⟜(↕≠))y	Keep every i0'th major cell of y	Tacit	Dyadic Function
 i0(⊢/˜0≠|⟜(↕≠))y	Remove every i0'th cell of y	Tacit	Dyadic Function		Selection	filter item element
 (⊢>⌜⟜(⌽↕)⌈´)i1	Matrix with i⊑i1 trailing ones on row i	Tacit	Monadic Function		Boolean/Logical	1st trues truths first table ending
 (⊢≤⌜⟜(⌽↕)⌈´)i1	Matrix with i⊑i1 trailing zeroes on row i	Tacit	Monadic Function		Boolean/Logical	1s 0s zeros ones falses falsehoods trues truths table ending
+↕∘⌈⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending before n0	Expression			Mathematical	sequence interval
 x(∾○(↕≠)⍋⊸⊏∾)y	Merge x and y alternately	Tacit	Dyadic Function		Structural	faro weave dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
 i0(⊢/˜(⍋⍋)⊸∊˜)y	The i0 smallest cells of y in order of occurrence	Tacit	Dyadic Function		Selection	least items elements
 i0(⊢/˜(⍋⍒)⊸∊˜)y	The i0 largest cells of y in order of occurrence	Tacit	Dyadic Function		Selection	biggest greatestif items elements
 (∨≠¨⊸(≍˘)∘⊔)y	Sorted frequency table	Tacit	Monadic Function		Mathematical	matrix
 =⊸{<⎉𝕨⍉⍟𝕨>𝕩}y	Invert array of same-rank arrays, exchanging inner with outer axes	Tacit	Monadic Function		Structural	transpose transposing cell element zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing flip
+{2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Block Function	Dyadic Function		Mathematical	 triangle shape region size points coordinates
+{𝕩⌾(0‿0⊸⍉)0⌜˜𝕩}y1	Diagonal matrix with elements of y1 (filled appropriately)	Block Function	Monadic Function		Structural	cells items table
 (××2×·⌈2÷˜1-˜|)n	Round to nearest even number, ties towards 0	Tacit	Monadic Function		Mathematical	precision favoring
 (+˝|∘-)⎉1⎉1‿∞˜n2	Manhattan distance table for points in n-space (one point per row)	Tacit	Monadic Function		Mathematical	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d() matrix
 (28+·≠´0=400‿100‿4|⌜⊢)j	Number of days in February of year j (YYYY)	Tacit	Monadic Function		Mathematical	gregoriancalendar feb29 29february29th feb28 28february28th length
@@ -903,6 +1008,7 @@ i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tac
 m0(⋆⟜(↕≠)+´∘×⊢)n1	Value of polynomial with ascending coefficients n1 at point m0	Tacit	Dyadic Function		Mathematical	
 i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorter one at the end if needed	Tacit	Dyadic Function		Structural	chunk divide dividing cut partition distribute greedy
 a1(1(∾/∾˜)(≥/⊣))b1	All elements true (∧´) for each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	sub-vector major cells items ∧/¨a1⊂[1]b1
+m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending coefficients and optional constant m0	Block Function	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate
 i0 10⊸⋆⊸(⊣÷˜0.5⌊∘+×) n	Round n to i0 decimal places	Tacit	Dyadic Function		Mathematical	precision banking banker's bank's (⍎⍕)
 i0(⊢÷⊣√·+´⋆˜⟜|)n	Normalisation by i0-norm	Tacit	Dyadic Function		Mathematical	Lp-normalise Lp-normalize Lp-normalization L-p ℓp ℓ-p
 (√·×´0⊸∾-+´÷2˙)n	Area of triangle with side lengths n	Tacit	Monadic Function		Circular/Trigonometric	Heron's formula herons
@@ -910,6 +1016,8 @@ a1(1⌈·⌈`↕∘≠⊸×)⊸⊏y	Copy each cell of y until before next 1 in a
 (<·⌈´≢¨)⊸(↑¨)y1	Pad elements of list of equal-rank arrays y1 to equal shape	Tacit	Monadic Function		Structural	list cells items
 (2=·+´0=(1+↕)⊸|)n0	Is n0 a prime?	Tacit	Monadic Function		Mathematical	testif isprime primality
 (0=(1+·↕⌈´)|⌜⊢)j1	Divisibility table	Tacit	Monadic Function		Mathematical	divides divisor matrix
+{(√π)÷˜⋆-×˜𝕩}n	Gaussian or normal distribution with mean 0 and variance 1/2	Block Function	Monadic Function		Mathematical	statistics probability bell curve pdf probability density function
+f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Ambivalent Function	1-modifier	Function Application	each every list gerund elements to both arguments collect
 (∨˝' '⊸≠)⊸(/⎉1)d2	Remove blank columns	Tacit	Monadic Function		Text	all-space allspace empty remove delete drop space without
 (>⌈´↑¨⥊¨⟜'⎕')j	Bar chart	Tacit	Monadic Function		Mathematical	curve graph plotting
 (⍋·+˝˘' '⊸≠)⊸⊏d2	Sort words in list d2 according to word length	Tacit	Monadic Function		Text	vector
@@ -920,8 +1028,16 @@ m1((√+´∘×˜)÷⟜2⊸∾)n0	Length of edges of rectangular pyramid with ba
 i0(-÷○(×´)1⊸+)⟜↕˜j0	Number of unordered selections (combinations) of i0 items from j0 choices	Tacit	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations choose unordered selecting picking outof nCk C(n,k)
 i(⊢/˜¬∘∊˜⟜(↕≠))y	Remove major cells with indices i from y	Tacit	Dyadic Function		Selection	without remove indices delete drop
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Dyadic Function		Selection	trim left right spaces multiple consecutive blanks start beginning ending
+a1(-⟜»1⊸⌽⊸/⟜(+`))n	Sums over (+/) sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	segmented partitioned sub-vectors
+i0(1↓=⟜(+`⊑⊸=)/⊢)y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Block Function	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st
 i0(⌊∘×⟜(↕⊸÷≠)⊔⊢)y	Distribute major cells of y into i0 slices as evenly as possible	Tacit	Dyadic Function		Structural	unzip elements items deal
 a1(¬1(∾/∾˜)(∨/⊣))b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	sub-vector cell item ∨/¨a1⊂[1]b1
+(↕1+⌈)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending after n0	Expression			Mathematical	sequence interval
+(↕1+⌊)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending at or before n0	Expression			Mathematical	sequence interval
+F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Monadic Function	2-modifier	Iteration	application poweroperator circlestar starcircle repeated repeating iterating looping while
+{(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Monadic Function		Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
+m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
+F{F _𝕣_ G: {𝕊:F𝕩 ; 𝕊⁼:G𝕩}}G	Function that applies like F with inverse set to G	Block Modifier	Monadic Function	2-modifier	Function Application	obverse specify specified undo header opposite
 (<⥊¨·⊣⌜˜`⌾⌽↕¨)j1	Index arrays along each dimension for shape j1	Tacit	Monadic Function		Index Generation	separated indices positions locations elements odometer meshgrid ndgrid
 (≠(«-⊢)·/1»≠⟜«)y1	Lengths of sublists of y1 having equal elements	Tacit	Monadic Function		Comparison	runs changes identical consistent cells items
 x0(⊣-(××·↕1+|)∘-)y0	Consecutive values from x0 to y0 (both numbers, or both characters)	Tacit	Dyadic Function		Mathematical	inclusive range closed interval seq() sequence … any either direction unordered
@@ -930,6 +1046,7 @@ x0(⊣-(××·↕1+|)∘-)y0	Consecutive values from x0 to y0 (both numbers, or 
 ('F'-·×⊸+60‿70‿80‿90⊸⍋)j	Students grades given score	Tacit	Monadic Function		Mathematical	
 (⊣+=×'-'⊸-)⟜' 'y	Replace all blanks with dashes	Tacit	Monadic Function		Text	spaces substitute format
 ¬∘∊⟜".,:;?!"⊸/d1	Remove punctuation	Tacit	Monadic Function		Text	delete symbols drop without
+1⌽∾˜9⥊"""1⌽∾˜9⥊"""	An expression giving itself	Constant			Text	quine
 i0↕⊸(+´⊣/˜0=|)∘⊢⍟⊣j0	i0'th number in the Aliquot sequence for j0	Tacit	Dyadic Function		Mathematical	
 (+´↕⊸(⊣/˜0=|))⊸=j0	Is j0 a perfect number?	Tacit	Monadic Function		Mathematical	testif perfect?
 (+´↕⊸(⊣/˜0=|))⊸<j0	Is j0 a deficient number?	Tacit	Monadic Function		Mathematical	testif deficient?
@@ -937,6 +1054,7 @@ i0↕⊸(+´⊣/˜0=|)∘⊢⍟⊣j0	i0'th number in the Aliquot sequence for j0
 m1(-⟜»≠⟜«⊸/⟜(+`))n1	Sum elements of n1 marked by successive identicals in m1	Tacit	Dyadic Function		Mathematical	partitioned segmented major cells items
 x0((⊢-˜+`×¬)∘=⊔⊢)y1	Split y1 at occurrences of separators x0, removing the separators	Tacit	Dyadic Function		Structural	cut separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
 i0(+´÷≠){𝔽-⟜𝔽⊸⋆˜}n1	i0'th moment of n1	Tacit	Dyadic Function		Mathematical	
+{x0¨⌾((y0=𝕩)/○⥊⊢)𝕩}y	Replace all values y0 in y with x0	Block Function	Monadic Function	2-modifier	Structural	substitute merge amend replace update
 (√+´∘×˜∘-)⎉1⎉1‿∞˜n2	Euclidean distance table for points in n-space (one point per row)	Tacit	Monadic Function		Mathematical	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Cartesian metric Pythagorean d() matrix
 a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group of 1s	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions
 (>·»⊸+⍟(↕≠)1∾⥊⟜0)j0	Binomial coefficients until j0	Tacit	Monadic Function		Mathematical	pascal'striangle numberofcombinations pascalstriangle
@@ -950,6 +1068,8 @@ a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group
 (¬∘∊⟜(⥊×⌜˜)⊸/2↓↕)j0	Primes less than j0	Tacit	Monadic Function		Mathematical	primesuntil numbers
 x(≠∘⊣(+⟜1|--1˙)⌽⊸⊐)y	Last indices in x of major cells y	Tacit	Dyadic Function		Index Generation	indexin indexof find locate positionof locating items elements location
 i1(-⟜»⊏⟜(0∾⊢)○(+`))n	Sums (+´) of sublists of n with lengths given by i1	Tacit	Dyadic Function		Mathematical	segmented partitioned sub-vectors
+n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Dyadic Function		Mathematical	
+x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Monadic Function	1-modifier	Structural	substitute merge amend update cells items
 m(×⊸⊢×⊣×·⌈¯0.5+|∘÷˜)n	Round n to nearest multiple of m, ties towards 0	Tacit	Dyadic Function		Mathematical	precision favoring
 m(×⊸⊢×⊣×·⌊0.5+|∘÷˜)n	Round n to nearest multiple of m, ties away from 0	Tacit	Dyadic Function		Mathematical	precision favoring
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
@@ -958,10 +1078,12 @@ m(×⊸⊢×⊣×·⌊0.5+|∘÷˜)n	Round n to nearest multiple of m, ties away
 '0'⊸(⊢-∧`∘=×-⟜' ')d	Replace leading zeros with blanks	Tacit	Monadic Function		Text	spaces nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
 (-˜˝˘∘‿2⥊0⊸(/∾≠∾˜))b1	Lengths of groups of ones in b1	Tacit	Monadic Function		Boolean/Logical	runs 1s trues truths
 (-˜`˘∘‿2⥊0⊸(/∾≠∾˜))b1	Start and length of groups of 1s in b1	Tacit	Monadic Function		Boolean/Logical	runs sequences blocks trues truths 1st ones
+F{𝔽∘⊢⍟≢⟜𝔽_𝕣∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F starting at y (avoiding stack overflow)	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable low stack
 (+´÷≠){𝔽⌾(×˜)-⟜𝔽}n1	Theoretical standard deviation	Tacit	Monadic Function		Mathematical	stddev σ sigma SD
 i0(1={𝕨(|𝕊⍟(>⟜0)⊣)𝕩})j0	Are i0 and j0 co-prime?	Tacit	Dyadic Function		Mathematical	coprime? relatively mutually testif
 (1+·+´↕⊸(⊣/˜0=|))⊸=j0	Is j0 an almost perfect number?	Tacit	Monadic Function		Mathematical	testif almostperfect? almost-perfect?
 (¯1+·+´↕⊸(⊣/˜0=|))⊸=j0	Is j0 a quasiperfect number? (none are known)	Tacit	Monadic Function		Mathematical	testif quasiperfect? quasi-perfect?
+{𝕩𝕊⍟≢∨˝∘∧⎉1‿∞˜⊸∨𝕩}b2	Transitive closure	Block Function	Monadic Function		Boolean/Logical	adjacency list matrix contingency table
 ((∨`∧∨`⌾⌽)' '⊸≠)⊸/d1	Removing leading and trailing blanks	Tacit	Monadic Function		Text	trim left right spaces start beginning ending
 ≍⟜(' '(⊣+≠×'¯'-⊣)⊢)d1	Underline non-blanks in a string	Tacit	Monadic Function		Text	wordunderlinewords wordunderscorewords
 ((+´÷≠)∧⊏˜2⌊∘÷˜¯1‿0+≠)n1	Median of non-empty n1, averaging two values for even lengths	Tacit	Monadic Function		Mathematical	average
@@ -969,9 +1091,12 @@ i0(1={𝕨(|𝕊⍟(>⟜0)⊣)𝕩})j0	Are i0 and j0 co-prime?	Tacit	Dyadic Func
 a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b1	Indicate first one in each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	sub-vector 1st
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch given b1 on and a1 off spikes (initially off)	Tacit	Dyadic Function		Boolean/Logical	signal on/off
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	zeros 0s falses falsehoods start beginning
+m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
 (-·+´2(⋆⁼×⊢)/⁼∘⊐÷≠)y	Shannon entropy of array 𝕩	Tacit	Monadic Function		Mathematical	informationtheory text message string
 (" ⎕"⊏˜·>⌜⟜(↕⌈´)/⁼)j1	Histogram (distribution barchart, down the page)	Tacit	Monadic Function		Mathematical	
+{'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all blanks with dashes	Block Function	Monadic Function		Text	spaces substitute format
 a1(⊢∧∧(⊢∊/)(+`»⊸<)∘⊢)b1	Groups of ones in b1 pointed to by at least one 1 in a1	Tacit	Dyadic Function		Boolean/Logical	runs sequences 1s indicated trues truths
+a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
 a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero in each sublist of b indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned 1st
@@ -979,168 +1104,43 @@ a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero in each sublist of
 (=⌜˜∘(↕≠)≡+˝∘×⎉1‿∞⟜⍉)n2	Is square matrix n2 orthogonal?	Tacit	Monadic Function		Mathematical	testif Orthogonal?
 c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Dyadic Function		Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions
 (⊏∘⊑˘·(⌈´⊸=≠¨)⊸/⊐⊸⊔)y	Modes: Most frequent major cells of data	Tacit	Monadic Function		Set	average items elements
+(-2⌊∘÷˜·+´·∧`' '=⌽)⊸⌽˘d2	Center flush left character array	Block Function	Monadic Function		Text	centre align
 -⟜(64×'^'⊸=»⊸∧1="@`"⊸⍋)d1	Evaluate control character sequences (like ^J)	Tacit	Monadic Function		Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed lf verticaltab vt formfeed ff carriagereturn cr crlf cr+lf ^M^J control-z sub eof endoffile end-of-file escape ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^J ^K ^L ^M ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_
+{∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨⋈⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Monadic Function		Mathematical	gol conways cellularautomaton sub-array
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Dyadic Function		Text	fuzzy match lcs
 (+´(↕3)(×˝⌽˘){𝔽--⊸𝔽}⊢) n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Tacit	Monadic Function		Mathematical	scalar box signed volume parallelepiped
+x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of elements of sublists of y indicated by a1	Tacit	Dyadic Function		Mathematical	segmented partitioned array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of elements of sublists of y indicated by a1	Tacit	Dyadic Function		Mathematical	segmented partitioned array maximums greatestif largest biggest major cells items
+(2×a)÷˜b-⊸(+⋈-)√(×˜b)-(4×a×c)	Solutions of quadratic equation ax²+bx+c=0	Expression			Mathematical	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
 m(+´⋆⌜˜)⟜((1+↕)⊸(⊣/˜0=|))j0	Sum of m'th powers of positive divisors of j0	Tacit	Dyadic Function		Mathematical	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	1s trues truths start beginning
+a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	sub-vectors +\
+a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Dyadic Function		Boolean/Logical	sub-vectors sublists sub-lists ≠\
+10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Base-10 digits of natural number j0	Block Modifier	Monadic Function		Mathematical	base10 decimal base-10
+2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0	Block Modifier	Monadic Function		Mathematical	digits base2 base-2 Boolean
 (16⊸×⊸+˜´∘⌽(∾"0A"+⟜↕¨10‿6)⊸⊐)d1	Convert from hexadecimal string to number	Tacit	Monadic Function		Mathematical	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
+x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 (=⌜˜∘(↕≠)≡+˝∘×⎉1‿∞⟜(⍉+))n2	Is square matrix n2 unitary?	Tacit	Monadic Function		Mathematical	testif Unitary?
 (+´¨(+⌜´(↕2)¨)⊔·×⌜´1⋈¨˜-)n1	Coefficients in ascending order of polynomial with roots n1	Tacit	Monadic Function		Mathematical	solve
+{÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨𝕩}n1	Continued fraction convergents with terms n1, in linear time	Block Function	Monadic Function		Mathematical	series sequence
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Tacit	Monadic Function		Mathematical	average AHM() HAM() AH() HA() harmonic-arithmetic
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Monadic Function		Structural	list cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Dyadic Function		Mathematical	pcc() ppmcc() bivariate
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈×´⊸(√˜))≠𝕩}n1	Arithmetic-geometric mean	Tacit	Monadic Function		Mathematical	average AGM() GAM() AG() GA() geometric-arithmetic common
 ((↕-⌈∘÷⟜2)(⊣⌽˘⌾⍉⌽˘)≍˜⥊⟜↕×˜)j0	a magic square, odd side j0	Tacit	Monadic Function		Mathematical	
+{(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Block Modifier	Monadic Function	2-modifier	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
 x1(⊑{+´𝕨⋈⟜¬⊸×1‿¯1↓¨<𝕩}⍟(1-˜≠∘⊢)˜)m0	Bezier curve with control points x1 evaluated at m0, by De Casteljau's algorithm	Tacit	Dyadic Function		Mathematical	polynomial spline value of interpolate parameter linear quadratic cubic
 ⊑∘{𝕩𝕊⍟≢𝕩(×´⊸(√˜)⋈+´⌾÷⊸×)≠𝕩}n1	Geometric-harmonic mean	Tacit	Monadic Function		Mathematical	average GHM() HGM() GH() HG() harmonic-geometric
 (((≠×+´∘×˜)-·×˜+´)÷·(1⌈-⟜1)⊸×≠)n1	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(x) dispersion
 ×˜⊸((2÷√π)×⋆∘-⊸××1(1+×)´÷⟜(1.5+↕99))n0	Error function (normalized integral of Gaussian)	Tacit	Monadic Function		Mathematical	statistics erf() normal distribution sigmoid cdf cumulative
 ((≍↕0){∾˝(0∾˘1+𝕩)⊸⊏˘⍒˘=⌜˜↕𝕨}´-⟜↕)n0	All permutations of ↕n0, as table rows in lexicographical order	Tacit	Monadic Function		Mathematical	combinatorics ordered orderings anagrams without replacement list
 c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Dyadic Function		Text	fuzzy match
+1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression				Knuth ALGOL
 m0(∾·(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽↕⟜↕)n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Tacit	Dyadic Function		Mathematical	combinatorics selections list sublists subsequences choices choose
+(0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression				fizz buzz interview counting
+c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Dyadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
 i0(⊣|·⊑{0=𝕨?1‿0;(⌽-(0⋈𝕩⌊∘÷𝕨)⊸×)𝕨𝕊˜𝕨|𝕩})j0	Multiplicative inverse of n0 modulo m0	Tacit	Dyadic Function		Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
-f{𝕎𝕩}y	Function to apply f to y as a function	Block Function	Dyadic Function		Function Application	call tacit dynamic value subject
-{<˘⍉>𝕩}y1	Invert list of lists, so that element i of j of the result is j of i of the argument	Block Function	Monadic Function		Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
-x1{∾𝕨⊸∾¨𝕩}y1	Join list of lists y1 using separator x1, including leading separator	Block Function	Dyadic Function		Structural	text with using string list joiner combiner joining combining merge merging
-c{𝕨⊸⊐⌾<𝕩}d1	Position of first occurrence of string d1 in list of strings c	Block Function	Dyadic Function		Index Generation	indexin indexof vtv vector 1st
-{⥊1‿0‿1∧⌜⍟𝕩1}j0	Cantor set iteration j0	Block Function	Monadic Function		Mathematical	fractal ternary middle third
-i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	Dyadic Function		Index Generation	repeated
-x{𝕨⌾(¯1⊸⊏)𝕩}y	Replace last major cell of y with x0	Block Function	Dyadic Function		Structural	substitute merge amend replace update item element
-{+⟜÷´¨1↓↑𝕩}n1	Continued fraction convergents with terms n1	Block Function	Monadic Function		Mathematical	series sequence
-{⥊+⌜´𝕩⥊<↕10}i0	Sum of digits of the first 10⋆i0 numbers	Block Function	Monadic Function		Mathematical	sod()
-m{𝕨⊸×⊸+˜´𝕩}n1	Value of polynomial with ascending coefficients n1 at points m (Horner's method)	Block Function	Dyadic Function		Mathematical	
-x1{𝕨⌾(0‿0⊸⍉)𝕩}y2	Matrix y2 with main diagonal changed to x1	Block Function	Dyadic Function		Expression	inplace update table
-{2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Block Function	Dyadic Function		Mathematical	 triangle shape region size points coordinates
-{𝕩⌾(0‿0⊸⍉)0⌜˜𝕩}y1	Diagonal matrix with elements of y1 (filled appropriately)	Block Function	Monadic Function		Structural	cells items table
-m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending coefficients and optional constant m0	Block Function	Ambivalent Monadic Function, Dyadic Function		Mathematical	firstintegral integrate
-{(√π)÷˜⋆-×˜𝕩}n	Gaussian or normal distribution with mean 0 and variance 1/2	Block Function	Monadic Function		Mathematical	statistics probability bell curve pdf probability density function
-a1(-⟜»1⊸⌽⊸/⟜(+`))n	Sums over (+/) sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	segmented partitioned sub-vectors
-i0(1↓=⟜(+`⊑⊸=)/⊢)y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Block Function	Dyadic Function		Text	select pick partitionedvector segmentedstring index cell item 1st
-{(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Monadic Function		Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
-m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
-{x0¨⌾((y0=𝕩)/○⥊⊢)𝕩}y	Replace all values y0 in y with x0	Block Function	Monadic Function	2-modifier	Structural	substitute merge amend replace update
-n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Dyadic Function		Mathematical	
-x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Monadic Function	1-modifier	Structural	substitute merge amend update cells items
-{𝕩𝕊⍟≢∨˝∘∧⎉1‿∞˜⊸∨𝕩}b2	Transitive closure	Block Function	Monadic Function		Boolean/Logical	adjacency list matrix contingency table
-m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Dyadic Function		Mathematical	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
-{'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all blanks with dashes	Block Function	Monadic Function		Text	spaces substitute format
-a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Dyadic Function		Boolean/Logical	runs sequences chop limit indicated trues truths 1st
-(-2⌊∘÷˜·+´·∧`' '=⌽)⊸⌽˘d2	Center flush left character array	Block Function	Monadic Function		Text	centre align
-{∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨⋈⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Monadic Function		Mathematical	gol conways cellularautomaton sub-array
-a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	sub-vectors +\
-a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Dyadic Function		Boolean/Logical	sub-vectors sublists sub-lists ≠\
-{÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨𝕩}n1	Continued fraction convergents with terms n1, in linear time	Block Function	Monadic Function		Mathematical	series sequence
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Monadic Function		Index Generation	dependency resolution ordering dag scheduling kahn's algorithm
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Dyadic Function		Comparison	least minimum infirmum smallest lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Dyadic Function		Comparison	most maximum supremum biggest largest highest
-x{𝔽𝔾⊢}y	Church Boolean AND	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	∧ conjunction caret wedge hat circumflex Kpq
-x{⊣𝔽𝔾}y	Church Boolean OR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	∨ disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
-x{𝔽𝔾⊣}y	Church Boolean Converse Implication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	≥ because ∵ ⇐ if converseconditional Bpq reverseimplying
-x{𝔾𝔽⊣}y	Church Boolean Implication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	≤ materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
-x{⊢𝔽𝔾˜}y	Church Boolean NOR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	⍱ peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
-x{𝔽˜𝔾⊢}y	Church Boolean Converse Nonimplication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	< ⇍ Mpq
-x{𝔾˜𝔽⊢}y	Church Boolean Nonimplication	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	> abjunction ⇏ not butnot Lpq
-x{𝔽˜𝔾⊣}y	Church Boolean NAND	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	⍲ shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼
-{𝔽˜𝔾𝔽}	Church Boolean XOR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	≠ exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
-{𝔽𝔾𝔽˜}	Church Boolean XNOR	Block Modifier	Dyadic Function	2-modifier	Boolean/Logical	= materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
-F{𝔽𝕩⋄𝕩}y	Apply function F but discard result and return the original value	Block Modifier	Monadic Function	1-modifier	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
-F{⊐⊏𝔽∘⍷}y	Apply deterministic cell-wise F to cells of y, avoiding extra calls for duplicate cells	Block Modifier	Monadic Function	1-modifier	Function Application	performance memoisation memoization quick speed
-F{⊢𝔽¨¨1↓↓}n1	Apply F to all pairs of distinct elements in n1, reverse order	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
-F{⊢𝔽¨¨1↓↑}n1	Apply F to all pairs of elements in n1 including self-pairs	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
-F{𝕨𝔽˜´⌽𝕩}y	Fold from the left	Block Modifier	Monadic Function	1-modifier	Function Application	reduction typenotation reducing folding
-F{⊢𝔽¨¨≠↑↓}n1	Apply F to all pairs of elements in n1 including self-pairs, reverse order	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
-F{⊢𝔽¨¨≠↑↑}n1	Apply F to all pairs of distinct elements in n1	Block Modifier	Monadic Function	1-modifier	Function Application	all-pairs combinations ordered every each
-F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable
-x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block Modifier	Dyadic Function	1-modifier	Structural	items elements
-f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Ambivalent Function	1-modifier	Function Application	each every list gerund elements to both arguments collect
-F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Monadic Function	2-modifier	Iteration	application poweroperator circlestar starcircle repeated repeating iterating looping while
-F{F _𝕣_ G: {𝕊:F𝕩 ; 𝕊⁼:G𝕩}}G	Function that applies like F with inverse set to G	Block Modifier	Monadic Function	2-modifier	Function Application	obverse specify specified undo header opposite
-F{𝔽∘⊢⍟≢⟜𝔽_𝕣∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F starting at y (avoiding stack overflow)	Block Modifier	Monadic Function	1-modifier	Iteration	fixpoint ycombinator repeated iterated until convergence powerlimit stable low stack
-x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
-10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Base-10 digits of natural number j0	Block Modifier	Monadic Function		Mathematical	base10 decimal base-10
-2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0	Block Modifier	Monadic Function		Mathematical	digits base2 base-2 Boolean
-x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
-{(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Block Modifier	Monadic Function	2-modifier	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
-c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Dyadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
-mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa
-realIimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
-¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating
-name←y	Define	Syntax	Dyadic Function		Expression	leftarrow gets is copula let define naming denotes means
-name F↩y	Modify: change name to name F y	Syntax	Dyadic Function	1-modifier	Expression	leftarrow gets is copula let redefine naming denotes means inplace update
-name↩y	Change definition	Syntax			Expression	inplace replace value reassignment re-assignment reassigning re-assigning
-𝕨	Block left argument	Syntax	Array		Expression	alpha leftarg α ɑ alfa larg
-𝕨	Optional left argument in header	Syntax			Definition	curlybraces function operator default ambivalent variadic traditional ambivalence header
-𝕩	Block right argument	Syntax	Array		Expression	omega rightarg ω ꞷ rarg
-𝔽	Block modifier left operand	Syntax	Array, Monadic Function, Dyadic Function		Expression	alpha leftop
-𝔾	Block modifier right operand	Syntax	Array, Monadic Function, Dyadic Function		Expression	omega rightop
-𝕊	Function self-reference	Syntax	Ambivalent Monadic Function, Dyadic Function		Expression	del recurse triangledown downtriangle carrot
-𝕣	Modifier self-reference	Syntax	Ambivalent Monadic Function, Dyadic Function	1-modifier;2-modifier	Expression	deldel recurse triangledown downtriangle carrot
-⋄	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
-,	Statement Separator	Syntax			Expression	diamond statementseparator break stop else then
-#	Comment symbol (disables rest of line)	Syntax			Expression	commentout lamp ignore skip note nb
-int.frac	Decimal Point	Syntax	Array		Expression	period rational
-'	Character delimiter	Syntax	Array		Expression	quote apostrophe string text
-"	String delimiter	Syntax	Array		Expression	quote apostrophe string text "
-∞	Positive infinity	Constant			Expression	upper limit ∞ ∞ ¯ positiveinfinity ∞
-¯∞	Negative infinity	Constant			Expression	lower limit -∞ ¯∞ ¯¯ negativeinfinity -∞
-x0⌈y0⌊z	Force z to range x0≤z≤y0	Expression			Mathematical	clamp limitrange between –
-a0⊑x‿y	Pick y if a0 is true or x if a0 is false	Expression			Selection	conditional selector pick choose
-@+0	Null character (NUL)	Constant	Expression		Text	\0 ^@ U+00 0x00h \u00 ≢00
-@+10	Line Feed (LF)	Constant	Expression		Text	\n ^j U+0D 0x0Ah \u0A ≢0A newline linefeed
-@+11	Vertical Tab character (VT)	Constant	Expression		Text	\v ^K U+00 0x00h \u00 ≢00 tabulation
-@+12	Form Feed character (FF)	Constant	Expression		Text	\F ^L U+00 0x00h \u00 ≢00
-@+127	Delete character (DEL)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D ≢0D carriagereturn
-@+13	Carriage Return character (CR)	Constant	Expression		Text	\r ^m U+0D 0x0Dh \u0D ≢0D carriagereturn
-@+26	End-Of-File character (EOF)	Constant	Expression		Text	SUB ^z U+0A 0x0Dh \u0D ≢0D carriagereturn
-@+27	Escape character (ESC)	Constant	Expression		Text	\e ^[ U+0A 0x0Dh \u0D ≢0D carriagereturn
-@+7	Bell character (BEL)	Constant	Expression		Text	\a ^G U+07 0x07h \u07 ≢07 beep
-@+8	Backspace character (BS)	Constant	Expression		Text	\b ^H U+08 0x08h \u08 ≢08
-@+9	Horizontal Tab character (HT)	Constant	Expression		Text	\t ^i U+00 0x00h \u00 ≢00 tabulation
-⊢name←y	Define, and print if in the session	Syntax			Expression	passthroughvalue yieldassignment
-name∾↩y	Fast: 'name' redefined to be its value with y catenated along its first axis				Expression	amend append extend accumulate concatenate dimension 1st
-(F G H)y	Fork: (F y)G(H y)	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train
-(F G)y	Atop: F G y	Syntax	Monadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
-(x G H)y	Fork: x G H y	Syntax	Monadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train
-x(F G H)y	Fork: (x F y)G(x H y)	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived fgh 3train 3-train
-x(F G)y	Atop: F x G y	Syntax	Dyadic Function	Train	Expression	tacit roundparentheses roundparens grouping derived fg 2train 2-train
-x(z G H)y	Fork: z G x H y	Syntax	Dyadic Function	Train	Expression	pointwise tacit roundparentheses roundparens grouping derived Agh 3train 3-train
-2×π	tau (2 pi)	Constant	Expression		Circular/Trigonometric	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏
-m×n⋆¯1⋆a	Conditionally multiply (where a=0) or divide (where a=1) m by n	Expression			Mathematical	per-element item cell
-m0+n0×↕j0	Arithmetic progression list: j0 elements starting at m0 with step n0	Expression		2-modifier	Mathematical	list sequence seq() cells items
-@+13‿10	Carriage Return-Line Feed pair (CRLF)	Constant	Expression		Text	\r\n U+0DU+0A 0x0D0x0A \u0D\u0A ≢0D≢0A enter linebreak windows
-⌊0.5+n	Round to nearest integer	Expression			Mathematical	int()
-'''	Quote character	Constant	Expression		Text	apostrophe ’ U+27 0x27 ≢27 quotationmark prime singlequoted in string symbol escape literal
-2÷˜1+√5	Golden ratio (direct formula)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
-@+31↓↕126	Printable ASCII	characters	Expression		Text	characters
-(x+y)×z	Precedence: z×x+y	Syntax			Expression	roundparentheses grouping roundparens
-(a×i1)↓y	Conditional drop of i1 elements from array y only if a is true	Expression			Structural	major cells items delete remove without
-x‿(y‿z)	Stranding: ⟨x,⟨y,z⟩⟩	Syntax			Expression	roundparentheses roundparens grouping nestedarraynotation nestedvectornotation
-F←{𝕨}	Prototypical dyadic block function	Syntax	Dyadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining
-F←{𝕩}	Prototypical monadic block function	Syntax	Monadic Function		Definition	direct dynamic lambda anonymous curlybraces assignment header defining
-⟨name1,name2⟩←y	Multiple assignment				Expression	leftarrow get are copula let define list naming denote mean unpacking distributing distribution vector distributed pervasive pervading pervade unpacking unpacked
->x1‿y1‿…	n-row table from n vectors	Syntax	Monadic Function		Structural	rows table lists
-'0'+↕10	The digits from 0 to 9	Constant	Expression		System Function	123456789 numbers arabicnumerals 0-9 0123456789
-'a'+↕26	The letters from a to z	Constant	Expression		System Function	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z ABCDEFGHIJKLMNOPQRSTUVWXYZ
-(1˙𝕨)⊣0	Was this block function called monadically?			Function Application	Expression	arity ambivalent ambivalence variadic leftargument 900⌶ monadic?
-_op←{𝔽𝕨}	Prototypical block 1-modifier deriving dyadic functions	Syntax	Dyadic Function	1-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
-_op←{𝔽𝕩}	Prototypical block 1-modifier deriving monadic functions	Syntax	Monadic Function	1-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
-_op_←{𝔾𝕨}	Prototypical block 2-modifier deriving dyadic functions	Syntax	Dyadic Function	2-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
-_op_←{𝔾𝕩}	Prototypical block 2-modifier deriving monadic functions	Syntax	Monadic Function	2-modifier	Definition	direct dynamic lambda anonymous curlybraces assignment header defining
-name1‿name2⌽∘⊣↩@	Swap variable values				Expression	leftarrow get are copula let redefine redefining list renaming denote mean unpacking redistributing redistribution vector exchange exchanging swapping variables
-x{𝕨⌾⊏𝕩}y	Replace first major cell of y with x	Block function	Monadic Function	1-modifier	Structural	substitute merge amend replace update 1st item element
-f{𝕎𝕩}¨<y	Apply each function in f to the whole of y	Expression			Function Application	functions each every list gerund elements collect
-m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions j1 starting at m1 with steps n1	Expression			Mathematical	sequence seq() multidimensional axes
-{𝕩𝕊⍟≠1+÷𝕩}1	Golden ratio (as a limit)	Constant	Expression		Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
-(↕2)∾⌜⍟2<⟨⟩	Unit square	Constant	Expression		Mathematical	
-(↕2)∾⌜⍟3<⟨⟩	Unit cube	Constant	Expression		Mathematical	
-(↕2)∾⌜⍟4<⟨⟩	Unit tesseract	Constant	Expression		Mathematical	
-↕∘⌈⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending before n0	Expression			Mathematical	sequence interval
-(↕1+⌈)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending after n0	Expression			Mathematical	sequence interval
-(↕1+⌊)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending at or before n0	Expression			Mathematical	sequence interval
-1⌽∾˜9⥊"""1⌽∾˜9⥊"""	An expression giving itself	Constant			Text	quine
-(2×a)÷˜b-⊸(+⋈-)√(×˜b)-(4×a×c)	Solutions of quadratic equation ax²+bx+c=0	Expression			Mathematical	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
-1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression				Knuth ALGOL
-(0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression				fizz buzz interview counting

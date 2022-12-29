@@ -11,9 +11,7 @@ Reorder←{𝕊t:
   class←⟨
     "Primitive"
     "System"
-    "Tacit"
-    "Block Function"
-    "Block Modifier"
+    "Syntax"
   ⟩
   type←⟨
     "Monadic Function"
