@@ -1037,7 +1037,7 @@ f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in n
 -˜˝˘∘‿2⥊/0(∾≠∾˜)b1	Lengths of groups of ones in b1	Expression			Boolean/Logical	runs 1s trues truths
 ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕j0	Primes less than j0	Expression			Mathematical	primesuntil numbers
 -˜`˘∘‿2⥊/0(∾≠∾˜)b1	Start and length of groups of 1s in b1	Expression			Boolean/Logical	runs sequences blocks trues truths 1st ones
-m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descending order)	Tacit	Dyadic Function		Mathematical	multiplicationof multiply times coefficients
+m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descending order), a convolution	Tacit	Dyadic Function		Mathematical	multiplicationof multiply times coefficients kernel filter reverberation
 i0(-÷○(×´)1⊸+)⟜↕˜j0	Number of unordered selections (combinations) of i0 items from j0 choices	Tacit	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations choose unordered selecting picking outof nCk C(n,k)
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Dyadic Function		Selection	trim left right spaces multiple consecutive blanks start beginning ending
 (↕1+⌈)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending after n0	Expression			Mathematical	sequence interval
