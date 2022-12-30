@@ -1068,6 +1068,7 @@ a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group
 '0'(⊢+∧`∘=×' '-⊣)d	Replace leading zeros with blanks in d	Expression			Text	spaces nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
 i1(-⟜»⊏⟜(0∾⊢)○(+`))n	Sums (+´) of sublists of n with lengths given by i1	Tacit	Dyadic Function		Mathematical	segmented partitioned sub-vectors
 n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Dyadic Function		Mathematical	
+{𝕩(⊢⌊⊏˘+⌜⊏)´↕≠𝕩}n2	Shortest path length matrix from weighted adjacency matrix n2, using Floyd-Warshall	Block Function	Monadic Function		Graph	roy wfi directed transitive closure algorithm pathfinding search lengths dense edges vertices follow connections
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Monadic Function	1-modifier	Structural	substitute merge amend update cells items
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate blanks	Tacit	Monadic Function		Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
 ⊏∘⊑˘(⌈´⊸=≠¨)⊸/⊐⊸⊔y	Modes: Most frequent major cells of data	Expression			Set	average items elements
