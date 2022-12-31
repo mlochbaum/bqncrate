@@ -182,6 +182,7 @@ x1 •BQN d1	Evaluate string d1 as BQN code, with •state x1	System	Dyadic Func
 •Fmt y	Format value y for printing	System	Monadic Function		I/O	itoa tostringify() totext() tostring()
 •Glyph g	Glyph character of primitive g	System	Monadic Function		Properties	squiggle builtin
 •Out d1	Print string d1, and trailing newline, to stdout	System	Monadic Function		I/O	echo puts
+•ParseFloat d1	Convert d1 from string to number, supporting scientific notation	System	Monadic Function		I/O	decimal Conversion converting cast integer strtod atoi
 •ReBQN y	Create BQN-like evaluation function using options namespace y	System	Monadic Function		Execution	repl extend extension replace new
 •Repr y	Source code representation of BQN value y, if possible	System	Monadic Function		I/O	uneval itoa totext() numbers numerics converting into marshal serialize pickle
 •Show y	Format and print BQN value y	System	Monadic Function		I/O	echo log debug display
@@ -1099,6 +1100,7 @@ a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin onl
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Monadic Function		Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Dyadic Function		Structural	split separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
 +´¨(+⌜´(↕2)¨n1)⊔×⌜´1⋈¨˜-n1	Coefficients in ascending order of polynomial with roots n1	Expression			Mathematical	solve
+(2×a)÷˜b-⊸(+⋈-)√(×˜b)-4×a×c	Solutions of quadratic equation ax²+bx+c=0	Expression			Mathematical	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
 a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero in each sublist of b indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	segmented partitioned 1st
 (=⌜˜↕≠n2)≡+˝∘×⎉1‿∞⟜(⍉+)n2	Is square matrix n2 unitary?	Expression			Mathematical	testif Unitary?
 c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Dyadic Function		Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions
@@ -1111,7 +1113,6 @@ c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest comm
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Monadic Function	2-modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of elements of sublists of y indicated by a1	Tacit	Dyadic Function		Mathematical	segmented partitioned array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of elements of sublists of y indicated by a1	Tacit	Dyadic Function		Mathematical	segmented partitioned array maximums greatestif largest biggest major cells items
-(2×a)÷˜b-⊸(+⋈-)√(×˜b)-(4×a×c)	Solutions of quadratic equation ax²+bx+c=0	Expression			Mathematical	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Dyadic Function		Boolean/Logical	1s trues truths start beginning
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Dyadic Function		Mathematical	sub-vectors +\
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Dyadic Function		Boolean/Logical	sub-vectors sublists sub-lists ≠\
@@ -1125,12 +1126,12 @@ m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation c
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈×´⊸(√˜))≠𝕩}n1	Arithmetic-geometric mean	Tacit	Monadic Function		Mathematical	average AGM() GAM() AG() GA() geometric-arithmetic common
 ((↕-⌈∘÷⟜2)(⊣⌽˘⌾⍉⌽˘)⋈˜⥊⟜↕×˜)j0	a magic square, odd side j0	Tacit	Monadic Function		Mathematical	
 ⊑{𝕩𝕊⍟≢𝕩(×´⊸(√˜)⋈+´⌾÷⊸×)≠𝕩}n1	Geometric-harmonic mean	Expression			Mathematical	average GHM() HGM() GH() HG() harmonic-geometric
-{(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Block Modifier	Monadic Function	2-modifier	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
+{(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Tacit	Monadic Function		Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
+(2÷√π)×n0×{(⋆-𝕩)×1(1+×)´𝕩÷1.5+↕99}×˜n0	Error function (normalized integral of Gaussian)	Expression			Mathematical	statistics erf() normal distribution sigmoid cdf cumulative
 ∾(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽m0↕⟜↕n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Expression			Mathematical	combinatorics selections list sublists subsequences choices choose
 (≍↕0){∾˝(0∾˘1+𝕩)⊸⊏˘⍒˘=⌜˜↕𝕨}´-⟜↕n0	All permutations of ↕n0, as table rows in lexicographical order	Expression			Mathematical	combinatorics ordered orderings anagrams without replacement list
 i0|⊑i0{0=𝕨?1‿0;(⌽-(0⋈𝕩⌊∘÷𝕨)⊸×)𝕨𝕊˜𝕨|𝕩}j0	Multiplicative inverse of j0 modulo i0	Expression			Mathematical	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
 (((≠×+´∘×˜)-·×˜+´)÷·(1⌈-⟜1)⊸×≠)n1	Sample variance	Tacit	Monadic Function		Mathematical	σ² s² σ^2 s^2 empirical Var(x) dispersion
-×˜⊸((2÷√π)×⋆∘-⊸××1(1+×)´÷⟜(1.5+↕99))n0	Error function (normalized integral of Gaussian)	Tacit	Monadic Function		Mathematical	statistics erf() normal distribution sigmoid cdf cumulative
 c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Dyadic Function		Text	fuzzy match
 1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression				Knuth ALGOL
 (0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression				fizz buzz interview counting
