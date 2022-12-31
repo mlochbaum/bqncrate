@@ -73,8 +73,8 @@ i1⥊y0	Shape-i1 array of copies of y0	Primitive	Dyadic Function		Structural	rep
 m⋆n	m raised to the power n	Primitive	Dyadic Function		Mathematical	star asterisk raisedtothepowerof exponentiation pow() ** raising
 √n	Square Root	Primitive	Monadic Function		Mathematical	squareroot sqrt ²√ ^0.5 ^.5
 m√n	m'th Root of n	Primitive	Dyadic Function		Mathematical	nthroot ⁿ√ ³√ ∛ ∜
-¬n	Probabilistic inverse (NOT)	Primitive	Monadic Function		Mathematical	fuzzy probability chance logicalnot logicalnegation logicalcomplement ~ ¬ negate inverting
-¬y	Logical inverse (NOT): 1-y	Primitive	Monadic Function		Boolean/Logical	gate tilde logicalnot logicalnegation logicalcomplement ~ ¬ negate inverting
+¬b	Logical inverse (NOT): 1-b	Primitive	Monadic Function		Boolean/Logical	gate tilde logicalnot logicalnegation logicalcomplement ~ negate inverting
+¬n	Probabilistic inverse (NOT)	Primitive	Monadic Function		Mathematical	fuzzy probability chance logicalnot logicalnegation logicalcomplement ~ negate inverting
 i¬j	Number of integers between i and j, inclusive	Primitive	Dyadic Function		Mathematical	plus span distance fence-post range
 x¬y	Span: 1+x-y	Primitive	Dyadic Function		Mathematical	not plus span distance fence-post range
 x y˙z	Constant: ignore arguments and return y	Primitive	Dyadic Function	1-modifier	Structural	single dot replace
@@ -170,6 +170,7 @@ F⎊G y	Catch: Run F, but run G on the same arguments instead if it fails	Primit
 x F⎊G y	Catch: Run F, but run G on the same arguments instead if it fails	Primitive	Monadic Function	2-modifier	Errors	recover stop exception signalled
 F•_timed y	Time taken to evaluate F y	System	Monadic Function	1-modifier	Time	timings performance speed measure elapsed tuning tune
 m0 F•_timed y	Average time per call to evaluate F y, m0 times in succession	System	Dyadic Function	1-modifier	Time	timings performance speed measure elapsed tuning tune mean
+c1 •FFI y1	Load native function (such as compiled C) from a shared object file	System	Dyadic Function		Interface	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
 x •Import d1	Load BQN script from path d1, with •args x	System	Dyadic Function		Execution	include library run execute
 x1 •BQN d1	Evaluate string d1 as BQN code, with •state x1	System	Dyadic Function		Execution	eval() run call
 •MakeRand m0	Random number generator (behaves like •rand) initialized with seed m0	System	Monadic Function		Random	RNG rnd pseudorandominteger pseudo-randomfloat srandomness source randomlink deterministic reproducible reproduce seeded predictable
@@ -185,6 +186,7 @@ x1 •BQN d1	Evaluate string d1 as BQN code, with •state x1	System	Dyadic Func
 •ParseFloat d1	Convert d1 from string to number, supporting scientific notation	System	Monadic Function		I/O	decimal Conversion converting cast integer strtod atoi
 •ReBQN y	Create BQN-like evaluation function using options namespace y	System	Monadic Function		Execution	repl extend extension replace new
 •Repr y	Source code representation of BQN value y, if possible	System	Monadic Function		I/O	uneval itoa totext() numbers numerics converting into marshal serialize pickle
+•SH y1	Execute shell command given by strings y1 (such as "mv"‿"old"‿"new")	System	Monadic Function		Interface	cli evaluate call executable run os operatingsystem commandprocessor linux macos ash bash dash pdksh mksh zsh tcsh fish rc scsh wish
 •Show y	Format and print BQN value y	System	Monadic Function		I/O	echo log debug display
 •Type y	Type of y: 0 array, 1 number, 2 character, 3 function, 4 1-modifier, 5 2-modifier, 6 namespace	System	Monadic Function		Properties	kind
 •UnixTime y	Current Unix time in seconds	System	Monadic Function		Time	now timestamp datetime
@@ -194,6 +196,13 @@ x1 •BQN d1	Evaluate string d1 as BQN code, with •state x1	System	Dyadic Func
 •path	Path of the file where this system value appears	System	Constant		Execution	this here script location
 •primitives	List of primitives as glyph‿value pairs	System	Constant		Execution	builtins
 •wdpath	The shell's current working directory path	System	Constant		Execution	pwd folder location where
+@ •FFI y1	Load native libc function	System	Dyadic Function		Interface	stdlib standardlibrary
+m i1•bit._add n	Wrapping integer addition (+) of m and n with widths given by i1 	System	Dyadic Function		Bitwise	greek cross plus addition
+m i1•bit._and n	Bitwise and (∧) of m and n with bit widths given by i1 	System	Dyadic Function		Bitwise	gate conjunction caret wedge hat circumflex Kpq ^
+m i1•bit._sub n	Wrapping integer subtraction (-) of m and n with widths given by i1 	System	Dyadic Function		Bitwise	minus dash hyphen subtraction difference −
+m i1•bit._mul n	Wrapping integer multiplication (×) of m and n with widths given by i1 	System	Dyadic Function		Bitwise	cross times multiplication ∙ ⋅ · product
+m i1•bit._or n	Bitwise or (∨) of m and n with bit widths given by i1 	System	Dyadic Function		Bitwise	gate disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
+m i1•bit._xor n	Bitwise exclusive or (≠) of m and n with bit widths given by i1 	System	Dyadic Function		Bitwise	gate exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 m •math.Atan2 n	2-argument arctangent, angle of vector m‿n relative to 1‿0	System	Dyadic Function		Mathematical	argument phase
 m •math.Comb n	Binomial function m choose n	System	Dyadic Function		Mathematical	exclamation bang shriek binomial combinatorics countcombinations unordered selecting picking outof nCk C(n,k)
 m •math.GCD n	Greatest Common Divisor of m and n	System	Dyadic Function		Mathematical	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
@@ -209,6 +218,8 @@ c1 •file.Bytes d1	Write raw bytes to file d1 (overwrites existing contents)	Sy
 c1 •file.Chars d1	Write string c1 to file d1 (overwrites existing contents)	System	Dyadic Function		Files	store put dump cat save to overwrite
 c1 •file.Copy d1	Copy file d1 to c1	System	Dyadic Function		Files	copying
 c1 •file.Rename d1	Rename file d1 to c1	System	Dyadic Function		Files	moving renaming
+i1•bit._neg n	Fixed-width integer negation (-) of n with widths given by i1 	System	Dyadic Function		Bitwise	minus hyphen invert additiveinverse opposite dash negation signchange − negating
+i1•bit._not n	Bitwise negation (¬) of n with bit widths given by i1 	System	Dyadic Function		Bitwise	gate tilde logicalnot logicalnegation logicalcomplement ~ negate inverting
 x1 •file.Lines d1	Write lines x1 to file d1 (overwrites existing contents)	System	Dyadic Function		Files	store put dump cat save to overwrite vtv charvec charactervector textvector string
 •file.Modified d1	Time of last modification to file d1	System	Monadic Function		Files	filepath dir directory directories folders ls list information vector when modified
 •file.Name d1	File name from path d1	System	Monadic Function		Files	parts
@@ -257,6 +268,7 @@ x1 •file.Lines d1	Write lines x1 to file d1 (overwrites existing contents)	Sys
 •rand.Range 0	A random real number in the interval from 0 to 1	System	Monadic Function		Random	roll
 •rand.Range n0	A number selected uniformly at random from ↕n0	System	Monadic Function		Random	randominteger roll
 •rand.Subset n0	A random sorted subset of ↕n0	System	Monadic Function		Random	simple random sample srs length
+x1‿y1 •bit._cast n	Cast n from bit representation y1 to x1 	System	Dyadic Function		Bitwise	
 mantEexp	Scaled Notation	Syntax	Array		Expression	exponent timestento mantissa
 realIimag	Complex Notation	Syntax	Array		Expression	plusitimes imaginary
 ¯	Negative number indicator	Syntax	Array		Expression	macron highminus minus indicate sign masking indicating
