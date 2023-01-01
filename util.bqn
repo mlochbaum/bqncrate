@@ -19,8 +19,9 @@ Reorder ← {𝕊t:
 }
 
 [opts,acts] ← ⍉[
-  "reorder"‿{𝕤⋄Reorder _file "table.tsv"}
-  "showdup"‿{𝕤⋄•Out¨ (¬∘(∊∧∊⌾⌽)⊏˘)⊸/ _onTSV •FLines "table.tsv"}
+  "reorder"‿{Reorder _file 𝕩}
+  "showdup"‿{•Out¨ (¬∘(∊∧∊⌾⌽)⊏˘)⊸/ _onTSV •FLines 𝕩}
+  "showcat"‿{•Show ∨ (/⁼∘⊐≍˘⍷) ((⍉1⊸↓) ⊏˜ ·⊑⊏⊐⟨"CATEGORY"⟩˙) SplitTSV •FLines 𝕩}
 ]
 
-{𝕏@} (opts⊸⊐⌾< ⊑•args) ⊑ acts∾⟨{𝕤⋄0!˜"Option not found!"}⟩
+{𝕏"table.tsv"} (opts⊸⊐⌾< ⊑•args) ⊑ acts∾⟨{𝕤⋄0!˜"Option not found!"}⟩
