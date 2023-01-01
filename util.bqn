@@ -3,31 +3,24 @@
 SplitTSV ← >(@+9)⊸=⊸(×∘↕∘≠⊸(↓¨)+`⊸⊔)¨
 JoinTSV ← (<1↓∾)˘ (@+9)⊸∾¨
 _onTSV ← {JoinTSV∘𝔽∘SplitTSV}
+_file ← { 𝕩 •FLines 𝔽 _onTSV •FLines 𝕩 }
 
-Reorder←{𝕊t:
-  letters←"¯_"∾∾"0aA"+⟜↕¨10‿26‿26
-  chars←" ⊢⊣+-×∨∧⌈⌊⌽÷|»«=≠<>≤≥≡≢↓↑⥊⋆√¬˙˜∘⊸⟜˘¨⌜○/´⎉⌾⊘◶˝∾⋈≍‿⊏↕∊⊐⁼⍟⍋⍒`⍉⊑⊒⍷⊔⚇!⎊@←⇐↩:;𝕨𝕩𝔽𝔾𝕗𝕘𝕎𝕏𝕤𝕊𝕣(){}⟨⟩⋄,#0123456789_XYZMNIJABCDEFGHIJKLMNOPQRSTUVWXYZfghasvmabcdefghijklmnopqrstuvwxyzÀ"
+Reorder ← {𝕊t:
+  letters ← "¯_"∾∾"0aA"+⟜↕¨10‿26‿26
+  chars ← " ⊢⊣+-×∨∧⌈⌊⌽÷|»«=≠<>≤≥≡≢↓↑⥊⋆√¬˙˜∘⊸⟜˘¨⌜○/´⎉⌾⊘◶˝∾⋈≍‿⊏↕∊⊐⁼⍟⍋⍒`⍉⊑⊒⍷⊔⚇!⎊@←⇐↩:;𝕨𝕩𝔽𝔾𝕗𝕘𝕎𝕏𝕤𝕊𝕣(){}⟨⟩⋄,#0123456789_XYZMNIJABCDEFGHIJKLMNOPQRSTUVWXYZfghasvmabcdefghijklmnopqrstuvwxyzÀ"
 
-  class←⟨
-    "Primitive"
-    "System"
-    "Syntax"
-  ⟩
-
-  fields←"SYNTAX"‿"CLASS"
-  val←((fields⊐˜⊏)⊏·⍉1⊸↓)t
-  syntaxdata←chars⊸⊐¨0⊏val
-  classdata←class⊐1⊏val
-  complexity←(≠∾·∨chars⊸⊐)∘(¬∘∊/⊣)⟜(" "∾letters)¨0⊏val
-  t⊏˜0∾1+⍋⍉>⟨classdata,complexity,syntaxdata⟩
-}
-ReorderFile←{
-  𝕩 •FLines Reorder _onTSV •FLines 𝕩
+  [syntax,class] ← ("SYNTAX"‿"CLASS"⊐˜⊏t) ⊏ ⍉1↓t
+  order ← ⍋⍉[
+    "Primitive"‿"System"‿"Syntax" ⊐ class
+    (≠∾·∨chars⊸⊐)∘(¬∘∊/⊣)⟜(" "∾letters)¨ syntax
+    chars⊸⊐¨ syntax
+  ]
+  t ⊏˜ 0∾1+order
 }
 
-opts‿acts ← <˘⍉∘‿2⥊ ⟨
-  "reorder", {𝕤⋄ReorderFile "table.tsv"}
-  "showdup", {𝕤⋄•Out ¯1↓(∾∾⟜(@+10)¨) (¬∘(∊∧∊⌾⌽)⊏˘)⊸/ _onTSV •FLines "table.tsv"}
-⟩
+[opts,acts] ← ⍉[
+  "reorder"‿{𝕤⋄Reorder _file "table.tsv"}
+  "showdup"‿{𝕤⋄•Out¨ (¬∘(∊∧∊⌾⌽)⊏˘)⊸/ _onTSV •FLines "table.tsv"}
+]
 
-{𝕏@} (acts∾⟨{𝕤⋄0!˜"Option not found!"}⟩)⊑∘⊏˜opts⊐⊏•args
+{𝕏@} (opts⊸⊐⌾< ⊑•args) ⊑ acts∾⟨{𝕤⋄0!˜"Option not found!"}⟩
