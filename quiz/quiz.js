@@ -14,11 +14,11 @@ Z=x=>[...x[0].matchAll(/[xmiacynjbdz][0-2]?/g)].map(m=>m[0])
 L=x=>x.length<=2 ? x.join(" and ") : x.map((s,i)=>i<x.length-1?s:"and "+s).join(", ")
 Q1=_=>{
   c1=R(ps);a=Z(c1)
-  q1.innerHTML=`Write an expression that for ${L(a.map(E))}, solves the following ${["easy","medium-difficulty","hard"][(x=>Math.floor(3*x.indexOf(c1)/x.length))(ps.filter(x=>x[2]===c1[2]))]} ${c1[5].toLowerCase()} task:<p>${c1[1]}</p>`
+  q1.innerHTML=`Write an expression that for ${L(a.map(E))}, solves the following ${["easy","medium-difficulty","hard"][(x=>Math.floor(3*x.indexOf(c1)/x.length))(ps.filter(x=>x[2]===c1[2]))]} ${c1[3].toLowerCase()} task:<p>${c1[1]}</p>`
 }
 Q2=_=>{
   c2=R(ps);a=Z(c2)
-  q2.innerHTML=`What does the following expression compute when given ${L(a.map(E))}? (${c2[5].toLowerCase()})<p><code>${c2[0]}</code></p>`
+  q2.innerHTML=`What does the following expression compute when given ${L(a.map(E))}? (${c2[3].toLowerCase()})<p><code>${c2[0]}</code></p>`
 }
 Q3=_=>{
   r=/[^\[\]\{\}\(\)\w¯\d&;⋄' ]/g
@@ -26,6 +26,6 @@ Q3=_=>{
   n=Math.floor(Math.random()*c3[0].match(r).length)
   i=0;c3d=c3[0].replace(/&lt;|&gt;/g,x=>({'&lt;':'<','&gt;':'>'}[x])).replace(r,x=>i++==n?"@@":x).replace(/<|>/g,x=>({'<':'&lt;','>':'&gt;'}[x])).replace('@@','<del> </del>')
   i=0;c3i=c3[0].replace(/&lt;|&gt;/g,x=>({'&lt;':'<','&gt;':'>'}[x])).replace(r,x=>i++==n?"@←@"+x+"@→@":x).replace(/<|>/g,x=>({'<':'&lt;','>':'&gt;'}[x])).replace('@←@','<ins>').replace('@→@','</ins>')
-  q3.innerHTML=`What is the obscured symbol in the following expression:<p><code id='p3'>${c3d}</code></p>which when given ${L(a.map(E))}, solves the ${c2[5].toLowerCase()} task: <p>${c3[1]}</p>`
+  q3.innerHTML=`What is the obscured symbol in the following expression:<p><code id='p3'>${c3d}</code></p>which when given ${L(a.map(E))}, solves the ${c2[3].toLowerCase()} task: <p>${c3[1]}</p>`
 }
 W=x=>{b.className=x?x:"wbg"[1+"wb".indexOf(b.className[0])];um.href="../?"+b.className}

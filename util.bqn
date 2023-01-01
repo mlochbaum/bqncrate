@@ -13,18 +13,13 @@ Reorder←{𝕊t:
     "System"
     "Syntax"
   ⟩
-  type←⟨
-    "Monadic Function"
-    "Dyadic Function"
-  ⟩
 
-  fields←"SYNTAX"‿"CLASS"‿"TYPE"
+  fields←"SYNTAX"‿"CLASS"
   val←((fields⊐˜⊏)⊏·⍉1⊸↓)t
   syntaxdata←chars⊸⊐¨0⊏val
   classdata←class⊐1⊏val
-  typedata←type⊐2⊏val
   complexity←(≠∾·∨chars⊸⊐)∘(¬∘∊/⊣)⟜(" "∾letters)¨0⊏val
-  t⊏˜0∾1+⍋⍉>⟨classdata,complexity,syntaxdata,typedata⟩
+  t⊏˜0∾1+⍋⍉>⟨classdata,complexity,syntaxdata⟩
 }
 ReorderFile←{
   𝕩 •FLines Reorder _onTSV •FLines 𝕩

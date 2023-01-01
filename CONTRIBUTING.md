@@ -14,15 +14,15 @@ You can also submit a pull request, especially against [table.tsv](table.tsv) �
 
 ### Example entries from table.tsv
 
-|SYNTAX|DESCRIPTION|CLASS|TYPE|GROUP|CATEGORY|KEYWORDS|
-|------|-----------|-----|----|-----|--------|--------|
-| +y   |Conjugate ('Identity' if y not complex)|Primitive|Monadic Function||Mathematical|greek cross plus conj() conjugating|
-|(+´÷≠)n|Arithmetic mean of n|Tacit|Monadic Function||Mathematical|average arithmeticmean() AM() avg() mean()
-|F⎉j0 y|Rank: apply F to j0-cells to form cells of the result|Primitive|Monadic Function|2-modifier|Function Application|sub-array dimensions axes ending
-|x F⎉j1 y|Rank: F on corresponding cells of x and y|Primitive|Dyadic Function|2-modifier|Function Application|sub-array dimensions axes ending
-|F{𝔽𝕩⋄𝕩}y|Apply function F but discard result and return the original value|Block Modifier|Monadic Function|1-modifier|Function Application|is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
+|SYNTAX|DESCRIPTION|CLASS|CATEGORY|KEYWORDS|
+|------|-----------|-----|--------|--------|
+| +y   |Conjugate ('Identity' if y not complex)|Primitive|Mathematical|greek cross plus conj() conjugating
+|(+´÷≠)n|Arithmetic mean of n|Tacit|Mathematical|average arithmeticmean() AM() avg() mean()
+|F⎉j0 y|Rank: apply F to j0-cells to form cells of the result|Primitive|Function Application|sub-array dimensions axes ending
+|x F⎉j1 y|Rank: F on corresponding cells of x and y|Primitive|Function Application|sub-array dimensions axes ending
+|F{𝔽𝕩⋄𝕩}y|Apply function F but discard result and return the original value|Block Modifier|Function Application|is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 
-You don't have to fill all the columns, but do try to maximise the number of keyword synonyms in the KEYWORDS column.
+Keywords aren't required, but providing as many as possible makes it more likely that someone looking for the entry will find it.
 
 ### Notation for arguments and operands
 
