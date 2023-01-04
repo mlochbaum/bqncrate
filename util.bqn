@@ -7,11 +7,11 @@ _file ← { 𝕩 •FLines 𝔽 _onTSV •FLines 𝕩 }
 
 Reorder ← {𝕊t:
   letters ← "¯_"∾∾"0aA"+⟜↕¨10‿26‿26
-  chars ← " ⊢⊣+-×∨∧⌈⌊⌽÷|»«=≠<>≤≥≡≢↓↑⥊⋆√¬˙˜∘⊸⟜˘¨⌜○/´⎉⌾⊘◶˝∾⋈≍‿⊏↕∊⊐⁼⍟⍋⍒`⍉⊑⊒⍷⊔⚇!⎊@←⇐↩:;𝕨𝕩𝔽𝔾𝕗𝕘𝕎𝕏𝕤𝕊𝕣(){}⟨⟩⋄,#0123456789_XYZMNIJABCDEFGHIJKLMNOPQRSTUVWXYZfghasvmabcdefghijklmnopqrstuvwxyzÀ"
+  chars ← " +-×∧∨⌈⌊÷=≠<>≤≥¬»«⋈∾≍‿(){}≡≢↕|𝕩𝕨↓↑⌽⊢⊣˜˘¨/⊏⊑⥊⊔∘⊸⟜○⌾⁼⌜´˝`˙⟨⟩[]⋆√∊⊐⎉⊘⍟◶𝔽𝔾⍋⍒⊒⍷⍉⚇!⎊@⋄,←⇐↩𝕗𝕘𝕏𝕎𝕊𝕤𝕣:;#0123456789_XYZMNIJABCDEFGHIJKLMNOPQRSTUVWXYZfghasvmabcdefghijklmnopqrstuvwxyz"
 
   [syntax,class] ← ("SYNTAX"‿"CLASS"⊐˜⊏t) ⊏ ⍉1↓t
   order ← ⍋⍉[
-    "Primitive"‿"System"‿"Syntax" ⊐ class
+    "Primitive"‿"Syntax"‿"System" ⊐ class
     (≠∾·∨chars⊸⊐)∘(¬∘∊/⊣)⟜(" "∾letters)¨ syntax
     chars⊸⊐¨ syntax
   ]
