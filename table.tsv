@@ -1,22 +1,20 @@
 SYNTAX	DESCRIPTION	CLASS	CATEGORY	KEYWORDS
 ⊢y	Same: y	Primitive	Function Application	dex righttack sameright default
 x⊢y	Right: y	Primitive	Function Application	dex righttack sameright
-x⊢y	Church Boolean false (x if false, else y)	Primitive	Functional	falsy falsey 0
 ⊣y	Same: y	Primitive	Function Application	lev lefttack
 x⊣y	Left: x	Primitive	Function Application	lev lefttack sameleft defer ignore where
-x⊣y	Church Boolean true (x if true, else y)	Primitive	Functional	truthy 1
 +y	Conjugate: mirror complex y across x-axis; 'Identity' if y not complex	Primitive	Complex Numbers	greek cross plus conj() conjugating
 m+n	Add n to m	Primitive	Arithmetic	greek cross plus addition
 -n	Negate: 0-n	Primitive	Arithmetic	minus hyphen invert additiveinverse opposite dash negation signchange − negating
 m-n	Subtract n from m	Primitive	Arithmetic	minus dash hyphen subtraction difference −
-×n	Sign (Direction, for complex n)	Primitive	Arithmetic	cross sgn() sign() trend
+×n	Sign, or direction for complex n	Primitive	Arithmetic	cross sgn() sign() trend
 a×n	Select elements satisfying condition a, others to 0	Primitive	Data	zero cells items
 m×n	Multiply m and n	Primitive	Arithmetic	cross times multiplication ∙ ⋅ · product
 m1×n1	Ring modulation of signal m1 by n1	Primitive	Specialty	
-∨y	Sort Descending	Primitive	Ordering	sort() down decreasing sorting reordering ordering
+∨y	Sort down	Primitive	Ordering	sort() descending decreasing sorting reordering ordering
 a∨b	Logical OR	Primitive	Boolean	gate disjunction vel alternation Caron hacek invertedcircumflex checkmark hachek Apq
 m∨n	Probabilistic OR	Primitive	Statistical	Caron hacek invertedcircumflex checkmark hachek fuzzy probability chance disjunction vel alternation Apq
-∧y	Sort Ascending	Primitive	Ordering	sort() up increasing sorting reordering ordering
+∧y	Sort up	Primitive	Ordering	sort() ascending increasing sorting reordering ordering
 a∧b	Logical AND	Primitive	Boolean	gate conjunction caret wedge hat circumflex Kpq ^
 m∧n	Probabilistic AND	Primitive	Statistical	caret wedge hat circumflex ^ fuzzy probability chance conjunction Kpq
 ⌈n	Round up to integer	Primitive	Arithmetic	upstile roundup ceiling seiling up() ceil()
@@ -28,7 +26,7 @@ m⌊n	Minimum of m and n	Primitive	Arithmetic	downstile lesser smaller min()
 i⌽y	Rotate rows along leading axis of y	Primitive	Structural	circlebar rotating cyclically dimension lists start beginning
 ÷n	Reciprocal: 1÷n	Primitive	Arithmetic	multiplicativeinverse opposite obelus inverting reciprocating per
 m÷n	Divide m by n	Primitive	Arithmetic	division over ⁄ divide per
-|n	Magnitude (absolute value)	Primitive	Arithmetic	verticalbar pipe stile stroke verticalline modulo modulus amplitude
+|n	Magnitude or absolute value	Primitive	Arithmetic	verticalbar pipe stile stroke verticalline modulo modulus amplitude
 m|n	Residue after dividing n by m	Primitive	Arithmetic	verticalbar pipe stile stroke verticalline modulo modulus divisionremainder mod() divide ≢ divmod() residual
 »y	Nudge: shift a fill cell into the front of y, displacing a cell from the end	Primitive	Selection	chevron french quote rightshift push
 x»y	Shift before: shift major cells from x into the front of y, displacing cells from the end	Primitive	Selection	chevron french quote rightshift
@@ -38,13 +36,13 @@ x«y	Shift after: shift major cells from x into the end of y, displacing cells f
 a=b	Logical XNOR	Primitive	Boolean	gate materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying both-or-neither
 x=y	Equal To	Primitive	Arithmetic	sameas ===
 ≠x2	Number of rows in table x2	Primitive	Array	count tally table
-≠y	Length (along first axis)	Primitive	Array	equalslash unequal count tally length() cells len() major cells elements dimension start beginning
+≠y	Length of y along first axis	Primitive	Array	equalslash unequal count tally length() cells len() major cells elements dimension start beginning
 a≠b	Logical XOR	Primitive	Boolean	gate exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 x≠y	Not Equal To	Primitive	Arithmetic	ne unequal differentfrom != <> /=
 <y	Enclose: Unit containing y	Primitive	Structural	angle boxing scalarise scalarize enclosing
 a<b	Logical converse nonimplication	Primitive	Boolean	gate ⇍ Mpq cnimply
 m<n	Less Than	Primitive	Arithmetic	lt before precedes ≺ smaller lesser
->y	Merge: Remove nesting (adding trailing axes)	Primitive	Structural	pike uparrow axis dimensions delete drop ending without
+>y	Merge: Remove nesting by inner array axes into trailing axes	Primitive	Structural	pike uparrow axis dimensions delete drop ending without
 >y1	List of row lists to table	Primitive	Structural	pike uparrow mix table from lists into
 a>b	Logical nonimplication	Primitive	Boolean	gate abjunction ⇏ not butnot Lpq nimply
 m>n	Greater Than	Primitive	Arithmetic	gt after follows ≻ larger succeeds
@@ -52,7 +50,7 @@ a≤b	Logical implication	Primitive	Boolean	gate materialconditional materialcon
 m≤n	Less Than Or Equal To	Primitive	Arithmetic	before precedes ≦ smaller lesser same as
 a≥b	Logical converse implication	Primitive	Boolean	gate because ∵ ⇐ if converseconditional Bpq reverseimplying cimply
 m≥n	Greater Than Or Equal To	Primitive	Arithmetic	ge after follows ≧ larger same as succeeds
-≡y	Depth: Maximum level of nesting in y (negative if uneven)	Primitive	Structural	equalunderbar
+≡y	Depth: Maximum level of nesting in y	Primitive	Structural	equalunderbar
 x≡y	Match: 1 if x is identical to y, else 0	Primitive	Arithmetic	testif equalunderbar identical? === equivalentto sameas
 ≢y	Shape: Length of each axis of y	Primitive	Array	equalunderbarslash unequalunderbar dimensions rho ⍴ ρ ϱ rank axes
 x≢y	Not Match: ¬x≡y	Primitive	Arithmetic	notmatch natch equalunderbarslash unequalunderbar notidentical differentfrom
@@ -68,12 +66,12 @@ i1↑y0	Pad y0 to shape i1	Primitive	Structural	extend text
 i0⥊y0	Length-i0 list of copies of y0	Primitive	Structural	repeat repetition repeats repeating copy
 i1⥊y	Reshape y to have shape i1	Primitive	Structural	zig zag rho mold form dimension array ⍴ ρ ϱ mould dim() axis cyclically repeat repetition repeats repeating take taking elements of
 i1⥊y0	Shape-i1 array of copies of y0	Primitive	Structural	repeat repetition repeats repeating copy
-⋆n	e raised to the power n	Primitive	Arithmetic	star asterisk exponential etothepowerof naturalexponential exp() 2.718281828459045235360287471352662 antiln antilog ln^-1() ln⁻¹() log^-1() log⁻¹() lnₑ^-1() lnₑ⁻¹() logₑ^-1() logₑ⁻¹()
-m⋆n	m raised to the power n	Primitive	Arithmetic	star asterisk raisedtothepowerof exponentiation pow() ** raising
+⋆n	Exponential: e raised to the power n	Primitive	Arithmetic	star asterisk exponential etothepowerof naturalexponential exp() 2.718281828459045235360287471352662 antiln antilog ln^-1() ln⁻¹() log^-1() log⁻¹() lnₑ^-1() lnₑ⁻¹() logₑ^-1() logₑ⁻¹()
+m⋆n	Power: m raised to the power n	Primitive	Arithmetic	star asterisk raisedtothepowerof exponentiation pow() ** raising
 √n	Square Root	Primitive	Arithmetic	squareroot sqrt ²√ ^0.5 ^.5
 m√n	m'th Root of n	Primitive	Arithmetic	nthroot ⁿ√ ³√ ∛ ∜
-¬b	Logical inverse (NOT): 1-b	Primitive	Boolean	gate tilde logicalnot logicalnegation logicalcomplement ~ negate inverting
-¬n	Probabilistic inverse (NOT)	Primitive	Statistical	fuzzy probability chance logicalnot logicalnegation logicalcomplement ~ negate inverting
+¬b	Logical negation (NOT): 1-b	Primitive	Boolean	gate tilde logicalnot logicalnegation logicalcomplement ~ negate inverting
+¬n	Probabilistic negation (NOT)	Primitive	Statistical	fuzzy probability chance logicalnot logicalnegation logicalcomplement ~ negate inverting
 i¬j	Number of integers between i and j, inclusive	Primitive	Sequences	plus span distance fence-post range
 x¬y	Span: 1+x-y	Primitive	Arithmetic	not plus span distance fence-post range
 x y˙z	Constant: ignore arguments and return y	Primitive	Functional	single dot replace
@@ -160,7 +158,6 @@ x⍷y	Find: boolean indication of top left corner of occurrences of entire array
 ⊔i1	Group Indices of i1 by placing them in the given positions	Primitive	Selection	square cup bucket
 ⊔x1	Group compound indices ↕≠¨x1 according to x1	Primitive	Selection	square cup bucket
 i1⊔y	Group major cells of y into the positions i1	Primitive	Selection	square cup bucket sort
-x1⊔y	Group array y based on x1	Primitive	Selection	square cup bucket sort
 F⚇j0 y	Depth: apply F to depth-j0 nested elements of y	Primitive	Function Application	circledots recursion repeated each
 x F⚇j1 y	Depth: F on corresponding elements of x and y at the given depths	Primitive	Function Application	circledots recursion repeated each
 !y	Assert: throw an error (with message y) unless y is 1	Primitive	Errors	raise exception fail signal panic abort test require
@@ -306,21 +303,23 @@ _op←{𝔽𝕩}	Prototypical block 1-modifier deriving monadic functions	Syntax
 _op_←{𝔾𝕨}	Prototypical block 2-modifier deriving dyadic functions	Syntax	Block	direct dynamic lambda anonymous curlybraces assignment header defining
 _op_←{𝔾𝕩}	Prototypical block 2-modifier deriving monadic functions	Syntax	Block	direct dynamic lambda anonymous curlybraces assignment header defining
 [x1,y1,…]	n-row table from n vectors	Syntax	Array	rows table lists
+x⊢y	Church Boolean false (x if false, else y)	Tacit	Functional	falsy falsey 0
+x⊣y	Church Boolean true (x if true, else y)	Tacit	Functional	truthy 1
 ¯1-j	2's-complement bit-wise NOT	Expression	Bitwise	bitwise binary gate logicalnot logicalnegation logicalcomplement negate inverting inversion 2s two's twos
 0×n	Zero array of shape, size, and structure of n	Expression	Data	zeroes zeros fill mold mould 0s falses falsehoods
 100×n	Percentage corresponding to rate n	Expression	Statistical	conversion converting change changing
-0⌈n	Ensure that n is non-negative (negatives become zero)	Expression	Data	clamp limit restrict
-0⌊n	Ensure that n is non-positive (positives become zero)	Expression	Data	clamp limit restrict
-1⌽y	Rightmost neighbouring elements (cyclically)	Expression	Selection	neighbours neighbors lefthand bitshift cells items
-¯1⌽y	Leftmost neighbouring elements (cyclically)	Expression	Selection	neighboring neighbours neighbors lefthand bitshift cells items
+0⌈n	Ensure that n is non-negative by increasing negatives to zero	Expression	Data	clamp limit restrict
+0⌊n	Ensure that n is non-positive by reducing positives to zero	Expression	Data	clamp limit restrict
+1⌽y	Rightmost neighbouring elements, wrapping cyclically	Expression	Selection	neighbours neighbors lefthand bitshift cells items
+¯1⌽y	Leftmost neighbouring elements, wrapping cyclically	Expression	Selection	neighboring neighbours neighbors lefthand bitshift cells items
 n÷100	Rate corresponding to percentage n	Expression	Statistical	conversion converting change changing
 1|n	Fractional part of number	Expression	Arithmetic	decimals
 1000|ia	Last part of packed numeric code ABBB	Expression	Specialty	unpack converting change changing
 2|j	Parity of j (is j odd?)	Expression	Combinatorics	testif
 256|j	Convert from signed short integers to unsigned short integers	Expression	Fixed-Width	datarepresentation converting change changing
 0↓y	Ensure minimum rank 1 (reshaping unit into one-element list)	Expression	Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize list ravel-if-scalar
-1↑y2	First row as a row matrix (row list)	Expression	Selection	topmostrow leading 1st table list start beginning
-¯1↑y2	Last row as a row matrix (row list)	Expression	Selection	bottommostrow trailing table list ending
+1↑y2	First row as a length-1 table	Expression	Selection	topmostrow leading 1st table list start beginning
+¯1↑y2	Last row as a length-1 table	Expression	Selection	bottommostrow trailing table list ending
 1˘y2	List having as many ones as y2 has rows	Tacit	Data	1s trues truths list
 0¨y	Zeros with same shape as y	Tacit	Data	zeroes naughts 0s falses falsehoods
 x0¨y	Fill array y with data value x0	Tacit	Data	
@@ -347,8 +346,8 @@ n×¯1⋆a	Change sign of n where a is 1	Expression	Arithmetic	signum conditiona
 ×˜n	Square: n⋆2	Tacit	Arithmetic	² ^2
 =˜y	Ones, same shape and structure	Tacit	Data	1s trues truths
 ≠˜y	Zeros, same shape and structure	Tacit	Data	zeroes naughts 0s falses falsehoods
-x F∘⊢ y	Ignore left argument (call F monadically on y)	Tacit	Function Application	to from dummy onrightargument
-x F∘⊣ y	Ignore right argument (call F monadically on x)	Tacit	Function Application	to from dummy onleftargument
+x F∘⊢ y	Ignore left argument and call F monadically on y	Tacit	Function Application	to from dummy onrightargument
+x F∘⊣ y	Ignore right argument and call F monadically on x	Tacit	Function Application	to from dummy onleftargument
 F⊸⊢y	Apply function F but discard result and return the original value	Tacit	Function Application	is-yfunction do-yfunction enpassant noresult isyfunction doyfunction
 1⊸+n	Increment: n+1	Tacit	Arithmetic	increase next
 3⊸×n	Triple: 3×n	Tacit	Arithmetic	thrice
@@ -367,16 +366,16 @@ F⊸⊢y	Apply function F but discard result and return the original value	Tacit
 ÷⟜F n	Normalise, scaling so that the norm F is equal to 1	Expression	Data	normalise arbitrary custom F=1 vector list
 ⋆⟜3 n	Cube	Tacit	Arithmetic	³ ^3
 x F⊸G⟜H y	Split-Compose: apply G between (F x) and (H y), that is (F x) G (H y)	Tacit	Composition	composewith splitover (fX)G(hY) (fX)ghY
-∨˘y	Sort major cells descending	Tacit	Ordering	elements items sort() down decreasing sorting reordering ordering
-∧˘y	Sort major cells ascending	Tacit	Ordering	elements items sort() up increasing sorting reordering ordering
+∨˘y	Sort each major cell descending	Tacit	Ordering	elements items sort() down decreasing sorting reordering ordering
+∧˘y	Sort each major cell ascending	Tacit	Ordering	elements items sort() up increasing sorting reordering ordering
 ⌽˘y2	Reflect vertically	Tacit	Structural	mirroring reflecting reflection right-left rightleft leftright left-right
-»˘y2	Leftmost neighbouring elements (padding at edge)	Tacit	Selection	neighboring neighbours neighbors lefthand bitshift cells items
-«˘y2	Rightmost neighbouring elements (padding at edge)	Tacit	Selection	neighbours neighbors neighboring lefthand bitshift cells items
+»˘y2	Leftmost neighbouring elements, padding at edge	Tacit	Selection	neighboring neighbours neighbors lefthand bitshift cells items
+«˘y2	Rightmost neighbouring elements, padding at edge	Tacit	Selection	neighbours neighbors neighboring lefthand bitshift cells items
 <˘y2	Table to list of rows	Tacit	Structural	spike downarrow split lists from array into nested nesting rank depth unflatten
 i0↓˘y2	Drop i0 columns from y2	Tacit	Structural	table delete remove without
-1↑˘y2	First column as a column matrix (column list)	Expression	Selection	leftmostcolumn leading 1st table list start beginning
-i0↑˘y2	Adjust y2 to width i0 (positive i0 to pad/chop on right, negative i0 to pad/chop on left)	Tacit	Structural	fill limit
-¯1↑˘y2	Last column as a column matrix (column list)	Expression	Selection	rightmostcolumn trailing table list ending
+1↑˘y2	First column as a column matrix	Expression	Selection	leftmostcolumn leading 1st table list start beginning
+i0↑˘y2	Adjust table y2 to width |i0 by truncating or padding rows	Tacit	Structural	fill limit
+¯1↑˘y2	Last column as a column matrix	Expression	Selection	rightmostcolumn trailing table list ending
 ⥊˘y	Convert to rank 2 array by flattening each cell to a row	Tacit	Structural	commabar ravelcells flattencells razecells Merge demoterank lessenrank reduce reducing
 i0⥊˘y1	Table with i0 columns, each consisting of y1	Tacit	Structural	fill table
 ⥊¨y	Ensure that all elements are lists	Tacit	Structural	items elements cells lists uniformity make force to be
@@ -390,22 +389,22 @@ F⊸/y	Filter to only those elements of y that satisfy cell-wise criterion F	Exp
 ∨´b1	Are any true?	Tacit	Boolean	anyone? forany thereexists ∃ horizontally rowwise testif forany?
 ∧´b1	Are all true?	Tacit	Boolean	forall? ∀ binary base-2 base2 testif
 ⌈´n1	Maximum of n1	Tacit	Data	supremum biggest largest highest greatest
-0⌈´n	Positive maximum, at least zero (even for empty n)	Expression	Data	largest biggest
+0⌈´n	Positive maximum, at least zero even for empty n	Expression	Data	largest biggest
 ⌊´n1	Minimum of n1	Tacit	Data	infirmum smallest lowest least
 ÷´n1	Alternating product of n1	Tacit	Arithmetic	
-≠´b1	Boolean Parity (Even)	Tacit	Boolean	
+≠´b1	Parity of boolean list: are there an odd number of 1s?	Tacit	Boolean	
 F´⥊y	Fold F over all elements without respect to shape	Expression	Function Application	reduce insert over rowwise reducing folding row-wise horizontally remove
-∨⎉1 y	Sort each row in descending order	Tacit	Ordering	down decreasing sorting reordering ordering
-∧⎉1 y	Sort each row in ascending order	Tacit	Ordering	up increasing sorting reordering ordering
+∨⎉1 y	Sort each row descending	Tacit	Ordering	down decreasing sorting reordering ordering
+∧⎉1 y	Sort each row ascending	Tacit	Ordering	up increasing sorting reordering ordering
 ⌽⎉1 y	Reverse last axis of y	Tacit	Structural	circlestile reversing dimension
 <⎉1 y	Nest sub-arrays from last axis	Tacit	Structural	spike downarrow subarrays dimension
 a1 /⎉1 y	Filter columns of y according to mask a1	Tacit	Selection	compressing slash solidus selecting cells items horizontally across bitmask bit-mask
 i1 /⎉1 y	Replicate along last axis of y	Tacit	Selection	compressing slash solidus copying repeatingeachcolumns dimension horizontally replicating rowwise row-wise across
 F⌾⥊y	Handle array y temporarily as a list	Tacit	Function Application	columnheadings columnnumbers ⍢, flattened ravelled raveled list
 ⊢˝y	Last cell of y	Tacit	Selection	topmostrow subarray dimension 1st
-+˝n	Sum of n (column-wise)	Tacit	Data	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise
++˝n	Column-wise sum of n	Tacit	Data	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise
 -˝n	Column-wise alternating sum: ((n_0-n_1)+n_2)-n_3+…	Tacit	Data	alternatingsum series vertically columnwise
-×˝n	Product of n (column-wise)	Tacit	Data	enlargedpi bigpi capitalpi ∏ Π vertically columnwise
+×˝n	Column-wise product of n	Tacit	Data	enlargedpi bigpi capitalpi ∏ Π vertically columnwise
 1∾˘y2	Preface a column of 1s	Expression	Structural	ones trues truths
 x2∾˘y0	Append unit to each row of table	Tacit	Structural	extend with next merge join concatenate rows table connect
 x2∾˘y1	Append elements of list to respective rows of table	Tacit	Structural	extend with next merge join concatenate table list connect
@@ -418,7 +417,7 @@ x2 ∾⎉1 y1	Postfix list to each row of table	Tacit	Structural	append rows lis
 x⋈⌜y	Cartesian product: all pairs from x and y	Tacit	Structural	catalog pairings tuples table matrix
 ≍˘y	Increment rank by inserting a new dimension after the first	Tacit	Structural	additional dimensions axes axis items elements cells extend shape add beginning first 1st
 ≍˘y1	Reshape list y1 into a one-column table	Tacit	Structural	1-column table list
-x1≍˘y1	Two-column table from two lists (repeat units)	Tacit	Structural	table lists columns
+x1≍˘y1	Two-column table from two lists	Tacit	Structural	table lists columns
 i0/≍y1	Table with i0 rows, each consisting of y1	Expression	Structural	fill table
 ≍⎉0 y	Increment rank by inserting a new dimension after the trailing one	Tacit	Structural	additional dimensions axes axis items elements cells extend shape add ending last columnmatrixfromvector
 ≍⎉1 y	Increment rank by inserting a new dimension before the last one	Tacit	Structural	additional dimensions axes axis items elements cells extend shape add ending last
@@ -431,13 +430,14 @@ F◶1‿G y	Sequential OR test (F∨G with shortcutting)	Tacit	Function Applicat
 F◶G‿0 y	Sequential AND test (F∧G with shortcutting)	Tacit	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting short-circuit minimal evaluation McCarthy
 i0⊏∨y	i0'th-largest major cell of y	Expression	Selection	greatestof maximum biggest lexicographically item element
 i0⊏∧y	i0'th-smallest major cell of y	Expression	Selection	leastof minimum lexicographically item element
+⊏i0⌽y	Select major cell of y at cyclic offset i0 (default i0:¯1)	Tacit	Selection	element item
 i1⊏˜j1	Generate consolidated left argument for successive transposes i1⍉j1⍉y	Tacit	Structural	
 ¯1⊸⊏y	Tail: Last major cell	Tacit	Selection	y[-1] x[-1] y[¯1] x[¯1] trailing element item ending
 x⌾⊏y	Replace first major cell of y with x	Expression	Structural	substitute merge amend replace update 1st item element
 1+↕j0	Integers from 1 to j0	Expression	Sequences	whole numbers naturals 1st
 m0×↕j0	Arithmetic progression vector: j0 steps of m0	Expression	Sequences	sequence
 ↕=y	All axes of array y	Expression	Indices	dimensions
-⥊↕y1	All tuples of corresponding elements of ↕¨y1 (for small y1)	Expression	Indices	indices major cells items
+⥊↕y1	All ordered tuples choosing elements from ↕¨y1	Expression	Indices	indices major cells items
 ¬x∊y	Boolean elements in x that are not in y	Expression	Search	isnotin membership notcontainedin hasn't doesnothave elementof ∉ cells elements binary base-2 base2
 /x∊y	Indices of all cells in x that appear in same-rank array y	Expression	Indices	locate find membersof positionsof locating cells items location
 ∊/j1	Change lengths j1 of sublists to starting indicators	Expression	Data	partitions change converting conversion segments
@@ -456,10 +456,10 @@ m⋆⁼n	Base-m logarithm of n	Tacit	Arithmetic	logarithms logs circlestar starc
 ⍒x⊐y	Grade down of y according to key x	Expression	Ordering	custom sort order descending
 ⍋⍒y	Descending cardinal numbers (ranking, all different)	Expression	Ordering	falling down
 +`n	Cumulative sum	Tacit	Data	runningtotal
-∨`b	Turn on all 1s after first 1 (indicate all elements except leading 0s)	Tacit	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes trues truths ones falses falsehoods 1st start beginning mask not
-∧`b	Turn off all 1s after first 0 (indicate all elements until the first 0)	Tacit	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask ones zero false trues truths falsehood 1st mask
-⌈`n	Progressive maxima (column-wise)	Tacit	Data	running cumulative scan columnwise vertically
-⌊`n	Progressive minima (column-wise)	Tacit	Data	running cumulative scan columnwise vertically
+∨`b	Turn on all 1s after first 1, or indicate all elements except leading 0s	Tacit	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes trues truths ones falses falsehoods 1st start beginning mask not
+∧`b	Turn off all 1s after first 0, or indicate all elements until the first 0	Tacit	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask ones zero false trues truths falsehood 1st mask
+⌈`n	Column-wise progressive maxima	Tacit	Data	running cumulative scan columnwise vertically
+⌊`n	Column-wise progressive minima	Tacit	Data	running cumulative scan columnwise vertically
 ≠`b	Convert reflected Gray code to binary	Tacit	Boolean	flip change changing inverting negating bitmask bit-mask base-2 base2 mask Conversion converting change changing
 ≠`b	Parity: Connect odd and even ones	Tacit	Boolean	flip change changing inverting negating bitmask bit-mask 1s running trues truths mask
 <`b	Indicate 1s preceded by an even number of 1s in their group	Tacit	Partitioning	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes falses ones trues truths falsehoods 1st mask
@@ -469,8 +469,8 @@ m⋆⁼n	Base-m logarithm of n	Tacit	Arithmetic	logarithms logs circlestar starc
 ⍉⎉2 y	Transpose every submatrix of y	Tacit	Structural	cant ^T ⸆ ᵀ sub-matrix sub-table subtable planes
 F⌾⍉y	Apply action F defined on rows to columns instead	Tacit	Function Application	
 0‿0⍉y2	Main diagonal of matrix	Expression	Selection	table
-⊑i0⌽y1	Pick element of list y1 at cyclic offset i0 (default ¯1)	Expression	Selection	element cell list ⎕ioindependent ⎕ioindependence ⎕io-insensitive ⎕ioinsensitive Choosing choose ⎕io=0
-¯1⊑≢y	Length of last axis	Expression	Array	count length() cells len() cells elements dimension ending
+⊑i0⌽y1	Pick element of list y1 at cyclic offset i0	Expression	Selection	element cell list ⎕ioindependent ⎕ioindependence ⎕io-insensitive ⎕ioinsensitive Choosing choose ⎕io=0
+¯1⊑≢y	Length of last axis, assuming at least one axis	Expression	Array	count length() cells len() cells elements dimension ending
 ¯1⊑≢y2	Number of columns in y2	Expression	Array	trailingshape
 ⊑/b	Index of first satisfied condition in b	Expression	Search	1st
 a0⊑x‿y	Pick y if a0 is true or x if a0 is false	Expression	Selection	conditional selector pick choose
@@ -542,7 +542,7 @@ m∧○¬n	Probabilistic NOR	Tacit	Statistical	fuzzy probability chance peirce's
 -´m1÷n1	Sum of alternating reciprocal series m1÷n1	Expression	Mathematical	sequence
 ⌈´|n1	Largest magnitude found in n1	Expression	Data	rowwise horizontally biggest greatestif maximum absolute value
 ⌊´|n1	Smallest magnitude found in n1	Expression	Data	rowwise horizontally least minimum absolute value
-+´x1=y1	Count pairwise matches (equal elements) in two lists	Expression	Data	cells items lists
++´x1=y1	Number of equal corresponding elements in x1 and y1	Expression	Data	cells items lists pairwise matches
 +´x1≠y1	Hamming distance	Expression	Data	edit
 ×´≢y	Number of elements (bound) of array y	Expression	Array	tallyall ≢, numberofelements numberofitems howmanyelements howmanyitems whole scalars countall ×⌿≢ ≠, ≢, cells items
 =´≢y2	Is y2 a square matrix?	Expression	Linear Algebra	square? table
@@ -552,8 +552,8 @@ m∧○¬n	Probabilistic NOR	Tacit	Statistical	fuzzy probability chance peirce's
 ∧´⥊b	Are all true?	Expression	Boolean	testif forall ∀ ⋀ givenany tautology universalquantification
 ×´n1⋆b1	Product of the elements in n1 where b1 is true	Expression	Data	sub-sets
 ⌽⌾⥊y2	Rotate 180°	Tacit	Structural	turning rotating rotation half-turn halfturn
-+˝⎉1 n	Sum of n (row-wise)	Tacit	Data	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise
-×˝⎉1 n	Product of n (row-wise)	Tacit	Data	enlargedpi bigpi capitalpi ∏ Π horizontally rowwise
++˝⎉1 n	Row-wise sum of n	Tacit	Data	summation enlargedsigma bigsigma capitalsigma ∑ Σ sum() horizontally rowwise
+×˝⎉1 n	Row-wise product of n	Tacit	Data	enlargedpi bigpi capitalpi ∏ Π horizontally rowwise
 ∾a×<b	Expand a by replacing 1s with same-rank array b, and 0s with 0×b	Expression	Structural	nest fractal replace copies
 ⥊x1≍˘y1	Merge equal-length lists x1 and y1 alternately	Expression	Structural	faro weave dovetail zipper zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
 1‿¯1×<n	±n by juxtaposition	Expression	Arithmetic	plusminus
@@ -563,7 +563,6 @@ i0‿⌽⥊y1	Reshape y1 to i0-row table (filled row-wise)	Tacit	Structural	tabl
 ∘‿2⥊y1	Reshape list y1 into a two-column table	Expression	Structural	2-column table list
 1‿¯1×⌜n	±n as two major cells of the result	Expression	Arithmetic	plusminus dimensions axes
 ¯1‿1×⌜n	∓n as two major cells of the result	Expression	Arithmetic	minusplus dimensions axes
-i0⊏∘⌽y	Select major cell of y at cyclic offset i0 (default i0:¯1)	Tacit	Selection	element item
 x2∾y¨⊏x2	Append element y to each column of table x2	Expression	Structural	vertically ontop atop extend with over merge join concatenate columns table
 1+2×↕j0	Odd integers from 1 to 2×j0	Expression	Sequences	numbers 1st
 m0+n0×↕j0	Arithmetic progression list: j0 elements starting at m0 with step n0	Expression	Sequences	list sequence seq() cells items
@@ -585,7 +584,7 @@ i1∊↕≠y	Starting points for y in indices pointed by i1	Expression	Partition
 x⌽⊸⊐y	Last indices in x of major cells y, counted from the rear	Tacit	Search	indexin indexof find locate positionof locating items elements location
 ⌈´x⊐y	Index of last occurrence in x of any major cell of y	Expression	Search	element find locate location indexin indexof positionof locating cells items
 ⌊´x⊐y	Index of first occurrence in x of any major cell of y	Expression	Search	element find locate 1st location indexin indexof positionof locating cells items
-j0↑/⁼i	Boolean list of length j0 with ones in locations i (inverse of /b1)	Expression	Boolean	inversion 1s trues truths list binary base-2 base2
+j0↑/⁼i	Boolean list of length j0 with ones in locations i	Expression	Boolean	inversion 1s trues truths list binary base-2 base2
 /⁼⊐y	Count of occurrences of each unique major cell	Expression	Data	elements items how many repetitions times repeated occurrences statistics items elements
 x⍋⌾⋈y	Is x lexically less than or equal to y?	Tacit	Ordering	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
 x⍋⊸⊏y	Sorting y according to x	Tacit	Ordering	ordering
@@ -595,8 +594,8 @@ a1⍒⊸⊏y	Moving cells of y indicated by a1 to the start of y	Tacit	Structura
 +`»j1	Starting positions of sublists having lengths j1	Expression	Partitioning	sub-vectors sub-lists sublists
 ∧`x=y	Indicate leading elements that are equal	Expression	Search	show matching onleft cells items masking indicating start beginning
 ∧`x≠y	Indicate leading elements that are unequal	Expression	Search	show different onleft cells items masking indicating start beginning
-⌈`⎉1 n	Progressive maxima (row-wise)	Tacit	Data	running cumulative scan rowwise horizontally
-⌊`⎉1 n	Progressive minima (row-wise)	Tacit	Data	running cumulative scan rowwise horizontally
+⌈`⎉1 n	Row-wise progressive maxima	Tacit	Data	running cumulative scan rowwise horizontally
+⌊`⎉1 n	Row-wise progressive minima	Tacit	Data	running cumulative scan rowwise horizontally
 F`⌾⌽y	Scan from end with F	Tacit	Function Application	cumulativereduce rowwise backscan backwards suffix scanning row-wise horizontally trailing ending
 +`↕j0	First j0 triangular numbers	Expression	Sequences	oeisA000217 oeisA217 1st
 i1∊+`b1	Mask to get sublists with indices i1 as indicated by b1	Expression	Selection	sub-vectors masking indicating bitmask bit-mask
@@ -607,7 +606,7 @@ i1∊+`b1	Mask to get sublists with indices i1 as indicated by b1	Expression	Sel
 ⍉⊸≡y2	Is y2 a symmetric matrix?	Tacit	Linear Algebra	testif
 <˘⍉y2	Table to list of column lists (inverted table)	Expression	Structural	split table lists into columns vertically column-wise columnwise boxed enclosed table matrix transforming transformation change changing into inverting inversion
 ⊑⌽⥊y	The last element of y	Expression	Selection	cell element
-⊑1↑0⥊y	Fill element (converts characters to spaces, numbers to zeros)	Expression	Structural	fillelement padding 0s zeroes type cell item blanks falses falsehoods
+⊑1↑0⥊y	Fill element of y	Expression	Structural	fillelement padding 0s zeroes type cell item blanks falses falsehoods
 ⊑/x≠y	Index of first differing element in x and y	Expression	Search	indexin indexof find locate positionof unequal different 1st locating cell item difference location
 ↕¯1⊑≢y2	All column indices of y2	Expression	Indices	enumerate columns
 ⊑/x∊y	Index of first occurrence in x of any cell of y	Expression	Search	cell element find locate 1st position find location
@@ -623,7 +622,7 @@ x(F⎉0)y	Run F on units	Tacit	Function Application	apply
 ⟨⟩⥊y	First element of y as a unit	Expression	Selection	1st cell item top-left topleft northwest north-west NW
 ⟨⟩⍉y	Convert y to array (enclose if atom)	Expression	Structural	leftshoeunderbar encloseifsimple conditionalenclose boxsimple eis condenclose
 32+1.8×n	Celsius to Fahrenheit	Expression	Specialty	°Fahrenheit °Celsius f2c() ftoc() converting change changing
-π×m×n	Area of cone with height m and radius n (excluding base)	Expression	Geometric	lengths bottom
+π×m×n	Area of cone with height m and radius n, excluding base	Expression	Geometric	lengths bottom
 ⌊0.5+n	Round to nearest integer, ties towards ∞	Expression	Rounding	precision favoring whole number favoring closestinteger nearestinteger nint()
 π×n⋆2	Area of circle with radius n	Expression	Geometric	length
 '0'+d	Translate digit numbers to characters	Expression	Text	base-2 base2 binary Boolean decimal converting change changing
@@ -631,7 +630,7 @@ d-'0'	Translate character digits to numbers	Expression	Text	base-2 base2 binary 
 d-'a'	Convert lowercase letters to their positions in the alphabet	Expression	Text	nth ordinals Conversion converting change changing
 '''	Quote character	Constant	Text	apostrophe ’ U+27 0x27 ≢27 quotationmark prime singlequoted in string symbol escape literal
 ÷1+⋆-n	Logistic function, approaching 0 for small n and 1 for large n	Expression	Mathematical	standard sigmoid curve limited exponential population growth
-2÷˜1+√5	Golden ratio (direct formula)	Constant	Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
+2÷˜1+√5	Golden ratio	Constant	Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
 1«»⊸≠y1	Which elements differ from next ones	Expression	Data	testif neighbouring neightbors neighboring neighbours neighbors righthand cells items 1s trues truths
 1«»⊸≠y1	Indicate end of each group of consecutive equal elements	Expression	Partitioning	runs sequences Boolean major cells items indicate masking indicating trailing binary base-2 base2
 i0-⊸↑j0⥊1	Suffix List: length i0 with j0 ones on the right, the rest zeroes	Expression	Sequences	1s 0s zeros Is𝕩Js falses falsehoods trues truths
@@ -680,12 +679,12 @@ m ⌊⟜-⍟2 n	Clamp numbers n to range (-m)≤n≤m	Expression	Data	force rest
 x⊏˜⍋⍋y	Reorder x to match the ordering of y	Expression	Ordering	meshing sorting reordering ordering
 1=x⌽⊸⍒y	Are cells of y within the range ( x_0 , x_1 ]?	Expression	Data	testif <y≤ <x≤ tao totalarrayordering interval inrange?
 1≠x⌽⊸⍒y	Are cells of y outside the range ( x_0 , x_1 ]?	Expression	Data	testif ≥y> ≥x> tao totalarrayordering interval outsiderange?
-≠`⊸∨b	Parity with connectors: Joining pairs of odd and even ones (fill gaps with ones)	Tacit	Boolean	1s trues truths
+≠`⊸∨b	Parity with connectors: fill between pairs of ones	Tacit	Boolean	1s trues truths
 +`⍟2↕j0	First j0 triangular pyramidal numbers	Expression	Sequences	figurative tetrahedral oeisA000292 oeisA292 1st
-<˘⍉>y1	Invert list of lists, so that element i of j of the result is j of i of the argument	Expression	Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
+<˘⍉>y1	Invert list of lists, so that element i of j of the result is j of i of y1	Expression	Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
 1⍉˘m2×⌜n2	Direct matrix product	Expression	Linear Algebra	table
-⍉i0‿⌽⥊y1	Reshape y1 to i0-column table (filled column-wise)	Expression	Structural	table vertically columnwise columns
-⊑1↑0⥊<y	Type (convert to fill element)	Expression	Structural	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods
+⍉i0‿⌽⥊y1	Reshape y1 to i0-column table, filled column-wise	Expression	Structural	table vertically columnwise columns
+⊑1↑0⥊<y	Convert to fill element, replacing numbers with 0 and characters with space	Expression	Structural	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods
 ⊑/¬x∊y	Position of first element in x not in y	Expression	Search	cell element 1st
 a1/¨⊸⊔y	Partition y along each axis by list of partition length lists a1	Tacit	Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions blockmatrix
 a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension
@@ -709,8 +708,8 @@ i1≤⌜↕⌈´i1	Matrix with i⊑i1 leading zeroes on row i	Expression	Linear 
 ↕⊸∾⊸÷j0	Endpoints when [0,1] is split into j0 intervals (including 0 and 1: j0+1 total)	Tacit	Sequences	unit normalized steps linear divide
 ⍋≠⊸⋈¨y1	Ascending shortlex grade	Expression	Ordering	radix length-lexicographic lengthlexicographic military genealogical
 ⍒≠⊸⋈¨y1	Descending shortlex grade	Expression	Ordering	radix length-lexicographic lengthlexicographic military genealogical ordering sorting
-»⊸<∨`b	Turn off all 1s after first 1 (indicate only the first 1)	Expression	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes falses ones trues truths falsehoods 1st mask
-»⊸≤∧`b	Turn on all 0s after first 0 (indicate all elements except the first 0)	Expression	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes falsehoods 1st mask not
+»⊸<∨`b	Turn off all 1s after first 1, or indicate only the first 1	Expression	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes falses ones trues truths falsehoods 1st mask
+»⊸≤∧`b	Turn on all 0s after first 0, or indicate all elements except the first 0	Expression	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes falsehoods 1st mask not
 +´∧`⌽b1	Count of trailing ones	Expression	Boolean	0s zeroes falses at end
 +´∧`x=y	Count number of leading elements that are equal	Expression	Search	matching onleft cells items start beginning
 +´∧`x≠y	Count number of leading elements that are unequal	Expression	Search	different onleft cells items start beginning
@@ -746,8 +745,8 @@ x{𝔾𝔽⊣}y	Church Boolean Implication	Block Modifier	Functional	≤ materia
 (2×π)×n	Circumference of circle with radius n	Expression	Geometric	edge length
 (180÷π)×n	n Radians in Degrees	Expression	Trigonometry	
 (π÷180)×n	n Degrees in Radians	Expression	Trigonometry	
-∧˝' '=d	Mask for blank columns	Expression	Text	spaces empty filter indicate masking indicating blanks bitmask bit-mask
-⊐⟜' '⎉1 d	Indices of first blanks in rows of array d	Tacit	Search	1st spaces row-wise rowwise text horizontally
+∧˝' '=d2	Mask for blank columns	Expression	Text	spaces empty filter indicate masking indicating blanks bitmask bit-mask
+⊐⟜' '˘d2	Indices of first space in each row of text table d2	Tacit	Search	1st blanks row-wise rowwise text horizontally
 m⊸×⊸+˜´n1	Value of polynomial with ascending coefficients n1 at points m (Horner's method)	Expression	Polynomial	
 -´×⟜⌽˝n2	Determinant of two-row matrix	Expression	Linear Algebra	det() 2-row 2row table
 ÷1++⌜˜↕j0	Hilbert matrix of order j0	Expression	Linear Algebra	table sorting reordering ordering
@@ -761,7 +760,7 @@ i1≤⌜⌽↕⌈´i1	Matrix with i⊑i1 trailing zeroes on row i	Expression	Lin
 =⌜○↕´≢n2	Identity matrix with shape of table n2	Expression	Linear Algebra	diagonal table
 ≠⌜○↕´≢n2	Anti-diagonal matrix with shape of table n2	Expression	Linear Algebra	nondiagonal table
 ∧´∘⥊y∊0‿1	Is y an array of booleans?	Expression	Boolean	testif binary base-2 base2
-⌊1+10⋆⁼1⌈|j	Number of (base-10) digits of each integer in j	Expression	Mathematical	positions width representation
+⌊1+10⋆⁼1⌈|j	Number of base-10 digits of each integer in j	Expression	Mathematical	positions width representation
 ⥊1‿0‿1∧⌜⍟j0 1	Cantor set iteration j0	Expression	Geometric	fractal ternary middle third
 y/˜i0∊˜⍋⍋y	The i0 smallest cells of y in order of occurrence	Expression	Ordering	least items elements
 y/˜i0∊˜⍋⍒y	The i0 largest cells of y in order of occurrence	Expression	Ordering	biggest greatestif items elements
@@ -788,9 +787,9 @@ x1(⥊∾⎉1‿0)y1	Insert x1 before every element of y1	Tacit	Structural	merge
 (↕÷-⟜1)j0	j0 evenly spaced numbers starting at 0 and ending at 1	Tacit	Sequences	unit normalized steps linear divide inclusive
 x(¬⍋⌾⋈)y	Is x lexically greater than y?	Tacit	Ordering	testif tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds
 x(¬⍒⌾⋈)y	Is x lexically less than y?	Tacit	Ordering	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
-(⌽⍒/i1)⊏y	Reverse (⌽) sublists of y having lengths i1	Expression	Partitioning	
+(⌽⍒/i1)⊏y	Reverse sublists of y having lengths i1	Expression	Partitioning	
 (¬∧≠`)b	Places between pairs of ones	Tacit	Boolean	1s trues truths
-(i0=+`b1)/y1	The i0'th sublist of y1 (sublists indicated by b1)	Expression	Selection	
+(i0=+`b1)/y1	The i0'th sublist of y1 with sublists indicated by b1	Expression	Selection	
 (+´∧`)b1	Count of leading ones	Tacit	Boolean	1s trues truths at start beginning
 x1⌾(0‿0⊸⍉)y2	Matrix y2 with main diagonal changed to x1	Expression	Linear Algebra	inplace update table
 i+⊑(i↓b)⊐1	Index of first one after index i0 in b1	Expression	Search	1st
@@ -804,12 +803,14 @@ x{𝔽˜𝔾⊣}y	Church Boolean NAND	Block Modifier	Functional	⍲ shefferstrok
 {𝔽˜𝔾𝔽}	Church Boolean XOR	Block Modifier	Functional	≠ exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 {𝔽𝔾𝔽˜}	Church Boolean XNOR	Block Modifier	Functional	= materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 f{𝕎𝕩}¨<y	Apply each function in f to the whole of y	Expression	Function Application	functions each every list gerund elements collect
-' '⊸≠⊸/d1	Remove blanks in string	Tacit	Text	deletespaces spaces drop without
-+˝˘' '≠d	Word lengths of words in list d	Expression	Text	vector
-∧˝⎉1' '=d	Mask for blank rows	Expression	Text	spaces empty filter indicate masking indicating blanks bitmask bit-mask
-⊐⟜' '⊸↑d1	First word in d1	Tacit	Text	initial leading leftmost nonspace non-space 1st start beginning
-∨`⎉1' '≠d	Locate leading blanks	Expression	Text	spaces beginning mask indicate indications start bitmask bit-mask
+' '⊸≠⊸/d1	Remove spaces from string	Tacit	Text	deletespaces blanks drop without
+∧˝˘' '=d2	Mask indicating all-blank rows of table d2	Expression	Text	spaces empty filter indicate masking indicating blanks bitmask bit-mask
++˝˘' '≠d2	Lengths of words in table d2 if padded with trailing spaces	Expression	Text	spaces blanks count varchar
+∨`˘' '≠d2	Locate leading spaces in rows of table d2	Expression	Text	blanks beginning mask indicate indications start bitmask bit-mask
 "ASSERTION FALURE"!∧´⥊b	Signal an error if any condition is not met	Expression	Errors	throw
+(d1⊐' ')↑d1	First word in d1	Expression	Text	initial leading leftmost nonspace non-space 1st start beginning
+10⊸×⊸+˜´⌽d1	Natural number from base-10 digits	Expression	Mathematical	frombase10 base-10 dec() decimal Conversion converting change changing
+2⊸×⊸+˜´⌽d1	Natural number from binary representation	Expression	Mathematical	frombase2 base-2 binary Conversion converting change changing
 +⟜÷´¨1↓↑n1	Continued fraction convergents with terms n1	Expression	Mathematical	series sequence
 ≠˝0=400‿100‿4|⌜j	Is year j a leap year?	Expression	Specialty	testif gregoriancalendar 29thfeb29 29february29th
 m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions j1 starting at m1 with steps n1	Expression	Sequences	sequence seq() multidimensional axes
@@ -835,7 +836,7 @@ i0(⊢/˜0=|)j1	Elements of j1 divisible by i0	Tacit	Number Theory	filter diviso
 (+´÷1⌈≢)n1	Average, returning 0 if empty	Tacit	Statistical	arithmeticmean
 m1(+´|∘-)n1	Manhattan distance between two points in n-space	Tacit	Geometric	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()
 x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Function Application	conformity conforming axes frames major minor cells
-x⊣⌾(b1⊸/)˜y	Mask Operator: Merge x and y using b1 (1 for x's element, 0 for y1's element)	Tacit	Structural	faro weave dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
+x⊣⌾(b1⊸/)˜y	Merge x and y using b1 (1 for x's element, 0 for y1's element)	Tacit	Structural	faro weave dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
 +´⌾(×˜)n1	Length of vector n1	Tacit	Geometric	absolute value magnitude distance from origin 0 zero
 (100×⊢÷+˝)n	Column-wise percentage per column	Tacit	Data	≢ vertically columnwise
 i0/⟜≍⎉(-m0)y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension
@@ -851,7 +852,7 @@ x(¬∘∊/⊣)y	x without major cells that appear in y	Tacit	Sets	butnot except
 x(∊⍒⊸⊏⊣)y	Move major cells of x that appear in y to the front	Tacit	Search	promote cells items
 0⌈´0(0⌈+)`n1	Largest sum of any contiguous sublist	Expression	Data	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
 (+˝∧`)⎉1 b	Number of leading ones in each row of b	Tacit	Boolean	ones trues truths start beginning
-(⌽⍒+`a1)⊏y	Reverse (⌽) sublists of y indicated by starting mask a1	Expression	Structural	
+(⌽⍒+`a1)⊏y	Reverse sublists of y indicated by starting mask a1	Expression	Structural	
 k˙⌾(i‿j⊸⊑)y2	Replace element i,j of matrix y2 with k	Tacit	Structural	modify change at index
 (↕¯1⊑≢)⊸∾y2	Attach column numbers to a table	Tacit	Indices	headings table
 (⊑⊢⊐⌈´)n1	Index of minimum value in n1 (linear time)	Tacit	Search	lesser smaller smallest lowest least
@@ -863,11 +864,9 @@ m -˝∘×⎉1‿∞ n	Alternating matrix product of m and n (¯1↑m ↔ 1↑�
 a2 ∨˝∘∧⎉1‿∞ b2	Extend a transitive binary relation	Tacit	Graph Theory	extension base-2 base2
 m2 ⌊˝∘+⎉1‿∞ n2	Extend a distance table to next leg	Tacit	Graph Theory	extension matrix
 i2 <¨⊸⊏⎉¯1‿∞ y	Select: each row of i2 selects a cell from y	Tacit	Selection	rightshoeunderbar saneindexing ⊇ items elements index
-' '⊸≠⊸/¨d	Remove blanks in each string	Tacit	Text	deletespaces spaces drop without
-∧`∧˝' '=d2	Locate leading blank columns	Expression	Text	spaces beginning masking indicate indications allspace all-space start blanks
+' '⊸≠⊸/¨d	Remove spaces in each string	Tacit	Text	deletespaces blanks drop without
+∧`∧˝' '=d2	Locate leading blank columns in text table d2	Expression	Text	spaces beginning masking indicate indications allspace all-space start blanks
 ≍⟜('¯'¨)d1	Underline a string	Tacit	Text	underscore
-10⊸×⊸+˜´∘⌽d1	Natural number from base-10 digits	Tacit	Mathematical	frombase10 base-10 dec() decimal Conversion converting change changing
-2⊸×⊸+˜´∘⌽d1	Natural number from binary representation	Tacit	Mathematical	frombase2 base-2 binary Conversion converting change changing
 ÷⟜⊑⌽+`0∾↕j0	Outstanding balances on rule of 78s	Expression	Finance	sum-of-the-digits method
 ⌈´⊸=∘⊒⊸/y	Modes: Most frequent major cells of data	Tacit	Statistical	average items elements
 i(⊣⋆˜1+÷˜)n	Effective rate of interest with nominal rate n for i periods	Tacit	Finance	
@@ -880,14 +879,12 @@ m1(×÷+´∘×)n1	Bayes' formula	Tacit	Statistical	Bayesformula statistical sta
 +´⌾(×˜)m1-n1	Euclidean distance between two points in n-space	Expression	Geometric	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Pythagorean d()
 +´⌾(⋆⟜i0)|n1	i0-norm	Expression	Geometric	Lp-normal L-p ℓp ℓ-p
 (⊢÷⌈˝∘|)n	Normalize by infinity-norm (maximum absolute value)	Tacit	Geometric	L∞-normalise L∞-normalize L∞-normalization L-∞
-x0(⊣+↕∘¬˜)y0	Consecutive values from x0 to y0 inclusive (both numbers, or both characters, with x0≤y0)	Tacit	Sequences	inclusive range closed interval seq() sequence …
 (↕1++˜)⊸-j0	Integers from -j0 to j0	Tacit	Sequences	whole numbers natural symmetric negative positive
 (1↓↕∘≠⊸×)n1	Derivative of polynomial with coefficients n1 in ascending order	Tacit	Polynomial	firstderivative derivate
 (↕∘≠⌽˘⊢)y2	Skew y2 to turn diagonals into columns (with wrap-around)	Tacit	Structural	table
 /○⥊⟜(↕≢)b2	List of arcs from adjacency matrix b2	Tacit	Graph Theory	connections table directed graph vector
 (↕∘≠∾˘⊢)y2	Attach row numbers to a table	Tacit	Indices	labels table
 (↕∘≠↕¨<)y1	All possible slices grouped in arrays by length	Tacit	Selection	sub-strings substrings sub-vectors sub-sequences subsequences segmented sub-lists partitioned sublists
-m1(⊢×¬∘∊˜)n	Change elements of n that are found in m1 to zero	Tacit	Data	arein membersof 0ing cells items
 x1(∧´∊˜∾∊)y1	Are x1 and y1 equivalent as sets?	Tacit	Sets	equivalence
 x(⊏˜⍋⊸⊏⊢)j1	Sort indices j1 according to data x	Tacit	Ordering	permute
 i0(⊏⎉1⍋⊸⊏⊢)y	Sort y ascending according to column i0	Tacit	Ordering	sort() major cells elements items of array up increasing sorting reordering ordering bycolumn specific
@@ -895,15 +892,17 @@ x(⍋∘∊˜⊏⊢)y	Move cells x to end of y	Tacit	Search	major cells elements
 x1(∊˜⍋⊸⊏⊢)y1	Move elements x1 to end of y1	Tacit	Search	major cells elements trailing ending
 i0(⊏⎉1⍒⊸⊏⊢)y	Sort y descending according to column i0	Tacit	Ordering	sort() major cells elements items of array down decreasing sorting reordering ordering bycolumn specific
 ⌈´(⊢⌈+)`n1	Largest sum of any contiguous non-empty sublist	Expression	Data	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
-(⍋+`⊸+a1)⊏y	Rotate first major cells (1⌽) of sublists of y indicated by starting mask a1	Expression	Structural	sub-vectors sub-lists sublists items elements 1st
-m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (matrix sum)	Tacit	Data	tables
+(⍋+`⊸+a1)⊏y	Rotate first major cells (1⊸⌽) of sublists of y indicated by starting mask a1	Expression	Structural	sub-vectors sub-lists sublists items elements 1st
+m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (slow)	Tacit	Data	tables
 x F⌾(<˘ax⍉⁼⊢) y	Run F on each list along axis ax of y	Tacit	Function Application	onaxis apply dimensions
-(+˝÷≠)i0⍉⁼n	Average (mean value) of elements of n along axis i0	Expression	Statistical	arithmeticmean() AM() avg() axis dimension cells items
+(+˝÷≠)i0⍉⁼n	Average (mean) of elements of n along axis i0	Expression	Statistical	arithmeticmean() AM() avg() axis dimension cells items
 (1+⊒+⊒⌾⌽)y	Count of total (not previous) occurrences of each cell of y	Tacit	Search	tally selfcount items elements duplicate repetitions appearances
+x0{𝕨+↕𝕩¬𝕨}y0	Consecutive values from x0 to y0 inclusive (both numbers, or both characters, with x0≤y0)	Block Function	Sequences	inclusive range closed interval seq() sequence …
 {⌊𝕩+1≤2|𝕩}n	Round to nearest even number, ties towards ∞	Block Function	Rounding	precision favoring whole number favoring
+m1{𝕩×¬𝕩∊𝕨}n	Change elements of n that are found in m1 to zero	Block Function	Data	arein membersof 0ing cells items
 F{𝕨𝔽˜´⌽𝕩}	Fold from the left	Block Modifier	Function Application	reduction typenotation reducing folding
-⊢´∘/⎉1' '≠d	Indices of last non-blanks in rows	Expression	Search	nonblanks nonspaces characters text row-wise rowwise horizontally
-∧`∧˝˘' '=d2	Locate leading blank rows	Expression	Text	spaces beginning masking indicate indications allspace all-space lines start blanks
+⊢´∘/˘' '≠d2	Indices of last non-space character in each row of d2	Expression	Search	nonblanks nonspaces characters text row-wise rowwise horizontally
+∧`∧˝˘' '=d2	Indicate leading all-blank rows of d2	Expression	Text	spaces beginning masking locate indications allspace all-space lines start blanks
 ≠`⊸∨'''=d1	Locations of texts between and including quotes	Expression	Text	strings
 ≠`⊸>'''=d1	Locations of texts between and excluding quotes	Expression	Text	strings
 i0(×⥊⊢-⊸↑1˙)j0	Mark ending points for i0 sublists of width j0	Tacit	Partitioning	vector list trailing segments partitions
@@ -921,7 +920,7 @@ i0(+˝˘∘↕÷⊣)n	n-wise rolling average	Tacit	Data	rollingmean windowedmean
 (↕∘≠≡⌽∘⍋)n	Is n Strictly Decreasing?	Tacit	Ordering	testif descending? falling? down ordered? sorted?
 (⍒≠⊸⋈¨)⊸⊏y1	Descending shortlex sort	Tacit	Ordering	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
 (↕∘≠≡⌽∘⍒)n	Is n Strictly Increasing?	Tacit	Ordering	testif ascending? rising? up ordered? sorted?
--⟜»(1⌽a1)/+`n	Sums over (+´) sublists of n indicated by a1	Expression	Partitioning	segmented partitioned sub-vectors
+-⟜»(1⌽a1)/+`n	Sums of sublists of n indicated by a1	Expression	Partitioning	segmented partitioned sub-vectors
 (∨`∧∨`⌾⌽)b1	Mask that selects values between first and last 1	Tacit	Boolean	masking trim ones 1st bitmask bit-mask
 ∨≠¨⊸(≍˘)⊔y	Sorted frequency table	Expression	Data	matrix
 (⌊i0×↕⊸÷≠y)⊔y	Distribute major cells of y into i0 slices as evenly as possible	Expression	Partitioning	unzip elements items deal
@@ -931,14 +930,14 @@ i0(+˝˘∘↕÷⊣)n	n-wise rolling average	Tacit	Data	rollingmean windowedmean
 (≠x)-1+(⌽x)⊐y	Last indices in x of major cells y (¯1 if not found)	Expression	Search	indexin indexof finding locating locate positionof items elements location
 x2(¯1⊑≠)⊸(↑˘)y2	Widen table y2 to the same row length as x2	Tacit	Structural	adjust width table
 i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	Combinatorics	repeated
-{𝕩𝕊⍟≠1+÷𝕩}1	Golden ratio (as a limit)	Constant	Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
+{𝕩𝕊⍟≠1+÷𝕩}1	Golden ratio, computed as a limit	Constant	Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
 (↕2)∾⌜⍟2<⟨⟩	Unit square	Constant	Geometric	
 (↕2)∾⌜⍟3<⟨⟩	Unit cube	Constant	Geometric	
 (↕2)∾⌜⍟4<⟨⟩	Unit tesseract	Constant	Geometric	
 j⊏∾"0A"+⟜↕¨10‿26	Translate digits to characters (bases 2 through 36)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing
 (××·⌈¯0.5+|)n	Round to nearest integer, ties towards 0	Tacit	Rounding	precision favoring integer round()
 (××·⌊0.5+|)n	Round to nearest integer, ties away from 0	Tacit	Rounding	precision favoring integer round()
-(⍋' '⊸=)⊸⊏d1	Moving all blanks to end of text	Tacit	Text	spaces trailing ending
+(⍋' '⊸=)⊸⊏d1	Move all spaces to end	Tacit	Text	blanks trailing ending
 m(¬∧⟜¬∨¬⊸∧)n	Probabilistic XNOR	Tacit	Statistical	fuzzy probability chance materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 x0(1⊸»⊸∨∘≠/⊢)y1	Remove consecutive duplicate x0's from list y1	Tacit	Search	list
 +´(⌈´≠¨y1)↑¨y1	Sum of list of polynomials y1 with ascending coefficient order	Expression	Polynomial	sumof
@@ -955,7 +954,7 @@ m1(-´⌈○≠↑¨⋈)n1	Difference between polynomials with ascending coeffic
 (≥⌜˜↕∘≠)⊸≡b2	Is b2 a full lower triangular matrix with diagonal?	Tacit	Linear Algebra	testif triangle SW southwest south-west table triangular?
 2=+´0=(1+↕)⊸|n0	Is n0 a prime?	Expression	Number Theory	testif isprime primality
 (1⌈`↕∘≠⊸×a1)⊏y	Copy each cell of y until before next 1 in a1	Expression	Selection	item element
-(∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column) only	Tacit	Boolean	sequence run trues truths 1st
+(∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column)	Tacit	Boolean	sequence run trues truths 1st
 (∧⊑˜2⌊∘÷˜≠)n1	Median of non-empty n1, taking larger value for even lengths	Tacit	Statistical	average
 1↓(i0=+`⊑⊸=y1)/y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Expression	Text	select pick partitionedvector segmentedstring index cell item 1st
 (100×÷⟜(+˝)˘)n	Row-wise percentage per row	Tacit	Statistical	≢ horizontally rowwise
@@ -967,7 +966,7 @@ F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Blo
 i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Tacit	Ordering	sort() sortby() table sorting reordering ordering specific columns
 (π÷3)×(×˜m)×n	Volume of cone with height m and radius n	Expression	Geometric	lengths
 'F'-×⊸+60‿70‿80‿90⍋j	Students grades given score	Expression	Specialty	
-(∨`' '⊸≠)⊸/d1	Remove leading blanks	Tacit	Text	delete spaces beginning start drop without
+(∨`' '⊸≠)⊸/d1	Remove leading spaces	Tacit	Text	delete blanks beginning start drop without
 (∨`'0'⊸≠)⊸/d1	Remove leading zero characters	Tacit	Text	zeros 0s trim left falses falsehoods start beginning
 " ⎕"⊏˜j>⌜↕⌈´j	Bar chart	Expression	Data	curve graph plotting
 (b¬⊸/"in")∾"correct"	Conditional in text	Expression	Text	message true false Boolean binary base-2 base2 converting change changing
@@ -997,9 +996,9 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 (⊢↑˝·≍⟜¬2+≢)y	Pad y with a layer of fill elements on all sides	Tacit	Structural	expand enlarge outer outside around edges boundary border surround frame
 {⌊0.5+𝕩}⌾(100⊸×)n	Round to nearest hundredth, ties towards ∞	Tacit	Rounding	precision favoring whole number favoring
 {⌊0.5+𝕩}⌾(20⊸×)n	Round currency to nearest five hundredths	Tacit	Rounding	cents nickels ¢5¢
-(»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate blanks	Tacit	Text	delete trim without consecutive extraneous normalise normalize spaces multiple drop start beginning
-(∨⟜«' '⊸≠)⊸/d1	Remove trailing and duplicate blanks	Tacit	Text	delete trim without consecutive extraneous normalise normalize spaces multiple drop start ending
-(∨˝˘' '⊸≠)⊸/d2	Remove blank rows	Tacit	Text	all-space allspace empty remove delete drop space without
+(»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate spaces	Tacit	Text	delete trim without consecutive extraneous normalise normalize blanks multiple drop start beginning
+(∨⟜«' '⊸≠)⊸/d1	Remove trailing and duplicate spaces	Tacit	Text	delete trim without consecutive extraneous normalise normalize blanks multiple drop start ending
+(∨˝˘' '⊸≠)⊸/d2	Remove all-blank rows	Tacit	Text	all-space allspace empty remove delete drop space without
 (∾"0A"+⟜↕¨10‿26)⊐d	Translate characters to digits (bases 2 through 36)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing
 -⟜(32×1="a{"⊸⍋)d	Uppercase ASCII text	Tacit	Text	casemap lettercase toupper upper-case conversion converting change changing
 +⟜(32×1="A["⊸⍋)d	Lowercase ASCII text	Tacit	Text	casemap lettercase tolower lower-case conversion converting change changing
@@ -1021,13 +1020,13 @@ x(∾○(↕≠)⍋⊸⊏∾)y	Merge x and y alternately	Tacit	Structural	faro w
 (/i1)(⊏˜⍋⊸⊏⊢)⍒y	Grade down (⍒) for sorting subarrays of y having lengths i1 (≠y ↔ +´i1)	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
 =⊸{<⎉𝕨⍉⍟𝕨>𝕩}y	Invert array of same-rank arrays, exchanging inner with outer axes	Tacit	Structural	transpose transposing cell element zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing flip
 {2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Block Function	Geometric	 triangle shape region size points coordinates
-{𝕩⌾(0‿0⊸⍉)0⌜˜𝕩}y1	Diagonal matrix with elements of y1 (filled appropriately)	Block Function	Linear Algebra	cells items table
+{𝕩⌾(0‿0⊸⍉)0⌜˜𝕩}y1	Diagonal matrix with y1 along diagonal	Block Function	Linear Algebra	cells items table
 i1{(¬𝕨∊↕≠𝕩)/𝕩}y	Remove major cells at indices i1 from y	Block Function	Selection	elements items without positions
 (××2×·⌈2÷˜1-˜|)n	Round to nearest even number, ties towards 0	Tacit	Rounding	precision favoring
-(+˝|∘-)⎉1⎉1‿∞˜n2	Manhattan distance table for points in n-space (one point per row)	Tacit	Geometric	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d() matrix
+(+˝|∘-)⎉1⎉1‿∞˜n2	Manhattan distance table given one point in each row of n2	Tacit	Geometric	taxicab L1 L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d() matrix
 (28+·≠´0=400‿100‿4|⌜⊢)j	Number of days in February of year j (YYYY)	Tacit	Specialty	gregoriancalendar feb29 29february29th feb28 28february28th length
-(1⊸»⊸∨' '⊸≠)⊸/d1	Remove duplicate blanks, turning each sequence of blanks into a single blank	Tacit	Text	delete trim reformat extraneous spaces multiple remove drop without
-(∨`⌾⌽' '⊸≠)⊸/d1	Remove trailing blanks	Tacit	Text	delete spaces drop ending without
+(1⊸»⊸∨' '⊸≠)⊸/d1	Remove duplicate spaces, turning each sequence of spaces into one	Tacit	Text	delete trim reformat extraneous blanks multiple remove drop without
+(∨`⌾⌽' '⊸≠)⊸/d1	Remove trailing spaces	Tacit	Text	delete blanks drop ending without
 +`-⟜»˝"()"=⌜d1	Depth of parentheses	Expression	Text	bracket brace nesting level parenthesis parens
 ¯1⋆+´∨´¨<⟜(≠↑↑)j1	Sign of permutation	Expression	Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita symbol LC
 (∧´∘∊≠|↕∘≠⊸+)j1	Valid siteswap pattern for juggling?	Tacit	Specialty	testif beat
@@ -1042,8 +1041,8 @@ i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorte
 m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending coefficients and optional constant m0	Block Function	Polynomial	firstintegral integrate
 i0(⊢÷⊣√·+´⋆˜⟜|)n	Normalisation by i0-norm	Tacit	Geometric	Lp-normalise Lp-normalize Lp-normalization L-p ℓp ℓ-p
 f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Function Application	each every list gerund elements to both arguments collect
-(∨˝' '⊸≠)⊸(/⎉1)d2	Remove blank columns	Tacit	Text	all-space allspace empty remove delete drop space without
-' '(⊢+=×'-'-⊣)d	Replace all blanks with dashes in d	Expression	Text	spaces substitute format
+{(∨˝' '≠𝕩)/⎉1𝕩}d2	Remove blank columns	Block Function	Text	all-space allspace empty remove delete drop space without
+' '(⊢+=×'-'-⊣)d	Replace all spaces with dashes in d	Expression	Text	blanks substitute format
 -˜˝˘∘‿2⥊/0(∾≠∾˜)b1	Lengths of groups of ones in b1	Expression	Partitioning	runs 1s trues truths
 ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕j0	Primes less than j0	Expression	Number Theory	primesuntil numbers
 -˜`˘∘‿2⥊/0(∾≠∾˜)b1	Start and length of groups of 1s in b1	Expression	Partitioning	runs sequences blocks trues truths 1st ones
@@ -1057,9 +1056,9 @@ i1{𝕩↑˜𝕨⌊(≠𝕨)↑≢𝕩}y	Take up to i1 positions from axes of y	
 {(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
 m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Number Theory	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
 F{F _𝕣_ G: {𝕊:F𝕩 ; 𝕊⁼:G𝕩}}G	Function that applies like F with inverse set to G	Block Modifier	Function Application	obverse specify specified undo header opposite
-+´⌾(×˜)∘-⎉1⎉1‿∞˜n2	Euclidean distance table for points in n-space (one point per row)	Tacit	Geometric	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Cartesian metric Pythagorean d() matrix
++´⌾(×˜)∘-⎉1⎉1‿∞˜n2	Euclidean distance table given one point in each row of n2	Tacit	Geometric	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Cartesian metric Pythagorean d() matrix
 (<⥊¨·⊣⌜˜`⌾⌽↕¨)j1	Index arrays along each dimension for shape j1	Tacit	Indices	separated indices positions locations elements odometer meshgrid ndgrid
-x0(⊣-(××·↕1+|)∘-)y0	Consecutive values from x0 to y0 (both numbers, or both characters)	Tacit	Sequences	inclusive range closed interval seq() sequence … any either direction unordered
+x0(⊣-(××·↕1+|)∘-)y0	Consecutive values from x0 to y0 (both numbers, or both characters, in any order)	Tacit	Sequences	inclusive range closed interval seq() sequence … any either direction unordered
 {⌊0.5+𝕩}⌾((10⋆i0)⊸×) n	Round n to i0 decimal places	Expression	Rounding	precision banking banker's bank's (⍎⍕)
 (10⊸×⊸+˜´∘⌽-⟜'0')d1	Parse natural number from string	Tacit	Text	decimal Conversion converting cast integer parseint atoi
 ¬∘∊⟜".,:;?!"⊸/d1	Remove punctuation	Tacit	Text	delete symbols drop without
@@ -1075,12 +1074,12 @@ x0((⊢-˜+`×¬)∘=⊔⊢)y1	Split y1 at occurrences of separators x0, removin
 a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group of 1s	Tacit	Partitioning	split separate chop divide chunk dividing partitions
 ∊⟜(∾"0aA"+⟜↕¨10‿26‿26)⊸/d1	Remove non-alphanumeric ASCII characters	Tacit	Text	punctuation
 " ⎕"⊏˜>⌜⟜(↕⌈´)/⁼j1	Histogram (distribution barchart, down the page)	Expression	Data	
-'0'(⊢+∧`∘=×' '-⊣)d	Replace leading zeros with blanks in d	Expression	Text	spaces nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
+'0'(⊢+∧`∘=×' '-⊣)d	Replace leading zeros with spaces in d	Expression	Text	blanks nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
 i1(-⟜»⊏⟜(0∾⊢)○(+`))n	Sums (+´) of sublists of n with lengths given by i1	Tacit	Data	segmented partitioned sub-vectors
 n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Polynomial	
 {𝕩(⊢⌊⊏˘+⌜⊏)´↕≠𝕩}n2	Shortest path length matrix from weighted adjacency matrix n2, using Floyd-Warshall	Block Function	Graph Theory	roy wfi directed transitive closure algorithm pathfinding search lengths dense edges vertices follow connections
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Structural	substitute merge amend update cells items
-((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate blanks	Tacit	Text	delete trim reformat extraneous normalise normalize spaces multiple drop start beginning ending without
+((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate spaces	Tacit	Text	delete trim reformat extraneous normalise normalize blanks multiple drop start beginning ending without
 ⊏∘⊑˘(⌈´⊸=≠¨)⊸/⊐⊸⊔y	Modes: Most frequent major cells of data	Expression	Statistical	average items elements
 +´m⋆⌜˜(1+↕)⊸(⊣/˜0=|)j0	Sum of m'th powers of positive divisors of j0	Expression	Number Theory	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
 -+´2(⋆⁼×⊢)(/⁼∘⊐÷≠)y	Shannon entropy of array y	Expression	Statistical	informationtheory text message string
@@ -1090,12 +1089,12 @@ i0(+´÷≠){𝔽(𝕩-𝔽𝕩)⋆𝕨}n1	i0'th moment of n1	Tacit	Statistical
 i0(1={𝕨(|𝕊⍟(>⟜0)⊣)𝕩})j0	Are i0 and j0 co-prime?	Tacit	Number Theory	coprime? relatively mutually testif
 (=⌜˜↕≠n2)≡+˝∘×⎉1‿∞⟜⍉n2	Is square matrix n2 orthogonal?	Expression	Linear Algebra	testif Orthogonal?
 {𝕩𝕊⍟≢∨˝∘∧⎉1‿∞˜⊸∨𝕩}b2	Transitive closure	Block Function	Graph Theory	adjacency list matrix contingency table
-((∨`∧∨`⌾⌽)' '⊸≠)⊸/d1	Remove leading and trailing blanks from d1	Tacit	Text	trim left right spaces start beginning ending
-≍⟜{' '(⊣+≠×'¯'-⊣)𝕩}d1	Underline non-blanks in a string	Tacit	Text	wordunderlinewords wordunderscorewords
+{(∨`∧∨`⌾⌽)' '≠𝕩}⊸/d1	Remove leading and trailing spaces from d1	Tacit	Text	trim left right blanks start beginning ending
+{𝕩≍' '(⊣+≠×'¯'-⊣)𝕩}d1	Underline non-spaces in a string	Block Function	Text	blanks wordunderlinewords wordunderscorewords
 ((+´÷≠)∧⊏˜2⌊∘÷˜¯1‿0+≠)n1	Median of non-empty n1, averaging two values for even lengths	Tacit	Statistical	average
 (+´¨(+⌜´↕∘≠¨)⊔×⌜´)y1	Product of list of polynomials (ascending or descending order)	Tacit	Polynomial	multiplicationof multiply times coefficients
 a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b1	Indicate first one in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	sub-vector 1st
-a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch given b1 on and a1 off spikes (initially off)	Tacit	Partitioning	signal on/off
+a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch when b1 turns on and a1 turns off (initially off)	Tacit	Partitioning	signal on/off
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	zeros 0s falses falsehoods start beginning
 +´(↕3)(×˝⌽˘){𝔽--⊸𝔽}n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Expression	Linear Algebra	scalar box signed volume parallelepiped
 m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Number Theory	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
@@ -1104,7 +1103,7 @@ a1(⊢∧∧(⊢∊/)·+`»⊸<∘⊢)b1	Groups of ones in b1 pointed to by at l
 (⌈-⟜0.5)⌾(÷⟜m){××𝔽∘|}n	Round n to nearest multiple of m, ties towards 0	Tacit	Rounding	precision favoring
 16⊸×⊸+˜´⌽(∾"0A"+⟜↕¨10‿6)⊐d1	Convert from hexadecimal string to number	Expression	Text	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
 '"'{𝕨∾𝕨∾˜(1+𝕨=𝕩)/𝕩}d1	Turn string d1 into string literal source code (like •Repr)	Expression	Text	serialise ⍎⁼ inverse⍎ escape
-{'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all blanks with dashes	Block Function	Text	spaces substitute format
+{'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all spaces with dashes	Block Function	Text	blanks substitute format
 a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Partitioning	runs sequences chop limit indicated trues truths 1st
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Partitioning	split separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
@@ -1120,8 +1119,8 @@ c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of char
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Text	fuzzy match lcs
 (+´÷≠){(𝔽-1˙)⌾(×˜)-⟜𝔽}n1	Sample standard deviation	Tacit	Statistical	stddev σ sigma SD empirical
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
-a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of elements of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array minimums smallest least major cells items
-a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of elements of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array maximums greatestif largest biggest major cells items
+a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array minimums smallest least major cells items
+a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array maximums greatestif largest biggest major cells items
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	1s trues truths start beginning
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Partitioning	sub-vectors +\
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Partitioning	sub-vectors sublists sub-lists ≠\
