@@ -1124,11 +1124,11 @@ a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists 
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Partitioning	sub-vectors sublists sub-lists ≠\
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array maximums greatestif largest biggest major cells items
-10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Base-10 digits of natural number j0	Block Modifier	Mathematical	base10 decimal base-10
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0	Block Modifier	Mathematical	digits base2 base-2 Boolean
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 ⊑{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Expression	Statistical	average AHM() HAM() AH() HA() harmonic-arithmetic
 ⊑m0{+´𝕨⋈⟜¬⊸×1‿¯1↓¨<𝕩}⍟(1-˜≠∘⊢)x1	Bezier curve with control points x1 evaluated at m0, by De Casteljau's algorithm	Expression	Geometric	polynomial spline value of interpolate parameter linear quadratic cubic
+10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼0.5+1⌈⊢)}j0	Base-10 digits of natural number j0	Block Modifier	Mathematical	base10 decimal base-10
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Structural	list cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Statistical	pcc() ppmcc() bivariate
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈×´⊸(√˜))≠𝕩}n1	Arithmetic-geometric mean	Tacit	Statistical	average AGM() GAM() AG() GA() geometric-arithmetic common
