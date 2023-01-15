@@ -889,6 +889,7 @@ i(⊣⋆˜1+÷˜)n	Effective rate of interest with nominal rate n for i periods	
 +´⌾(⋆⟜i0)|n1	i0-norm	Expression	Geometric	Lp-normal L-p ℓp ℓ-p
 m1{𝕩×¬𝕩∊𝕨}n	Change elements of n that are found in m1 to zero	Block Function	Data	arein membersof 0ing cells items
 x1(∧´∊˜∾∊)y1	Are x1 and y1 equivalent as sets?	Tacit	Sets	equivalence
+0(∾+∾˜)⍟i0⥊1	Row i0 of Pascal's triangle	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 F{𝕨𝔽˜´⌽𝕩}	Fold from the left	Block Modifier	Function Application	reduction typenotation reducing folding
 x(⊏˜⍋⊸⊏⊢)j1	Sort indices j1 according to data x	Tacit	Ordering	permute
 (⍋+`⊸+a1)⊏y	Rotate first major cells (1⊸⌽) of sublists of y indicated by starting mask a1	Expression	Structural	sub-vectors sub-lists sublists items elements 1st
@@ -1078,6 +1079,7 @@ a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group
 {𝕩(⊢⌊⊏˘+⌜⊏)´↕≠𝕩}n2	Shortest path length matrix from weighted adjacency matrix n2, using Floyd-Warshall	Block Function	Graph Theory	roy wfi directed transitive closure algorithm pathfinding search lengths dense edges vertices follow connections
 i1(-⟜»⊏⟜(0∾⊢)○(+`))n	Sums (+´) of sublists of n with lengths given by i1	Tacit	Data	segmented partitioned sub-vectors
 n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Polynomial	
+⟨1⟩{(»+𝕨⊸×)𝕩∾0}´⌽↕i0	Stirling numbers of the first kind s(i0,k) for all k	Expression	Combinatorics	
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Structural	substitute merge amend update cells items
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate spaces	Tacit	Text	delete trim reformat extraneous normalise normalize blanks multiple drop start beginning ending without
 +´m⋆⌜˜(1+↕)⊸(⊣/˜0=|)j0	Sum of m'th powers of positive divisors of j0	Expression	Number Theory	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
@@ -1105,6 +1107,7 @@ a1(⊢∧∧(⊢∊/)·+`»⊸<∘⊢)b1	Groups of ones in b1 pointed to by at l
 '"'{𝕨∾𝕨∾˜(1+𝕨=𝕩)/𝕩}d1	Turn string d1 into string literal source code (like •Repr)	Expression	Text	serialise ⍎⁼ inverse⍎ escape
 {'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all spaces with dashes	Block Function	Text	blanks substitute format
 a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Partitioning	runs sequences chop limit indicated trues truths 1st
+⟨1⟩{(»+𝕨⊸×)𝕩∾0}´↕¨2+⌽↕i0	Stirling numbers of the second kind S(i0,k) for all k	Expression	Combinatorics	
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Partitioning	split separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
 a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero in each sublist of b indicated by starting mask a1	Tacit	Partitioning	segmented partitioned 1st
@@ -1146,6 +1149,7 @@ c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Le
 1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression	Recreational	Knuth ALGOL
 (0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression	Recreational	fizz buzz interview counting
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Text	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
+F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 according to custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering comparator
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution ordering dag scheduling kahn's algorithm
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infirmum smallest lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Ordering	most maximum supremum biggest largest highest
