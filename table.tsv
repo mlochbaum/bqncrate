@@ -938,6 +938,7 @@ i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	
 (××·⌈¯0.5+|)n	Round to nearest integer, ties towards 0	Tacit	Rounding	precision favoring integer round()
 (××·⌊0.5+|)n	Round to nearest integer, ties away from 0	Tacit	Rounding	precision favoring integer round()
 j⊏∾"0A"+⟜↕¨10‿26	Translate digits to characters (bases 2 through 36)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing
+-´(2×n0)•math.Comb n0+↕2	Catalan number C_n0: number of ways to nest n0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 (⍋' '⊸=)⊸⊏d1	Move all spaces to end	Tacit	Text	blanks trailing ending
 (⥊(↕2˘)/¨<)y	Power set: a list of all subsets of the cells of y	Tacit	Sets	powerset power-set all combinations choices at most one
 (∧⊑˜2⌊∘÷˜≠)n1	Median of non-empty n1, taking larger value for even lengths	Tacit	Statistical	average
@@ -960,6 +961,7 @@ m1(-´⌈○≠↑¨⋈)n1	Difference between polynomials with ascending coeffic
 1↓(i0=+`⊑⊸=y1)/y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Expression	Text	select pick partitionedvector segmentedstring index cell item 1st
 (1⌈`↕∘≠⊸×a1)⊏y	Copy each cell of y until before next 1 in a1	Expression	Selection	item element
 (∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column)	Tacit	Boolean	sequence run trues truths 1st
+⊐⊸≡¨⊸/⥊↕1+↕n0	All set partitions of n0 items, as Group arguments	Expression	Combinatorics	count equivalence relations rhyme schemes
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Structural	faro weave dovetail zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Text	combine glue 0x0A U+0A U+000A
 F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Block Modifier	Function Application	fixpoint ycombinator repeated iterated until convergence powerlimit stable
@@ -986,6 +988,7 @@ a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those l
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left cells items list start
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Sets	⊖
 >»⊸+⍟(↕≠)1∾j0⥊0	Binomial coefficients until j0	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
+⊑(+`⊢´⊸∾)⍟n0⥊1	Bell number B_n0: number of ways to partition a set of size n0	Expression	Combinatorics	count equivalence relations rhyme schemes
 m1 1⊸⌽⊸×{1⌽𝔽˜-𝔽} n1	Cross product of 3-dimensional vectors m1 and n1	Tacit	Geometric	crossproduct exterior product multiplication multiply
 -˜˝(⍋⍋)⌾⥊≍˜y1	Count of total (not previous) occurrences of each element of y1	Expression	Search	tally selfcount items elements
 ⍉+˝(↕≠j2)×j2=⌜1‿¯1	Change connection matrix j2 (¯1 to 1) to a node matrix	Expression	Graph Theory	graph connectivity table change converting conversion
@@ -1034,6 +1037,7 @@ m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending c
 i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorter one at the end if needed	Tacit	Partitioning	chunk divide dividing cut partition distribute greedy
 i0((⊢+|⟜-)⟜≠↑⊢)y	Increase the leading dimension of y to multiple of i0	Tacit	Structural	1st axis divisibleby pad extend first start beginning
 i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tacit	Structural	allaxes divisibleby pad extend axes
+n0(+÷○(×´)⊢)1+1↓↕n0	Catalan number C_n0: number of ways to nest n0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 ¯1⋆+´∨´¨<⟜(≠↑↑)j1	Sign of permutation	Expression	Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita symbol LC
 (∧´∘∊≠|↕∘≠⊸+)j1	Valid siteswap pattern for juggling?	Tacit	Specialty	testif beat
 x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Tacit	Selection	trim trailing right cells items list ending
@@ -1078,7 +1082,7 @@ a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group
 '0'(⊢+∧`∘=×' '-⊣)d	Replace leading zeros with spaces in d	Expression	Text	blanks nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
 {𝕩(⊢⌊⊏˘+⌜⊏)´↕≠𝕩}n2	Shortest path length matrix from weighted adjacency matrix n2, using Floyd-Warshall	Block Function	Graph Theory	roy wfi directed transitive closure algorithm pathfinding search lengths dense edges vertices follow connections
 i1(-⟜»⊏⟜(0∾⊢)○(+`))n	Sums (+´) of sublists of n with lengths given by i1	Tacit	Data	segmented partitioned sub-vectors
-n0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point n0	Block Function	Polynomial	
+m0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point m0	Block Function	Polynomial	
 ⟨1⟩{(»+𝕨⊸×)𝕩∾0}´⌽↕i0	Stirling numbers of the first kind s(i0,k) for all k	Expression	Combinatorics	
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Structural	substitute merge amend update cells items
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate spaces	Tacit	Text	delete trim reformat extraneous normalise normalize blanks multiple drop start beginning ending without
@@ -1150,6 +1154,7 @@ c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Le
 (0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression	Recreational	fizz buzz interview counting
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Text	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
 F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 according to custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering comparator
+∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution ordering dag scheduling kahn's algorithm
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infirmum smallest lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Ordering	most maximum supremum biggest largest highest
