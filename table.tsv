@@ -488,8 +488,8 @@ F⌾⍉y	Apply action F defined on rows to columns instead	Tacit	Function Applic
 @+7	Bell character (BEL)	Constant	Text	\a ^G U+07 0x07h \u07 ≢07 beep
 @+8	Backspace character (BS)	Constant	Text	\b ^H U+08 0x08h \u08 ≢08
 @+9	Horizontal Tab character (HT)	Constant	Text	\t ^i U+00 0x00h \u00 ≢00 tabulation
-@+i	Characters to Unicode code point numbers	Expression	Text	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping UniversalCodedCharacterSet UniversalCharacterSet codepoints code-points converting change changing
-c-@	Characters from Unicode code point numbers	Expression	Text	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping UniversalCodedCharacterSet UniversalCharacterSet codepoints code-points converting change changing
+@+i	Characters from Unicode code point numbers	Expression	Text	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping UniversalCodedCharacterSet UniversalCharacterSet codepoints code-points converting change changing
+c-@	Characters to Unicode code point numbers	Expression	Text	utf-8 utf8 utf-16 utf16 utf-32 utf32 ucs-4 ucs4 ucs-2 ucs2 iso10646 ord() num() chr() char() ascii latin-1 windows-1252 ansi mapping UniversalCodedCharacterSet UniversalCharacterSet codepoints code-points converting change changing
 expr⊣name←y	Combining two lines into one	Expression	Syntax	lev lefttack where
 name∾↩y	Fast: 'name' redefined to be its value with y catenated along its first axis	Expression	Structural	amend append extend accumulate concatenate dimension 1st
 2×π	tau (2 pi)	Constant	Mathematical	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏
