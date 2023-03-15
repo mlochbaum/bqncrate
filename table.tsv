@@ -1019,7 +1019,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 ∧´⥊(0≠b2)≤>⌜˜↕≠b2	Is b2 a lower triangular matrix without diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular? remove strict
 ∧´⥊(0≠b2)≤≤⌜˜↕≠b2	Is b2 an upper triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle NE northeast north-east table triangular?
 ∧´⥊(0≠b2)≤≥⌜˜↕≠b2	Is b2 a lower triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular?
-1∾÷˜○(×`)⟜⌽1+↕j0	Coefficients of the binomial	Expression	Combinatorics	
+1∾×`⌽⊸÷1+↕j0	Coefficients of the binomial	Expression	Combinatorics	
 √×´(0∾n)-(+´n)÷2	Area of triangle with side lengths n	Expression	Geometric	Heron's formula herons
 i1{(¬𝕨∊↕≠𝕩)/𝕩}y	Remove major cells at indices i1 from y	Block Function	Selection	elements items without positions
 x(⊢/˜⊏∘⥊˘⊸∊˜)y2	Rows of non-empty table y starting with an element in x	Tacit	Selection	cell item table
