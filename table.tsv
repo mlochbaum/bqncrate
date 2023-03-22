@@ -887,6 +887,7 @@ m1(×÷+´∘×)n1	Bayes' formula	Tacit	Statistical	Bayesformula statistical sta
 +´⌾(×˜)m1-n1	Euclidean distance between two points in n-space	Expression	Geometric	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Pythagorean d()
 (⌈´-⌊´)⥊n	Statistical range, or difference between largest and smallest element, of n	Expression	Statistical	span minmaxmin extremes of
 (⊢÷⌈˝∘|)n	Normalize by infinity-norm (maximum absolute value)	Tacit	Geometric	L∞-normalise L∞-normalize L∞-normalization L-∞
+1∾×`⌽⊸÷1+↕j0	Coefficients of the binomial	Expression	Combinatorics	
 ÷⟜⊑⌽+`0∾↕j0	Outstanding balances on rule of 78s	Expression	Finance	sum-of-the-digits method
 ⌈´(⊢⌈+)`n1	Largest sum of any contiguous non-empty sublist	Expression	Data	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
 i(⊣⋆˜1+÷˜)n	Effective rate of interest with nominal rate n for i periods	Tacit	Finance	
@@ -1019,7 +1020,6 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 ∧´⥊(0≠b2)≤>⌜˜↕≠b2	Is b2 a lower triangular matrix without diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular? remove strict
 ∧´⥊(0≠b2)≤≤⌜˜↕≠b2	Is b2 an upper triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle NE northeast north-east table triangular?
 ∧´⥊(0≠b2)≤≥⌜˜↕≠b2	Is b2 a lower triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular?
-1∾×`⌽⊸÷1+↕j0	Coefficients of the binomial	Expression	Combinatorics	
 √×´(0∾n)-(+´n)÷2	Area of triangle with side lengths n	Expression	Geometric	Heron's formula herons
 i1{(¬𝕨∊↕≠𝕩)/𝕩}y	Remove major cells at indices i1 from y	Block Function	Selection	elements items without positions
 x(⊢/˜⊏∘⥊˘⊸∊˜)y2	Rows of non-empty table y starting with an element in x	Tacit	Selection	cell item table
@@ -1130,7 +1130,7 @@ c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of char
 -⟜(64×'^'⊸=»⊸∧1="@`"⊸⍋)d1	Evaluate control character sequences (like ^J)	Tacit	Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed lf verticaltab vt formfeed ff carriagereturn cr crlf cr+lf ^M^J control-z sub eof endoffile end-of-file escape ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^J ^K ^L ^M ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_
 {∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨⋈⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Recreational	gol conways cellularautomaton sub-array
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Text	fuzzy match lcs
-(+´÷≠){(𝔽-1˙)⌾(×˜)-⟜𝔽}n1	Sample standard deviation	Tacit	Statistical	stddev σ sigma SD empirical
+(+´÷≠-1˙)⌾(×˜)-⟜(+´÷≠)n1	Sample standard deviation	Tacit	Statistical	stddev σ sigma SD empirical
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	1s trues truths start beginning
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Partitioning	sub-vectors +\
