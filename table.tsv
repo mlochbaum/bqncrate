@@ -127,7 +127,7 @@ x F˝ y	Insert: F between all major cells of y and initial value x	Primitive	Fun
 F`y	Scan: F between elements of y progressing along the first axis	Primitive	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst columnwise scanning major cells elements dimension 1st column-wise vertically lists
 x F` y	Scan: F between elements of y with initial cell x	Primitive	Function Application	slopebar backslashbar reversesolidusbar scanfirst cumulativereducefirst columnwise scanning major cells elements dimension 1st column-wise vertically lists
 x y˙z	Constant: ignore arguments and return y	Primitive	Functional	single dot replace
-x˙y	Constant: ignore z and return x	Primitive	Functional	single dot replace
+x˙y	Constant: ignore y and return x	Primitive	Functional	single dot replace
 ⋆n	Exponential: e raised to the power n	Primitive	Arithmetic	star asterisk exponential etothepowerof naturalexponential exp() 2.718281828459045235360287471352662 antiln antilog ln^-1() ln⁻¹() log^-1() log⁻¹() lnₑ^-1() lnₑ⁻¹() logₑ^-1() logₑ⁻¹()
 m⋆n	Power: m raised to the power n	Primitive	Arithmetic	star asterisk raisedtothepowerof exponentiation pow() ** raising
 √n	Square Root	Primitive	Arithmetic	squareroot sqrt ²√ ^0.5 ^.5
