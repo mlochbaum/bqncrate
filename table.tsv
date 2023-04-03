@@ -248,13 +248,13 @@ m1 •file.Owner d1	Set owner user ID and group ID number of file d1	System	File
 m1 •file.Permissions d1	Set permissions of file d1	System	Files	dir directory directories folders ls list information vector chmod
 m1 •rand.Range n0	Shape m1 array of elements selected uniformly at random from ↕n0	System	Random	randominteger roll draw with replacement
 c1 •file.At d1	Absolute path of file with path d1 relative to c1	System	Files	resolve canonicalize reduce extend
-c1 •file.Bytes d1	Write raw bytes to file d1 (overwrites existing contents)	System	Files	store put dump cat save to overwrite UTF-8
-c1 •file.Chars d1	Write string c1 to file d1 (overwrites existing contents)	System	Files	store put dump cat save to overwrite
+c1 •file.Bytes d1	Write raw bytes to file c1 (overwrites existing contents)	System	Files	store put dump cat save to overwrite UTF-8
+c1 •file.Chars d1	Write string d1 to file c1 (overwrites existing contents)	System	Files	store put dump cat save to overwrite
 c1 •file.Copy d1	Copy file d1 to c1	System	Files	copying
+c1 •file.Lines x1	Write lines x1 to file c1 (overwrites existing contents)	System	Files	store put dump cat save to overwrite vtv charvec charactervector textvector string
 c1 •file.Rename d1	Rename file d1 to c1	System	Files	moving renaming
 i1•bit._neg n	Fixed-width integer negation (-) of n with widths given by i1 	System	Bitwise	minus hyphen invert additiveinverse opposite dash negation signchange − negating
 i1•bit._not n	Bitwise negation (¬) of n with bit widths given by i1 	System	Bitwise	gate tilde logicalnot logicalnegation logicalcomplement ~ negate inverting
-x1 •file.Lines d1	Write lines x1 to file d1 (overwrites existing contents)	System	Files	store put dump cat save to overwrite vtv charvec charactervector textvector string
 •file.Modified d1	Time of last modification to file d1	System	Files	filepath dir directory directories folders ls list information vector when modified
 •file.Name d1	File name from path d1	System	Files	parts
 •file.Accessed d1	Time of last access to file d1	System	Files	filepath dir directory directories folders ls list information vector when previously accessed
