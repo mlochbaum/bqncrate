@@ -378,6 +378,9 @@ a0⊑x‿y	Pick y if a0 is true or x if a0 is false	Expression	Selection	conditi
 ⊑/b	Index of first satisfied condition in b	Expression	Search	1st
 i1⥊<y	Array of shape i1 filled with copies of y	Expression	Structural	copy repeat repetitions duplicate reshape
 0‿j0⥊0	Initialise a table with j0 columns and no rows	Expression	Structural	table
+↕2⥊2	Unit square	Constant	Geometric	
+↕3⥊2	Unit cube	Constant	Geometric	
+↕4⥊2	Unit tesseract	Constant	Geometric	
 ⥊↕y1	All ordered tuples choosing elements from ↕¨y1	Expression	Indices	indices major cells items
 i0↑j0⥊1	Prefix List: length i0 with j0 ones on the left, the rest zeroes	Expression	Data	1s 0s zeros Is𝕨Js falses falsehoods trues truths
 ⥊˘y	Convert to rank 2 array by flattening each cell to a row	Tacit	Structural	commabar ravelcells flattencells razecells Merge demoterank lessenrank reduce reducing
@@ -932,9 +935,6 @@ i0(×⥊⊢-⊸↑1˙)j0	Mark ending points for i0 sublists of width j0	Tacit	Pa
 (¬(↕≠y)∊i)/y	Remove major cells with indices i from y	Expression	Selection	without remove indices delete drop
 (≠x)-1+(⌽x)⊐y	Last indices in x of major cells y (¯1 if not found)	Expression	Search	indexin indexof finding locating locate positionof items elements location
 i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	Combinatorics	repeated
-(↕2)∾⌜⍟2<⟨⟩	Unit square	Constant	Geometric	
-(↕2)∾⌜⍟3<⟨⟩	Unit cube	Constant	Geometric	
-(↕2)∾⌜⍟4<⟨⟩	Unit tesseract	Constant	Geometric	
 (↕∘≠≡⌽∘⍋)n	Is n Strictly Decreasing?	Tacit	Ordering	testif descending? falling? down ordered? sorted?
 (⍋≠⊸⋈¨)⊸⊏y1	Ascending shortlex sort	Tacit	Ordering	radix length-lexicographic lengthlexicographic military genealogical sorting ordering bylength
 (↕∘≠≡⌽∘⍒)n	Is n Strictly Increasing?	Tacit	Ordering	testif ascending? rising? up ordered? sorted?
@@ -988,6 +988,7 @@ i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Ta
 m1(+˝∘×÷+´∘⊣)n2	Weighted average of each column of n2 with row weights m1	Tacit	Data	
 a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those locations	Tacit	Partitioning	cut separate chop divide chunk dividing strings lists segments partitions
 -⟜»(≠⟜«m1)/+`n1	Sum elements of n1 marked by successive identicals in m1	Expression	Partitioning	partitioned segmented major cells items
+⥊(<⟨⟩)<⊸∾⌜´y1	Cartesian product: all lists of one element from each list in y1	Tacit	Structural	catalog n-fold sets family pairings tuples table
 (+˝÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Statistical	average GM() G() geometricmean
 (+´÷≠)⌾(√⟜m0)n	Generalised mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left cells items list start
