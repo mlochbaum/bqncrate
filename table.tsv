@@ -851,8 +851,8 @@ n1+´∘×m0⋆↕≠n1	Value of polynomial with ascending coefficients n1 at po
 x(¬∘∊/⊣)y	x without major cells that appear in y	Tacit	Sets	butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
 (∊∧∊⌾⌽)y	Indicate which cells of y appear exactly once	Tacit	Search	unique indication indicate items masking indicating
 ⊏⟜(/⁼)⊐y	Indicate number of cells matching each cell of y	Expression	Search	count duplicate repetitions appearances
-(⊑⊢⊐⌈´)n1	Index of minimum value in n1 (linear time)	Tacit	Search	lesser smaller smallest lowest least
-(⊑⊢⊐⌊´)n1	Index of maximum value in n1 (linear time)	Tacit	Search	greater larger bigger greatest biggest largest highest
+(⊑⊢⊐⌊´)n1	Index of minimum value in n1 (linear time)	Tacit	Search	lesser smaller smallest lowest least
+(⊑⊢⊐⌈´)n1	Index of maximum value in n1 (linear time)	Tacit	Search	greater larger bigger greatest biggest largest highest
 +´¨(⊐x1)⊔n1	Sum n1 by buckets x1 (≠n1 ↔ ≠x1)	Expression	Data	groups classify bins
 x1(⥊∾⎉0‿1˜)y1	Insert x1 after every element of y1	Tacit	Structural	merge cell item
 i0/⟜≍⎉(-m0)y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension
