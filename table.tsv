@@ -86,7 +86,7 @@ x F˜y	Commute: same as y F x	Primitive	Function Application	switch superscript 
 x F˜y	Church Boolean Logical Inverse	Primitive	Functional	¬ not logicalnot logicalnegation logicalcomplement ¬ negate inverting
 F¨y	Each: F on elements of y	Primitive	Function Application	foreach diaeresis mapping cells elements
 x F¨y	Each: F between elements of x and y	Primitive	Function Application	foreach diaeresis mapping cells elements
-/b1	Indices of all 1s in b	Primitive	Indices	wheretrues slash solidus locationsoftrues positions ones trues truths
+/b1	Indices of all 1s in b1	Primitive	Indices	wheretrues slash solidus locationsoftrues positions ones trues truths
 /j1	Indices: j/↕≠j	Primitive	Indices	slash solidus locationsoftrues positions ones trues truths
 a1/y	Filter major cells of y according to mask a1	Primitive	Selection	compressing selecting items vertically rowsofmatrix columnwise column-wise dimension 1st start beginning down bitmask bit-mask
 i1/y	Copy major cells of y i1 times	Primitive	Selection	compressing slash solidus first copying repeatingeachrows dimension 1st start beginning vertically columnwise column-wise down
@@ -851,8 +851,8 @@ n1+´∘×m0⋆↕≠n1	Value of polynomial with ascending coefficients n1 at po
 x(¬∘∊/⊣)y	x without major cells that appear in y	Tacit	Sets	butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
 (∊∧∊⌾⌽)y	Indicate which cells of y appear exactly once	Tacit	Search	unique indication indicate items masking indicating
 ⊏⟜(/⁼)⊐y	Indicate number of cells matching each cell of y	Expression	Search	count duplicate repetitions appearances
-(⊑⊢⊐⌊´)n1	Index of minimum value in n1 (linear time)	Tacit	Search	lesser smaller smallest lowest least
 (⊑⊢⊐⌈´)n1	Index of maximum value in n1 (linear time)	Tacit	Search	greater larger bigger greatest biggest largest highest
+(⊑⊢⊐⌊´)n1	Index of minimum value in n1 (linear time)	Tacit	Search	lesser smaller smallest lowest least
 +´¨(⊐x1)⊔n1	Sum n1 by buckets x1 (≠n1 ↔ ≠x1)	Expression	Data	groups classify bins
 x1(⥊∾⎉0‿1˜)y1	Insert x1 after every element of y1	Tacit	Structural	merge cell item
 i0/⟜≍⎉(-m0)y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension
@@ -884,7 +884,8 @@ x0{𝕨+↕𝕩¬𝕨}y0	Consecutive values from x0 to y0 inclusive (both number
 (↕∘≠↕¨<)y1	All possible slices grouped in arrays by length	Tacit	Selection	sub-strings substrings sub-vectors sub-sequences subsequences segmented sub-lists partitioned sublists
 (↕1++˜)⊸-j0	Integers from -j0 to j0	Tacit	Sequences	whole numbers natural symmetric negative positive
 (1↓↕∘≠⊸×)n1	Derivative of polynomial with coefficients n1 in ascending order	Tacit	Polynomial	firstderivative derivate
-/○⥊⟜(↕≢)b2	List of arcs from adjacency matrix b2	Tacit	Graph Theory	connections table directed graph vector
+/○⥊⟜(↕≢)b	Indices of 1s in array b, as lists	Tacit	Indices	where ones trues boolean positions locations elements vector
+/○⥊⟜(↕≢)b2	List of graph edges from adjacency matrix b2	Tacit	Graph Theory	connections table directed vector
 m1(×÷+´∘×)n1	Bayes' formula	Tacit	Statistical	Bayesformula statistical statistics probability probabilities
 (≠×+´⌾÷)n	Harmonic mean	Tacit	Statistical	average subcontrary H() HM() harmonicmean
 +´⌾(×˜)m1-n1	Euclidean distance between two points in n-space	Expression	Geometric	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Pythagorean d()
