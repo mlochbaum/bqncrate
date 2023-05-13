@@ -858,6 +858,7 @@ x1(⥊∾⎉0‿1˜)y1	Insert x1 after every element of y1	Tacit	Structural	merg
 i0/⟜≍⎉(-m0)y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension
 x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Function Application	conformity conforming axes frames major minor cells
 (+˝∧`)⎉1 b	Number of leading ones in each row of b	Tacit	Boolean	ones trues truths start beginning
+⊑+`∘⌽⍟n0↕2	The n0'th Fibonacci number	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population
 (↕∘≠≡⍋)n	Is n non-decreasing?	Tacit	Ordering	testif ascending? increasing? rising? up ordered? sorted?
 ⊑∘⍋∘|⊸⊑n1	Element with the smallest magnitude (first in case of ties)	Tacit	Ordering	minimum absolute value closest nearest to 0 zero
 (↕∘≠≡⍒)n	Is n non-increasing?	Tacit	Ordering	testif descending? falling? down ordered? decreasing? sorted?
@@ -995,6 +996,7 @@ a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those l
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left cells items list start
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Sets	⊖
 >»⊸+⍟(↕≠)1∾j0⥊0	Binomial coefficients until j0	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
+⊑¨+`∘⌽⍟(↕n0)↕2	First n0 Fibonacci numbers	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population
 ⊑(+`⊢´⊸∾)⍟n0⥊1	Bell number B_n0: number of ways to partition a set of size n0	Expression	Combinatorics	count equivalence relations rhyme schemes
 m1 1⊸⌽⊸×{1⌽𝔽˜-𝔽} n1	Cross product of 3-dimensional vectors m1 and n1	Tacit	Geometric	crossproduct exterior product multiplication multiply
 -˜˝(⍋⍋)⌾⥊≍˜y1	Count of total (not previous) occurrences of each element of y1	Expression	Search	tally selfcount items elements
@@ -1166,3 +1168,4 @@ F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution ordering dag scheduling kahn's algorithm
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infirmum smallest lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Ordering	most maximum supremum biggest largest highest
+⊑{𝕩=0?↕2;+`∘⌽⍟(2|𝕩)((⊣×+˜⊸-˜)´⋈·+´×˜)𝕊⌊𝕩÷2}n0	The n0'th Fibonacci number, computed in about 2⋆⁼n0 steps	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population fast logarithmic time
