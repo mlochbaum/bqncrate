@@ -965,6 +965,8 @@ m1(+´⌈○≠↑¨⋈)n1	Sum of polynomials with ascending coefficients	Tacit	
 m1(-´⌈○≠↑¨⋈)n1	Difference between polynomials with ascending coefficients	Tacit	Polynomial	subtractionof minus
 +´(⌈´≠¨y1)↑¨y1	Sum of list of polynomials y1 with ascending coefficient order	Expression	Polynomial	sumof
 (100×÷⟜(+˝)˘)n	Row-wise percentage per row	Tacit	Statistical	≢ horizontally rowwise
+i0(↓--⊸↓)0∾+`n	Fast rolling sum +˝˘i0↕n	Expression	Data	windowed totals
+i0(-⊸↓≠↓)0∾≠`b	Fast rolling bitwise exclusive-or ≠˝˘i0↕b	Expression	Data	windowed xor
 1↓(i0=+`⊑⊸=y1)/y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Expression	Text	select pick partitionedvector segmentedstring index cell item 1st
 (1⌈`↕∘≠⊸×a1)⊏y	Copy each cell of y until before next 1 in a1	Expression	Selection	item element
 (∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column)	Tacit	Boolean	sequence run trues truths 1st
@@ -1136,6 +1138,7 @@ c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of char
 {∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨⋈⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Recreational	gol conways cellularautomaton sub-array
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Text	fuzzy match lcs
 (+´÷≠-1˙)⌾(×˜)-⟜(+´÷≠)n1	Sample standard deviation	Tacit	Statistical	stddev σ sigma SD empirical
+y(-⊸↓F↓)´⌽i0⊸«⊸-↕∘⌈⌾(2⋆⁼⊢)i0	Rolling minimum (F←⌊) or maximum (F←⌈), fast F˝˘i0↕y	Expression	Data	windowed largest smallest filter
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	1s trues truths start beginning
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Partitioning	sub-vectors +\
@@ -1167,6 +1170,7 @@ c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=�
 F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 according to custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering comparator
 ∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution ordering dag scheduling kahn's algorithm
+i0 F{(𝕨¬˜≠𝕩)↑⥊1(-⊸↓𝔽˜`⌾⌽⊸𝔽⟜(𝔽`)˘↓)↑‿(𝕨-1)⥊𝕩}y	Linear-time F˝˘i0↕y for associative arithmetic F, fast for large windows	Block Modifier	Data	rolling windowed sums minimums maximums average
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infirmum smallest lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Ordering	most maximum supremum biggest largest highest
 ⊑{𝕩=0?↕2;+`∘⌽⍟(2|𝕩)((⊣×+˜⊸-˜)´⋈·+´×˜)𝕊⌊𝕩÷2}n0	The n0'th Fibonacci number, computed in about 2⋆⁼n0 steps	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population fast logarithmic time
