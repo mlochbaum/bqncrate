@@ -1021,7 +1021,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 ¬1(∾/∾˜)a1(∨/⊣)b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	sub-vector cell item ∨/¨a1⊂[1]b1
 (1+↕)⊸(⊣/˜0=|)j0	All divisors of j0	Tacit	Number Theory	factorisation factorization
 ↕∘⌈⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending before n0	Expression	Sequences	sequence interval
-{2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Block Function	Geometric	 triangle shape region size points coordinates
+{2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Block Function	Geometric	 triangle shape region size points coordinates shoelace surveyor's gauss's formula determinant
 ↕⊸(⊢+´⊣/˜0=|)j0	Sum of positive divisors of j0	Tacit	Number Theory	sigma σ(n)
 ∧´⥊(0≠b2)≤<⌜˜↕≠b2	Is b2 an upper triangular matrix without diagonal?	Expression	Linear Algebra	testif triangle NE northeast north-east table triangular? remove strict
 ∧´⥊(0≠b2)≤>⌜˜↕≠b2	Is b2 a lower triangular matrix without diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular? remove strict
