@@ -929,6 +929,7 @@ i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Select
 (1»≢˘⟜«)⊸/y	Remove duplicate cells from ordered array y	Tacit	Search	table
 (<⌈´≢¨y1)↑¨y1	Pad elements of list of equal-rank arrays y1 to equal shape	Expression	Structural	list cells items
 0=(1+↕⌈´j1)|⌜j1	Divisibility table	Expression	Number Theory	divides divisor matrix
+(∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering comparator
 i0(+˝˘∘↕÷⊣)n	n-wise rolling average	Tacit	Data	rollingmean windowedmean windowedaverage
 -⟜»(1⌽a1)/+`n	Sums of sublists of n indicated by a1	Expression	Partitioning	segmented partitioned sub-vectors
 (∨`∧∨`⌾⌽)b1	Mask that selects values between first and last 1	Tacit	Boolean	masking trim ones 1st bitmask bit-mask
