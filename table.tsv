@@ -608,6 +608,7 @@ x(F⎉0)y	Run F on units	Tacit	Function Application	apply
 ×˝⎉1 n	Row-wise product of n	Tacit	Data	enlargedpi bigpi capitalpi ∏ Π horizontally rowwise
 ⌈`⎉1 n	Row-wise progressive maxima	Tacit	Data	running cumulative scan rowwise horizontally
 ⌊`⎉1 n	Row-wise progressive minima	Tacit	Data	running cumulative scan rowwise horizontally
+𝕨0⊘1𝕩	Was this block function called monadically?	Expression	Function Application	arity ambivalent ambivalence variadic leftargument 900⌶ monadic?
 x⍋⊸⊏y	Sorting y according to x	Tacit	Ordering	ordering
 x⍋⌾⋈y	Is x lexically less than or equal to y?	Tacit	Ordering	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
 /⁼x⍋y	Distribution of y into intervals with cut-offs x	Expression	Data	bins groups ranges buckets
@@ -677,6 +678,7 @@ i0⥊⟜0⊸«y1	Shift y1 left by i0, padding on right	Tacit	Selection	leftshift
 ∾˝i0/≍y	Repeat all of y i0 times along the first axis	Expression	Structural	duplicate copying extending recycling recycle list
 ≠`⊸∨b	Parity with connectors: fill between pairs of ones	Tacit	Boolean	1s trues truths
 a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension
++´∧`b1	Count of leading ones	Tacit	Boolean	1s trues truths at start beginning
 ÷1+⋆-n	Logistic function, approaching 0 for small n and 1 for large n	Expression	Mathematical	standard sigmoid curve limited exponential population growth
 ⌊1+i⋆⁼j	Length to represent j in base i	Expression	Mathematical	width representation required digits positions
 2÷˜1+√5	Golden ratio	Constant	Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
@@ -725,7 +727,6 @@ a1+`¨⊸⊔y	Partition y along each axis by list of partition indicators a1	Tac
 +´∧`x≠y	Count number of leading elements that are unequal	Expression	Search	different onleft cells items start beginning
 +´∧`⌽b1	Count of trailing ones	Expression	Boolean	0s zeroes falses at end
 +`+`↕j0	First j0 figurate numbers	Expression	Sequences	1st
-(1˙𝕨)⊣0	Was this block function called monadically?	Expression	Function Application	arity ambivalent ambivalence variadic leftargument 900⌶ monadic?
 10⊸(⋆⁼)n	Common logarithm	Tacit	Arithmetic	log() log-10 log10() 10-log₁₀() lg() lg-10 lg10() 10-lg₁₀()
 x(∊/⊣)y	Intersection: major cells of x that appear in y	Tacit	Sets	setand items elements
 x0(⥊≍⎉0)y1	Insert x0 after each element of y1	Tacit	Structural	cell item
@@ -777,7 +778,6 @@ x(∾˝≍˘)y	Merge cells of equal-length arrays x and y alternately	Tacit	Stru
 -´×⟜⌽˝n2	Determinant of two-row matrix	Expression	Linear Algebra	det() 2-row 2row table
 (¬∧≠`)b	Places between pairs of ones	Tacit	Boolean	1s trues truths
 (i0=+`b1)/y1	The i0'th sublist of y1 with sublists indicated by b1	Expression	Selection	
-(+´∧`)b1	Count of leading ones	Tacit	Boolean	1s trues truths at start beginning
 |¯11|+´+`j1	ISBN check digit generator from ten first digits j1	Expression	Specialty	InternationalStandardBookNumber correct validate 1st
 +´∧`⌽x=y	Count number of trailing elements that are equal	Expression	Search	matching onright cells items ending
 +´∧`⌽x≠y	Count number of trailing elements that are unequal	Expression	Search	different onright cells items ending
