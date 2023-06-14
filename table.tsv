@@ -147,9 +147,9 @@ x F⍟G y	Repeat: apply x∘F to y, G y times	Primitive	Function Application	app
 x F⍟j0 y	Repeat: apply x⊸F j0 times to y	Primitive	Function Application	poweroperator circlestar starcircle inverse inversion application repeated repeating inverting iterating looping
 ⍋j1	Invert permutation	Primitive	Selection	upgrade deltastile upgrade pine concordetakingoff
 ⍋y	Grade up: indices to reorder y into ascending order	Primitive	Ordering	upgrade gradeup deltastile pine concordetakingoff increasing
-x⍋y	Bins up: indices of cells of y in intervals with ascending cut-offs x	Primitive	Ordering	deltastile intervalindex iotaunderbar bins groups ranges buckets classes classifying classification major cells elements
+x⍋y	Bins up: indices of cells of y in intervals with ascending cut-offs x	Primitive	Ordering	deltastile intervalindex iotaunderbar binarysearch groups ranges buckets classes classifying classification major cells elements
 ⍒y	Grade down: indices to reorder y into descending order	Primitive	Ordering	downgrade gradedown delstile spine concordelanding decreasing
-x⍒y	Bins down: indices of cells of y in intervals with descending cut-offs x	Primitive	Ordering	delstile intervalindex iotaunderbar bins groups ranges buckets classes classifying classification major cells elements
+x⍒y	Bins down: indices of cells of y in intervals with descending cut-offs x	Primitive	Ordering	delstile intervalindex iotaunderbar binarysearch groups ranges buckets classes classifying classification major cells elements
 ⊒y	Occurrence count: number of times each major cell's value has appeared previously	Primitive	Search	indexin indexof matchingpositionof find locatecorresponding PDI remove tally selfcount
 x⊒y	Progressive Index of: ⊐ that can't use the same index twice	Primitive	Search	indexin indexof matchingpositionof find locatecorresponding PDI remove
 ⍷y	Deduplicate: distinct major cells of y	Primitive	Sets	cup downshoe distinctitems uniqueelements nub eraseremoveduplicates repetitions items elements
