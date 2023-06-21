@@ -202,9 +202,11 @@ _op←{𝔽𝕨}	Prototypical block 1-modifier deriving dyadic functions	Syntax	
 _op_←{𝔾𝕩}	Prototypical block 2-modifier deriving monadic functions	Syntax	Block	direct dynamic lambda anonymous curlybraces assignment header defining
 _op_←{𝔾𝕨}	Prototypical block 2-modifier deriving dyadic functions	Syntax	Block	direct dynamic lambda anonymous curlybraces assignment header defining
 [x1,y1,…]	n-row table from n vectors	Syntax	Array	rows table lists
+F •_while_ G y	Apply F to y repeatedly until G returns 0	System	Function Application	application poweroperator circlestar starcircle repeated repeating iterating looping while
 F•_timed y	Time taken to evaluate F y	System	Time	timings performance speed measure elapsed tuning tune
 m0 F•_timed y	Average time per call to evaluate F y, m0 times in succession	System	Time	timings performance speed measure elapsed tuning tune mean
 c1 •FFI y1	Load native function (such as compiled C) from a shared object file	System	Interface	.dll .so .dylib .a c++ dynamiclinkedlibrary sharedlibrary dynamiclibrary
+x F •_while_ G y	Apply F with x to y repeatedly until G with x returns 0	System	Function Application	application poweroperator circlestar starcircle repeated repeating iterating looping while
 x •Import d1	Load BQN script from path d1, with •args x	System	Execution	include library run execute
 x1 •BQN d1	Evaluate string d1 as BQN code, with •state x1	System	Execution	eval() run call
 •MakeRand m0	Random number generator (behaves like •rand) initialized with seed m0	System	Random	RNG rnd pseudorandominteger pseudo-randomfloat srandomness source randomlink deterministic reproducible reproduce seeded predictable
