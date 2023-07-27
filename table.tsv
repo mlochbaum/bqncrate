@@ -471,11 +471,10 @@ F◶G‿0 y	Sequential AND test (F∧G with shortcutting)	Tacit	Function Applica
 1≠x⍋y	Is y outside the range [ x_0 , x_1 )	Expression	Data	testif >y≥ >x≥ tao totalarrayordering interval outsiderange?
 ⊑⍋y	Index of smallest cell in y (earliest index for ties)	Expression	Ordering	find locate positionof minimum lexicographically lexically locating location lesser smaller smallest lowest least
 ⍋x⊐y	Grade up of y according to key x	Expression	Ordering	custom sort order ascending
-⍋⍋y	Permutation that sorts like y	Expression	Ordering	ranking list
-⍋⍋y	Ascending cardinal numbers (ranking, all different)	Expression	Ordering	rising up
+⍋⍋y	Rank cells of y, giving a permutation with the same ordering (first is lower in a tie)	Expression	Ordering	ascending rising up ordinals cardinals list rownumber
 ⊑⍒y	Index of largest cell in y (earliest index for ties)	Expression	Ordering	find locate positionof maximum lexicographically lexically locating location greater larger bigger greatest biggest largest highest
 ⍒x⊐y	Grade down of y according to key x	Expression	Ordering	custom sort order descending
-⍋⍒y	Descending cardinal numbers (ranking, all different)	Expression	Ordering	falling down
+⍋⍒y	Rank cells of y descending (first is lower-ranked in a tie)	Expression	Ordering	falling down ordinals cardinals list rownumber
 ⍉>y1	Convert inverted table to table (character data as lists of lists)	Expression	Structural	matrix tables transforming transformation change changing into un-inverting un-inversion un-vertion unverting unversion unvertion
 0‿0⍉y2	Main diagonal of matrix	Expression	Selection	table
 ⌽⍉y2	Rotate 90° clockwise	Expression	Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn
@@ -598,8 +597,8 @@ i1∊↕≠y	Starting points for y in indices pointed by i1	Expression	Partition
 ∧´x1∊y1	Is x1 a subset of y1?	Expression	Sets	testif subset? containedin ⊆
 ∨´x1∊y1	Do x1 and y1 have any elements in common?	Expression	Search	testif anyshared? anycommon? cells items
 i1∊+`b1	Mask to get sublists with indices i1 as indicated by b1	Expression	Selection	sub-vectors masking indicating bitmask bit-mask
-∧⊸⊐y	Ascending cardinals numbers (ranking, ties equal)	Tacit	Ordering	rising up
-∨⊸⊐y	Descending cardinals numbers (ranking, ties equal)	Tacit	Ordering	falling do
+∧⊸⊐y	Rank y ascending; tied cells share the lowest rank	Tacit	Ordering	rising up ordinals cardinals list minrank
+∨⊸⊐y	Rank y descending; tied cells share the lowest rank	Tacit	Ordering	falling down ordinals cardinals list minrank
 x⌽⊸⊐y	Last indices in x of major cells y, counted from the rear	Tacit	Search	indexin indexof find locate positionof locating items elements location
 /⁼⊐y	Count of occurrences of each unique major cell	Expression	Data	elements items how many repetitions times repeated occurrences statistics items elements
 ⌈´x⊐y	Index of last occurrence in x of any major cell of y	Expression	Search	element find locate location indexin indexof positionof locating cells items
@@ -740,6 +739,8 @@ x{𝔽𝔾⊣}y	Church Boolean Converse Implication	Block Modifier	Functional	�
 x{𝔾𝔽⊣}y	Church Boolean Implication	Block Modifier	Functional	≤ materialconditional materialconsequence implies implying materialimplication therefore ∴ ⇒ Cpq
 ⍋≠⊸⋈¨y1	Ascending shortlex grade	Expression	Ordering	radix length-lexicographic lengthlexicographic military genealogical
 ⍒≠⊸⋈¨y1	Descending shortlex grade	Expression	Ordering	radix length-lexicographic lengthlexicographic military genealogical ordering sorting
+⍷∘∧⊸⊐y	Densely rank y ascending: tied cells share a rank, no ranks skipped	Tacit	Ordering	rising up ordinals cardinals list
+⍷∘∨⊸⊐y	Densely rank y descending: tied cells share a rank, no ranks skipped	Tacit	Ordering	falling down ordinals cardinals list
 (⍉≡+)n2	Is n2 a Hermitian matrix?	Tacit	Linear Algebra	testif Hermitian? self-adjoint? selfadjoint? Yᴴ y† Aᴴ a†
 (-≡⍉)y2	Is y2 an anti-symmetric matrix?	Tacit	Linear Algebra	testif antisymmetric skewsymmetric skew-symmetric
 0¨∘≢⊸⍉y	Main diagonal of any rank array	Tacit	Selection	maindiagonal nwse nw-se majordiagonal
