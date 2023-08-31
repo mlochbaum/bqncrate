@@ -1174,7 +1174,7 @@ c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=�
 F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 according to custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering comparator
 ∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution ordering dag scheduling kahn's algorithm
-i0 F{(𝕨¬˜≠𝕩)↑⥊1(-⊸↓𝔽˜`⌾⌽⊸𝔽⟜(𝔽`)˘↓)↑‿(𝕨-1)⥊𝕩}y	Linear-time F˝˘i0↕y for associative arithmetic F, fast for large windows	Block Modifier	Data	rolling windowed sums minimums maximums average
+i0 F{(𝕨¬˜≠𝕩)↑⥊1(-⊸↓𝔽˜`⌾⌽⊸𝔽⟜(𝔽`)˘↓)↑‿(𝕨-1)⥊𝕩}y	Linear-time F˝˘i0↕y for associative arithmetic F, fast for large windows	Block Modifier	Data	rolling windowed sums minimums maximums average vanherk gil werman
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infirmum smallest lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Ordering	most maximum supremum biggest largest highest
 ⊑{𝕩=0?↕2;+`∘⌽⍟(2|𝕩)((⊣×+˜⊸-˜)´⋈·+´×˜)𝕊⌊𝕩÷2}n0	The n0'th Fibonacci number, computed in about 2⋆⁼n0 steps	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population fast logarithmic time
