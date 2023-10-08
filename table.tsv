@@ -1147,6 +1147,7 @@ x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z t
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	1s trues truths start beginning
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Partitioning	sub-vectors +\
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Partitioning	sub-vectors sublists sub-lists ≠\
+{⥊(⊏⟜𝕩≍˘˜⊢-¯1⊸»)/𝕩≠¯1«𝕩}⍟j0⋈1	Term j0 of the look-and-say sequence	Expression	Recreational	conways morris number digits repeating
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by a1	Tacit	Partitioning	segmented partitioned array maximums greatestif largest biggest major cells items
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0	Block Modifier	Mathematical	digits base2 base-2 Boolean
