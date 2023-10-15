@@ -594,6 +594,7 @@ i1∊↕≠y	Starting points for y in indices pointed by i1	Expression	Partition
 ∊/1+n1	Boolean list with n1 zeros after each 1	Tacit	Boolean	runs binary base-2 base2
 1«∊/j1	Change lengths j1 of sublists to ending indicators	Expression	Partitioning	partitions trailing change converting conversion segments
 ⊑/x∊y	Index of first occurrence in x of any cell of y	Expression	Search	cell element find locate 1st position find location
+∧´∊y	Are all major cells of y distinct?	Expression	Search	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?
 ∧´x1∊y1	Is x1 a subset of y1?	Expression	Sets	testif subset? containedin ⊆
 ∨´x1∊y1	Do x1 and y1 have any elements in common?	Expression	Search	testif anyshared? anycommon? cells items
 i1∊+`b1	Mask to get sublists with indices i1 as indicated by b1	Expression	Selection	sub-vectors masking indicating bitmask bit-mask
@@ -615,10 +616,9 @@ x⍋⌾⋈y	Is x lexically less than or equal to y?	Tacit	Ordering	testif tao to
 /⁼x⍋y	Distribution of y into intervals with cut-offs x	Expression	Data	bins groups ranges buckets
 a1⍒⊸⊏y	Moving cells of y indicated by a1 to the start of y	Tacit	Structural	conditional promote promotion items elements beginning leading
 x⍒⌾⋈y	Is x lexically greater than or equal to y?	Tacit	Ordering	testif tao totalarrayordering notbeforefollowsorequivalentto ≽ ⊀ lexicographically
-1=≠⍷y	Are all major cells of y identical?	Expression	Search	testif allsame allmatch? elements items allidentical allequal
-1<≠⍷y	Are any major cells distinct?	Expression	Search	testif anydifferent? anyunequal? anyunique? items elements
-1≥≠⍷y	Are all major cells identical?	Expression	Search	testif allsame? allequal? nounique? items elements
-⍷⊸≡y	Are all major cells distinct?	Tacit	Search	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?
+1<≠⍷y	Are any major cells of y different?	Expression	Search	testif anydifferent? anyunequal? anyunique? items elements
+1≥≠⍷y	Are all major cells of y identical?	Expression	Search	testif allsame? allequal? nounique? items elements allidentical allequal
+⍷⊸≡y	Are all major cells of y distinct?	Tacit	Search	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?
 ⌽⍉⌽y2	Reflect counter-diagonally	Expression	Structural	mirroring reflecting reflection counterdiagonally mirror
 <˘⍉y2	Table to list of column lists (inverted table)	Expression	Structural	split table lists into columns vertically column-wise columnwise boxed enclosed table matrix transforming transformation change changing into inverting inversion
 ⍉∘+n2	Conjugate Transpose	Tacit	Linear Algebra	self-adjoint selfadjoin Yᴴ y^H y† y^† Aᴴ a^H a† a^†
@@ -678,6 +678,7 @@ i0⥊⟜0⊸«y1	Shift y1 left by i0, padding on right	Tacit	Selection	leftshift
 ∨˝˘x0≠y2	Do rows of y2 contain elements differing from x0?	Expression	Search	testif hasdifferent cells items
 ∾˝i0/≍y	Repeat all of y i0 times along the first axis	Expression	Structural	duplicate copying extending recycling recycle list
 ≠`⊸∨b	Parity with connectors: fill between pairs of ones	Tacit	Boolean	1s trues truths
+⊣`⊸≡y	Are all major cells of y identical?	Tacit	Search	testif allsame? allequal? nounique? items elements allidentical allequal
 a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension
 +´∧`b1	Count of leading ones	Tacit	Boolean	1s trues truths at start beginning
 ÷1+⋆-n	Logistic function, approaching 0 for small n and 1 for large n	Expression	Mathematical	standard sigmoid curve limited exponential population growth
