@@ -899,6 +899,7 @@ m1(×÷+´∘×)n1	Bayes' formula	Tacit	Statistical	Bayesformula statistical sta
 1∾×`⌽⊸÷1+↕j0	Coefficients of the binomial	Expression	Combinatorics	
 ÷⟜⊑⌽+`0∾↕j0	Outstanding balances on rule of 78s	Expression	Finance	sum-of-the-digits method
 ⌈´(⊢⌈+)`n1	Largest sum of any contiguous non-empty sublist	Expression	Data	maximum subarray sublist sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
+1-´×`⌾⌽1+↕n0	Number of derangements (permutations that move all elements) of length n0	Expression	Combinatorics	subfactorial de Montmort count change every
 i(⊣⋆˜1+÷˜)n	Effective rate of interest with nominal rate n for i periods	Tacit	Finance	
 +´⌾(⋆⟜i0)|n1	i0-norm	Expression	Geometric	Lp-normal L-p ℓp ℓ-p
 m1{𝕩×¬𝕩∊𝕨}n	Change elements of n that are found in m1 to zero	Block Function	Data	arein membersof 0ing cells items
