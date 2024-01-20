@@ -1021,7 +1021,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 (»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate spaces	Tacit	Text	delete trim without consecutive extraneous normalise normalize blanks multiple drop start beginning
 (∨⟜«' '⊸≠)⊸/d1	Remove trailing and duplicate spaces	Tacit	Text	delete trim without consecutive extraneous normalise normalize blanks multiple drop start ending
 (∨˝˘' '⊸≠)⊸/d2	Remove all-blank rows	Tacit	Text	all-space allspace empty remove delete drop space without
-(∾"0A"+⟜↕¨10‿26)⊐d	Translate characters to digits (bases 2 through 36)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing
+(∾"0A"+⟜↕¨10‿26)⊐d	Translate characters to digits (bases 2 through 36, uppercase letters only)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing
 -⟜(32×1="a{"⊸⍋)d	Uppercase ASCII text	Tacit	Text	casemap lettercase toupper upper-case conversion converting change changing
 +⟜(32×1="A["⊸⍋)d	Lowercase ASCII text	Tacit	Text	casemap lettercase tolower lower-case conversion converting change changing
 ¬1(∾/∾˜)a1(∨/⊣)b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	sub-vector cell item ∨/¨a1⊂[1]b1
@@ -1125,7 +1125,7 @@ m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbe
 a1(⊢∧∧(⊢∊/)·+`»⊸<∘⊢)b1	Groups of ones in b1 pointed to by at least one 1 in a1	Expression	Partitioning	runs sequences 1s indicated trues truths
 (⌊0.5⊸+)⌾(÷⟜m){××𝔽∘|}n	Round n to nearest multiple of m, ties away from 0	Tacit	Rounding	precision favoring
 (⌈-⟜0.5)⌾(÷⟜m){××𝔽∘|}n	Round n to nearest multiple of m, ties towards 0	Tacit	Rounding	precision favoring
-16⊸×⊸+˜´⌽(∾"0A"+⟜↕¨10‿6)⊐d1	Convert from hexadecimal string to number	Expression	Text	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
+16⊸×⊸+˜´⌽(∾"0A"+⟜↕¨10‿6)⊐d1	Convert from uppercase hexadecimal string to number	Expression	Text	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
 '"'{𝕨∾𝕨∾˜(1+𝕨=𝕩)/𝕩}d1	Turn string d1 into string literal source code (like •Repr)	Expression	Text	serialise ⍎⁼ inverse⍎ escape
 {'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all spaces with dashes	Block Function	Text	blanks substitute format
 a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Partitioning	runs sequences chop limit indicated trues truths 1st
