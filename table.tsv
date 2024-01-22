@@ -579,6 +579,8 @@ j0↑/⁼i	Boolean list of length j0 with ones in locations i	Expression	Boolean
 ∨´⥊b	Are any true?	Expression	Boolean	testif forany thereexists forsome existentialquantification ∃ ⋁ any?
 ∧`x=y	Indicate leading elements that are equal	Expression	Search	show matching onleft cells items masking indicating start beginning
 ∧`x≠y	Indicate leading elements that are unequal	Expression	Search	show different onleft cells items masking indicating start beginning
+b∨≠`b	Parity with connectors: fill between pairs of ones	Tacit	Boolean	1s trues truths
+b<≠`b	Places between pairs of ones	Tacit	Boolean	1s trues truths
 +`»j1	Starting positions of sublists having lengths j1	Expression	Partitioning	sub-vectors sub-lists sublists
 +`↕j0	First j0 triangular numbers	Expression	Sequences	oeisA000217 oeisA217 1st
 F`⌾⌽y	Scan from end with F	Tacit	Function Application	cumulativereduce rowwise backscan backwards suffix scanning row-wise horizontally trailing ending
@@ -677,7 +679,6 @@ i0⥊⟜0⊸«y1	Shift y1 left by i0, padding on right	Tacit	Selection	leftshift
 ∧˝˘x2=y0	Boolean rows of x2 all equal to unit y0	Expression	Search	findall lookup binary base-2 base2 compare equality match
 ∨˝˘x0≠y2	Do rows of y2 contain elements differing from x0?	Expression	Search	testif hasdifferent cells items
 ∾˝i0/≍y	Repeat all of y i0 times along the first axis	Expression	Structural	duplicate copying extending recycling recycle list
-≠`⊸∨b	Parity with connectors: fill between pairs of ones	Tacit	Boolean	1s trues truths
 ⊣`⊸≡y	Are all major cells of y identical?	Tacit	Search	testif allsame? allequal? nounique? items elements allidentical allequal
 a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension
 +´∧`b1	Count of leading ones	Tacit	Boolean	1s trues truths at start beginning
@@ -780,7 +781,6 @@ i1≤⌜⌽↕⌈´i1	Matrix with i⊑i1 trailing zeroes on row i	Expression	Lin
 (⊢=⌈˝)n1	Mask of positions where the global maximum occurs in n1	Tacit	Search	indicate where equal to maxima maximums location masking indicating
 x(∾˝≍˘)y	Merge cells of equal-length arrays x and y alternately	Tacit	Structural	faro weave dovetail zipper zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
 -´×⟜⌽˝n2	Determinant of two-row matrix	Expression	Linear Algebra	det() 2-row 2row table
-(¬∧≠`)b	Places between pairs of ones	Tacit	Boolean	1s trues truths
 (i0=+`b1)/y1	The i0'th sublist of y1 with sublists indicated by b1	Expression	Selection	
 |¯11|+´+`j1	ISBN check digit generator from ten first digits j1	Expression	Specialty	InternationalStandardBookNumber correct validate 1st
 +´∧`⌽x=y	Count number of trailing elements that are equal	Expression	Search	matching onright cells items ending
