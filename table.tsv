@@ -1000,6 +1000,7 @@ m1(+˝∘×÷+´∘⊣)n2	Weighted average of each column of n2 with row weights
 a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those locations	Tacit	Partitioning	cut separate chop divide chunk dividing strings lists segments partitions
 -⟜»(≠⟜«m1)/+`n1	Sum elements of n1 marked by successive identicals in m1	Expression	Partitioning	partitioned segmented major cells items
 ⥊(<⟨⟩)<⊸∾⌜´y1	Cartesian product: all lists of one element from each list in y1	Tacit	Structural	catalog n-fold sets family pairings tuples table
+¯1⋆≠´∾<⟜(≠↑↑)j1	Sign of permutation	Expression	Mathematical	even odd parity permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita symbol LC number inversions transpositions
 (+˝÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Statistical	average GM() G() geometricmean
 (+´÷≠)⌾(√⟜m0)n	Generalised mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left cells items list start
@@ -1055,7 +1056,6 @@ i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorte
 i0((⊢+|⟜-)⟜≠↑⊢)y	Increase the leading dimension of y to multiple of i0	Tacit	Structural	1st axis divisibleby pad extend first start beginning
 i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tacit	Structural	allaxes divisibleby pad extend axes
 n0(+÷○(×´)⊢)1+1↓↕n0	Catalan number C_n0: number of ways to nest n0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
-¯1⋆+´∨´¨<⟜(≠↑↑)j1	Sign of permutation	Expression	Mathematical	even odd permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita symbol LC
 (∧´∘∊≠|↕∘≠⊸+)j1	Valid siteswap pattern for juggling?	Tacit	Specialty	testif beat
 x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Tacit	Selection	trim trailing right cells items list ending
 (≠x)(+⟜1|-)1+x⌽⊸⊐y	Last indices in x of major cells y, ≠x if not found	Expression	Search	indexin indexof find locate positionof locating items elements location
