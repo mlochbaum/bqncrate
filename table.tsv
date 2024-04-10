@@ -867,6 +867,7 @@ x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Function Applicatio
 ⊑∘⍋∘|⊸⊑n1	Element with the smallest magnitude (first in case of ties)	Tacit	Ordering	minimum absolute value closest nearest to 0 zero
 (↕∘≠≡⍒)n	Is n non-increasing?	Tacit	Ordering	testif descending? falling? down ordered? decreasing? sorted?
 ⊑∘⍒∘|⊸⊑n1	Element with largest magnitude (first in case of ties)	Tacit	Ordering	maximum absolute value biggest farthest furthest away from 0 zero
+(⍒F⌜˜)⊸⊏y1	Sort y1 with custom comparison F (less-than or similar)	Expression	Ordering	ascending increasing sorting reordering by comparator three-result
 (⌽⍒+`a1)⊏y	Reverse sublists of y indicated by starting mask a1	Expression	Structural	
 x(∊⍒⊸⊏⊣)y	Move major cells of x that appear in y to the front	Tacit	Search	promote cells items
 x(≠∘⊣>⊒)y	Progressive member of (∊) without replacement	Tacit	Search	isin membership containedin hascorresponding mathcingmemberof PDE remove
@@ -934,7 +935,7 @@ i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Select
 (1»≢˘⟜«)⊸/y	Remove duplicate cells from ordered array y	Tacit	Search	table
 (<⌈´≢¨y1)↑¨y1	Pad elements of list of equal-rank arrays y1 to equal shape	Expression	Structural	list cells items
 0=(1+↕⌈´j1)|⌜j1	Divisibility table	Expression	Number Theory	divides divisor matrix
-(∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering comparator
+(∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering by comparator
 i0(+˝˘∘↕÷⊣)n	n-wise rolling average	Tacit	Data	rollingmean windowedmean windowedaverage
 -⟜»(1⌽a1)/+`n	Sums of sublists of n indicated by a1	Expression	Partitioning	segmented partitioned sub-vectors
 (∨`∧∨`⌾⌽)b1	Mask that selects values between first and last 1	Tacit	Boolean	masking trim ones 1st bitmask bit-mask
@@ -1174,7 +1175,7 @@ c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Le
 1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression	Recreational	Knuth ALGOL
 (0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression	Recreational	fizz buzz interview counting
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Text	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
-F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 according to custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering comparator
+F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 with custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering by comparator three-result
 ∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution ordering dag scheduling kahn's algorithm
 i0 F{(𝕨¬˜≠𝕩)↑⥊1(-⊸↓𝔽˜`⌾⌽⊸𝔽⟜(𝔽`)˘↓)↑‿(𝕨-1)⥊𝕩}y	Linear-time F˝˘i0↕y for associative arithmetic F, fast for large windows	Block Modifier	Data	rolling windowed sums minimums maximums average vanherk gil werman
