@@ -465,8 +465,8 @@ a1 /⎉1 y	Filter columns of y according to mask a1	Tacit	Selection	compressing 
 i1 /⎉1 y	Replicate along last axis of y	Tacit	Selection	compressing slash solidus copying repeatingeachcolumns dimension horizontally replicating rowwise row-wise across
 x ∊⎉1 y	Which elements of x belong to corresponding row of y (≠x ↔ ≠y)	Tacit	Search	testif memberof isin membership containedin has cells items
 x ⊐⎉1 y	Indices of elements of x in corresponding rows of x	Tacit	Search	indexin indexof find locate positionof rowwise row-wise locating cells items location horizontally
-F◶1‿G y	Sequential OR test (F∨G with shortcutting)	Tacit	Function Application	lazyevaluation sequentialtestif adjacentguard || shortcutting short-circuit minimal evaluation McCarthy
-F◶G‿0 y	Sequential AND test (F∧G with shortcutting)	Tacit	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting short-circuit minimal evaluation McCarthy
+F◶0‿G y	Sequential AND test (F∧G with shortcutting)	Tacit	Function Application	lazyevaluation sequentialtestif adjacentguard && shortcutting short-circuit minimal evaluation McCarthy
+F◶G‿1 y	Sequential OR test (F∨G with shortcutting)	Tacit	Function Application	lazyevaluation sequentialtestif adjacentguard || shortcutting short-circuit minimal evaluation McCarthy
 1=x⍋y	Is y within the range [ x_0 , x_1 )	Expression	Data	testif ≤y< ≤x< tao totalarrayordering interval inrange?
 1≠x⍋y	Is y outside the range [ x_0 , x_1 )	Expression	Data	testif >y≥ >x≥ tao totalarrayordering interval outsiderange?
 ⊑⍋y	Index of smallest cell in y (earliest index for ties)	Expression	Ordering	find locate positionof minimum lexicographically lexically locating location lesser smaller smallest lowest least
