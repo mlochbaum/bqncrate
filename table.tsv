@@ -1036,7 +1036,6 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 ∧´⥊(0≠b2)≤≤⌜˜↕≠b2	Is b2 an upper triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle NE northeast north-east table triangular?
 ∧´⥊(0≠b2)≤≥⌜˜↕≠b2	Is b2 a lower triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular?
 √×´(0∾n)-(+´n)÷2	Area of triangle with side lengths n	Expression	Geometric	Heron's formula herons
-i1{(¬𝕨∊↕≠𝕩)/𝕩}y	Remove major cells at indices i1 from y	Block Function	Selection	elements items without positions
 x(⊢/˜⊏∘⥊˘⊸∊˜)y2	Rows of non-empty table y starting with an element in x	Tacit	Selection	cell item table
 m1(+˝∘×⎉1÷+´∘⊣)n2	Weighted average of rows of n2 with column weights m1	Tacit	Data	
 x≤○≠◶0‿(⊣≡≠⊸↑)y	Is x a prefix of y?	Tacit	Search	prefixof startswith
@@ -1057,6 +1056,7 @@ i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorte
 i0((⊢+|⟜-)⟜≠↑⊢)y	Increase the leading dimension of y to multiple of i0	Tacit	Structural	1st axis divisibleby pad extend first start beginning
 i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tacit	Structural	allaxes divisibleby pad extend axes
 n0(+÷○(×´)⊢)1+1↓↕n0	Catalan number C_n0: number of ways to nest n0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
+i1{(¬𝕨∊˜↕≠𝕩)/𝕩}y	Remove major cells at indices i1 from y	Block Function	Selection	elements items without positions
 (∧´∘∊≠|↕∘≠⊸+)j1	Valid siteswap pattern for juggling?	Tacit	Specialty	testif beat
 x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Tacit	Selection	trim trailing right cells items list ending
 (≠x)(+⟜1|-)1+x⌽⊸⊐y	Last indices in x of major cells y, ≠x if not found	Expression	Search	indexin indexof find locate positionof locating items elements location
