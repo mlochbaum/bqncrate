@@ -1141,7 +1141,6 @@ c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of char
 ÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨n1	Continued fraction convergents with terms n1, in linear time	Expression	Mathematical	series sequence
 (=⌜˜↕≠n2)≡+˝∘×⎉1‿∞⟜(⍉+)n2	Is square matrix n2 unitary?	Expression	Linear Algebra	testif Unitary?
 (-2⌊∘÷˜·+´·∧`' '=⌽)⊸⌽˘d2	Center flush left character array	Tacit	Text	centre align
--⟜(64×'^'⊸=»⊸∧1="@`"⊸⍋)d1	Evaluate control character sequences (like ^J)	Tacit	Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed lf verticaltab vt formfeed ff carriagereturn cr crlf cr+lf ^M^J control-z sub eof endoffile end-of-file escape ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^J ^K ^L ^M ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_
 {∨´1‿𝕩∧3‿4=+˝⥊⌽⟜𝕩¨⋈⌜˜¯1‿0‿1}b2	Conway's Game of Life: next generation	Block Function	Recreational	gol conways cellularautomaton sub-array
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Text	fuzzy match lcs
 (+´÷≠-1˙)⌾(×˜)-⟜(+´÷≠)n1	Sample standard deviation	Tacit	Statistical	stddev σ sigma SD empirical
@@ -1166,6 +1165,7 @@ F{𝔽´𝔽˜⍟(/2|⌊∘÷⟜2⍟(↕1+⌊2⋆⁼𝕘)𝕘)}i0 y	Compute F⍟
 ⊑{𝕩𝕊⍟≢𝕩(×´⊸(√˜)⋈+´⌾÷⊸×)≠𝕩}n1	Geometric-harmonic mean	Expression	Statistical	average GHM() HGM() GH() HG() harmonic-geometric
 {(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Tacit	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
 (2÷√π)×n0×{(⋆-𝕩)×1(1+×)´𝕩÷1.5+↕99}×˜n0	Error function (normalized integral of Gaussian)	Expression	Statistical	statistics erf() normal distribution sigmoid cdf cumulative
+{s←('^'=𝕩)∧«1="@`"⍋𝕩⋄s¬⊸/𝕩-64×»s}d1	Evaluate control character sequences (like ^J)	Tacit	Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed lf verticaltab vt formfeed ff carriagereturn cr crlf cr+lf ^M^J control-z sub eof endoffile end-of-file escape ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^J ^K ^L ^M ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_
 (≍↕0){∾˝(0∾˘1+𝕩)⊸⊏˘⍒˘=⌜˜↕𝕨}´-⟜↕n0	All permutations of ↕n0, as table rows in lexicographical order	Expression	Combinatorics	combinatorics ordered orderings anagrams without replacement list
 ∾(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽m0↕⟜↕n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Expression	Combinatorics	combinatorics selections list sublists subsequences choices choose
 i0|⊑i0{0=𝕨?1‿0;(⌽-(0⋈𝕩⌊∘÷𝕨)⊸×)𝕨𝕊˜𝕨|𝕩}j0	Multiplicative inverse of j0 modulo i0	Expression	Number Theory	extended euclidean algorithm modular modulus modinv() invmod() numbertheory arithmetic
