@@ -699,6 +699,7 @@ x⊏˜⍋⍋y	Reorder x to match the ordering of y	Expression	Ordering	meshing s
 <˘⍉>y1	Invert list of lists, so that element i of j of the result is j of i of y1	Expression	Structural	transpose transposing vtv cell element 1st lists zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
 ⍉i0‿⌽⥊y1	Reshape y1 to i0-column table, filled column-wise	Expression	Structural	table vertically columnwise columns
 1⍉˘m2×⌜n2	Direct matrix product	Expression	Linear Algebra	table
++´0‿0⍉n2	Trace of square matrix n2 (sum of diagonal elements)	Expression	Linear Algebra	tr(A)
 @+31↓↕126	Printable ASCII characters	Expression	Text	characters
 f{𝕎𝕩}y	Function to apply f to y as a function	Block Function	Function Application	call tacit dynamic value subject
 1.8÷˜¯32+n	Fahrenheit to Celsius	Expression	Specialty	°Fahrenheit °Celsius c2f() ctof() converting change changing
