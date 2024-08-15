@@ -368,7 +368,8 @@ i0↑˘y2	Adjust table y2 to width |i0 by truncating or padding rows	Tacit	Struc
 ¯1↑˘y2	Last column as a column matrix	Expression	Selection	rightmostcolumn trailing table list ending
 ⌽˘y2	Reflect vertically	Tacit	Structural	mirroring reflecting reflection right-left rightleft leftright left-right
 x∾¨y	Join corresponding elements	Tacit	Structural	juxtapose tuples cells elements zip pair
-i0/≍y1	Table with i0 rows, each consisting of y1	Expression	Structural	fill table
+i0/≍y	Array where the major cells are i0 repeated copies of y1	Expression	Structural	fill tile copy duplicate add new axis dimension increase incrementing rank by 1 one
+i0/≍y1	Table with i0 rows, each consisting of y1	Expression	Structural	table fill tile repeat copy duplicate
 i0⊏∧y	i0'th-smallest major cell of y	Expression	Selection	leastof minimum lexicographically item element
 i0⊏∨y	i0'th-largest major cell of y	Expression	Selection	greatestof maximum biggest lexicographically item element
 ⊏i0⌽y	Select major cell of y at cyclic offset i0 (default i0:¯1)	Tacit	Selection	element item
@@ -515,6 +516,7 @@ x2∾y¨⊏x2	Append element y to each column of table x2	Expression	Structural	
 0=≠⥊y	Is y an empty array?	Expression	Structural	testif isempty? isvoid? isnull?
 1=≠⥊y	Is y a singleton (array with only one element)?	Expression	Array	testif unit? sole? one?
 >i1⥊<y	Shape i1∾≢y array with copies of y for cells	Expression	Structural	copy repeat repetitions duplicate reshape
+∾i1⥊<y	Repeat the whole of y the given number of times along each leading axis	Expression	Structural	copy repeat repetitions duplicate reshape tile tesselate
 ⌽‿i0⥊y1	Reshape y1 to i0-column table (filled row-wise)	Tacit	Structural	table horizontally rowwise columns
 i0‿⌽⥊y1	Reshape y1 to i0-row table (filled row-wise)	Tacit	Structural	table horizontally rowwise rows
 ⥊x1≍˘y1	Merge equal-length lists x1 and y1 alternately	Expression	Structural	faro weave dovetail zipper zipping merge interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
@@ -678,7 +680,7 @@ i0⥊⟜0⊸«y1	Shift y1 left by i0, padding on right	Tacit	Selection	leftshift
 +´⌾÷n1	Ohm's Law: resistance of parallel resistors/capacitance of serial capacitors	Tacit	Specialty	electronics electrics circuits Ω series inparallel
 ∧˝˘x2=y0	Boolean rows of x2 all equal to unit y0	Expression	Search	findall lookup binary base-2 base2 compare equality match
 ∨˝˘x0≠y2	Do rows of y2 contain elements differing from x0?	Expression	Search	testif hasdifferent cells items
-∾˝i0/≍y	Repeat all of y i0 times along the first axis	Expression	Structural	duplicate copying extending recycling recycle list
+∾˝i0/≍y	Repeat all of y i0 times along the first axis	Expression	Structural	duplicate copying extending recycling recycle list tile tesselate
 ⊣`⊸≡y	Are all major cells of y identical?	Tacit	Search	testif allsame? allequal? nounique? items elements allidentical allequal
 a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Selection	chop split cut separate chunk sub-vectors segmented sub-lists subvectors sublists dimension
 +´∧`b1	Count of leading ones	Tacit	Boolean	1s trues truths at start beginning
@@ -860,7 +862,7 @@ x(¬∘∊/⊣)y	x without major cells that appear in y	Tacit	Sets	butnot except
 (⊑⊢⊐⌊´)n1	Index of minimum value in n1 (linear time)	Tacit	Search	lesser smaller smallest lowest least
 +´¨(⊐x1)⊔n1	Sum n1 by buckets x1 (≠n1 ↔ ≠x1)	Expression	Data	groups classify bins
 x1(⥊∾⎉0‿1˜)y1	Insert x1 after every element of y1	Tacit	Structural	merge cell item
-i0/⟜≍⎉(-m0)y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension
+i0/⟜≍⎉(-m0)y	Create a new axis of y before axis m0, and replicate to length i0	Tacit	Structural	copying repeating replicate replication add dimension increase incrementing rank by 1 one insertion inserting extending extension tile
 x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Function Application	conformity conforming axes frames major minor cells
 (+˝∧`)⎉1 b	Number of leading ones in each row of b	Tacit	Boolean	ones trues truths start beginning
 ⊑+`∘⌽⍟n0↕2	The n0'th Fibonacci number	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population
