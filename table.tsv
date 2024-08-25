@@ -647,13 +647,13 @@ d-'a'	Convert lowercase letters to their positions in the alphabet	Expression	Te
 ⊑1↑0⥊<y	Convert to fill element, replacing numbers with 0 and characters with space	Expression	Structural	prototype ⍷ datatypeof 0s zeroes spaces blanks zeros falses falsehoods
 <∘∾˘y2	Turn a table of lists into a list of lists by joining each row	Tacit	Structural	format merge along rows concatenate lines each
 1«»⊸≠y1	Which elements differ from next ones	Expression	Data	testif neighbouring neightbors neighboring neighbours neighbors righthand cells items 1s trues truths
-1«»⊸≠y1	Indicate end of each group of consecutive equal elements	Expression	Partitioning	runs sequences Boolean major cells items indicate masking indicating trailing binary base-2 base2
+1«»⊸≠y1	Indicate end of each group of consecutive equal elements	Expression	Partitioning	runs sequences Boolean major cells items indicate masking indicating trailing different from next
 2×↕⊸∾j0	Even integers from 0 to 2×j0	Expression	Sequences	numbers 1st
 ∾x1⊸∾¨y1	Join list of lists y1 using separator x1, including leading separator	Expression	Structural	text with using string list joiner combiner joining combining merge merging
 i0-⊸↑j0⥊1	Suffix List: length i0 with j0 ones on the right, the rest zeroes	Expression	Sequences	1s 0s zeros Is𝕩Js falses falsehoods trues truths
 a1/¨⊸⊔y	Partition y along each axis by list of partition length lists a1	Tacit	Structural	chop split cut separate chunk segmented sub-matrices submatrices sub-tables subtables partitioned block-matrix table dimensions blockmatrix
 1»≠⟜«y1	Which elements differ from previous ones	Expression	Data	testif neighboring neighbours neighbors lefthand cells items 1s trues truths
-1»≠⟜«y1	Indicate start of each group of consecutive equal elements	Expression	Partitioning	runs sequences Boolean major cells items indicate masking indicating starting starts beginnings leading binary base-2 base2
+1»≠⟜«y1	Indicate start of each group of consecutive equal elements	Expression	Partitioning	runs sequences Boolean major cells items indicate masking indicating starting starts beginnings leading different from previous
 -⟜»/i1	Segment lengths given the number of segments that end at each position	Expression	Partitioning	chunk trailing converting change changing segments partitions
 i0⥊⟜0⊸»y1	Shift y1 right by i0, padding on left	Tacit	Selection	rightshift list
 i0⥊⟜0⊸«y1	Shift y1 left by i0, padding on right	Tacit	Selection	leftshift list
@@ -934,8 +934,8 @@ x2(¯1⊑≠)⊸(↑˘)y2	Widen table y2 to the same row length as x2	Tacit	Stru
 (¬2|↕∘≠)⊸/y	Remove every second cell of y	Tacit	Selection	filter even odd parity
 m(∧⟜¬∨¬⊸∧)n	Probabilistic XOR	Tacit	Statistical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Selection	leftshift rightshift bits bytes
-(1»≢˘⟜«)⊸/y	Remove consecutive duplicate major cells	Tacit	Search	list
-(1»≢˘⟜«)⊸/y	Remove duplicate cells from ordered array y	Tacit	Search	table
+(1»≢˘⟜«)⊸/y	Remove consecutive duplicate major cells	Tacit	Search	items deduplicate erase remove multiple repetitions repeated copies equal matching keep retain different from previous next adjacent
+(1»≢˘⟜«)⊸/y	Remove duplicate cells from ordered array y	Tacit	Search	major items deduplicate distinctitems uniqueelements nub erase remove repetitions
 (<⌈´≢¨y1)↑¨y1	Pad elements of list of equal-rank arrays y1 to equal shape	Expression	Structural	list cells items
 0=(1+↕⌈´j1)|⌜j1	Divisibility table	Expression	Number Theory	divides divisor matrix
 (∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering by comparator
@@ -959,7 +959,7 @@ j⊏∾"0A"+⟜↕¨10‿26	Translate digits to characters (bases 2 through 36)	
 (⍋' '⊸=)⊸⊏d1	Move all spaces to end	Tacit	Text	blanks trailing ending
 (⥊(↕2˘)/¨<)y	Power set: a list of all subsets of the cells of y	Tacit	Sets	powerset power-set all combinations choices at most one
 (∧⊑˜2⌊∘÷˜≠)n1	Median of non-empty n1, taking larger value for even lengths	Tacit	Statistical	average
-x0(1⊸»⊸∨∘≠/⊢)y1	Remove consecutive duplicate x0's from list y1	Tacit	Search	list
+x0(1⊸»⊸∨∘≠/⊢)y1	Remove consecutive duplicate x0's from list y1	Tacit	Search	list deduplicate erase remove multiple repetitions repeated copies equal matching keep retain different from previous next adjacent
 m(¬∧⟜¬∨¬⊸∧)n	Probabilistic XNOR	Tacit	Statistical	fuzzy probability chance materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 i0(⊢∾-⟜≠/¯1⊸↑)y	Extend y with last cell of y to length i0	Tacit	Data	filling enlongating item element
 (<⌜˜↕∘≠)⊸×m2	Extract the upper triangular part of the matrix m2 without main diagonal	Tacit	Linear Algebra	make strict triangle northeast north east north-east
