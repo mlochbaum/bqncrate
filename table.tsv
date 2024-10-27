@@ -955,7 +955,7 @@ i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	
 (××·⌈¯0.5+|)n	Round to nearest integer, ties towards 0	Tacit	Rounding	precision favoring integer round()
 (××·⌊0.5+|)n	Round to nearest integer, ties away from 0	Tacit	Rounding	precision favoring integer round()
 j⊏∾"0A"+⟜↕¨10‿26	Translate digits to characters (bases 2 through 36)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing
--´(2×n0)•math.Comb n0+↕2	Catalan number C_n0: number of ways to nest n0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
+-´(2×j0)•math.Comb j0+↕2	Catalan number C_j0: number of ways to nest j0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 (⍋' '⊸=)⊸⊏d1	Move all spaces to end	Tacit	Text	blanks trailing ending
 (⥊(↕2˘)/¨<)y	Power set: a list of all subsets of the cells of y	Tacit	Sets	powerset power-set all combinations choices at most one
 (∧⊑˜2⌊∘÷˜≠)n1	Median of non-empty n1, taking larger value for even lengths	Tacit	Statistical	average
@@ -1058,7 +1058,7 @@ m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending c
 i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorter one at the end if needed	Tacit	Partitioning	chunk divide dividing cut partition distribute greedy
 i0((⊢+|⟜-)⟜≠↑⊢)y	Increase the leading dimension of y to multiple of i0	Tacit	Structural	1st axis divisibleby pad extend first start beginning
 i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tacit	Structural	allaxes divisibleby pad extend axes
-n0(+÷○(×´)⊢)1+1↓↕n0	Catalan number C_n0: number of ways to nest n0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
+j0(+÷○(×´)⊢)1+1↓↕j0	Catalan number C_j0: number of ways to nest j0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 i1{(¬𝕨∊˜↕≠𝕩)/𝕩}y	Remove major cells at indices i1 from y	Block Function	Selection	elements items without positions
 (∧´∘∊≠|↕∘≠⊸+)j1	Valid siteswap pattern for juggling?	Tacit	Specialty	testif beat
 x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Tacit	Selection	trim trailing right cells items list ending
@@ -1078,9 +1078,9 @@ m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descend
 -˜˝˘∘‿2⥊/0(∾≠∾˜)b1	Lengths of groups of ones in b1	Expression	Partitioning	runs 1s trues truths
 -˜`˘∘‿2⥊/0(∾≠∾˜)b1	Start and length of groups of 1s in b1	Expression	Partitioning	runs sequences blocks trues truths 1st ones
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Selection	trim left right spaces multiple consecutive blanks start beginning ending
-×`(1⊸+÷˜2×-⟜¬)1⌈↕j0	First n0 Catalan numbers	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
+×`(1⊸+÷˜2×-⟜¬)1⌈↕j0	First j0 Catalan numbers	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕j0	Primes less than j0	Expression	Number Theory	primesuntil numbers
->j0↑¨(+`∾⟜0)⍟(↕j0)⥊1	First n0 rows of Catalan's triangle	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
+>j0↑¨(+`∾⟜0)⍟(↕j0)⥊1	First j0 rows of Catalan's triangle	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 {(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
 m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Number Theory	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
 F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Function Application	application poweroperator circlestar starcircle repeated repeating iterating looping while
