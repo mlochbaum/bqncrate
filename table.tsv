@@ -981,6 +981,7 @@ i0(-⊸↓≠↓)0∾≠`b	Fast rolling bitwise exclusive-or ≠˝˘i0↕b	Expre
 (1⌈`↕∘≠⊸×a1)⊏y	Copy each cell of y until before next 1 in a1	Expression	Selection	item element
 (∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column)	Tacit	Boolean	sequence run trues truths 1st
 ⊐⊸≡¨⊸/⥊↕1+↕n0	All set partitions of n0 items, as Group arguments	Expression	Combinatorics	count equivalence relations rhyme schemes
+>»⊸+⍟(↕≠)j0↑1	Pascal's triangle: first j0 rows of binomial coefficients	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 (⍋(↕≠x)∾i1)⊏x∾y	Insert cells of y into x after positions i1	Expression	Structural	add items elements index indices splice
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Structural	faro weave dovetail zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Text	combine glue 0x0A U+0A U+000A
@@ -1009,7 +1010,6 @@ a1(⊢-˜+`×¬)⊸⊔y	Split y at 1s in a1, not including cells of y at those l
 (+´÷≠)⌾(√⟜m0)n	Generalised mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left cells items list start
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Sets	⊖
->»⊸+⍟(↕≠)1∾j0⥊0	Binomial coefficients until j0	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 ⊑¨+`∘⌽⍟(↕n0)↕2	First n0 Fibonacci numbers	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population
 ⊑(+`⊢´⊸∾)⍟n0⥊1	Bell number B_n0: number of ways to partition a set of size n0	Expression	Combinatorics	count equivalence relations rhyme schemes
 m1 1⊸⌽⊸×{1⌽𝔽˜-𝔽} n1	Cross product of 3-dimensional vectors m1 and n1	Tacit	Geometric	crossproduct exterior product multiplication multiply
@@ -1078,6 +1078,7 @@ m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descend
 -˜˝˘∘‿2⥊/0(∾≠∾˜)b1	Lengths of groups of ones in b1	Expression	Partitioning	runs 1s trues truths
 -˜`˘∘‿2⥊/0(∾≠∾˜)b1	Start and length of groups of 1s in b1	Expression	Partitioning	runs sequences blocks trues truths 1st ones
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Selection	trim left right spaces multiple consecutive blanks start beginning ending
+×`(1⊸+÷˜2×-⟜¬)1⌈↕j0	First n0 Catalan numbers	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕j0	Primes less than j0	Expression	Number Theory	primesuntil numbers
 {(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
 m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Number Theory	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
@@ -1125,6 +1126,7 @@ a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b1	Indicate first one in each sublist o
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch when b1 turns on and a1 turns off (initially off)	Tacit	Partitioning	signal on/off
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	zeros 0s falses falsehoods start beginning
 +´(↕3)(×˝⌽˘){𝔽--⊸𝔽}n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Expression	Linear Algebra	scalar box signed volume parallelepiped
+⍉>j0-⊸↑¨(+`1⊸↓)⍟(↕≠)j0⥊1	First n0 rows of Catalan's triangle	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Number Theory	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
 a1(⊢∧∧(⊢∊/)·+`»⊸<∘⊢)b1	Groups of ones in b1 pointed to by at least one 1 in a1	Expression	Partitioning	runs sequences 1s indicated trues truths
 (⌊0.5⊸+)⌾(÷⟜m){××𝔽∘|}n	Round n to nearest multiple of m, ties away from 0	Tacit	Rounding	precision favoring
