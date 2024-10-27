@@ -1080,6 +1080,7 @@ m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descend
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Selection	trim left right spaces multiple consecutive blanks start beginning ending
 ×`(1⊸+÷˜2×-⟜¬)1⌈↕j0	First n0 Catalan numbers	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕j0	Primes less than j0	Expression	Number Theory	primesuntil numbers
+>j0↑¨(+`∾⟜0)⍟(↕j0)⥊1	First n0 rows of Catalan's triangle	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 {(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
 m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Number Theory	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
 F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Function Application	application poweroperator circlestar starcircle repeated repeating iterating looping while
@@ -1126,7 +1127,6 @@ a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b1	Indicate first one in each sublist o
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch when b1 turns on and a1 turns off (initially off)	Tacit	Partitioning	signal on/off
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	zeros 0s falses falsehoods start beginning
 +´(↕3)(×˝⌽˘){𝔽--⊸𝔽}n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Expression	Linear Algebra	scalar box signed volume parallelepiped
-⍉>j0-⊸↑¨(+`1⊸↓)⍟(↕≠)j0⥊1	First n0 rows of Catalan's triangle	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Number Theory	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
 a1(⊢∧∧(⊢∊/)·+`»⊸<∘⊢)b1	Groups of ones in b1 pointed to by at least one 1 in a1	Expression	Partitioning	runs sequences 1s indicated trues truths
 (⌊0.5⊸+)⌾(÷⟜m){××𝔽∘|}n	Round n to nearest multiple of m, ties away from 0	Tacit	Rounding	precision favoring
