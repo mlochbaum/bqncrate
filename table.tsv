@@ -686,6 +686,7 @@ a1+`⊸⊔y	Partitioned y at 1s in a1 along first axis	Tacit	Selection	chop spli
 +´∧`b1	Count of leading ones	Tacit	Boolean	1s trues truths at start beginning
 ÷1+⋆-n	Logistic function, approaching 0 for small n and 1 for large n	Expression	Mathematical	standard sigmoid curve limited exponential population growth
 ⌊1+i⋆⁼j	Length to represent j in base i	Expression	Mathematical	width representation required digits positions
+n1⋆⌜↕≠n1	Vandermonde matrix for numbers n1	Expression	Linear Algebra	polynomial interpolation square of exponents geometric progression
 2÷˜1+√5	Golden ratio	Constant	Mathematical	phi φ ϕ ɸ 1.618033988749894848204586834365638 0.618033988749894848204586834365638
 ⊑/¬x∊y	Position of first element in x not in y	Expression	Search	cell element 1st
 ∊⟜c⌾<d1	Is string d1 a member of list of strings c	Expression	Search	isin membership containedin has vtv vector
@@ -970,6 +971,7 @@ i0(⊢∾-⟜≠/¯1⊸↑)y	Extend y with last cell of y to length i0	Tacit	Dat
 (>⌜˜↕∘≠)⊸≡b2	Is b2 a full lower triangular matrix without diagonal?	Tacit	Linear Algebra	testif triangle SW southwest south-west table triangular? remove strict
 (≤⌜˜↕∘≠)⊸≡b2	Is b2 a full upper triangular matrix with diagonal?	Tacit	Linear Algebra	testif triangle NE northeast north-east table triangular?
 (≥⌜˜↕∘≠)⊸≡b2	Is b2 a full lower triangular matrix with diagonal?	Tacit	Linear Algebra	testif triangle SW southwest south-west table triangular?
+×´∾(⊢-≠↑↑)n1	Vandermonde polynomial on values n1	Expression	Linear Algebra	determinant alternating discriminant
 2=+´0=(1+↕)⊸|n0	Is n0 a prime?	Expression	Number Theory	testif isprime primality
 m1(+´⌈○≠↑¨⋈)n1	Sum of polynomials with ascending coefficients	Tacit	Polynomial	additionof plus
 m1(-´⌈○≠↑¨⋈)n1	Difference between polynomials with ascending coefficients	Tacit	Polynomial	subtractionof minus
