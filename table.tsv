@@ -1144,7 +1144,7 @@ x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing s
 a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero in each sublist of b indicated by starting mask a1	Tacit	Partitioning	segmented partitioned 1st
 +´¨(+⌜´(↕2)¨n1)⊔×⌜´1⋈¨˜-n1	Coefficients in ascending order of polynomial with roots n1	Expression	Polynomial	solve
 (2×a)÷˜b-⊸(+⋈-)√(×˜b)-4×a×c	Solutions of quadratic equation ax²+bx+c=0	Expression	Polynomial	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
-c1((⊢-˜¬×·+`»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions
+c1((⊢-˜¬×·+`1⊸»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions
 ÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨n1	Continued fraction convergents with terms n1, in linear time	Expression	Mathematical	series sequence
 (=⌜˜↕≠n2)≡+˝∘×⎉1‿∞⟜(⍉+)n2	Is square matrix n2 unitary?	Expression	Linear Algebra	testif Unitary?
 (-2⌊∘÷˜·+´·∧`' '=⌽)⊸⌽˘d2	Center flush left character array	Tacit	Text	centre align
