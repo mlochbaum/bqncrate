@@ -924,6 +924,7 @@ m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (slow)	Tacit	Data	tab
 (+˝÷≠)i0⍉⁼n	Average (mean) of elements of n along axis i0	Expression	Statistical	arithmeticmean() AM() avg() axis dimension cells items
 ⊢´∘/˘' '≠d2	Indices of last non-space character in each row of d2	Expression	Search	nonblanks nonspaces characters text row-wise rowwise horizontally
 ∧`∧˝˘' '=d2	Indicate leading all-blank rows of d2	Expression	Text	spaces beginning masking locate indications allspace all-space lines start blanks
+(⍋⊏1⊸⌽)•rand.Deal j0	Random permutation of length j0 consisting of a single cycle	Expression	Random	only one circle circular ordering
 ≠`⊸∨'''=d1	Locations of texts between and including quotes	Expression	Text	strings
 ≠`⊸>'''=d1	Locations of texts between and excluding quotes	Expression	Text	strings
 (≠(«-⊢)/)b1	Changing starting indicators b1 of sublists to lengths	Tacit	Partitioning	partitions change converting conversion segments
@@ -1144,7 +1145,7 @@ x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing s
 a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero in each sublist of b indicated by starting mask a1	Tacit	Partitioning	segmented partitioned 1st
 +´¨(+⌜´(↕2)¨n1)⊔×⌜´1⋈¨˜-n1	Coefficients in ascending order of polynomial with roots n1	Expression	Polynomial	solve
 (2×a)÷˜b-⊸(+⋈-)√(×˜b)-4×a×c	Solutions of quadratic equation ax²+bx+c=0	Expression	Polynomial	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
-c1((⊢-˜¬×·+`1⊸»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions
+i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Permutation cycles: lowest index in the cycle, for each entry of permutation i1	Expression	Mathematical	disjoint cyclic fixed point
 ÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨n1	Continued fraction convergents with terms n1, in linear time	Expression	Mathematical	series sequence
 (=⌜˜↕≠n2)≡+˝∘×⎉1‿∞⟜(⍉+)n2	Is square matrix n2 unitary?	Expression	Linear Algebra	testif Unitary?
 (-2⌊∘÷˜·+´·∧`' '=⌽)⊸⌽˘d2	Center flush left character array	Tacit	Text	centre align
@@ -1153,6 +1154,7 @@ c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest comm
 (+´÷≠-1˙)⌾(×˜)-⟜(+´÷≠)n1	Sample standard deviation	Tacit	Statistical	stddev σ sigma SD empirical
 y(-⊸↓F↓)´⌽i0⊸«⊸-↕∘⌈⌾(2⋆⁼⊢)i0	Rolling minimum (F←⌊) or maximum (F←⌈), fast F˝˘i0↕y	Expression	Data	windowed largest smallest filter
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
+c1((⊢-˜¬×·+`1⊸»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk list dividing segments partitions
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	1s trues truths start beginning
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) over sublists of n indicated by a1	Block Function	Partitioning	sub-vectors +\
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) over sublists of b indicated by a1	Block Function	Partitioning	sub-vectors sublists sub-lists ≠\
@@ -1163,11 +1165,13 @@ a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 ⊑{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Expression	Statistical	average AHM() HAM() AH() HA() harmonic-arithmetic
 ⊑m0{+´𝕨⋈⟜¬⊸×1‿¯1↓¨<𝕩}⍟(1-˜≠∘⊢)x1	Bezier curve with control points x1 evaluated at m0, by De Casteljau's algorithm	Expression	Geometric	polynomial spline value of interpolate parameter linear quadratic cubic
+∨/⁼⊐i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Cycle type (lengths of all cycles) of permutation i1	Expression	Mathematical	structure shape partition
 10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼0.5+1⌈⊢)}j0	Base-10 digits of natural number j0	Block Modifier	Mathematical	base10 decimal base-10
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Structural	list cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Statistical	pcc() ppmcc() bivariate
 F{𝔽´𝔽˜⍟(/2|⌊∘÷⟜2⍟(↕1+⌊2⋆⁼𝕘)𝕘)}i0 y	Compute F⍟i0 y for associative F by repeated squaring	Block Modifier	Function Application	exponential poweroperator repeating iterating looping matrix reorder
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈×´⊸(√˜))≠𝕩}n1	Arithmetic-geometric mean	Tacit	Statistical	average AGM() GAM() AG() GA() geometric-arithmetic common
+¯1⋆≠´¬∊i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Sign of permutation i1, in quasi-linear time	Expression	Mathematical	even odd parity permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita symbol LC number inversions transpositions
 ((↕-⌈∘÷⟜2)(⊣⌽˘⌾⍉⌽˘)⋈˜⥊⟜↕×˜)j0	a magic square, odd side j0	Tacit	Recreational	
 ⊑{𝕩𝕊⍟≢𝕩(×´⊸(√˜)⋈+´⌾÷⊸×)≠𝕩}n1	Geometric-harmonic mean	Expression	Statistical	average GHM() HGM() GH() HG() harmonic-geometric
 {(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Tacit	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
