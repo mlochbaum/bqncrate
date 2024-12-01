@@ -858,7 +858,7 @@ n1+´∘×m0⋆↕≠n1	Value of polynomial with ascending coefficients n1 at po
 (2⊸⋆+¯1⊸⋆)j0	Jacobsthal-Lucas number	Tacit	Mathematical	sequence Édouard Edouard Ernst j(n) A014551() A14551()
 x(¬∘∊/⊣)y	x without major cells that appear in y	Tacit	Sets	butnot except setdifference setsubtraction setminus ∖ removing remove delete drop
 (∊∧∊⌾⌽)y	Indicate which cells of y appear exactly once	Tacit	Search	unique indication indicate items masking indicating
-⊏⟜(/⁼)⊐y	Indicate number of cells matching each cell of y	Expression	Search	count duplicate repetitions appearances
+⊏⟜(/⁼)⊐y	Indicate number of cells matching each cell of y	Expression	Search	count matches how many times duplicate repetitions copies appears appearances
 (⊑⊢⊐⌈´)n1	Index of maximum value in n1 (linear time)	Tacit	Search	greater larger bigger greatest biggest largest highest
 (⊑⊢⊐⌊´)n1	Index of minimum value in n1 (linear time)	Tacit	Search	lesser smaller smallest lowest least
 +´¨(⊐x1)⊔n1	Sum n1 by buckets x1 (≠n1 ↔ ≠x1)	Expression	Data	groups classify bins
@@ -1103,6 +1103,7 @@ x0(⊣-(××·↕1+|)∘-)y0	Consecutive values from x0 to y0 (both numbers, or 
 (+´↕⊸(⊣/˜0=|))⊸<j0	Is j0 a deficient number?	Tacit	Number Theory	testif deficient?
 (+´↕⊸(⊣/˜0=|))⊸>j0	Is j0 an abundant number?	Tacit	Number Theory	testif abundant?
 x0((⊢-˜+`×¬)∘=⊔⊢)y1	Split y1 at occurrences of separators x0, removing the separators	Tacit	Partitioning	cut separate chop divide chunk dividing partitions strings lists segments delimiters spaces words
+x(⊐˜∘⊣⊏≠∘⊣↑/⁼∘⊐)y	Count how many cells of y match each cell of x	Tacit	Search	count matches number times duplicate repetitions copies appears appearances
 i0↕⊸(+´⊣/˜0=|)∘⊢⍟⊣j0	i0'th number in the Aliquot sequence for j0	Tacit	Number Theory	
 a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group of 1s	Tacit	Partitioning	split separate chop divide chunk dividing partitions
 ∊⟜(∾"0aA"+⟜↕¨10‿26‿26)⊸/d1	Remove non-alphanumeric ASCII characters	Tacit	Text	punctuation
