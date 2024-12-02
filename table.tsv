@@ -836,7 +836,7 @@ m(⊣+-⊸|)n	Residue after dividing n by m but replacing 0 with m	Expression	Da
 m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions j1 starting at m1 with steps n1	Expression	Sequences	sequence seq() multidimensional axes
 m(≤⟜|×⊢)n	Round to zero values of n within m of zero	Tacit	Rounding	precision fuzz 0
 ∾⟜(1¨∘⊏)y	Append a row of 1s	Tacit	Data	ones trues truths
-x⊣⌾(b1⊸/)˜y	Merge x and y using b1 (1 for x's element, 0 for y1's element)	Tacit	Structural	faro dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
+x⊣⌾(b1⊸/)˜y	Merge x and y using b1 (0 for x's element, 1 for y's element)	Tacit	Structural	faro dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
 ⌽⌾(0‿¯1⊸⊏)y	Swap first and last major cells	Tacit	Structural	exchange swap head tail leading trailing elements items 1st start beginning ending
 (+´÷1⌈≢)n1	Average, returning 0 if empty	Tacit	Statistical	arithmeticmean
 m1(+´|∘-)n1	Manhattan distance between two points in n-space	Tacit	Geometric	taxicab L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()
