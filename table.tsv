@@ -74,7 +74,7 @@ i0↑y	Take first i0 major cells or y	Primitive	Structural	pike uparrow table gr
 i0↑y1	Pad y1 on the right to width i0	Primitive	Structural	extend right-align rightalign text
 i1↑y	Take i1 positions along leading axes of y	Primitive	Selection	pike uparrow first last beginning trailing head tail major cells elements dimensions 1st start ending
 i1↑y0	Pad y0 to shape i1	Primitive	Structural	extend text
-⌽y	Reverse leading axis of y	Primitive	Structural	circlebar rowel upsetting flipping upending upsidedown reversing dimension start beginning
+⌽y	Reverse leading axis of y	Primitive	Structural	circlebar rowel upsetting flipping reflect upending put backwards upsidedown reversing dimension start beginning
 ⌽y2	Reflect horizontally	Primitive	Structural	mirroring reflecting reflection up-down updown down-up downup
 i⌽y	Rotate rows along leading axis of y	Primitive	Structural	circlebar rotating cyclically dimension lists start beginning
 ⊢y	Same: y	Primitive	Function Application	dex righttack sameright default
@@ -366,7 +366,7 @@ i0↓˘y2	Drop i0 columns from y2	Tacit	Structural	table delete remove without
 1↑˘y2	First column as a column matrix	Expression	Selection	leftmostcolumn leading 1st table list start beginning
 i0↑˘y2	Adjust table y2 to width |i0 by truncating or padding rows	Tacit	Structural	fill limit
 ¯1↑˘y2	Last column as a column matrix	Expression	Selection	rightmostcolumn trailing table list ending
-⌽˘y2	Reflect vertically	Tacit	Structural	mirroring reflecting reflection right-left rightleft leftright left-right
+⌽˘y2	Reflect vertically	Tacit	Structural	mirroring reflecting reflection right-left rightleft leftright left-right reverse flip put backwards
 x∾¨y	Join corresponding elements	Tacit	Structural	juxtapose tuples cells elements zip pair
 i0/≍y	Array where the major cells are i0 repeated copies of y1	Expression	Structural	fill tile copy duplicate add new axis dimension increase incrementing rank by 1 one
 i0/≍y1	Table with i0 rows, each consisting of y1	Expression	Structural	table fill tile repeat copy duplicate
@@ -461,7 +461,7 @@ x2 ∾⎉1 y1	Postfix list to each row of table	Tacit	Structural	append rows lis
 ≍⎉0 y	Increment rank by inserting a new dimension after the trailing one	Tacit	Structural	additional dimensions axes axis items elements cells extend shape ending last columnmatrixfromvector
 ≍⎉1 y	Increment rank by inserting a new dimension before the last one	Tacit	Structural	additional dimensions axes axis items elements cells extend shape ending last
 m1 F⎉0‿1 n2	Apply F between list m1 and each column of n2	Tacit	Function Application	rank suffixagreement columns distribute columwise column-wise list dimensions axes vertically columnwise
-⌽⎉1 y	Reverse last axis of y	Tacit	Structural	circlestile reversing dimension
+⌽⎉1 y	Reverse last axis of y	Tacit	Structural	circlestile reversing dimension flip reflect put backwards
 a1 /⎉1 y	Filter columns of y according to mask a1	Tacit	Selection	compressing slash solidus selecting cells items horizontally across bitmask bit-mask
 i1 /⎉1 y	Replicate along last axis of y	Tacit	Selection	compressing slash solidus copying repeatingeachcolumns dimension horizontally replicating rowwise row-wise across
 x ∊⎉1 y	Which elements of x belong to corresponding row of y (≠x ↔ ≠y)	Tacit	Search	testif memberof isin membership containedin has cells items
@@ -557,6 +557,7 @@ a∨⟜¬b	Probabilistic converse implication	Tacit	Statistical	fuzzy probabilit
 ×⟜|n	Square without changing sign	Tacit	Arithmetic	remove change converting conversion
 m∧○¬n	Probabilistic NOR	Tacit	Statistical	fuzzy probability chance peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽
 x≡○∧y	Are x and y permutations of each other?	Tacit	Data	testif permutation? permutationof?
+⌽⌾⥊y	Reverse y along every axis	Tacit	Structural	flip reflect put backwards each all dimensions directions axes
 ⌽⌾⥊y2	Rotate 180°	Tacit	Structural	turning rotating rotation half-turn halfturn
 j0↑/⁼i	Boolean list of length j0 with ones in locations i	Expression	Boolean	inversion 1s trues truths list binary base-2 base2
 1‿¯1×⌜n	±n as two major cells of the result	Expression	Arithmetic	plusminus dimensions axes
@@ -807,7 +808,7 @@ x{𝔽˜𝔾⊣}y	Church Boolean NAND	Block Modifier	Functional	⍲ shefferstrok
 {𝔽˜𝔾𝔽}	Church Boolean XOR	Block Modifier	Functional	≠ exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 {𝔽𝔾𝔽˜}	Church Boolean XNOR	Block Modifier	Functional	= materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying
 x(¬⍋⌾⋈)y	Is x lexically greater than y?	Tacit	Ordering	testif tao totalarrayordering after follows ≻ ⋠ ⋩ lexicographically succeeds
-(⌽⍒/i1)⊏y	Reverse sublists of y having lengths i1	Expression	Partitioning	
+(⌽⍒/i1)⊏y	Reverse sublists of y having lengths i1	Expression	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists flip reflect put backwards
 x(¬⍒⌾⋈)y	Is x lexically less than y?	Tacit	Ordering	testif totalarrayordering tao before precedes ≺ ⋡ ⋨ lexicographically
 (1=⊒)⊸/y	Distinct major cells that appear at least twice	Tacit	Search	duplicated duplicates nonunique items elements
 (⊐⊏F∘⍷)y	Apply deterministic cell-wise F to cells of y, avoiding extra calls for duplicate cells	Tacit	Function Application	performance memoisation memoization quick speed
@@ -872,7 +873,7 @@ x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Function Applicatio
 (↕∘≠≡⍒)n	Is n non-increasing?	Tacit	Ordering	testif descending? falling? down ordered? decreasing? sorted?
 ⊑∘⍒∘|⊸⊑n1	Element with largest magnitude (first in case of ties)	Tacit	Ordering	maximum absolute value biggest farthest furthest away from 0 zero
 (⍒F⌜˜)⊸⊏y1	Sort y1 with custom comparison F (less-than or similar)	Expression	Ordering	ascending increasing sorting reordering by comparator three-result
-(⌽⍒+`a1)⊏y	Reverse each sublist of y indicated by starting mask a1	Expression	Structural	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
+(⌽⍒+`a1)⊏y	Reverse each sublist of y indicated by starting mask a1	Expression	Structural	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings flip reflect put backwards
 x(∊⍒⊸⊏⊣)y	Move major cells of x that appear in y to the front	Tacit	Search	promote cells items
 x(≠∘⊣>⊒)y	Progressive member of (∊) without replacement	Tacit	Search	isin membership containedin hascorresponding mathcingmemberof PDE remove
 i2 <¨⊸⊏⎉¯1‿∞ y	Select: each row of i2 selects a cell from y	Tacit	Selection	rightshoeunderbar saneindexing ⊇ items elements
