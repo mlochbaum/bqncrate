@@ -999,6 +999,7 @@ i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Ta
 " ⎕"⊏˜j>⌜↕⌈´j	Bar chart	Expression	Data	curve graph plotting
 (b¬⊸/"in")∾"correct"	Conditional in text	Expression	Text	message true false Boolean binary base-2 base2 converting change changing
 1(∾/∾˜)a1(≥/⊣)b1	All elements true (∧´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings every and
+(÷⟜2≤↕)¨∘≢⊸⊔y	Split array y in half along each axis	Tacit	Partitioning	separated partitioned chunked segmented sub-matrices submatrices block-matrix blockmatrix
 ↕⊸(+´⊣/˜0=|)j0	Aliquot sum (sum of proper divisors)	Tacit	Number Theory	s(n) divisorsum
 (+´⌾(×˜)÷≠)n1	Quadratic mean	Tacit	Statistical	Root square rms()
 +´⌾(×˜)(m1÷2)∾n0	Length of edges of rectangular pyramid with base dimensions m1 and height n0	Expression	Geometric	lengths sides
