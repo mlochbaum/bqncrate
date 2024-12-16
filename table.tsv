@@ -795,7 +795,6 @@ x(∾˝≍˘)y	Merge cells of equal-length arrays x and y alternately	Tacit	Stru
 F´¨i1+`⊸⊔y	Segmented reduction	Expression	Function Application	partionedreduction sub-vectors partitioned sub-lists subvectors sublists
 ∧˝⌈`⊸=n	Mask of which columns of n are in ascending order?	Expression	Ordering	testif vertical raising? sorted? growing?
 ∧˝⌊`⊸=n	Mask of which columns of n are in descending order?	Expression	Ordering	testif vertical falling? sorted? shrinking?
-⌊1+10⋆⁼1⌈|j	Number of base-10 digits of each integer in j	Expression	Mathematical	positions width representation
 (≠√×˝)n	Geometric mean	Tacit	Statistical	average GM() G() geometricmean
 ∧´∘⥊y∊0‿1	Is y an array of booleans?	Expression	Boolean	testif binary base-2 base2
 i+⊑(i↓b)⊐1	Index of first one after index i0 in b1	Expression	Search	1st
@@ -815,6 +814,7 @@ x(¬⍒⌾⋈)y	Is x lexically less than y?	Tacit	Ordering	testif totalarrayorde
 =⌜˜⟜⍷⊐y	Table of which unique matches each major cell of y	Expression	Search	nub distinctitems uniqueelemenets matrix elements
 x1⌾(0‿0⊸⍉)y2	Matrix y2 with main diagonal changed to x1	Expression	Linear Algebra	inplace update table
 f{𝕎𝕩}¨<y	Apply each function in f to the whole of y	Expression	Function Application	functions each every list gerund elements collect
+⌊1+•math.Log10 1⌈|j	Number of base-10 digits of each integer in j	Expression	Mathematical	positions width representation
 •rand.Deal∘≠⊸⊏y	Randomly reorder (shuffle) cells of y	Tacit	Random	permutation knuth fisher yates
 •rand.Range∘≠⊸⊏y	Random cell of y	Tacit	Random	deal one select
 •rand.Range∘≠⊸⊑y1	Random element of list y1	Tacit	Random	deal one select
@@ -923,6 +923,7 @@ i0(⊏⎉1⍒⊸⊏⊢)y	Sort y descending according to column i0	Tacit	Ordering
 x F⌾(<˘ax⍉⁼⊢) y	Run F on each list along axis ax of y	Tacit	Function Application	onaxis apply dimensions
 m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (slow)	Tacit	Data	tables
 (+˝÷≠)i0⍉⁼n	Average (mean) of elements of n along axis i0	Expression	Statistical	arithmeticmean() AM() avg() axis dimension cells items
+⌊1+10⋆⁼0.5+1⌈|j	Number of base-10 digits of each integer in j<1e15	Expression	Mathematical	positions width representation
 ⊢´∘/˘' '≠d2	Indices of last non-space character in each row of d2	Expression	Search	nonblanks nonspaces characters text row-wise rowwise horizontally
 ∧`∧˝˘' '=d2	Indicate leading all-blank rows of d2	Expression	Text	spaces beginning masking locate indications allspace all-space lines start blanks
 (⍋⊏1⊸⌽)•rand.Deal j0	Random permutation of length j0 consisting of a single cycle	Expression	Random	only one circle circular ordering
@@ -1137,6 +1138,8 @@ m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbe
 a1(⊢∧∧(⊢∊/)·+`»⊸<∘⊢)b1	Groups of ones in b1 pointed to by at least one 1 in a1	Expression	Partitioning	runs sequences 1s indicated trues truths
 (⌊0.5⊸+)⌾(÷⟜m){××𝔽∘|}n	Round n to nearest multiple of m, ties away from 0	Tacit	Rounding	precision favoring
 (⌈-⟜0.5)⌾(÷⟜m){××𝔽∘|}n	Round n to nearest multiple of m, ties towards 0	Tacit	Rounding	precision favoring
+10{𝕩=0?↕0;(𝕊⌊𝕩÷𝕗)∾𝕗|𝕩}j0	Base-10 digits of positive integer j0	Block Modifier	Mathematical	base10 decimal base-10 representation expand expansion antibase
+2{𝕩=0?↕0;(𝕊⌊𝕩÷𝕗)∾𝕗|𝕩}j0	Binary representation of positive integer j0	Block Modifier	Mathematical	digits base2 base-2 Boolean expand expansion antibase
 16⊸×⊸+˜´⌽(∾"0A"+⟜↕¨10‿6)⊐d1	Convert from uppercase hexadecimal string to number	Expression	Text	frombase16 base-16 ₁₆ hex2dec dec() Conversion converting change changing
 '"'{𝕨∾𝕨∾˜(1+𝕨=𝕩)/𝕩}d1	Turn string d1 into string literal source code (like •Repr)	Expression	Text	serialise ⍎⁼ inverse⍎ escape
 {'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all spaces with dashes	Block Function	Text	blanks substitute format
@@ -1164,12 +1167,12 @@ a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) of ea
 {⥊(⊏⟜𝕩≍˘˜⊢-¯1⊸»)/𝕩≠¯1«𝕩}⍟j0⋈1	Term j0 of the look-and-say sequence	Expression	Recreational	conways morris number digits repeating
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array maximums greatestif largest biggest major cells items
-2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0	Block Modifier	Mathematical	digits base2 base-2 Boolean
+2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0≤2⋆47	Block Modifier	Mathematical	digits base2 base-2 Boolean expand expansion antibase
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 ⊑{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Expression	Statistical	average AHM() HAM() AH() HA() harmonic-arithmetic
 ⊑m0{+´𝕨⋈⟜¬⊸×1‿¯1↓¨<𝕩}⍟(1-˜≠∘⊢)x1	Bezier curve with control points x1 evaluated at m0, by De Casteljau's algorithm	Expression	Geometric	polynomial spline value of interpolate parameter linear quadratic cubic
 ∨/⁼⊐i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Cycle type (lengths of all cycles) of permutation i1	Expression	Mathematical	structure shape partition
-10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼0.5+1⌈⊢)}j0	Base-10 digits of natural number j0	Block Modifier	Mathematical	base10 decimal base-10
+10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼0.5+1⌈⊢)}j0	Base-10 digits of natural number j0<1e15	Block Modifier	Mathematical	base10 decimal base-10 representation expand expansion antibase
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Structural	list cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Statistical	pcc() ppmcc() bivariate
 F{𝔽´𝔽˜⍟(/2|⌊∘÷⟜2⍟(↕1+⌊2⋆⁼𝕘)𝕘)}i0 y	Compute F´i0⥊<y (or y F⍟i0 id) for associative F by repeated squaring	Block Modifier	Function Application	exponential poweroperator repeating iterating looping matrix reorder
