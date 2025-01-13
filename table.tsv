@@ -912,11 +912,13 @@ m1{𝕩×¬𝕩∊𝕨}n	Change elements of n that are found in m1 to zero	Block
 x1(∧´∊˜∾∊)y1	Are x1 and y1 equivalent as sets?	Tacit	Sets	equivalence
 0(∾+∾˜)⍟i0⥊1	Row i0 of Pascal's triangle	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 F{𝕨𝔽˜´⌽𝕩}	Fold from the left	Block Modifier	Function Application	reduction typenotation reducing folding
+(≠x)-(⌽x)⍋y	Exclusive bins down: like x⍒y, but placing cells of y before matching ones in x	Expression	Ordering	right-inclusive left-exclusive intervalindex binarysearch groups ranges buckets classes classifying classification major cells elements
 x(⊏˜⍋⊸⊏⊢)j1	Sort indices j1 according to data x	Tacit	Ordering	permute
 (⍋+`⊸+a1)⊏y	Rotate (1⊸⌽) each sublist of y's major cells indicated by starting mask a1	Expression	Structural	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements
 x(⍋∘∊˜⊏⊢)y	Move cells x to end of y	Tacit	Search	major cells elements trailing ending
 x1(∊˜⍋⊸⊏⊢)y1	Move elements x1 to end of y1	Tacit	Search	major cells elements trailing ending
 i0(⊏⎉1⍋⊸⊏⊢)y	Sort y ascending according to column i0	Tacit	Ordering	sort() major cells elements items of array up increasing sorting reordering bycolumn specific
+(≠x)-(⌽x)⍒y	Exclusive bins up: like x⍋y, but placing cells of y before matching ones in x	Expression	Ordering	right-inclusive left-exclusive intervalindex binarysearch groups ranges buckets classes classifying classification major cells elements
 i0(⊏⎉1⍒⊸⊏⊢)y	Sort y descending according to column i0	Tacit	Ordering	sort() major cells elements items of array down decreasing sorting reordering bycolumn specific
 ⌈´⊸=∘⊒⊸/y	Modes: Most frequent major cells of data	Tacit	Statistical	average items elements
 (1+⊒+⊒⌾⌽)y	Count of total (not previous) occurrences of each cell of y	Tacit	Search	tally selfcount items elements duplicate repetitions appearances
