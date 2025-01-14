@@ -1194,7 +1194,7 @@ i0|⊑i0{0=𝕨?1‿0;(⌽-(0⋈𝕩⌊∘÷𝕨)⊸×)𝕨𝕊˜𝕨|𝕩}j0	Mu
 (((≠×+´∘×˜)-·×˜+´)÷·(1⌈-⟜1)⊸×≠)n1	Sample variance	Tacit	Statistical	σ² s² σ^2 s^2 empirical Var(x) dispersion
 {𝕩‿𝕩⥊⍒⌽+`(⌽»2/1+↕𝕩)(⊣/≠⊸⥊)∾⟜-1‿𝕩}j0	Spiral of numbers of size j0, starting with 0 the center and increasing outwards	Block Function	Recreational	rotation concentric rectangular rings evolute
 {m←(+´∘⥊÷˜+˝˘×⌜+˝)𝕩⋄+´⥊(×˜𝕩-m)÷m}n2	Pearson's chi-squared test on contingency table n2	Block Function	Statistical	χ2 hypothesis testing null statistically significant distribution
-c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Text	fuzzy match
+c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Text	approximate fuzzy matching insertions deletions substitutions wagner-fischer algorithm
 1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression	Recreational	Knuth ALGOL
 (0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression	Recreational	interview counting
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Text	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
