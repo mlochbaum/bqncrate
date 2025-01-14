@@ -1133,6 +1133,7 @@ F{𝔽∘⊢⍟≢⟜𝔽_𝕣∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F starti
 a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b	Indicate first one ((»∨`)⊸<) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
 ((+´÷≠)∧⊏˜2⌊∘÷˜¯1‿0+≠)n1	Median of non-empty n1, averaging two values for even lengths	Tacit	Statistical	average
 (+´¨(+⌜´↕∘≠¨)⊔×⌜´)y1	Product of list of polynomials (ascending or descending order)	Tacit	Polynomial	multiplicationof multiply times coefficients
+(+⟜»˝×⌜)˝1⊸↓⊸(0=|⌜)↕n0	First n0 partition numbers (number of sets with the given sum)	Expression	Combinatorics	integers partitions unordered young ferrers diagrams
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings zeros 0s falses
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch when b1 turns on and a1 turns off (initially off)	Tacit	Partitioning	signal on/off
 +´(↕3)(×˝⌽˘){𝔽--⊸𝔽}n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Expression	Linear Algebra	scalar box signed volume parallelepiped
