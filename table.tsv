@@ -945,7 +945,7 @@ i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Select
 (<⌈´≢¨y1)↑¨y1	Pad elements of list of equal-rank arrays y1 to equal shape	Expression	Structural	cells items
 0=(1+↕⌈´j1)|⌜j1	Divisibility table	Expression	Number Theory	divides divisor matrix
 (∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering by comparator
-i0(+˝˘∘↕÷⊣)n	n-wise rolling average	Tacit	Data	rollingmean windowedmean windowedaverage
+i0(+˝˘∘↕÷⊣)n	i0-wise rolling average	Tacit	Data	rollingmean windowedmean windowedaverage
 -⟜»(1⌽a1)/+`n	Sum of each sublist of n indicated by starting mask a1	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements
 (∨`∧∨`⌾⌽)b1	Mask that selects values between first and last 1	Tacit	Boolean	masking trim ones 1st bitmask bit-mask
 i0(×⥊⊢-⊸↑1˙)j0	Mark ending points for i0 sublists of width j0	Tacit	Partitioning	vector trailing segments partitions
@@ -1201,6 +1201,7 @@ c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=�
 F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 with custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering by comparator three-result
 ∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
 {{𝕊⍟(𝕩<○≠⊢)⟜(𝕩∾·/𝕨⊸<)𝕨∨∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution dag scheduling kahn's algorithm
+1-˜1{𝕨≥≠𝕩?↕≠𝕩;0⌈-⟜(𝕨×n1≤⊏⟜𝕩)𝕨+˜⊸𝕊𝕩⌊𝕨-⊸⌽𝕩}»n1	Index of most recent element with a smaller value, at each position of n1	Expression	Mathematical	latest rightmost nearest distance from before precedes preceding lesser
 i0 F{(𝕨¬˜≠𝕩)↑⥊1(-⊸↓𝔽˜`⌾⌽⊸𝔽⟜(𝔽`)˘↓)↑‿(𝕨-1)⥊𝕩}y	Linear-time F˝˘i0↕y for associative arithmetic F, fast for large windows	Block Modifier	Data	rolling windowed sums minimums maximums average vanherk gil werman
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infirmum lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Ordering	most maximum supremum biggest highest
