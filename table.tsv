@@ -1078,6 +1078,7 @@ i0(⊢÷⊣√·+´⋆˜⟜|)n	Normalisation by i0-norm	Tacit	Geometric	Lp-norma
 f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Function Application	each every list gerund elements to both arguments collect
 -⟜»n0∾˜1+m0•rand.Subset○(-⟜1)n0	Random list of m0 positive (not zero) integers with sum n0	Expression	Random	partition divide number
 {(∨˝' '≠𝕩)/⎉1𝕩}d2	Remove blank columns	Block Function	Text	all-space allspace empty delete drop without
+∾1↓⥊(<',')≍˘•Repr¨n1	Format list of numbers with commas between	Expression	I/O	csv separated values
 ' '(⊢+=×'-'-⊣)d	Replace all spaces with dashes in d	Expression	Text	blanks substitute format
 i1{𝕩↑˜𝕨⌊(≠𝕨)↑≢𝕩}y	Take up to i1 positions from axes of y	Block Function	Selection	limit major cells items
 (↕1+⌈)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending after n0	Expression	Sequences	interval
@@ -1173,6 +1174,7 @@ a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0≤2⋆47	Block Modifier	Mathematical	digits base2 base-2 Boolean expand expansion antibase
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 ⊑{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Expression	Statistical	average AHM() HAM() AH() HA() harmonic-arithmetic
+∾1↓⥊≍˘⎉1˜⟜((@+10)»','¨∘⊏)•Repr¨n2	Format table of numbers as comma separated values	Expression	I/O	csv
 ⊑m0{+´𝕨⋈⟜¬⊸×1‿¯1↓¨<𝕩}⍟(1-˜≠∘⊢)x1	Bezier curve with control points x1 evaluated at m0, by De Casteljau's algorithm	Expression	Geometric	polynomial spline value of interpolate parameter linear quadratic cubic
 ∨/⁼⊐i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Cycle type (lengths of all cycles) of permutation i1	Expression	Mathematical	structure shape partition
 10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼0.5+1⌈⊢)}j0	Base-10 digits of natural number j0<1e15	Block Modifier	Mathematical	base10 decimal representation expand expansion antibase
