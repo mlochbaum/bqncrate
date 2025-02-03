@@ -936,7 +936,6 @@ m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (slow)	Tacit	Data	tab
 ↕⊸(⊣/˜0=|)j0	Proper divisors of j0	Tacit	Number Theory	factorisation factorization
 x2(¯1⊑≠)⊸(↑˘)y2	Widen table y2 to the same row length as x2	Tacit	Structural	adjust width
 (⌊i0×↕⊸÷≠y)⊔y	Distribute major cells of y into i0 slices as evenly as possible	Expression	Partitioning	unzip elements items deal
-∨≠¨⊸(≍˘)⊔y	Sorted frequency table	Expression	Data	matrix
 (¬2|↕∘≠)⊸/y	Remove every second cell of y	Tacit	Selection	filter even odd parity
 m(∧⟜¬∨¬⊸∧)n	Probabilistic XOR	Tacit	Statistical	fuzzy probability chance exclusivedisjunction eor exor ⊕ ⊻ ⇎ Jpq
 i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Selection	leftshift rightshift bits bytes
@@ -991,6 +990,7 @@ i0(-⊸↓≠↓)0∾≠`b	Fast rolling bitwise exclusive-or ≠˝˘i0↕b	Expre
 >»⊸+⍟(↕≠)j0↑1	Pascal's triangle: first j0 rows of binomial coefficients	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 (⍋(↕≠x)∾i1)⊏x∾y	Insert cells of y into x after positions i1	Expression	Structural	add items elements index indices splice
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Structural	faro dovetail zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
+∨(/⁼∘⊐≍˘⍷)y1	Table of unique element counts and values, sorted with most frequent first	Expression	Data	matrix histogram number frequency frequencies elements
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Text	combine glue 0x0A U+0A U+000A
 F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Block Modifier	Function Application	fixpoint ycombinator iterated until convergence powerlimit stable
 (π÷3)×(×˜m)×n	Volume of cone with height m and radius n	Expression	Geometric	lengths
