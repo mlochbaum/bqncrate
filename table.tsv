@@ -771,6 +771,7 @@ y/˜0≠i0|↕≠y	Remove every i0'th cell of y	Expression	Selection	filter item
 (⌊⋈1⊸|)n0	Integral and fractional part of positive number	Tacit	Mathematical	parts split whole decimals
 ¯97⊸(|-⊣)i0	SWIFT check digit from i0 bank number	Tacit	Finance	correct validate
 (↕÷-⟜1)j0	j0 evenly spaced numbers starting at 0 and ending at 1	Tacit	Sequences	unit normalized steps linear divide inclusive
+∾⟜(1¨⊏)y	Append a row of 1s	Tacit	Data	ones trues truths
 x0¨⌾(b1⊸/)y1	Replace elements of y1 with x0 where b1 is 1	Tacit	Structural	substitute merge amend update major cells items indicate masking indicating
 ÷1++⌜˜↕j0	Hilbert matrix of order j0	Expression	Linear Algebra	table sorting reordering
 (+´÷≠)n	Arithmetic mean of n	Tacit	Statistical	average arithmeticmean() AM() avg()
@@ -836,7 +837,6 @@ m(⊣+-⊸|)n	Residue after dividing n by m but replacing 0 with m	Expression	Da
 (↕¯1⊑≢)⊸∾y2	Attach column numbers to a table	Tacit	Indices	headings
 m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions j1 starting at m1 with steps n1	Expression	Sequences	seq() multidimensional axes
 m(≤⟜|×⊢)n	Round to zero values of n within m of zero	Tacit	Rounding	precision fuzz 0
-∾⟜(1¨∘⊏)y	Append a row of 1s	Tacit	Data	ones trues truths
 x⊣⌾(b1⊸/)˜y	Merge x and y using b1 (0 for x's element, 1 for y's element)	Tacit	Structural	faro dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
 ⌽⌾(0‿¯1⊸⊏)y	Swap first and last major cells	Tacit	Structural	exchange head tail leading trailing elements items 1st start beginning ending
 (+´÷1⌈≢)n1	Average, returning 0 if empty	Tacit	Statistical	arithmeticmean
@@ -1177,6 +1177,7 @@ x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements o
 ∾1↓⥊≍˘⎉1˜⟜((@+10)»','¨∘⊏)•Repr¨n2	Format table of numbers as comma separated values	Expression	I/O	csv
 ⊑m0{+´𝕨⋈⟜¬⊸×1‿¯1↓¨<𝕩}⍟(1-˜≠∘⊢)x1	Bezier curve with control points x1 evaluated at m0, by De Casteljau's algorithm	Expression	Geometric	polynomial spline value of interpolate parameter linear quadratic cubic
 ∨/⁼⊐i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Cycle type (lengths of all cycles) of permutation i1	Expression	Mathematical	structure shape partition
+{(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}d1-'0'	Extract natural numbers from a string of digits and separators less than '0'	Expression	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
 10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼0.5+1⌈⊢)}j0	Base-10 digits of natural number j0<1e15	Block Modifier	Mathematical	base10 decimal representation expand expansion antibase
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Structural	cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Statistical	pcc() ppmcc() bivariate
@@ -1186,11 +1187,10 @@ F{𝔽´𝔽˜⍟(/2|⌊∘÷⟜2⍟(↕1+⌊2⋆⁼𝕘)𝕘)}i0 y	Compute F´i
 ¯1⋆≠´¬∊i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Sign of permutation i1, in quasi-linear time	Expression	Mathematical	even odd parity permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita LC number inversions transpositions
 ((↕-⌈∘÷⟜2)(⊣⌽˘⌾⍉⌽˘)⋈˜⥊⟜↕×˜)j0	a magic square, odd side j0	Tacit	Recreational	
 ⊑{𝕩𝕊⍟≢𝕩(×´⊸(√˜)⋈+´⌾÷⊸×)≠𝕩}n1	Geometric-harmonic mean	Expression	Statistical	average GHM() HGM() GH() HG() harmonic-geometric
-{(>⟜«0≤𝕩)/0(0⊸≤××⟜10⊸+)`𝕩}∘-⟜'0' d1	Extract natural numbers from a string of digits and separators less than '0'	Tacit	Text	frombase10 base-10 dec() decimal Conversion converting change changing scanf read
+∾(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽m0↕↕n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Expression	Combinatorics	selections sublists subsequences choices choose
 (2÷√π)×n0×{(⋆-𝕩)×1(1+×)´𝕩÷1.5+↕99}×˜n0	Error function (normalized integral of Gaussian)	Expression	Statistical	statistics erf() distribution sigmoid cdf cumulative
 {s←('^'=𝕩)∧«1="@`"⍋𝕩⋄s¬⊸/𝕩-64×»s}d1	Evaluate control character sequences (like ^J)	Tacit	Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed verticaltab vt formfeed carriagereturn crlf cr+lf ^M^J control-z sub eof endoffile end-of-file ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^K ^L ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_
 (≍↕0){∾˝(0∾˘1+𝕩)⊸⊏˘⍒˘=⌜˜↕𝕨}´-⟜↕j0	All permutations of ↕j0, as table rows in lexicographical order	Expression	Combinatorics	ordered orderings anagrams rearrangements without replacement list
-∾(⍉∾˘¨⟜(∾˜`)˝˜≠↑(↓≍↕0)˙)⌾⌽m0↕⟜↕n0	All length-m0 subsets (combinations) of ↕n0, as table rows in lexicographical order	Expression	Combinatorics	selections sublists subsequences choices choose
 0{0=≠𝕩?𝕨;(⊑𝕩)(+⟜(𝕨×≠𝕩)𝕊⊢-<)1↓𝕩}i1	Index of the permutation i1 among those of equal length in lexicographical order	Expression	Combinatorics	ordering anagram rearrangement without replacement list lehmer encode
 {𝕩‿𝕩⥊⍋+`(⌽»2/1+↕𝕩)(⊣/≠⊸⥊)∾⟜-1‿𝕩}j0	Spiral of numbers of size j0, starting with 0 in a corner and increasing inwards	Block Function	Recreational	rotation concentric rectangular rings involute
 ⍋<⟜⍉{𝕩(⊢⌈⊏˘⌊⌜⊏)´↕≠𝕩}+´(<⌜˜⍋)¨y1	Given a list of complete ballots ordering ↕n, choose an overall ordering by Schulze's method (smaller wins ties)	Expression	Ordering	ranked ranking choice voting rcv election votes voters rule majority winner condorcet beatpath
