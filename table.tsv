@@ -1201,6 +1201,7 @@ i0|⊑i0{0=𝕨?1‿0;(⌽-(0⋈𝕩⌊∘÷𝕨)⊸×)𝕨𝕊˜𝕨|𝕩}j0	Mu
 c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Levenshtein distance (number of single-character edits) between strings	Tacit	Text	approximate fuzzy matching insertions deletions substitutions wagner-fischer algorithm
 1‿¯1‿¯1‿1‿0{y‿z←3↓𝕨⋄0⊸<◶⟨Y+Z,»⟜𝕨⊸𝕊{𝕤𝔽k-↩1}⟩k←𝕩}10	Man or boy test	Expression	Recreational	Knuth ALGOL
 (0=3‿5⊸|)◶(⊢˙⌾⊑∾⌜○{""‿𝕩}´"Fizz"‿"Buzz")¨1+↕100	FizzBuzz	Expression	Recreational	interview counting
+{/(2≤↕𝕩){𝕩>0⌾(𝕨⊸⊑)𝕩≠⊸⥊𝕨↑1}⍟⊑´⌽↕⌈√𝕩}j0	Primes less than j0, somewhat quickly	Expression	Number Theory	primesuntil numbers
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Text	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
 F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 with custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering by comparator three-result
 ∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
