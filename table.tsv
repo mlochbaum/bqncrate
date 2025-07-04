@@ -1069,6 +1069,7 @@ i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorte
 i0((⊢+|⟜-)⟜≠↑⊢)y	Increase the leading dimension of y to multiple of i0	Tacit	Structural	1st axis divisibleby pad extend first start beginning
 i1((⊢+|⟜-)⟜≢↑⊢)y	Increase the dimensions of y to multiples of i1	Tacit	Structural	allaxes divisibleby pad extend
 j0(+÷○(×´)⊢)1+1↓↕j0	Catalan number C_j0: number of ways to nest j0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
+(/⁼⥊+⌜´↕¨j1)÷×´j1	Probabilities of possible sums when rolling dice with numbers of sides j1	Expression	Combinatorics	sided die total add together
 i1{(¬𝕨∊˜↕≠𝕩)/𝕩}y	Remove major cells at indices i1 from y	Block Function	Selection	elements items without positions
 (∧´∘∊≠|↕∘≠⊸+)j1	Valid siteswap pattern for juggling?	Tacit	Specialty	testif beat
 x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Tacit	Selection	trim trailing right items list ending
