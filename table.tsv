@@ -962,6 +962,7 @@ i1{𝕨⊏⍟𝕩↕≠𝕨}j0	Permutation i1 to the power of j0	Block Function	
 j⊏∾"0A"+⟜↕¨10‿26	Translate digits to characters (bases 2 through 36)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 letters 0123456789abcdef converting change changing
 -´(2×j0)•math.Comb j0+↕2	Catalan number C_j0: number of ways to nest j0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 (⍋' '⊸=)⊸⊏d1	Move all spaces to end	Tacit	Text	blanks trailing ending
+(+`m1)⍋j0•rand.Range+´m1	Length-j0 list of random indices into m1 with integer weights m1	Expression	Random	weighted biased non-uniform distribution roll die sample
 (⥊(↕2˘)/¨<)y	Power set: a list of all subsets of the cells of y	Tacit	Sets	powerset power-set combinations choices most one
 (∧⊑˜2⌊∘÷˜≠)n1	Median of non-empty n1, taking larger value for even lengths	Tacit	Statistical	average
 x0(1⊸»⊸∨∘≠/⊢)y1	Remove consecutive duplicate x0's from list y1	Tacit	Search	deduplicate erase multiple repetitions repeated copies equal matching keep retain different previous next adjacent
@@ -1063,6 +1064,7 @@ x(∾○(↕≠)⍋⊸⊏∾)y	Merge x and y alternately	Tacit	Structural	faro d
 (1⊸»⊸∨' '⊸≠)⊸/d1	Remove duplicate spaces, turning each sequence of spaces into one	Tacit	Text	delete trim reformat extraneous blanks multiple drop without
 (∨`⌾⌽' '⊸≠)⊸/d1	Remove trailing spaces	Tacit	Text	delete blanks drop ending without
 +`-⟜»˝"()"=⌜d1	Depth of parentheses	Expression	Text	bracket brace nesting level parenthesis parens
+(¯1(↓÷⊑)+`m1)⍋j0•rand.Range 0	Length-j0 list of random indices into m1 with weights m1	Expression	Random	weighted biased non-uniform distribution roll die sample real floating-point
 m0{(𝕨⊣0)∾𝕩÷1+↕≠𝕩}n1	Integral of polynomial n1 with ascending coefficients and optional constant m0	Block Function	Polynomial	firstintegral integrate
 (≠y1)(«-⊢)/1»≠⟜«y1	Lengths of sublists of y1 having equal elements	Expression	Partitioning	runs changes identical consistent cells items
 i0(⌊∘÷˜⟜(↕≠)⊔⊢)y	Split y into groups of length i0, plus a shorter one at the end if needed	Tacit	Partitioning	chunk divide dividing cut distribute greedy
