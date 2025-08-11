@@ -876,6 +876,7 @@ x F⎉(-⌊○=) y	Apply F with leading axis agreement	Tacit	Function Applicatio
 (⌽⍒+`a1)⊏y	Reverse each sublist of y indicated by starting mask a1	Expression	Structural	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings flip reflect put backwards
 x(∊⍒⊸⊏⊣)y	Move major cells of x that appear in y to the front	Tacit	Search	promote items
 x(≠∘⊣>⊒)y	Progressive member of (∊) without replacement	Tacit	Search	isin membership containedin hascorresponding mathcingmemberof PDE remove
+⍷⊐¨⥊↕1+↕j0	All set partitions of j0 items, as Group arguments	Expression	Combinatorics	count equivalence relations rhyme schemes
 i2 <¨⊸⊏⎉¯1‿∞ y	Select: each row of i2 selects a cell from y	Tacit	Selection	rightshoeunderbar saneindexing ⊇ items elements
 m +˝∘×⎉1‿∞ n	Matrix product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Linear Algebra	dotproduct multiplication multiply
 m -˝∘×⎉1‿∞ n	Alternating matrix product of m and n (¯1↑m ↔ 1↑≢n)	Tacit	Linear Algebra	
@@ -987,7 +988,6 @@ i0(-⊸↓≠↓)0∾≠`b	Fast rolling bitwise exclusive-or ≠˝˘i0↕b	Expre
 1↓(i0=+`⊑⊸=y1)/y1	The i0'th sublist of y1, where sublists are separated by ⊑y1	Expression	Text	select pick partitionedvector segmentedstring index cell item 1st
 (1⌈`↕∘≠⊸×a1)⊏y	Copy each cell of y until before next 1 in a1	Expression	Selection	item element
 (∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column)	Tacit	Boolean	sequence run trues truths 1st
-⊐⊸≡¨⊸/⥊↕1+↕n0	All set partitions of n0 items, as Group arguments	Expression	Combinatorics	count equivalence relations rhyme schemes
 >»⊸+⍟(↕≠)j0↑1	Pascal's triangle: first j0 rows of binomial coefficients	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 (⍋(↕≠x)∾i1)⊏x∾y	Insert cells of y into x after positions i1	Expression	Structural	add items elements index indices splice
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Structural	faro dovetail zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
@@ -1174,6 +1174,7 @@ a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) of ea
 {⥊(⊏⟜𝕩≍˘˜⊢-¯1⊸»)/𝕩≠¯1«𝕩}⍟j0⋈1	Term j0 of the look-and-say sequence	Expression	Recreational	conways morris number digits repeating
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array maximums greatestif largest biggest major cells items
+⍉(1⌈2+⌈˝)⊸(/⎉1∾⊒∘/∘⊣)⍟j0≍˘↕0	All set partitions of j0 items, quickly	Expression	Combinatorics	count equivalence relations rhyme schemes
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0≤2⋆47	Block Modifier	Mathematical	digits base2 base-2 Boolean expand expansion antibase
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 ⊑{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Expression	Statistical	average AHM() HAM() AH() HA() harmonic-arithmetic
