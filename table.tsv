@@ -1174,7 +1174,6 @@ a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) of ea
 {⥊(⊏⟜𝕩≍˘˜⊢-¯1⊸»)/𝕩≠¯1«𝕩}⍟j0⋈1	Term j0 of the look-and-say sequence	Expression	Recreational	conways morris number digits repeating
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array minimums smallest least major cells items
 a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array maximums greatestif largest biggest major cells items
-⍉(1⌈2+⌈˝)⊸(/⎉1∾⊒∘/∘⊣)⍟j0≍˘↕0	All set partitions of j0 items, quickly	Expression	Combinatorics	count equivalence relations rhyme schemes
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0≤2⋆47	Block Modifier	Mathematical	digits base2 base-2 Boolean expand expansion antibase
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 ⊑{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Expression	Statistical	average AHM() HAM() AH() HA() harmonic-arithmetic
@@ -1185,6 +1184,7 @@ x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements o
 10{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼0.5+1⌈⊢)}j0	Base-10 digits of natural number j0<1e15	Block Modifier	Mathematical	base10 decimal representation expand expansion antibase
 (<·⌈´≢¨«¨·<1⥊˜·⌈´=¨)⊸(↑¨)y1	Pad elements of list of arbitrary-rank arrays y1 to equal shape	Tacit	Structural	cells items
 m1+´∘×○(÷⟜(√+´∘×˜)-⟜(+´÷≠))n1	Sample Pearson correlation coefficient	Tacit	Statistical	pcc() ppmcc() bivariate
+⍉(1⌈2+⌈˝)⊸{(𝕨⊸/˘𝕩)∾⊒/𝕨}⍟j0≍˘↕0	All set partitions of j0 items, quickly	Expression	Combinatorics	count equivalence relations rhyme schemes
 i0{(↕0)(⊣∾≤+⊢)´⌽l|⌊∘÷`𝕨»l←1+↕𝕩}j0	The i0'th permutation of ↕j0 according to lexicographical order	Block Function	Combinatorics	ordering anagram rearrangement without replacement list lehmer decode
 F{𝔽´𝔽˜⍟(/2|⌊∘÷⟜2⍟(↕1+⌊2⋆⁼𝕘)𝕘)}i0 y	Compute F´i0⥊<y (or y F⍟i0 id) for associative F by repeated squaring	Block Modifier	Function Application	exponential poweroperator repeating iterating looping matrix reorder
 ⊑∘{𝕩𝕊⍟≢𝕩(+´⊸÷⋈×´⊸(√˜))≠𝕩}n1	Arithmetic-geometric mean	Tacit	Statistical	average AGM() GAM() AG() GA() geometric-arithmetic common
