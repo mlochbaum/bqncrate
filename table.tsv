@@ -380,7 +380,7 @@ a0⊑x‿y	Pick y if a0 is true or x if a0 is false	Expression	Selection	conditi
 ⊑i0⌽y1	Pick element of list y1 at cyclic offset i0	Expression	Selection	cell ⎕ioindependent ⎕ioindependence ⎕io-insensitive ⎕ioinsensitive Choosing choose ⎕io=0
 ⊑/b	Index of first satisfied condition in b	Expression	Search	1st
 i1⥊<y	Array of shape i1 filled with copies of y	Expression	Structural	copy repeat repetitions duplicate reshape
-0‿j0⥊0	Initialise a table with j0 columns and no rows	Expression	Structural	
+0‿j0⥊0	Initialize a table with j0 columns and no rows	Expression	Structural	
 ↕2⥊2	Unit square	Constant	Geometric	
 ↕3⥊2	Unit cube	Constant	Geometric	
 ↕4⥊2	Unit tesseract	Constant	Geometric	
@@ -406,7 +406,7 @@ F⊸/y	Filter to only those elements of y that satisfy cell-wise criterion F	Exp
 ¯1⊸⊏y	Tail: Last major cell	Tacit	Selection	y[-1] x[-1] y[¯1] x[¯1] trailing element item ending
 -⟜1 n	Decrement	Tacit	Arithmetic	decrease previous
 ÷⟜2 n	Halve: n÷2	Tacit	Arithmetic	halfof
-÷⟜F n	Normalise, scaling so that the norm F is equal to 1	Expression	Data	arbitrary custom F=1 vector list
+÷⟜F n	Normalize, scaling so that the norm F is equal to 1	Expression	Data	arbitrary custom F=1 vector list
 x F⊸G⟜H y	Split-Compose: apply G between (F x) and (H y), that is (F x) G (H y)	Tacit	Composition	composewith splitover (fX)G(hY) (fX)ghY
 x⌾⊏y	Replace first major cell of y with x	Expression	Structural	substitute merge amend update 1st item element
 F⌾⥊y	Handle array y temporarily as a list	Tacit	Function Application	columnheadings columnnumbers ⍢, flattened ravelled raveled
@@ -784,8 +784,8 @@ i1≤⌜⌽↕⌈´i1	Matrix with i⊑i1 trailing zeroes on row i	Expression	Lin
 =⌜○↕´≢n2	Identity matrix with shape of table n2	Expression	Linear Algebra	diagonal
 ≠⌜○↕´≢n2	Anti-diagonal matrix with shape of table n2	Expression	Linear Algebra	nondiagonal
 (+˝÷≠)n	Column-wise arithmetic mean of n	Tacit	Statistical	average arithmeticmean() AM() avg()
-(⊢-⌊˝)n	Normalise n so that minimum value is 0	Tacit	Data	normalize zero smallest least cell element
-(⊢÷+˝)n	Normalise n so that sum is 1	Tacit	Data	normalize one
+(⊢-⌊˝)n	Normalize n so that minimum value is 0	Tacit	Data	normalize zero smallest least cell element
+(⊢÷+˝)n	Normalize n so that sum is 1	Tacit	Data	normalize one
 (⊢=⌈˝)n1	Mask of positions where the global maximum occurs in n1	Tacit	Search	indicate equal to maxima maximums location masking indicating
 x(∾˝≍˘)y	Merge cells of equal-length arrays x and y alternately	Tacit	Structural	faro dovetail zipper zipping interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
 -´×⟜⌽˝n2	Determinant of two-row matrix	Expression	Linear Algebra	det() 2-row 2row table
@@ -1018,7 +1018,7 @@ i1⊏⟜(0∾⊢)⌾(+`)n	Sums (+´) of sublists of n with lengths given by i1	T
 ⟨1⟩(0⊸∾-×∾0˙)´n1	Coefficients in ascending order of polynomial with roots n1	Expression	Polynomial	solved zeroes binomial factors monic
 ¯1⋆≠´∾<⟜(≠↑↑)j1	Sign of permutation	Expression	Mathematical	even odd parity permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita LC number inversions transpositions
 (+˝÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Statistical	average GM() G() geometricmean
-(+´÷≠)⌾(√⟜m0)n	Generalised mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
+(+´÷≠)⌾(√⟜m0)n	Generalized mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left items list start
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Sets	⊖
 ⊑¨+`∘⌽⍟(↕n0)↕2	First n0 Fibonacci numbers	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population
