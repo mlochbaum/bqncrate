@@ -1017,8 +1017,8 @@ i1⊏⟜(0∾⊢)⌾(+`)n	Sums (+´) of sublists of n with lengths given by i1	T
 ⥊(<⟨⟩)<⊸∾⌜´y1	Cartesian product: all lists of one element from each list in y1	Tacit	Structural	catalog n-fold sets family pairings tuples table
 ⟨1⟩(0⊸∾-×∾0˙)´n1	Coefficients in ascending order of polynomial with roots n1	Expression	Polynomial	solved zeroes binomial factors monic
 ¯1⋆≠´∾<⟜(≠↑↑)j1	Sign of permutation	Expression	Mathematical	even odd parity permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita LC number inversions transpositions
-(+˝÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Statistical	average GM() G() geometricmean
-(+´÷≠)⌾(√⟜m0)n	Generalized mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
+(+´÷≠)⌾(⋆⟜m0)n	Generalized mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
+(+´÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Statistical	average GM() G() geometricmean
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left items list start
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Sets	⊖
 ⊑¨+`∘⌽⍟(↕n0)↕2	First n0 Fibonacci numbers	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population
