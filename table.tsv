@@ -947,6 +947,7 @@ i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Select
 (∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering by comparator
 i0(+˝˘∘↕÷⊣)n	i0-wise rolling average	Tacit	Data	rollingmean windowedmean windowedaverage
 -⟜»(1⌽a1)/+`n	Sum of each sublist of n indicated by starting mask a1	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements
+≠⟜»(1⌽a1)/≠`b	Parity (≠´) of each sublist of b indicated by starting mask a1	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements boolean
 (∨`∧∨`⌾⌽)b1	Mask that selects values between first and last 1	Tacit	Boolean	masking trim ones 1st bitmask bit-mask
 i0(×⥊⊢-⊸↑1˙)j0	Mark ending points for i0 sublists of width j0	Tacit	Partitioning	vector trailing segments partitions
 (3÷˜2⊸⋆-¯1⊸⋆)j0	Jacobsthal number	Tacit	Mathematical	sequence Ernst j(n) A001045() A1045()
@@ -1055,8 +1056,10 @@ x(⊢/˜⊏∘⥊˘⊸∊˜)y2	Rows of non-empty table y starting with an elemen
 m1(+˝∘×⎉1÷+´∘⊣)n2	Weighted average of rows of n2 with column weights m1	Tacit	Data	
 x≤○≠◶0‿(⊣≡≠⊸↑)y	Is x a prefix of y?	Tacit	Search	prefixof startswith
 x(∾○(↕≠)⍋⊸⊏∾)y	Merge x and y alternately	Tacit	Structural	faro dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
-(/i1)(⊏˜⍋⊸⊏⊢)⍋y	Grade up (⍋) for sorting subarrays of y having lengths i1 (≠y ↔ +´i1)	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
-(/i1)(⊏˜⍋⊸⊏⊢)⍒y	Grade down (⍒) for sorting subarrays of y having lengths i1 (≠y ↔ +´i1)	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
+(⍋⊏⟜(+`a1))⊸⊏⍋y	Indices to sort each sublist of y indicated by starting mask a1, ascending	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements upgrade
+(⍋(+`i1)⊸⍋)⊸⊏⍋y	Grade up (⍋) for sorting subarrays of y having lengths i1 (≠y ↔ +´i1)	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
+(⍋⊏⟜(+`a1))⊸⊏⍒y	Indices to sort each sublist of y indicated by starting mask a1, descending	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements upgrade
+(⍋(+`i1)⊸⍋)⊸⊏⍒y	Grade down (⍒) for sorting subarrays of y having lengths i1 (≠y ↔ +´i1)	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
 {𝕩⌾(0‿0⊸⍉)0⌜˜𝕩}y1	Diagonal matrix with y1 along diagonal	Block Function	Linear Algebra	cells items table
 =⊸{<⎉𝕨⍉⍟𝕨>𝕩}y	Invert array of same-rank arrays, exchanging inner with outer axes	Tacit	Structural	transpose transposing cell element zip() remixing zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing flip
 (××2×·⌈2÷˜1-˜|)n	Round to nearest even number, ties towards 0	Tacit	Rounding	precision favoring
