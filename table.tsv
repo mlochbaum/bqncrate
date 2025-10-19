@@ -300,7 +300,7 @@ i1•bit._not n	Bitwise negation (¬) of n with bit widths given by i1 	System	B
 •math.Sinh n	Hyperbolic sine of n	System	Trigonometry	sinh()
 •math.Tan n	Tangent of angle n (radians)	System	Trigonometry	tan() tangens
 •math.Tanh n	Hyperbolic tangent of n	System	Trigonometry	tanh()
-•rand.Deal n0	A random shuffle of ↕n0	System	Random	shuffling reorder
+•rand.Deal n0	A random shuffle of ↕n0	System	Random	shuffling reorder permutation
 •rand.Range 0	A random real number in the interval from 0 to 1	System	Random	roll
 •rand.Range n0	A number selected uniformly at random from ↕n0	System	Random	randominteger roll
 •rand.Subset n0	A random sorted subset of ↕n0	System	Random	simple sample srs length
@@ -784,8 +784,8 @@ i1≤⌜⌽↕⌈´i1	Matrix with i⊑i1 trailing zeroes on row i	Expression	Lin
 =⌜○↕´≢n2	Identity matrix with shape of table n2	Expression	Linear Algebra	diagonal
 ≠⌜○↕´≢n2	Anti-diagonal matrix with shape of table n2	Expression	Linear Algebra	nondiagonal
 (+˝÷≠)n	Column-wise arithmetic mean of n	Tacit	Statistical	average arithmeticmean() AM() avg()
-(⊢-⌊˝)n	Normalize n so that minimum value is 0	Tacit	Data	normalize zero smallest least cell element
-(⊢÷+˝)n	Normalize n so that sum is 1	Tacit	Data	normalize one
+(⊢-⌊˝)n	Normalize n so that minimum value is 0	Tacit	Data	zero smallest least cell element
+(⊢÷+˝)n	Normalize n so that sum is 1	Tacit	Data	one
 (⊢=⌈˝)n1	Mask of positions where the global maximum occurs in n1	Tacit	Search	indicate equal to maxima maximums location masking indicating
 x(∾˝≍˘)y	Merge cells of equal-length arrays x and y alternately	Tacit	Structural	faro dovetail zipper zipping interweave interweaving interleave interleaving shuffle shuffling meshing lists zip()
 -´×⟜⌽˝n2	Determinant of two-row matrix	Expression	Linear Algebra	det() 2-row 2row table
@@ -1017,7 +1017,7 @@ i1⊏⟜(0∾⊢)⌾(+`)n	Sums (+´) of sublists of n with lengths given by i1	T
 ⥊(<⟨⟩)<⊸∾⌜´y1	Cartesian product: all lists of one element from each list in y1	Tacit	Structural	catalog n-fold sets family pairings tuples table
 ⟨1⟩(0⊸∾-×∾0˙)´n1	Coefficients in ascending order of polynomial with roots n1	Expression	Polynomial	solved zeroes binomial factors monic
 ¯1⋆≠´∾<⟜(≠↑↑)j1	Sign of permutation	Expression	Mathematical	even odd parity permutationsymbol antisymmetricsymbol anti-symmetricsymbol alternatingsymbol levi-civita LC number inversions transpositions
-(+´÷≠)⌾(⋆⟜m0)n	Generalized mean	Tacit	Statistical	x-mean xmean generalized power Hölder holder cubic
+(+´÷≠)⌾(⋆⟜m0)n	Generalized mean	Tacit	Statistical	x-mean xmean power Hölder holder cubic
 (+´÷≠)⌾(⋆⁼)n	Geometric mean, using logarithm	Tacit	Statistical	average GM() G() geometricmean
 x(∧`∘∊˜¬⊸/⊢)y	Remove cells that appear in x from beginning of y	Tacit	Selection	trim leading left items list start
 x((¬∊∾∊˜)/∾)y	Symmetric set difference: cells that appear in exactly one argument	Tacit	Sets	⊖
@@ -1049,6 +1049,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 ∧´⥊(0≠b2)≤>⌜˜↕≠b2	Is b2 a lower triangular matrix without diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular? remove strict
 ∧´⥊(0≠b2)≤≤⌜˜↕≠b2	Is b2 an upper triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle northeast north-east table triangular?
 ∧´⥊(0≠b2)≤≥⌜˜↕≠b2	Is b2 a lower triangular matrix with diagonal?	Expression	Linear Algebra	testif triangle SW southwest south-west table triangular?
+⊢´⥊1+`∘×˝⌽i0↕1↓↕j0	Count permutations of a set of j0 objects that have i0≤j0 cycles: s(j0,i0)	Expression	Combinatorics	ways permute disjoint Stirling numbers first kind
 √×´(0∾n)-(+´n)÷2	Area of triangle with side lengths n	Expression	Geometric	Heron's formula herons
 x(⊢/˜⊏∘⥊˘⊸∊˜)y2	Rows of non-empty table y starting with an element in x	Tacit	Selection	cell item
 m1(+˝∘×⎉1÷+´∘⊣)n2	Weighted average of rows of n2 with column weights m1	Tacit	Data	
@@ -1121,7 +1122,7 @@ a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group
 '0'(⊢+∧`∘=×' '-⊣)d	Replace leading zeros with spaces in d	Expression	Text	blanks nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
 {𝕩(⊢⌊⊏˘+⌜⊏)´↕≠𝕩}n2	Shortest path length matrix from weighted adjacency matrix n2, using Floyd-Warshall	Block Function	Graph Theory	roy wfi directed transitive closure algorithm pathfinding search lengths dense edges vertices follow connections
 m0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point m0	Block Function	Polynomial	
-⟨1⟩{(»+𝕨⊸×)𝕩∾0}´⌽↕i0	Stirling numbers of the first kind s(i0,k) for all k	Expression	Combinatorics	
+⟨1⟩{(»+𝕨⊸×)𝕩∾0}´⌽↕i0	Stirling numbers of the first kind s(i0,k) for all k	Expression	Combinatorics	ways permute permutations set disjoint cycles
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Structural	substitute merge amend update cells items
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate spaces	Tacit	Text	delete trim reformat extraneous normalise normalize blanks multiple drop start beginning ending without
 +´m⋆⌜˜(1+↕)⊸(⊣/˜0=|)j0	Sum of m'th powers of positive divisors of j0	Expression	Number Theory	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
