@@ -1139,11 +1139,11 @@ F{𝔽∘⊢⍟≢⟜𝔽_𝕣∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F starti
 {𝕩𝕊⍟≢∨˝∘∧⎉1‿∞˜⊸∨𝕩}b2	Transitive closure	Block Function	Graph Theory	adjacency list matrix contingency table
 {(∨`∧∨`⌾⌽)' '≠𝕩}⊸/d1	Remove leading and trailing spaces from d1	Tacit	Text	trim left right blanks start beginning ending
 {𝕩≍' '(⊣+≠×'¯'-⊣)𝕩}d1	Underline non-spaces in a string	Block Function	Text	blanks wordunderlinewords wordunderscorewords
-a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b	Indicate first one ((»∨`)⊸<) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
+a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b1	Indicate first one ((»∨`)⊸<) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
 ((+´÷≠)∧⊏˜2⌊∘÷˜¯1‿0+≠)n1	Median of non-empty n1, averaging two values for even lengths	Tacit	Statistical	average
 (+´¨(+⌜´↕∘≠¨)⊔×⌜´)y1	Product of list of polynomials (ascending or descending order)	Tacit	Polynomial	multiplicationof multiply times coefficients
 (+⟜»˝×⌜)˝1⊸↓⊸(0=|⌜)↕n0	First n0 partition numbers (number of sets with the given sum)	Expression	Combinatorics	integers partitions unordered young ferrers diagrams
-a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings zeros 0s falses
+a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings zeros 0s falses
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch when b1 turns on and a1 turns off (initially off)	Tacit	Partitioning	signal on/off
 +´(↕3)(×˝⌽˘){𝔽--⊸𝔽}n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Expression	Linear Algebra	scalar box signed volume parallelepiped
 m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Number Theory	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
@@ -1160,7 +1160,7 @@ a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin onl
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Partitioning	split separate chop divide chunk dividing partitions strings lists delimiters spaces words
 -⟜(»1+⊢)m0(•rand.Subset∾⊢)○(-⟜1)m0+n0	Random list of m0 non-negative integers with sum n0	Expression	Random	partition divide number
-a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b	Not first zero ((1»∧`)⊸>) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings 1st
+a1(≤∧≥{¬»⊸<⌾(𝕨⊸/)¬𝕩}⊢)b1	Not first zero ((1»∧`)⊸>) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings 1st
 (2×a)÷˜b-⊸(+⋈-)√(×˜b)-4×a×c	Solutions of quadratic equation ax²+bx+c=0	Expression	Polynomial	coefficients F(x)=ax²+bx+c=0 F(x)=ax^2+bx+c=0
 i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Permutation cycles: lowest index in the cycle, for each entry of permutation i1	Expression	Mathematical	disjoint cyclic fixed point
 ÷○⊑˝¨+˝∘×⎉1‿∞`{𝕩‿1≍1‿0}¨n1	Continued fraction convergents with terms n1, in linear time	Expression	Mathematical	series sequence
@@ -1172,7 +1172,7 @@ c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest comm
 y(-⊸↓F↓)´⌽i0⊸«⊸-↕∘⌈⌾(2⋆⁼⊢)i0	Rolling minimum (F←⌊) or maximum (F←⌈), fast F˝˘i0↕y	Expression	Data	windowed largest smallest filter
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 c1((⊢-˜¬×·+`1⊸»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk dividing segments partitions
-a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b	Leading ones (∧`) in each sublist of b indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings 1s trues truths
+a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings 1s trues truths
 a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) of sublists of n indicated by starting mask a1	Block Function	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings
 a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) of each sublist of b indicated by starting mask a1	Block Function	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
 {⥊(⊏⟜𝕩≍˘˜⊢-¯1⊸»)/𝕩≠¯1«𝕩}⍟j0⋈1	Term j0 of the look-and-say sequence	Expression	Recreational	conways morris number digits repeating
