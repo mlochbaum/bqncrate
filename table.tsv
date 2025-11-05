@@ -140,7 +140,7 @@ x1⊐y	Indices of keys y in key list x1	Primitive	Search	find locate positionof 
 F⎉j0 y	Rank: apply F to j0-cells to form cells of the result	Primitive	Function Application	sub-array dimensions axes ending
 x F⎉j1 y	Rank: F on corresponding cells of x and y	Primitive	Function Application	sub-array dimensions axes ending
 F⊘G y	Valences: F y since F is used for one argument	Primitive	Function Application	circle slash number adicity ambivalent
-x F⊘G y	Valences: x G y since F is used for two arguments	Primitive	Function Application	circle slash number adicity ambivalent
+x F⊘G y	Valences: x G y since G is used for two arguments	Primitive	Function Application	circle slash number adicity ambivalent
 F⍟G y	Repeat: apply F G y times to y, in succession	Primitive	Function Application	poweroperator circlestar starcircle inverse repeated repeating inversion inverting iterating looping
 F⍟j0 y	Repeat: apply F j0 times to y	Primitive	Function Application	poweroperator circlestar starcircle inverse repeated repeating inversion inverting iterating looping
 x F⍟G y	Repeat: apply x∘F to y, G y times	Primitive	Function Application	inverse repeated repeating inversion inverting iterating looping
