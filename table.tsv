@@ -422,7 +422,7 @@ x⋈⌜y	Cartesian product: all pairs from x and y	Tacit	Structural	catalog pair
 ∨´b1	Are any true?	Tacit	Boolean	anyone? thereexists ∃ horizontally rowwise testif forany?
 ⌈´n1	Maximum of n1	Tacit	Data	supremum biggest largest highest greatest
 0⌈´n	Positive maximum, at least zero even for empty n	Expression	Data	largest biggest
-⌊´n1	Minimum of n1	Tacit	Data	infirmum smallest lowest least
+⌊´n1	Minimum of n1	Tacit	Data	infimum smallest lowest least
 ÷´n1	Alternating product of n1	Tacit	Arithmetic	
 ≠´b1	Parity of boolean list: are there an odd number of 1s?	Tacit	Boolean	
 F´x‿y	Apply dyadic function as a monadic function on a two-element argument	Tacit	Function Application	calling runing converting change changing switching valence arity into dyad-to-monad dyadic-to-monadic binary-to-unary
@@ -1217,6 +1217,6 @@ F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.
 1-˜1{𝕨≥≠𝕩?↕≠𝕩;0⌈-⟜(𝕨×n1≤⊏⟜𝕩)𝕨+˜⊸𝕊𝕩⌊𝕨-⊸⌽𝕩}»n1	Index of most recent element with a smaller value, at each position of n1	Expression	Mathematical	latest rightmost nearest distance from before precedes preceding lesser
 i0 F{(𝕨¬˜≠𝕩)↑⥊1(-⊸↓𝔽˜`⌾⌽⊸𝔽⟜(𝔽`)˘↓)↑‿(𝕨-1)⥊𝕩}y	Linear-time F˝˘i0↕y for associative arithmetic F, fast for large windows	Block Modifier	Data	rolling windowed sums minimums maximums average vanherk gil werman
 n2{𝕩𝕊⍟≢>(+˝÷≠)¨⊐⟜(⌊´)∘(+˝×˜)∘-⟜(⍉𝕩)˘⊸⊔𝕗}m2	k-means clustering of points n2 from initial means m2, by iterative refinement	Block Modifier	Data	machine learning naive lloyd's lloyd-forgy algorithm voronoi partitioning centroids
-i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infirmum lowest
+i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infimum lowest
 i0{(𝕨↑·⍒⊏⟜𝕩)⊸⊏/𝕩≥(𝕨-1)⊑∨(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of largest i0 elements of n1 (fast i0↑⍒n1)	Block Function	Ordering	most maximum supremum biggest highest
 ⊑{𝕩=0?↕2;+`∘⌽⍟(2|𝕩)((⊣×+˜⊸-˜)´⋈·+´×˜)𝕊⌊𝕩÷2}n0	The n0'th Fibonacci number, computed in about 2⋆⁼n0 steps	Expression	Mathematical	sequence series recurrence golden ratio growth rabbit population fast logarithmic time
