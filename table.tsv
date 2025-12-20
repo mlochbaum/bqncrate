@@ -1043,6 +1043,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 +⟜(32×1="A["⊸⍋)d	Lowercase ASCII text	Tacit	Text	casemap lettercase tolower lower-case conversion converting change changing
 ¬1(∾/∾˜)a1(∨/⊣)b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
 (1+↕)⊸(⊣/˜0=|)j0	All divisors of j0	Tacit	Number Theory	factorisation factorization
+0(∾˜(<-○/>)∾)b1	Lengths of groups of ones in b1	Expression	Partitioning	runs 1s trues truths
 ↕∘⌈⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending before n0	Expression	Sequences	interval
 {2÷˜-´⥊𝕩×1‿1⌽𝕩}n2	Signed area of 2-dimensional polygon given by 2-column matrix n2	Block Function	Geometric	triangle shape region size points coordinates shoelace surveyor's gauss's formula determinant
 ↕⊸(⊢+´⊣/˜0=|)j0	Sum of positive divisors of j0	Tacit	Number Theory	sigma σ(n)
@@ -1093,7 +1094,6 @@ i1{𝕩↑˜𝕨⌊(≠𝕨)↑≢𝕩}y	Take up to i1 positions from axes of y	
 (↕1+⌊)⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending at or before n0	Expression	Sequences	interval
 i0(-÷○(×´)1⊸+)⟜↕˜j0	Number of unordered selections (combinations) of i0 items from j0 choices	Tacit	Combinatorics	exclamation bang shriek binomial countcombinations choose selecting picking outof nCk C(n,k)
 m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descending order), a convolution	Tacit	Polynomial	multiplicationof multiply times coefficients kernel filter reverberation
--˜˝˘∘‿2⥊/0(∾≠∾˜)b1	Lengths of groups of ones in b1	Expression	Partitioning	runs 1s trues truths
 -˜`˘∘‿2⥊/0(∾≠∾˜)b1	Start and length of groups of 1s in b1	Expression	Partitioning	runs sequences blocks trues truths 1st ones
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Selection	trim left right spaces multiple consecutive blanks start beginning ending
 ×`(1⊸+÷˜2×-⟜¬)1⌈↕j0	First j0 Catalan numbers	Expression	Combinatorics	dyck words binary trees mountain ranges
