@@ -946,8 +946,8 @@ i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Select
 0=(1+↕⌈´j1)|⌜j1	Divisibility table	Expression	Number Theory	divides divisor matrix
 (∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering by comparator
 i0(+˝˘∘↕÷⊣)n	i0-wise rolling average	Tacit	Data	rollingmean windowedmean windowedaverage
--⟜»(1⌽a1)/+`n	Sum of each sublist of n indicated by starting mask a1	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements
-≠⟜»(1⌽a1)/≠`b	Parity (≠´) of each sublist of b indicated by starting mask a1	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements boolean
+-⟜»(1⌽a1)/+`n	Sum of each sublist of n indicated by starting mask a1	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements add plus fold reduce reduction
+≠⟜»(1⌽a1)/≠`b	Parity (≠´) of each sublist of b indicated by starting mask a1	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements boolean not equals neq fold reduce reduction
 (∨`∧∨`⌾⌽)b1	Mask that selects values between first and last 1	Tacit	Boolean	masking trim ones 1st bitmask bit-mask
 i0(×⥊⊢-⊸↑1˙)j0	Mark ending points for i0 sublists of width j0	Tacit	Partitioning	vector trailing segments partitions
 (3÷˜2⊸⋆-¯1⊸⋆)j0	Jacobsthal number	Tacit	Mathematical	sequence Ernst j(n) A001045() A1045()
@@ -1003,7 +1003,7 @@ i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Ta
 'F'-×⊸+60‿70‿80‿90⍋j	Students grades given score	Expression	Specialty	
 " ⎕"⊏˜j>⌜↕⌈´j	Bar chart	Expression	Data	curve graph plotting
 (b¬⊸/"in")∾"correct"	Conditional in text	Expression	Text	message true false Boolean binary base-2 base2 converting change changing
-1(∾/∾˜)a1(≥/⊣)b1	All elements true (∧´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings every and
+1(∾/∾˜)a1(≥/⊣)b1	All elements true (∧´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings every and fold reduce reduction
 (÷⟜2≤↕)¨∘≢⊸⊔y	Split array y in half along each axis	Tacit	Partitioning	separated partitioned chunked segmented sub-matrices submatrices block-matrix blockmatrix
 ↕⊸(+´⊣/˜0=|)j0	Aliquot sum (sum of proper divisors)	Tacit	Number Theory	s(n) divisorsum
 (+´⌾(×˜)÷≠)n1	Quadratic mean	Tacit	Statistical	Root square rms()
@@ -1041,7 +1041,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 (∾"0A"+⟜↕¨10‿26)⊐d	Translate characters to digits (bases 2 through 36, uppercase letters only)	Expression	Text	base-2 base2 binary Boolean base16 base-16 hexadecimal base36 base-36 0123456789abcdef converting change changing
 -⟜(32×1="a{"⊸⍋)d	Uppercase ASCII text	Tacit	Text	casemap lettercase toupper upper-case conversion converting change changing
 +⟜(32×1="A["⊸⍋)d	Lowercase ASCII text	Tacit	Text	casemap lettercase tolower lower-case conversion converting change changing
-¬1(∾/∾˜)a1(∨/⊣)b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
+¬1(∾/∾˜)a1(∨/⊣)b1	Any element true (∨´) for each sublist of b1 indicated by starting mask a1	Expression	Boolean	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings fold reduce reduction
 (1+↕)⊸(⊣/˜0=|)j0	All divisors of j0	Tacit	Number Theory	factorisation factorization
 0(∾˜(<-○/>)∾)b1	Lengths of groups of ones in b1	Expression	Partitioning	runs 1s trues truths
 ↕∘⌈⌾((m0+c0×⊢)⁼)n0	Range starting at m0 with step size c0, ending before n0	Expression	Sequences	interval
@@ -1143,7 +1143,7 @@ a1(∧∨∨{»⊸<⌾(𝕨⊸/)𝕩}⊢)b1	Indicate first one ((»∨`)⊸<) in
 ((+´÷≠)∧⊏˜2⌊∘÷˜¯1‿0+≠)n1	Median of non-empty n1, averaging two values for even lengths	Tacit	Statistical	average
 (+´¨(+⌜´↕∘≠¨)⊔×⌜´)y1	Product of list of polynomials (ascending or descending order)	Tacit	Polynomial	multiplicationof multiply times coefficients
 (+⟜»˝×⌜)˝1⊸↓⊸(0=|⌜)↕n0	First n0 partition numbers (number of sets with the given sum)	Expression	Combinatorics	integers partitions unordered young ferrers diagrams
-a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings zeros 0s falses
+a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	Not leading zeroes (∨`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings zeros 0s falses scan
 a1(≠`∨{»⊸≠⌾(𝕨⊸/)𝕩}⊢)b1	State of switch when b1 turns on and a1 turns off (initially off)	Tacit	Partitioning	signal on/off
 +´(↕3)(×˝⌽˘){𝔽--⊸𝔽}n2	Determinant of 3x3 matrix, or vector triple product of its rows or columns	Expression	Linear Algebra	scalar box signed volume parallelepiped
 m0(×÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})n0	Lowest Common Multiple of natural numbers m0 and n0	Block Function	Number Theory	least smallest lcm() denominator lcd() caret wedge hat circumflex ^
@@ -1172,12 +1172,12 @@ c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest comm
 y(-⊸↓F↓)´⌽i0⊸«⊸-↕∘⌈⌾(2⋆⁼⊢)i0	Rolling minimum (F←⌊) or maximum (F←⌈), fast F˝˘i0↕y	Expression	Data	windowed largest smallest filter
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 c1((⊢-˜¬×·+`1⊸»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk dividing segments partitions
-a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings 1s trues truths
-a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) of sublists of n indicated by starting mask a1	Block Function	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings
-a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) of each sublist of b indicated by starting mask a1	Block Function	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings
+a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings 1s trues truths and scan
+a1{+`(+`»𝕩)»⊸-⊸+⌾(𝕨⊸/)𝕩}n	Cumulative sums (+`) of sublists of n indicated by starting mask a1	Block Function	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings plus add prefix scan
+a1{≠`(≠`»𝕩)»⊸≠⊸≠⌾(𝕨⊸/)𝕩}b	Running parity (≠`) of each sublist of b indicated by starting mask a1	Block Function	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings not equals neq nescan
 {⥊(⊏⟜𝕩≍˘˜⊢-¯1⊸»)/𝕩≠¯1«𝕩}⍟j0⋈1	Term j0 of the look-and-say sequence	Expression	Recreational	conways morris number digits repeating
-a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array minimums smallest least major cells items
-a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array maximums greatestif largest biggest major cells items
+a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍋)y	Minima (⌊´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array minimums smallest least major cells items fold reduce reduction
+a1(⊢⊏˜(⊢⊏˜⊣/+`⊸(⍋⊏˜))⟜⍒)y	Maxima (⌈´) of sublists of y indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sub-vectors sub-lists starts beginnings array maximums greatestif largest biggest major cells items fold reduce reduction
 2{⌽𝕗|⌊∘÷⟜𝕗⍟(↕1+·⌊𝕗⋆⁼1⌈⊢)}j0	Binary representation of natural number j0≤2⋆47	Block Modifier	Mathematical	digits base2 base-2 Boolean expand expansion antibase
 x1{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)/○⥊⊢)𝕩}y1 z	Replace elements of z that appear in x1 with the corresponding element from y1	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set cells
 ⊑{𝕩𝕊⍟≢𝕩(+´⊸÷⋈+´⌾÷⊸×)≠𝕩}n1	Arithmetic-harmonic mean	Expression	Statistical	average AHM() HAM() AH() HA() harmonic-arithmetic
