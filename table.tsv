@@ -313,7 +313,7 @@ x1‿y1 •bit._cast n	Cast n from bit representation y1 to x1 	System	Bitwise
 n÷100	Rate corresponding to percentage n	Expression	Statistical	conversion converting change changing
 ∾y	Join array of arrays vertically	Expression	Structural	aboveandbelow stack merge flatten column-wise columnwise
 1|n	Fractional part of number	Expression	Arithmetic	decimals
-1000|ia	Last part of packed numeric code ABBB	Expression	Specialty	unpack converting change changing
+1000|j	Last part of packed numeric code with digits ABBB	Expression	Specialty	unpack converting change changing
 2|j	Parity of j (is j odd?)	Expression	Combinatorics	testif
 256|j	Convert from signed short integers to unsigned short integers	Expression	Fixed-Width	datarepresentation converting change changing
 0↓y	Ensure minimum rank 1 (reshaping unit into one-element list)	Expression	Structural	unscalarise unscalarize 1-element 1element minimumrank1 makenonscalarise nonscalarize ravel-if-scalar
