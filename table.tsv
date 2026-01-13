@@ -1083,6 +1083,7 @@ x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Taci
 (≠x)(+⟜1|-)1+x⌽⊸⊐y	Last indices in x of major cells y, ≠x if not found	Expression	Search	indexin indexof find locate positionof locating items elements location
 (+`a1)(⊏˜⍋⊸⊏⊢)⍋y	Grade up (⍋) for sorting subarrays of y indicated by a1	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
 (+`a1)(⊏˜⍋⊸⊏⊢)⍒y	Grade down (⍒) for sorting subarrays of y indicated by a1	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
+⍷⊸(¯1⌈≠∘⊣-˜∾⊒⊢)y	For each cell of y, index of most recent matching one (-1 if none)	Tacit	Mathematical	latest rightmost nearest distance from before precedes preceding matches equal same
 i0(⊢÷⊣√·+´⋆˜⟜|)n	Normalisation by i0-norm	Tacit	Geometric	Lp-normalise Lp-normalize Lp-normalization L-p ℓp ℓ-p
 f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Function Application	each every list gerund elements to both arguments collect
 -⟜»n0∾˜1+m0•rand.Subset○(-⟜1)n0	Random list of m0 positive (not zero) integers with sum n0	Expression	Random	partition divide number
@@ -1127,6 +1128,7 @@ a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group
 m0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point m0	Block Function	Polynomial	
 ⟨1⟩{(»+𝕨⊸×)𝕩∾0}´⌽↕i0	Stirling numbers of the first kind s(i0,k) for all k	Expression	Combinatorics	ways permute permutations set disjoint cycles
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Structural	substitute merge amend update cells items
+(∊y)(¬⊸×-⊣)(⍋⊏»)⍋y	For each cell of y, index of most recent matching one (-1 if none)	Tacit	Mathematical	latest rightmost nearest distance from before precedes preceding matches equal same
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate spaces	Tacit	Text	delete trim reformat extraneous normalise normalize blanks multiple drop start beginning ending without
 +´m⋆⌜˜(1+↕)⊸(⊣/˜0=|)j0	Sum of m'th powers of positive divisors of j0	Expression	Number Theory	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
 ⊏∘⊑˘(⌈´⊸=≠¨)⊸/⊐⊸⊔y	Modes: Most frequent major cells of data	Expression	Statistical	average items elements
