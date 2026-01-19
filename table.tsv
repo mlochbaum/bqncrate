@@ -1159,6 +1159,7 @@ a1(⊢∧∧(⊢∊/)·+`»⊸<∘⊢)b1	Groups of ones in b1 pointed to by at l
 {'-'¨⌾((' '=𝕩)⊸/)𝕩}y	Replace all spaces with dashes	Block Function	Text	blanks substitute format
 a{𝕩∧𝕨(⊢=⌈`∘×)+`»⊸<𝕩}b	Trim groups of ones in b to begin only where first pointed to by a 1 in a	Block Function	Partitioning	runs sequences chop limit indicated trues truths 1st
 ⟨1⟩{(»+𝕨⊸×)𝕩∾0}´↕¨2+⌽↕i0	Stirling numbers of the second kind S(i0,k) for all k	Expression	Combinatorics	
+{∾˝𝕩⊸⊏˘𝕨}´⌽1↓↑⍋˘=⌜˜↕j0	All permutations of ↕j0, as table rows in lexicographical order (j0>0)	Expression	Combinatorics	ordered orderings anagrams rearrangements without replacement list
 (⋈÷{𝕨(|𝕊⍟(>⟜0)⊣)𝕩})⟜1 n0	Convert fraction to (numerator,denominator)	Tacit	Mathematical	rationalnumber simplefraction commonfraction vulgarfraction Conversion converting change changing
 x0((¬-˜⊢×·+`»⊸>)∘≠⊔⊢)y1	Cut y1 at occurrences of x0, removing separators and empty segments	Tacit	Partitioning	split separate chop divide chunk dividing partitions strings lists delimiters spaces words
 -⟜(»1+⊢)m0(•rand.Subset∾⊢)○(-⟜1)m0+n0	Random list of m0 non-negative integers with sum n0	Expression	Random	partition divide number
