@@ -308,6 +308,7 @@ x1‿y1 •bit._cast n	Cast n from bit representation y1 to x1 	System	Bitwise
 ¯1-j	2's-complement bit-wise NOT	Expression	Bitwise	binary logicalnot logicalnegation logicalcomplement negate inverting inversion 2s two's twos
 0×n	Zero array of shape, size, and structure of n	Expression	Data	zeroes zeros fill mold mould 0s falses falsehoods
 100×n	Percentage corresponding to rate n	Expression	Statistical	conversion converting change changing
+m2×n2	Hadamard product of two matrices	Expression	Linear Algebra	element-wise entrywise schur
 0⌈n	Ensure that n is non-negative by increasing negatives to zero	Expression	Data	clamp limit restrict
 0⌊n	Ensure that n is non-positive by reducing positives to zero	Expression	Data	clamp limit restrict
 n÷100	Rate corresponding to percentage n	Expression	Statistical	conversion converting change changing
@@ -499,7 +500,8 @@ expr⊣name←y	Combining two lines into one	Expression	Syntax	lev lefttack wher
 name∾↩y	Fast: 'name' redefined to be its value with y catenated along its first axis	Expression	Structural	amend append extend accumulate concatenate dimension 1st
 2×π	tau (2 pi)	Constant	Mathematical	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏
 n+m×0=n	Replace zeroes in n with corresponding elements of m	Expression	Data	substitute merge amend update 0s zeros cells items falses falsehoods
-∾a×<b	Expand a by replacing 1s with same-rank array b, and 0s with 0×b	Expression	Structural	nest fractal replace copies
+∾a×<b	Expand a by replacing 1s with same-rank array b, and 0s with 0¨b	Expression	Structural	nest fractal replace copies
+∾m2×<n2	Kronecker product of two matrices	Expression	Linear Algebra	zehfuss block matrix direct tensor
 1‿¯1×<n	±n by juxtaposition	Expression	Arithmetic	plusminus
 ¯1‿1×<n	∓n by juxtaposition	Expression	Arithmetic	minusplus
 1+2×↕j0	Odd integers from 1 to 2×j0	Expression	Sequences	numbers 1st
@@ -926,6 +928,7 @@ i0(⊏⎉1⍒⊸⊏⊢)y	Sort y descending according to column i0	Tacit	Ordering
 x F⌾(<˘ax⍉⁼⊢) y	Run F on each list along axis ax of y	Tacit	Function Application	onaxis apply dimensions
 m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (slow)	Tacit	Data	tables
 (+˝÷≠)i0⍉⁼n	Average (mean) of elements of n along axis i0	Expression	Statistical	arithmeticmean() AM() avg() dimension cells items
+∾˝˘∾˝1⍉˘i2⊏y3	Expand array i2 of indices by replacing each index with that cell of y3	Expression	Structural	nest fractal replace copies
 ⌊1+10⋆⁼0.5+1⌈|j	Number of base-10 digits of each integer in j<1e15	Expression	Mathematical	positions width representation
 ⊢´∘/˘' '≠d2	Indices of last non-space character in each row of d2	Expression	Search	nonblanks nonspaces characters text row-wise rowwise horizontally
 ∧`∧˝˘' '=d2	Indicate leading all-blank rows of d2	Expression	Text	spaces beginning masking locate indications allspace all-space lines start blanks
@@ -1098,6 +1101,7 @@ m1(+´¨+⌜○↕○≠⊔×⌜)n1	Product of polynomials (ascending or descend
 -˜`˘∘‿2⥊/0(∾≠∾˜)b1	Start and length of groups of 1s in b1	Expression	Partitioning	runs sequences blocks trues truths 1st ones
 x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Tacit	Selection	trim left right spaces multiple consecutive blanks start beginning ending
 ×`(1⊸+÷˜2×-⟜¬)1⌈↕j0	First j0 Catalan numbers	Expression	Combinatorics	dyck words binary trees mountain ranges
+¯1⋆(∾≠⟜<)´i0⥊<∧⌜˜↕2	Hadamard matrix of dimension 2⋆i0, by Sylvester's construction	Expression	Linear Algebra	walsh
 ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕j0	Primes less than j0	Expression	Number Theory	primesuntil numbers
 >j0↑¨(+`∾⟜0)⍟(↕j0)⥊1	First j0 rows of Catalan's triangle	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 {(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
@@ -1173,6 +1177,7 @@ i1{𝕨⊏˜⊸𝕊⍟(𝕩⊸≢)𝕩⌊𝕨⊏𝕩}↕≠i1	Permutation cycles
 c1(¯1⊑0¨∘⊢{𝕩⌈⌈`𝕨+»𝕩}˝=⌜⟜⌽)d1	Length of longest common substring	Tacit	Text	fuzzy match lcs
 (+´÷≠-1˙)⌾(×˜)-⟜(+´÷≠)n1	Sample standard deviation	Tacit	Statistical	stddev σ sigma SD empirical
 y(-⊸↓F↓)´⌽i0⊸«⊸-↕∘⌈⌾(2⋆⁼⊢)i0	Rolling minimum (F←⌊) or maximum (F←⌈), fast F˝˘i0↕y	Expression	Data	windowed largest smallest filter
+{⊏(2×»)⊸-˜˝⊸«⍟𝕩2=⌜○↕𝕩+1}i0	Coefficients of the i0'th Chebyshev polynomial of the first kind, T_i0	Block Function	Polynomial	
 x{(𝕘⊏˜𝕗⊸⊐)⌾((𝕩∊𝕗)⊸/)𝕩}y z	Replace major cells of z that appear in x with the corresponding major cell from y	Block Modifier	Structural	substitute merge amend update translate transform map selective search-and-replace find-and-replace items high-rank array matrix matrices set
 c1((⊢-˜¬×·+`1⊸»⊸<)∘∊˜⊔⊢)d1	Split list d1 at any sequence of characters in c1	Tacit	Text	cut chop divide linebreak newline carriagereturn crnl crlf linefeed vec2vtv separate chunk dividing segments partitions
 a1(≥{¬≠`1⊸»⊸≠⌾(𝕨⊸/)𝕨∧𝕩}⊢)b1	Leading ones (∧`) in each sublist of b1 indicated by starting mask a1	Tacit	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings 1s trues truths and scan
