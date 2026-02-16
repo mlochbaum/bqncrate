@@ -640,6 +640,7 @@ name1‿name2⌽↩	Swap variable values	Expression	Assignment	leftarrow get are
 '0'+d	Translate digit numbers to characters	Expression	Text	base-2 base2 binary Boolean decimal converting change changing
 d-'0'	Translate character digits to numbers	Expression	Text	base-2 base2 binary Boolean decimal converting change changing
 d-'a'	Convert lowercase letters to their positions in the alphabet	Expression	Text	nth ordinals Conversion converting change changing
+•math.Fact n-1	Gamma function of n	Expression	Mathematical	gamma() Γ
 '''	Quote character	Constant	Text	apostrophe ’ U+27 0x27 ≢27 quotationmark prime singlequoted string symbol escape literal
 (a×i1)↓y	Conditional drop of i1 elements from array y only if a is true	Expression	Structural	major cells items delete remove without
 ∾↑¨↓y1	All possible slices of y1 ordered by starting index	Expression	Selection	sub-strings substrings sub-vectors sub-sequences subsequences segmented sub-lists partitioned sublists
@@ -763,6 +764,7 @@ y/˜i0>⍋⍒y	The i0 largest cells of y in order of occurrence	Expression	Order
 4×π××˜n	Area of sphere with radius n	Expression	Geometric	length ball
 π×4÷3÷n⋆3	Volume of sphere with radius n	Expression	Geometric	length ball
 ⍉>x1‿y1‿…	n-column table from n lists	Expression	Structural	transpose columns
+•math.Comb⌜˜↕j0	Pascal's triangle: first j0 rows of binomial coefficients	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 ∧˝' '=d2	Mask for blank columns	Expression	Text	spaces empty filter indicate masking indicating blanks bitmask bit-mask
 ⊐⟜' '˘d2	Indices of first space in each row of text table d2	Tacit	Search	1st blanks row-wise rowwise horizontally
 (××m+|)n	Increase absolute value of n by m without change of sign	Expression	Data	adjust decrease magnitude preserve signum direction remove changing converting conversion
@@ -930,6 +932,7 @@ m2(0‿1‿0‿1⍉+⌜)n2	Sum of common parts of matrices (slow)	Tacit	Data	tab
 (+˝÷≠)i0⍉⁼n	Average (mean) of elements of n along axis i0	Expression	Statistical	arithmeticmean() AM() avg() dimension cells items
 ∾˝˘∾˝1⍉˘i2⊏y3	Expand array i2 of indices by replacing each index with that cell of y3	Expression	Structural	nest fractal replace copies
 ⌊1+10⋆⁼0.5+1⌈|j	Number of base-10 digits of each integer in j<1e15	Expression	Mathematical	positions width representation
+(⊢•math.Comb↕⊸∾)j0	Coefficients of the binomial	Expression	Combinatorics	
 ⊢´∘/˘' '≠d2	Indices of last non-space character in each row of d2	Expression	Search	nonblanks nonspaces characters text row-wise rowwise horizontally
 ∧`∧˝˘' '=d2	Indicate leading all-blank rows of d2	Expression	Text	spaces beginning masking locate indications allspace all-space lines start blanks
 (⍋⊏1⊸⌽)•rand.Deal j0	Random permutation of length j0 consisting of a single cycle	Expression	Random	only one circle circular ordering
@@ -968,6 +971,7 @@ j⊏∾"0A"+⟜↕¨10‿26	Translate digits to characters (bases 2 through 36)	
 -´(2×j0)•math.Comb j0+↕2	Catalan number C_j0: number of ways to nest j0 pairs of parentheses	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
 (⍋' '⊸=)⊸⊏d1	Move all spaces to end	Tacit	Text	blanks trailing ending
 (+`m1)⍋j0•rand.Range+´m1	Length-j0 list of random indices into m1 with integer weights m1	Expression	Random	weighted biased non-uniform distribution roll die sample
+i(•math.Comb×•math.Fact∘⊢)j	Number of ordered selections (permutations) of j items from i choices	Tacit	Combinatorics	
 (⥊(↕2˘)/¨<)y	Power set: a list of all subsets of the cells of y	Tacit	Sets	powerset power-set combinations choices most one
 (∧⊑˜2⌊∘÷˜≠)n1	Median of non-empty n1, taking larger value for even lengths	Tacit	Statistical	average
 x0(1⊸»⊸∨∘≠/⊢)y1	Remove consecutive duplicate x0's from list y1	Tacit	Search	deduplicate erase multiple repetitions repeated copies equal matching keep retain different previous next adjacent
@@ -1001,6 +1005,7 @@ F{𝕊∘⊢⍟≢⟜𝔽𝕩} y	Fixed point of F if applied repeatedly to y	Blo
 (π÷3)×(×˜m)×n	Volume of cone with height m and radius n	Expression	Geometric	lengths
 (√π)÷˜⋆-×˜n	Gaussian or normal distribution with mean 0 and variance 1/2	Expression	Statistical	statistics probability bell curve pdf density function
 i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Tacit	Ordering	sort() sortby() sorting reordering specific columns
+m(+÷××+•math.Comb⊢)n	Beta function	Tacit	Mathematical	B(x,y) Β(x,y) B() Β() beta()
 (∨`' '⊸≠)⊸/d1	Remove leading spaces	Tacit	Text	delete blanks beginning start drop without
 (∨`'0'⊸≠)⊸/d1	Remove leading zero characters	Tacit	Text	zeros 0s trim left falses falsehoods start beginning
 'F'-×⊸+60‿70‿80‿90⍋j	Students grades given score	Expression	Specialty	
@@ -1133,6 +1138,7 @@ m0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficie
 ⟨1⟩{(»+𝕨⊸×)𝕩∾0}´⌽↕i0	Stirling numbers of the first kind s(i0,k) for all k	Expression	Combinatorics	ways permute permutations set disjoint cycles
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Structural	substitute merge amend update cells items
 (∊y)(¬⊸×-⊣)(⍋⊏»)⍋y	For each cell of y, index of most recent matching one (-1 if none)	Tacit	Mathematical	latest rightmost nearest distance from before precedes preceding matches equal same
+×´⊸÷○(•math.Fact-⟜1)⟜(+´)n1	Multivariate beta function	Tacit	Mathematical	B() Β() beta()
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate spaces	Tacit	Text	delete trim reformat extraneous normalise normalize blanks multiple drop start beginning ending without
 +´m⋆⌜˜(1+↕)⊸(⊣/˜0=|)j0	Sum of m'th powers of positive divisors of j0	Expression	Number Theory	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
 ⊏∘⊑˘(⌈´⊸=≠¨)⊸/⊐⊸⊔y	Modes: Most frequent major cells of data	Expression	Statistical	average items elements
