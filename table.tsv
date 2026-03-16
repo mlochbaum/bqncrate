@@ -329,6 +329,7 @@ x⊣y	Church Boolean true (x if true, else y)	Tacit	Functional	truthy 1
 x0¨y	Fill array y with data value x0	Tacit	Data	
 0/y	Empty array along first axis	Expression	Structural	dimension 1st
 ¯1⊑y1	Last element of list y1	Expression	Selection	cell
+@	Null character (NUL)	Constant	Text	\0 ^@ U+00 0x00h \u00 ≢00
 0⌈m⌊n	Clamp numbers n to range 0≤n≤m	Expression	Data	force restrictrange between 0–
 x0⌈y0⌊z	Force z to range x0≤z≤y0	Expression	Data	clamp limitrange between –
 0==y	Is y a unit?	Expression	Structural	testif
@@ -483,7 +484,6 @@ F◶G‿1 y	Sequential OR test (F∨G with shortcutting)	Tacit	Function Applicat
 ⍉⌽y2	Rotate 90° clockwise	Expression	Structural	turning rotating rotation -90° ¯90° quarter-turn quarterturn
 F⌾⍉y	Apply action F defined on rows to columns instead	Tacit	Function Application	
 ⍉⎉2 y	Transpose every submatrix of y	Tacit	Structural	cant ^T ⸆ ᵀ sub-matrix sub-table subtable planes
-@+0	Null character (NUL)	Constant	Text	\0 ^@ U+00 0x00h \u00 ≢00
 @+10	Line Feed (LF)	Constant	Text	\n ^j U+0D 0x0Ah \u0A ≢0A newline linefeed
 @+11	Vertical Tab character (VT)	Constant	Text	\v ^K U+00 0x00h \u00 ≢00 tabulation
 @+12	Form Feed character (FF)	Constant	Text	\F ^L U+00 0x00h \u00 ≢00
@@ -1137,6 +1137,7 @@ x(⊐˜∘⊣⊏≠∘⊣↑/⁼∘⊐)y	Count how many cells of y match each ce
 i0↕⊸(+´⊣/˜0=|)∘⊢⍟⊣j0	i0'th number in the Aliquot sequence for j0	Tacit	Number Theory	
 a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group of 1s	Tacit	Partitioning	split separate chop divide chunk dividing partitions
 ∊⟜(∾"0aA"+⟜↕¨10‿26‿26)⊸/d1	Remove non-alphanumeric ASCII characters	Tacit	Text	punctuation
+c1-13×¬3|1+(⥊"Aa"+⌜13×↕3)⍋c1	Rot-13: encode or decode c1 by shifting each letter 13 places in the alphabet	Expression	Text	cipher rotate rotation encrypting decrypting cypher obfuscation obfuscate rot13 string
 " ⎕"⊏˜>⌜⟜(↕⌈´)/⁼j1	Histogram (distribution barchart, down the page)	Expression	Data	
 '0'(⊢+∧`∘=×' '-⊣)d	Replace leading zeros with spaces in d	Expression	Text	blanks nulls zeroes nils naughts noughts 0s falses falsehoods start beginning
 {𝕩(⊢⌊⊏˘+⌜⊏)´↕≠𝕩}n2	Shortest path length matrix from weighted adjacency matrix n2, using Floyd-Warshall	Block Function	Graph Theory	roy wfi directed transitive closure algorithm pathfinding search lengths dense edges vertices follow connections
