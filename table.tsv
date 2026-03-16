@@ -1123,6 +1123,7 @@ x0(⊣-(××·↕1+|)∘-)y0	Consecutive values from x0 to y0 (both numbers, or 
 {⌊0.5+𝕩}⌾((10⋆i0)⊸×) n	Round n to i0 decimal places	Expression	Rounding	precision banking banker's bank's (⍎⍕)
 +´⌾(×˜)∘-⎉1⎉1‿∞˜n2	Euclidean distance table given one point in each row of n2	Tacit	Geometric	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Cartesian Pythagorean d() matrix
 (10⊸×⊸+˜´∘⌽-⟜'0')d1	Parse natural number from string	Tacit	Text	decimal Conversion converting cast integer parseint atoi
+m(⋆∘-∘⊣×⋆÷•math.Fact∘⊢)j	Poisson distribution: probability an event happens exactly j times over a period which averages m times	Tacit	Statistical	statistics chance frequency expected expectation discrete pmf mass function
 ¬∘∊⟜".,:;?!"⊸/d1	Remove punctuation	Tacit	Text	delete symbols drop without
 1⌽∾˜9⥊"""1⌽∾˜9⥊"""	An expression giving itself	Constant	Text	quine
 {x0¨⌾((y0=𝕩)/○⥊⊢)𝕩}y	Replace all values y0 in y with x0	Block Function	Structural	substitute merge amend update
