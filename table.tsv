@@ -887,6 +887,8 @@ m -˝∘×⎉1‿∞ n	Alternating matrix product of m and n (¯1↑m ↔ 1↑�
 a2 ∨˝∘∧⎉1‿∞ b2	Extend a transitive binary relation	Tacit	Graph Theory	extension base-2 base2
 m2 ⌊˝∘+⎉1‿∞ n2	Extend a distance table to next leg	Tacit	Graph Theory	extension matrix
 (n0•rand.Deal≠)⊸⊏y	n0 random cells of y, chosen without replacement	Tacit	Random	srs draw removing
+•rand.Range¨∘≢⊸⊑y	Random element of any-rank array y	Tacit	Random	selectrandom
+•rand.Range∘≠⊸⊑⥊y	Random element of any-rank array y	Tacit	Random	selectrandom
 ' '⊸≠⊸/¨d	Remove spaces in each string	Tacit	Text	deletespaces blanks drop without
 ≍⟜('¯'¨)d1	Underline a string	Tacit	Text	underscore
 ∧`∧˝' '=d2	Locate leading blank columns in text table d2	Expression	Text	spaces beginning masking indicate indications allspace all-space start blanks
@@ -998,6 +1000,7 @@ i0(-⊸↓≠↓)0∾≠`b	Fast rolling bitwise exclusive-or ≠˝˘i0↕b	Expre
 (∧`∨`⊸=)⊸∧b	Indicate first group of ones (in each column)	Tacit	Boolean	sequence run trues truths 1st
 >»⊸+⍟(↕≠)j0↑1	Pascal's triangle: first j0 rows of binomial coefficients	Expression	Combinatorics	pascal'striangle numberofcombinations pascalstriangle
 (⍋(↕≠x)∾i1)⊏x∾y	Insert cells of y into x after positions i1	Expression	Structural	add items elements index indices splice
+(+`≠¨x)⍋x∾⊸⊐y	For each cell of y, index of the first element in list of same-rank arrays x that contains it	Expression	Search	lists membership has includes groups find entry
 {⍋⍒2|↕≠𝕩}⊸⊏y	Perfect Ripple Shuffle	Tacit	Structural	faro dovetail zipper zipping merge merging interweave interweaving interleave interleaving shuffling meshing grade carddeck diversions riffleshuffle
 ∨(/⁼∘⊐≍˘⍷)y1	Table of unique element counts and values, sorted with most frequent first	Expression	Data	matrix histogram number frequency frequencies elements
 c1(⊣∾(@+10)∾⊢)d1	Join lines with line feed (LF)	Tacit	Text	combine glue 0x0A U+0A U+000A
@@ -1043,6 +1046,7 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 {⌊0.5+𝕩}⌾(100⊸×)n	Round to nearest hundredth, ties towards ∞	Tacit	Rounding	precision favoring whole number
 {⌊0.5+𝕩}⌾(20⊸×)n	Round currency to nearest five hundredths	Tacit	Rounding	cents nickels ¢5¢
 (⊢↑˝·≍⟜¬2+≢)y	Pad y with a layer of fill elements on all sides	Tacit	Structural	expand enlarge outer outside around edges boundary border surround frame
+(<∘•rand.Range¨i0↑≢)⊸⊏y	Random (-i0)-cell of array y	Tacit	Random	selectrandom
 (»⊸∨' '⊸≠)⊸/d1	Remove leading and duplicate spaces	Tacit	Text	delete trim without consecutive extraneous normalise normalize blanks multiple drop start beginning
 (∨⟜«' '⊸≠)⊸/d1	Remove trailing and duplicate spaces	Tacit	Text	delete trim without consecutive extraneous normalise normalize blanks multiple drop start ending
 (∨˝˘' '⊸≠)⊸/d2	Remove all-blank rows	Tacit	Text	all-space allspace empty delete drop without
@@ -1091,7 +1095,7 @@ x(∧`⌾⌽∘∊˜¬⊸/⊢)y	Remove cells that appear in x from end of y	Taci
 (≠x)(+⟜1|-)1+x⌽⊸⊐y	Last indices in x of major cells y, ≠x if not found	Expression	Search	indexin indexof find locate positionof locating items elements location
 (+`a1)(⊏˜⍋⊸⊏⊢)⍋y	Grade up (⍋) for sorting subarrays of y indicated by a1	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
 (+`a1)(⊏˜⍋⊸⊏⊢)⍒y	Grade down (⍒) for sorting subarrays of y indicated by a1	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
-⍷⊸(¯1⌈≠∘⊣-˜∾⊒⊢)y	For each cell of y, index of most recent matching one (-1 if none)	Tacit	Mathematical	latest rightmost nearest distance from before precedes preceding matches equal same
+⍷⊸(¯1⌈≠∘⊣-˜∾⊒⊢)y	For each cell of y, index of most recent matching one (-1 if none)	Tacit	Search	latest rightmost nearest distance from before precedes preceding matches equal same
 i0(⊢÷⊣√·+´⋆˜⟜|)n	Normalisation by i0-norm	Tacit	Geometric	Lp-normalise Lp-normalize Lp-normalization L-p ℓp ℓ-p
 f{𝕨𝕩{𝕨𝕏𝕗}⚇∞‿0𝕗}	Function that applies all functions in nested array f and returns all results	Block Modifier	Function Application	each every list gerund elements to both arguments collect
 -⟜»n0∾˜1+m0•rand.Subset○(-⟜1)n0	Random list of m0 positive (not zero) integers with sum n0	Expression	Random	partition divide number
@@ -1137,7 +1141,7 @@ a1(¬-˜⊢×·+`»⊸>)⊸⊔y	Cut y at 0s in a1, giving a slice for each group
 m0{𝕩+´∘××`1»𝕨÷1+↕≠𝕩}n1	Value of Taylor series with coefficients n1 at point m0	Block Function	Polynomial	
 ⟨1⟩{(»+𝕨⊸×)𝕩∾0}´⌽↕i0	Stirling numbers of the first kind s(i0,k) for all k	Expression	Combinatorics	ways permute permutations set disjoint cycles
 x{𝕨¨⌾((𝕩∊y)/○⥊⊢)𝕩}z	Replace all occurrences of elements from y in array z with x	Block Function	Structural	substitute merge amend update cells items
-(∊y)(¬⊸×-⊣)(⍋⊏»)⍋y	For each cell of y, index of most recent matching one (-1 if none)	Tacit	Mathematical	latest rightmost nearest distance from before precedes preceding matches equal same
+(∊y)(¬⊸×-⊣)(⍋⊏»)⍋y	For each cell of y, index of most recent matching one (-1 if none)	Tacit	Search	latest rightmost nearest distance from before precedes preceding matches equal same
 ×´⊸÷○(•math.Fact-⟜1)⟜(+´)n1	Multivariate beta function	Tacit	Mathematical	B() Β() beta()
 ((∨`∧∨⟜«)' '⊸≠)⊸/d1	Remove leading, trailing and duplicate spaces	Tacit	Text	delete trim reformat extraneous normalise normalize blanks multiple drop start beginning ending without
 +´m⋆⌜˜(1+↕)⊸(⊣/˜0=|)j0	Sum of m'th powers of positive divisors of j0	Expression	Number Theory	sigma_x sigma_2 sigma_3 sigma_4 sigmax sigma2 sigma3 sigma4 σₓ(n) σ₂(n) σ₃(n) σ₄(n)
@@ -1228,7 +1232,7 @@ c1(¯1⊑(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Le
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Text	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
 F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 with custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering by comparator three-result
 ∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
-1-˜1{𝕨≥≠𝕩?↕≠𝕩;0⌈-⟜(𝕨×n1≤⊏⟜𝕩)𝕨+˜⊸𝕊𝕩⌊𝕨-⊸⌽𝕩}»n1	Index of most recent element with a smaller value, at each position of n1	Expression	Mathematical	latest rightmost nearest distance from before precedes preceding lesser
+1-˜1{𝕨≥≠𝕩?↕≠𝕩;0⌈-⟜(𝕨×n1≤⊏⟜𝕩)𝕨+˜⊸𝕊𝕩⌊𝕨-⊸⌽𝕩}»n1	Index of most recent element with a smaller value, at each position of n1	Expression	Search	latest rightmost nearest distance from before precedes preceding lesser
 i0 F{(𝕨¬˜≠𝕩)↑⥊1(-⊸↓𝔽˜`⌾⌽⊸𝔽⟜(𝔽`)˘↓)↑‿(𝕨-1)⥊𝕩}y	Linear-time F˝˘i0↕y for associative arithmetic F, fast for large windows	Block Modifier	Data	rolling windowed sums minimums maximums average vanherk gil werman
 n2{𝕩𝕊⍟≢>(+˝÷≠)¨⊐⟜(⌊´)∘(+˝×˜)∘-⟜(⍉𝕩)˘⊸⊔𝕗}m2	k-means clustering of points n2 from initial means m2, by iterative refinement	Block Modifier	Data	machine learning naive lloyd's lloyd-forgy algorithm voronoi partitioning centroids
 i0{(𝕨↑·⍋⊏⟜𝕩)⊸⊏/𝕩≤(𝕨-1)⊑∧(⌈∘√𝕨⊸×)⊸•rand.Subset∘≠⊸⊏𝕩}n1	Indices of smallest i0 elements of n1 (fast i0↑⍋n1)	Block Function	Ordering	least minimum infimum lowest
