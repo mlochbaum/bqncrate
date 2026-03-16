@@ -618,6 +618,7 @@ x(F⎉0)y	Run F on units	Tacit	Function Application	apply
 ⌈`⎉1 n	Row-wise progressive maxima	Tacit	Data	running cumulative scan rowwise horizontally
 ⌊`⎉1 n	Row-wise progressive minima	Tacit	Data	running cumulative scan rowwise horizontally
 𝕨0⊘1𝕩	Was this block function called monadically?	Expression	Function Application	arity ambivalent ambivalence variadic leftargument 900⌶ monadic?
+f{𝔽}	Change f from subject to function role, without changing its value	Expression	Syntax	convert apply application
 x⍋⊸⊏y	Sorting y according to x	Tacit	Ordering	
 x⍋⌾⋈y	Is x lexically less than or equal to y?	Tacit	Ordering	testif tao totalarrayordering notafter precedesorequivalentto ≼ ⊁ lexicographically
 /⁼x⍋y	Distribution of y into intervals with cut-offs x	Expression	Data	bins groups ranges buckets
