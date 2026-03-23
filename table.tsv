@@ -499,7 +499,10 @@ c-@	Characters to Unicode code point numbers	Expression	Text	utf-8 utf8 utf-16 u
 expr⊣name←y	Combining two lines into one	Expression	Syntax	lev lefttack where
 name∾↩y	Fast: 'name' redefined to be its value with y catenated along its first axis	Expression	Structural	amend append extend accumulate concatenate dimension 1st
 2×π	tau (2 pi)	Constant	Mathematical	Palais'circleconstant Palais'constant Palaisconstant 6.283185307179586476925286766559006 τ 𝜏
+m+t×n-m	Linear interpolation (lerp) by parameter t, from m at t=0 to n at t=1	Expression	Linear Algebra	first-degree polynomial
+c+b×d-c	Replace characters from c with those of d where b is 1	Expression	Text	substitute merge amend update major cells items indicate masking indicating
 n+m×0=n	Replace zeroes in n with corresponding elements of m	Expression	Data	substitute merge amend update 0s zeros cells items falses falsehoods
+a≠u∧b≠a	Boolean blend: choose the bit from a where u is 0, or b if 1	Expression	Boolean	merge merging case alternative indicate masking indicating elements bitmask bit-mask
 ∾a×<b	Expand a by replacing 1s with same-rank array b, and 0s with 0¨b	Expression	Structural	nest fractal replace copies
 ∾m2×<n2	Kronecker product of two matrices	Expression	Linear Algebra	zehfuss block matrix direct tensor
 1‿¯1×<n	±n by juxtaposition	Expression	Arithmetic	plusminus
@@ -714,6 +717,7 @@ f{𝕎𝕩}y	Function to apply f to y as a function	Block Function	Function Appl
 m ×⎉1‿∞ n	Mid product of m and n	Tacit	Arithmetic	midproduct
 '0'+↕10	The digits from 0 to 9	Constant	Text	numbers arabicnumerals 0-9 0123456789
 'a'+↕26	The letters from a to z	Constant	Text	abcdefghijklmnopqrstuvwxyz latinalphabet englishletters uppercase a-z
+(u<a)∨u∧b	Boolean blend: choose the bit from a where u is 0, or b if 1	Expression	Boolean	merge merging case alternative indicate masking indicating elements bitmask bit-mask
 m0(+≍-)n0	m0±n0	Tacit	Arithmetic	plusminus
 m0(-≍+)n0	m0∓n0	Tacit	Arithmetic	minusplus
 (×m)×|n	Transfer sign, n with the sign of m	Expression	Data	signum resign
@@ -912,6 +916,7 @@ m1(×÷+´∘×)n1	Bayes' formula	Tacit	Statistical	Bayesformula statistics prob
 +´⌾(×˜)m1-n1	Euclidean distance between two points in n-space	Expression	Geometric	L2-distance L-2 ℓ2 ℓ-2 ℓ₂ L² Pythagorean d()
 (⌈´-⌊´)⥊n	Statistical range, or difference between largest and smallest element, of n	Expression	Statistical	span minmaxmin extremes
 (⊢÷⌈˝∘|)n	Normalize by infinity-norm (maximum absolute value)	Tacit	Geometric	L∞-normalise L∞-normalize L∞-normalization L-∞
+⊣⌾(b1⊸/)˜˝y2	Blend halves of length-2 array y element-wise, like selecting along columns	Expression	Selection	merge merging case alternative choose indicate masking indicating elements bitmask bit-mask
 1∾×`⌽⊸÷1+↕j0	Coefficients of the binomial	Expression	Combinatorics	
 ÷⟜⊑⌽+`0∾↕j0	Outstanding balances on rule of 78s	Expression	Finance	sum-of-the-digits method
 ⌈´(⊢⌈+)`n1	Largest sum of any contiguous non-empty sublist	Expression	Data	maximum subarray sub-array sub-list sub-vector biggest highest kadane's kadanes algorithm
