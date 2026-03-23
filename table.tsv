@@ -777,8 +777,10 @@ y/˜0≠i0|↕≠y	Remove every i0'th cell of y	Expression	Selection	filter item
 ¯97⊸(|-⊣)i0	SWIFT check digit from i0 bank number	Tacit	Finance	correct validate
 (↕÷-⟜1)j0	j0 evenly spaced numbers starting at 0 and ending at 1	Tacit	Sequences	unit normalized steps linear divide inclusive
 ∾⟜(1¨⊏)y	Append a row of 1s	Tacit	Data	ones trues truths
+x⊣⌾(i0⊸↑)y	Replace the first m0 cells of y with those of x	Expression	Structural	modify change initial starting prefix
 x⊣⌾(b1⊸/)y	Blend same-length x and y by mask: result cell is from y where b1 is 0, or x if 1	Expression	Selection	merge merging case alternative choose indicate masking indicating elements items major cells bitmask bit-mask
 x0¨⌾(b1⊸/)y1	Replace elements of y1 with x0 where b1 is 1	Tacit	Structural	substitute merge amend update major cells items indicate masking indicating
+x⊣⌾(i⊸⊏)y	Replace major cells i of y with those of x	Expression	Selection	modify change index indices corresponding
 ÷1++⌜˜↕j0	Hilbert matrix of order j0	Expression	Linear Algebra	table sorting reordering
 (+´÷≠)n	Arithmetic mean of n	Tacit	Statistical	average arithmeticmean() AM() avg()
 1+´0=↕⊸|j0	Number of positive divisors of j0	Expression	Number Theory	sigma_0(n) tau(n) sigma0 σ₀(n) d(n) ν(n) τ(n) oeisA000005 oeisA5
@@ -951,6 +953,7 @@ m(∧⟜¬∨¬⊸∧)n	Probabilistic XOR	Tacit	Statistical	fuzzy probability ch
 i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Selection	leftshift rightshift bits bytes
 (1»≢˘⟜«)⊸/y	Remove consecutive duplicate major cells	Tacit	Search	items deduplicate erase multiple repetitions repeated copies equal matching keep retain different from previous next adjacent
 (1»≢˘⟜«)⊸/y	Remove duplicate cells from ordered array y	Tacit	Search	major deduplicate distinctitems uniqueelements nub erase repetitions
+x⊣⌾((F˘y)⊸/)y	Computed blend: replace each cell of y where F is true with the one at the same place in x	Expression	Selection	merge merging case alternative choose indicate elements items major cells corresponding
 (<⌈´≢¨y1)↑¨y1	Pad elements of list of equal-rank arrays y1 to equal shape	Expression	Structural	cells items
 0=(1+↕⌈´j1)|⌜j1	Divisibility table	Expression	Number Theory	divides divisor matrix
 (∾∾⊔˜1∾F¨)˝y1	Sort y1 with custom less-than-or-equal function F (insertion sort, compares all pairs)	Expression	Ordering	ascending increasing sorting reordering by comparator
