@@ -777,6 +777,7 @@ y/˜0≠i0|↕≠y	Remove every i0'th cell of y	Expression	Selection	filter item
 ¯97⊸(|-⊣)i0	SWIFT check digit from i0 bank number	Tacit	Finance	correct validate
 (↕÷-⟜1)j0	j0 evenly spaced numbers starting at 0 and ending at 1	Tacit	Sequences	unit normalized steps linear divide inclusive
 ∾⟜(1¨⊏)y	Append a row of 1s	Tacit	Data	ones trues truths
+x⊣⌾(b1⊸/)y	Blend same-length x and y by mask: result cell is from y where b1 is 0, or x if 1	Expression	Selection	merge merging case alternative choose indicate masking indicating elements items major cells bitmask bit-mask
 x0¨⌾(b1⊸/)y1	Replace elements of y1 with x0 where b1 is 1	Tacit	Structural	substitute merge amend update major cells items indicate masking indicating
 ÷1++⌜˜↕j0	Hilbert matrix of order j0	Expression	Linear Algebra	table sorting reordering
 (+´÷≠)n	Arithmetic mean of n	Tacit	Statistical	average arithmeticmean() AM() avg()
@@ -842,7 +843,6 @@ m(⊣+-⊸|)n	Residue after dividing n by m but replacing 0 with m	Expression	Da
 (↕¯1⊑≢)⊸∾y2	Attach column numbers to a table	Tacit	Indices	headings
 m1⊸+¨n1⊸×¨↕j1	Multi-dimensional arithmetic progression with dimensions j1 starting at m1 with steps n1	Expression	Sequences	seq() multidimensional axes
 m(≤⟜|×⊢)n	Round to zero values of n within m of zero	Tacit	Rounding	precision fuzz 0
-x⊣⌾(b1⊸/)˜y	Merge x and y using b1 (0 for x's element, 1 for y's element)	Tacit	Structural	faro dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing alternative choose indicate masking indicating elements items major cells bitmask bit-mask
 ⌽⌾(0‿¯1⊸⊏)y	Swap first and last major cells	Tacit	Structural	exchange head tail leading trailing elements items 1st start beginning ending
 (+´÷1⌈≢)n1	Average, returning 0 if empty	Tacit	Statistical	arithmeticmean
 m1(+´|∘-)n1	Manhattan distance between two points in n-space	Tacit	Geometric	taxicab L-1 L1-distance ℓ1 ℓ-1 ℓ₁ L¹ d()
