@@ -19,7 +19,7 @@ m⌈n	Maximum of m and n	Primitive	Arithmetic	upstile greater larger max() bigge
 m⌊n	Minimum of m and n	Primitive	Arithmetic	downstile lesser smaller min()
 ÷n	Reciprocal: 1÷n	Primitive	Arithmetic	multiplicativeinverse opposite obelus inverting reciprocating per
 m÷n	Divide m by n	Primitive	Arithmetic	division over ⁄ per
-=y	Rank (number of dimensions) of y	Primitive	Array	howmanyaxes numberofaxes axiscount ⥊⥊
+=y	Rank (number of dimensions) of y	Primitive	Array	howmanyaxes numberofaxes axiscount
 a=b	Logical XNOR	Primitive	Boolean	gate materialbiconditional biimplication eqv nxor bothorneither exclusivenor materialequivalence ⇔ δ ẟ Kroneckerdelta iff logicalequivalence Epq doubleimplying both-or-neither
 x=y	Equal To	Primitive	Arithmetic	sameas ===
 ≠x2	Number of rows in table x2	Primitive	Array	count tally
@@ -325,8 +325,9 @@ n÷100	Rate corresponding to percentage n	Expression	Statistical	conversion conv
 x⊢y	Church Boolean false (x if false, else y)	Tacit	Functional	falsy falsey 0
 x⊣y	Church Boolean true (x if true, else y)	Tacit	Functional	truthy 1
 1˘y2	List having as many ones as y2 has rows	Tacit	Data	1s trues truths
+x˘y	Array with the same length as y and each cell matching array x	Expression	Data	constant repetition repeats repeating copy all cells
 0¨y	Zeros with same shape as y	Tacit	Data	zeroes naughts 0s falses falsehoods
-x0¨y	Fill array y with data value x0	Tacit	Data	
+x¨y	Array with the same shape as y, filled with data value x	Expression	Data	constant repetition repeats repeating copy all elements
 0/y	Empty array along first axis	Expression	Structural	dimension 1st
 ¯1⊑y1	Last element of list y1	Expression	Selection	cell
 @	Null character (NUL)	Constant	Text	\0 ^@ U+00 0x00h \u00 ≢00
@@ -370,6 +371,7 @@ i0↑˘y2	Adjust table y2 to width |i0 by truncating or padding rows	Tacit	Struc
 ¯1↑˘y2	Last column as a column matrix	Expression	Selection	rightmostcolumn trailing table list ending
 ⌽˘y2	Reflect vertically	Tacit	Structural	mirroring reflecting reflection right-left rightleft leftright left-right reverse flip put backwards
 x∾¨y	Join corresponding elements	Tacit	Structural	juxtapose tuples cells zip pair
+x0⊣¨y	Array with the same shape as y, filled with ⊑x0	Tacit	Data	constant repetition repeats repeating copy all elements
 i0/≍y	Array where the major cells are i0 repeated copies of y1	Expression	Structural	fill tile copy duplicate add new axis dimension increase incrementing rank by one
 i0/≍y1	Table with i0 rows, each consisting of y1	Expression	Structural	fill tile repeat copy duplicate
 i0⊏∧y	i0'th-smallest major cell of y	Expression	Selection	leastof minimum lexicographically item element
