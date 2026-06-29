@@ -428,12 +428,17 @@ x⋈⌜y	Cartesian product: all pairs from x and y	Tacit	Structural	catalog pair
 ÷´n1	Alternating product of n1	Tacit	Arithmetic	
 ≠´b1	Parity of boolean list: are there an odd number of 1s?	Tacit	Boolean	
 F´x‿y	Apply dyadic function as a monadic function on a two-element argument	Tacit	Function Application	calling runing converting change changing switching valence arity into dyad-to-monad dyadic-to-monadic binary-to-unary
+⊢´x1	Rightmost: last element of x1	Tacit	Selection	final ending
+⊣´x1	Leftmost: first element of x1	Tacit	Selection	1st start beginning leading initial
+x⊣´y1	First element of y1, or x if empty	Tacit	Selection	1st start beginning leading initial default 0 zero length
 F´⥊y	Fold F over all elements without respect to shape	Expression	Function Application	reduce insert rowwise reducing folding row-wise horizontally remove
 +˝n	Column-wise sum of n	Tacit	Data	summation enlargedsigma bigsigma capitalsigma ∑ Σ vertically columnwise
 -˝n	Column-wise alternating sum: ((n_0-n_1)+n_2)-n_3+…	Tacit	Data	alternatingsum series vertically columnwise
 ×˝n	Column-wise product of n	Tacit	Data	enlargedpi bigpi capitalpi ∏ Π vertically columnwise
 ∾˝y	Combine first two axes of y	Tacit	Structural	Merge demoterank lessenrank reduce flatten reducing table
-⊢˝y	Last cell of y	Tacit	Selection	topmostrow subarray dimension 1st
+⊢˝x	Rightmost: last cell of array x	Tacit	Selection	row item final ending bottom
+⊣˝x	Leftmost: first cell of array x	Tacit	Selection	row item 1st start beginning leading initial topmost
+x⊣˝y	First cell of array y, or x if length 0	Tacit	Selection	row item 1st start beginning leading initial default zero
 +`n	Cumulative sum	Tacit	Data	runningtotal
 ∧`b	Turn off all 1s after first 0, or indicate all elements until the first 0	Tacit	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask ones zero trues truths falsehood 1st
 ∨`b	Turn on all 1s after first 1, or indicate all elements except leading 0s	Tacit	Boolean	indicating flipping turning change changing inverting negating bitmask bit-mask zeros zeroes trues truths ones falses falsehoods 1st start beginning not
