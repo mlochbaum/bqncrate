@@ -965,6 +965,7 @@ m(∧⟜¬∨¬⊸∧)n	Probabilistic XOR	Tacit	Statistical	fuzzy probability ch
 i0(×⊸×⟜≠↑↓)b1	Shift b1 forward or backward i0 positions	Tacit	Selection	leftshift rightshift bits bytes
 (1»≢˘⟜«)⊸/y	Remove consecutive duplicate major cells	Tacit	Search	items deduplicate erase multiple repetitions repeated copies equal matching keep retain different from previous next adjacent
 (1»≢˘⟜«)⊸/y	Remove duplicate cells from ordered array y	Tacit	Search	major deduplicate distinctitems uniqueelements nub erase repetitions
+x(⊣≡⌊○≠↑⊢)y	Is x a prefix of y?	Tacit	Search	prefixof startswith
 x⊣⌾((F˘y)⊸/)y	Computed blend: replace each cell of y where F is true with the one at the same place in x	Expression	Selection	merge merging case alternative choose indicate elements items major cells corresponding
 (<⌈´≢¨y1)↑¨y1	Pad elements of list of equal-rank arrays y1 to equal shape	Expression	Structural	cells items
 0=(1+↕⌈´j1)|⌜j1	Divisibility table	Expression	Number Theory	divides divisor matrix
@@ -1083,7 +1084,6 @@ x i0{𝕗⊸↑∾⊣∾𝕗⊸↓} y	Insert x into y before major cell i0	Block
 √×´(0∾n)-(+´n)÷2	Area of triangle with side lengths n	Expression	Geometric	Heron's formula herons
 x(⊢/˜⊏∘⥊˘⊸∊˜)y2	Rows of non-empty table y starting with an element in x	Tacit	Selection	cell item
 m1(+˝∘×⎉1÷+´∘⊣)n2	Weighted average of rows of n2 with column weights m1	Tacit	Data	
-x≤○≠◶0‿(⊣≡≠⊸↑)y	Is x a prefix of y?	Tacit	Search	prefixof startswith
 x(∾○(↕≠)⍋⊸⊏∾)y	Merge x and y alternately	Tacit	Structural	faro dovetail zipper zipping merging interweave interweaving interleave interleaving shuffle shuffling meshing
 (⍋⊏⟜(+`a1))⊸⊏⍋y	Indices to sort each sublist of y indicated by starting mask a1, ascending	Expression	Partitioning	segments segmented partitions partitioned sublists sub-vectors sub-lists starts beginnings items elements upgrade
 (⍋(+`i1)⊸⍋)⊸⊏⍋y	Grade up (⍋) for sorting subarrays of y having lengths i1 (≠y ↔ +´i1)	Expression	Ordering	sub-arrays sub-vectors subvectors substrings sub-strings
