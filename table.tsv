@@ -106,14 +106,14 @@ i1⥊y0	Shape-i1 array of copies of y0	Primitive	Structural	repetition repeats r
 i1⊔y	Group major cells of y into the positions i1	Primitive	Selection	square cup bucket sort
 F∘G y	Atop: F on the result of G on y, that is, F G y	Primitive	Composition	small little tiny jot composewith bind ring functioncomposition against after
 x F∘G y	Atop: F on the result of x G y, that is, F x G y	Primitive	Composition	small little tiny jot composewith functioncomposition upon after
-F⊸G x	Before hook: (F x) G x	Primitive	Function Application	functioncomposition fXgX backcompose back-compose reverse-compose reversecompose into
-x F⊸G y	Before: (F x) G y	Primitive	Function Application	composewith functioncomposition fXgY backcompose back-compose reverse-compose reversecompose into
-x⊸G y	Bind: G between x and y, that is, XgY	Primitive	Composition	small little tiny jot composewith ring
+F⊸G x	Before hook: (F x) G x	Primitive	Function Application	functioncomposition FxGx backcompose back-compose reverse-compose reversecompose into
+x F⊸G y	Before: (F x) G y	Primitive	Function Application	composewith functioncomposition GxGy backcompose back-compose reverse-compose reversecompose into
+x⊸G y	Bind: G between x and y, that is, x G y	Primitive	Composition	small little tiny jot composewith ring
 F⟜G y	After hook: x F G x	Primitive	Composition	composewith bind ring functioncomposition against
 F⟜y z	Bind: F between z and y, that is, z F y	Primitive	Composition	small little tiny jot composewith ring
 x F⟜G y	After: x⊸F on the result of G on y, that is, x F G y	Primitive	Composition	small little tiny jot composewith bind ring functioncomposition hook against
 F○G y	Over: F on the result of G on y, that is, F G y	Primitive	Composition	circle hoof composewith functioncomposition
-x F○G y	Over: apply G to each argument and F to the results	Primitive	Function Application	circle ontop composewith functioncomposition (gX)F(gY) (gX)fgY (fX)G(fY) (fX)gfY comparing
+x F○G y	Over: apply G to each argument and F to the results	Primitive	Function Application	circle ontop composewith functioncomposition (Gx)F(Gy) (Gx)FGy (Fx)G(Fy) (Fx)GFy comparing
 F⌾G y	Under: apply G, then F, then undo G	Primitive	Function Application	double circle dual commutator
 x F⌾G y	Under: apply F○G, then undo G	Primitive	Function Application	double circle dual commutator
 F⁼y	Undo: find z such that y ≡ F z	Primitive	Function Application	F⁻¹(x) F′(x) fʹ(x) inverse opposite revert
@@ -411,7 +411,7 @@ F⊸/y	Filter to only those elements of y that satisfy cell-wise criterion F	Exp
 -⟜1 n	Decrement	Tacit	Arithmetic	decrease previous
 ÷⟜2 n	Halve: n÷2	Tacit	Arithmetic	halfof
 ÷⟜F n	Normalize, scaling so that the norm F is equal to 1	Expression	Data	arbitrary custom F=1 vector list
-x F⊸G⟜H y	Split-Compose: apply G between (F x) and (H y), that is (F x) G (H y)	Tacit	Composition	composewith splitover (fX)G(hY) (fX)ghY
+x F⊸G⟜H y	Split-Compose: apply G between (F x) and (H y), that is (F x) G (H y)	Tacit	Composition	composewith splitover (Fx)G(Hy) (Fx)GHy
 x⌾⊏y	Replace first major cell of y with x	Expression	Structural	substitute merge amend update 1st item element
 F⌾⥊y	Handle array y temporarily as a list	Tacit	Function Application	columnheadings columnnumbers ⍢, flattened ravelled raveled
 /⁼j1	Convert set of indices j1 to a mask	Tacit	Indices	indicate masking indicating bitmask bit-mask converting change changing
@@ -639,7 +639,7 @@ x⍒⌾⋈y	Is x lexically greater than or equal to y?	Tacit	Ordering	testif tao
 ⍷⊸≡y	Are all major cells of y distinct?	Tacit	Search	testif alldifferent? allunequal? noduplicates? nodups? items elements alldistinct? allunique?
 ⌽⍉⌽y2	Reflect counter-diagonally	Expression	Structural	mirroring reflecting reflection counterdiagonally
 <˘⍉y2	Table to list of column lists (inverted table)	Expression	Structural	split into columns vertically column-wise columnwise boxed enclosed matrix transforming transformation change changing inverting inversion
-⍉∘+n2	Conjugate Transpose	Tacit	Linear Algebra	self-adjoint selfadjoin Yᴴ y^H y† y^† Aᴴ a^H a† a^†
+⍉∘+n2	Conjugate Transpose	Tacit	Linear Algebra	self-adjoint selfadjoin yᴴ y^H y† y^† aᴴ a^H a† a^†
 ⍉⊸≡y2	Is y2 a symmetric matrix?	Tacit	Linear Algebra	testif
 ⟨⟩⍉y	Convert y to array (enclose if atom)	Expression	Structural	leftshoeunderbar encloseifsimple conditionalenclose boxsimple eis condenclose
 @+13‿10	Carriage Return-Line Feed pair (CRLF)	Constant	Text	\r\n U+0DU+0A 0x0D0x0A \u0D\u0A ≢0D≢0A enter linebreak windows
@@ -765,7 +765,7 @@ y/˜i0>⍋⍋y	The i0 smallest cells of y in order of occurrence	Expression	Orde
 y/˜i0>⍋⍒y	The i0 largest cells of y in order of occurrence	Expression	Ordering	biggest greatestif items elements
 ⍷∘∧⊸⊐y	Densely rank y ascending: tied cells share a rank, no ranks skipped	Tacit	Ordering	rising up ordinals cardinals list
 ⍷∘∨⊸⊐y	Densely rank y descending: tied cells share a rank, no ranks skipped	Tacit	Ordering	falling down ordinals cardinals list
-(⍉≡+)n2	Is n2 a Hermitian matrix?	Tacit	Linear Algebra	testif Hermitian? self-adjoint? selfadjoint? Yᴴ y† Aᴴ a†
+(⍉≡+)n2	Is n2 a Hermitian matrix?	Tacit	Linear Algebra	testif Hermitian? self-adjoint? selfadjoint? yᴴ y† aᴴ a†
 (-≡⍉)y2	Is y2 an anti-symmetric matrix?	Tacit	Linear Algebra	testif antisymmetric skewsymmetric skew-symmetric
 0¨∘≢⊸⍉y	Main diagonal of any rank array	Tacit	Selection	maindiagonal nwse nw-se majordiagonal
 ∧˘⌾⍉⎉2 y	Sort each column in ascending order	Tacit	Ordering	up increasing sorting reordering
@@ -1129,7 +1129,7 @@ x0((∨`∧∨⟜«)∘≠/⊢)y1	Remove leading, trailing and duplicate x0's	Ta
 ¯1⋆(∾≠⟜<)´i0⥊<∧⌜˜↕2	Hadamard matrix of dimension 2⋆i0, by Sylvester's construction	Expression	Linear Algebra	walsh
 ¬∘∊⟜(⥊×⌜˜)⊸/2↓↕j0	Primes less than j0	Expression	Number Theory	primesuntil numbers
 >j0↑¨(+`∾⟜0)⍟(↕j0)⥊1	First j0 rows of Catalan's triangle	Expression	Combinatorics	numbers dyck words binary trees mountain ranges
-{(∾𝕊¨)⍟(1<≡)⥊𝕩}Y	List of all atoms in Y (flatten)	Block Function	Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
+{(∾𝕊¨)⍟(1<≡)⥊𝕩}y	List of all atoms in y (flatten)	Block Function	Structural	enlist flattening flattened raze razing ϵ ε ∈ flatten() cells items
 m0{𝕨(|𝕊⍟(>⟜0)⊣)𝕩}n0	Greatest Common Divisor of natural numbers m0 and n0	Block Function	Number Theory	gcd() gcf() factor hcf() highest gcm() measure hcd Caron hacek invertedcircumflex checkmark hachek
 F{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}G y	Apply F to y repeatedly until G returns 0 (avoiding stack overflow)	Block Modifier	Function Application	poweroperator circlestar starcircle repeating iterating looping while
 F{F _𝕣_ G: {𝕊:F𝕩 ; 𝕊⁼:G𝕩}}G	Function that applies like F with inverse set to G	Block Modifier	Function Application	obverse specify specified undo header opposite
