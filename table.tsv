@@ -905,6 +905,7 @@ m2 ⌊˝∘+⎉1‿∞ n2	Extend a distance table to next leg	Tacit	Graph Theory
 •rand.Range∘≠⊸⊑⥊y	Random element of any-rank array y	Tacit	Random	selectrandom
 ' '⊸≠⊸/¨d	Remove spaces in each string	Tacit	Text	deletespaces blanks drop without
 ≍⟜('¯'¨)d1	Underline a string	Tacit	Text	underscore
+×´+`⊸•math.Comb j1	Multinomial coefficient: number of distinct rearrangements of /j1	Expression	Combinatorics	reorderings unique permutations identical indistinguishable copies multiple multiplicity
 ∧`∧˝' '=d2	Locate leading blank columns in text table d2	Expression	Text	spaces beginning masking indicate indications allspace all-space start blanks
 {⌊𝕩+1≤2|𝕩}n	Round to nearest even number, ties towards ∞	Block Function	Rounding	precision favoring whole
 x0{𝕨+↕𝕩¬𝕨}y0	Consecutive values from x0 to y0 inclusive (both numbers, or both characters, with x0≤y0)	Block Function	Sequences	range closed interval seq() …
@@ -1028,6 +1029,7 @@ i(⊏⎉∞‿1⍋⊸⊏⊢)y2	Sort rows of table y2 according to column(s) i	Ta
 m(+÷××+•math.Comb⊢)n	Beta function	Tacit	Mathematical	B(x,y) Β(x,y) B() Β() beta()
 (∨`' '⊸≠)⊸/d1	Remove leading spaces	Tacit	Text	delete blanks beginning start drop without
 (∨`'0'⊸≠)⊸/d1	Remove leading zero characters	Tacit	Text	zeros 0s trim left falses falsehoods start beginning
+×´+`⊸•math.Comb/⁼⊐y	Number of distinct rearrangements of the major cells of y	Expression	Combinatorics	reorderings unique permutations
 'F'-×⊸+60‿70‿80‿90⍋j	Students grades given score	Expression	Specialty	
 " ⎕"⊏˜j>⌜↕⌈´j	Bar chart	Expression	Data	curve graph plotting
 (b¬⊸/"in")∾"correct"	Conditional in text	Expression	Text	message true false Boolean binary base-2 base2 converting change changing
