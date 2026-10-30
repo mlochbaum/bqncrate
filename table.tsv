@@ -534,7 +534,7 @@ i0‿⌽⥊y1	Reshape y1 to i0-row table (filled row-wise)	Tacit	Structural	hori
 +∘-n	Negate real part (“real conjugate”)	Tacit	Complex Numbers	
 -∘+n	Mirror complex n across y-axis	Tacit	Complex Numbers	negatereal mirroring reflecting reflection
 m×∘-n	Sign of difference (¯1:m is smaller, 0:m=n, 1:m is bigger)	Tacit	Data	signum cmp() <=> >-< spaceship space-ship three-way compare comparing comparison
-m⌊∘÷n	Integer Division	Tacit	Arithmetic	intdiv() ≢ // divmod()
+m⌊∘÷n	Integer Division	Tacit	Arithmetic	quotient intdiv() ≢ // divmod()
 a¬∘∧b	Logical NAND	Tacit	Boolean	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼ gate
 m¬∘∧n	Probabilistic NAND	Tacit	Statistical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼
 a¬∘∨b	Logical NOR	Tacit	Boolean	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽ neither-nor gate †
