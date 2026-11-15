@@ -534,7 +534,7 @@ i0‿⌽⥊y1	Reshape y1 to i0-row table (filled row-wise)	Tacit	Structural	hori
 +∘-n	Negate real part (“real conjugate”)	Tacit	Complex Numbers	
 -∘+n	Mirror complex n across y-axis	Tacit	Complex Numbers	negatereal mirroring reflecting reflection
 m×∘-n	Sign of difference (¯1:m is smaller, 0:m=n, 1:m is bigger)	Tacit	Data	signum cmp() <=> >-< spaceship space-ship three-way compare comparing comparison
-m⌊∘÷n	Integer Division	Tacit	Arithmetic	quotient intdiv() ≢ // divmod()
+m⌊∘÷n	Integer Division	Tacit	Arithmetic	quotient floored divide dividing intdiv() //
 a¬∘∧b	Logical NAND	Tacit	Boolean	shefferstroke notand andtilde carettilde alternativedenial Dpq ⊼ gate
 m¬∘∧n	Probabilistic NAND	Tacit	Statistical	fuzzy probability chance shefferstroke notand alternativedenial Dpq ⊼
 a¬∘∨b	Logical NOR	Tacit	Boolean	peirce'sarrow quine'sdagger ampheck neithernor jointdenial Xpq ⊽ neither-nor gate †
@@ -1239,6 +1239,7 @@ F{𝔽´𝔽˜⍟(/2|⌊∘÷⟜2⍟(↕1+⌊2⋆⁼𝕘)𝕘)}i0 y	Compute F´i
 (2÷√π)×n0×{(⋆-𝕩)×1(1+×)´𝕩÷1.5+↕99}×˜n0	Error function (normalized integral of Gaussian)	Expression	Statistical	statistics erf() distribution sigmoid cdf cumulative
 {s←('^'=𝕩)∧«1="@`"⍋𝕩⋄s¬⊸/𝕩-64×»s}d1	Evaluate control character sequences (like ^J)	Tacit	Text	strings escapes characters charvector charvecs null bell backspace bs horizontaltab ht linefeed verticaltab vt formfeed carriagereturn crlf cr+lf ^M^J control-z sub eof endoffile end-of-file ^@ ^A ^B ^C ^D ^E ^F ^G ^H ^I ^K ^L ^N ^O ^P ^Q ^R ^S ^T ^U ^V ^W ^X ^Y ^Z ^[ ^\ ^] ^^ ^_
 (≍↕0){∾˝(0∾˘1+𝕩)⊸⊏˘⍒˘=⌜˜↕𝕨}´-⟜↕j0	All permutations of ↕j0, as table rows in lexicographical order	Expression	Combinatorics	ordered orderings anagrams rearrangements without replacement list
+m‿n F{a‿s←-˜`𝕨⋄s÷↩𝕩⋄s×2÷˜+´⥊2↕𝔽a+s×↕⊸∾𝕩}j0	Trapezoid rule integral approximation of F over [m,n] split into j0 intervals	Block Modifier	Mathematical	approximate numerical area newton-cotes quadrature
 0{0=≠𝕩?𝕨;(⊑𝕩)(+⟜(𝕨×≠𝕩)𝕊⊢-<)1↓𝕩}i1	Index of the permutation i1 among those of equal length in lexicographical order	Expression	Combinatorics	ordering anagram rearrangement without replacement list lehmer encode
 {𝕩‿𝕩⥊⍋+`(⌽»2/1+↕𝕩)(⊣/≠⊸⥊)∾⟜-1‿𝕩}j0	Spiral of numbers of size j0, starting with 0 in a corner and increasing inwards	Block Function	Recreational	rotation concentric rectangular rings involute
 ⍋<⟜⍉{𝕩(⊢⌈⊏˘⌊⌜⊏)´↕≠𝕩}+´(<⌜˜⍋)¨y1	Given a list of complete ballots ordering ↕n, choose an overall ordering by Schulze's method (smaller wins ties)	Expression	Ordering	ranked ranking choice voting rcv election votes voters rule majority winner condorcet beatpath
@@ -1252,6 +1253,7 @@ c1(⊢´(1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+⊣)˝=⌜⟜⌽)d1	Lev
 {/(2≤↕𝕩){𝕩>0⌾(𝕨⊸⊑)𝕩≠⊸⥊𝕨↑1}⍟⊑´⌽↕⌈√𝕩}j0	Primes less than j0, somewhat quickly	Expression	Number Theory	primesuntil numbers
 {{𝕨(∨𝕊⍟(𝕩⊸≢)𝕩∾/∘<)∧´∘⊏⟜𝕨¨p}⟜/0¨p←𝕩}y1	Topological sort if each index i of y1 depends on indices i⊑y1 (partial result if there are circular dependencies)	Block Function	Ordering	dependency resolution dag scheduling kahn's algorithm
 c1 d0{∾1(↑∾·⥊𝕩≍˘↓)𝕨⊔˜(1-˜∾⟜0¬⊸×1+`∾⟜1)𝕗=𝕨} y1	Replace the instances of d0 in c1 with the strings in list y1 in order	Block Modifier	Text	substitute merge amend update translate transform map selective search-and-replace find-and-replace items lists set interpolate
+m‿n F{a‿s←-˜`𝕨⋄s÷↩𝕩⋄s×3÷˜+´(1∾1«𝕩⥊2‿4)×𝔽a+s×↕⊸∾𝕩}j0	Simpson's 1/3 rule integral approximation of F over [m,n] using j0 intervals; j0 is even	Block Modifier	Mathematical	approximate numerical area newton-cotes quadrature composite weighted
 F{1≥≠𝕩?𝕩;∾𝕊¨⌾(0‿2⊸⊏)3↑𝕩⊔˜1+𝕩𝔽¨˜<•rand.Range∘≠⊸⊑𝕩}y1	Sort y1 with custom comparison F that returns -1, 0, or 1 (stable quicksort)	Block Modifier	Ordering	ascending increasing sorting reordering by comparator three-result
 ∾⊢´∾⟜(<-⟜↕∘≠{𝕨∾¨∾(-𝕨⌊≠𝕩)↑𝕩}¨⊢)⍟n0⋈⋈⋈↕0	All integer partitions of the number n0 (sets with sum n0)	Expression	Combinatorics	integers unordered young ferrers diagrams
 1-˜1{𝕨≥≠𝕩?↕≠𝕩;0⌈-⟜(𝕨×n1≤⊏⟜𝕩)𝕨+˜⊸𝕊𝕩⌊𝕨-⊸⌽𝕩}»n1	Index of most recent element with a smaller value, at each position of n1	Expression	Search	latest rightmost nearest distance from before precedes preceding lesser
